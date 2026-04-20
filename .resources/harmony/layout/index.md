@@ -10,6 +10,12 @@
 | health-dashboard | health-dashboard.md | 健康任务进度页 - 三叶草展示 |
 | mobile-sheet | mobile-sheet.md | 服药提醒半模态页 - 浮层卡片列表 |
 
+## Page Templates
+
+| template | layout family | template file | source block | description |
+|----------|---------------|---------------|--------------|-------------|
+| settings-page | mobile-settings | settings-page.md | src/blocks/settings-page.tsx | 通用系统设置页模板，多组设置卡片 |
+
 ## Layout Structure
 
 每个 layout markdown 必须包含：
