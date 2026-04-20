@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "18c4504860b130c1",
+    "type": "split",
+    "children": [
+      {
+        "id": "370678a3b96040c5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1aaaca5a07c5c3a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01-架构总览/02-shadcn.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "02-shadcn"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b2660accde9be26b",
+    "type": "split",
+    "children": [
+      {
+        "id": "1f5d8e8e43e06053",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8d977b5182d3c1f1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "2c7992ce5a3ec1da",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "15bee207d0076980",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ff8104020fe699c5",
+    "type": "split",
+    "children": [
+      {
+        "id": "f8b5d35e89148944",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3c8060e247fc9a97",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "01-架构总览/02-shadcn.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "02-shadcn 的反向链接列表"
+            }
+          },
+          {
+            "id": "7b48f4be272f890f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "01-架构总览/02-shadcn.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "02-shadcn 的出链列表"
+            }
+          },
+          {
+            "id": "e1f47daabbada98c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "1be23ae185a56077",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "7a0710a83e3fdddd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "01-架构总览/02-shadcn.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "02-shadcn 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "1aaaca5a07c5c3a3",
+  "lastOpenFiles": [
+    "01-架构总览/01-架构总览.md",
+    "01-架构总览/02-shadcn.md",
+    "01-架构总览/02-shadcn/02-为什么follow-shadcn架构.md",
+    "01-架构总览/02-shadcn/01-shadcn是什么.md",
+    "01-架构总览/02-shadcn",
+    "03-设计系统资源/01-设计系统资源概览.md",
+    "02-环境准备/01-工具准备.md",
+    "00-快速入口.md",
+    "01-架构总览/03-长期目标.md",
+    "01-架构总览/02-完整架构概览.md"
+  ]
+}
