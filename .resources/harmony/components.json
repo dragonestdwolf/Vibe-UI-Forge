@@ -84,6 +84,13 @@
       "path": "src/component/ServiceCard",
       "export": "ServiceCardStatus",
       "stories": "src/component/ServiceCard/ServiceCard.stories.tsx"
+    },
+    {
+      "id": "divider",
+      "name": "Divider",
+      "path": "src/component/Divider",
+      "export": "Divider",
+      "stories": "src/component/Divider/Divider.stories.tsx"
     }
   ]
 }
