@@ -7,7 +7,13 @@ import { mergeConfig } from "vite"
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.stories.@(ts|tsx|mdx)"],
+  stories: [
+    "../src/*.stories.@(ts|tsx|mdx)",
+    "../src/blocks/*.stories.@(ts|tsx|mdx)",
+    "../src/render/**/*.stories.@(ts|tsx|mdx)",
+    "../src/component/**/*.stories.@(ts|tsx|mdx)",
+    "../src/stories/**/*.stories.@(ts|tsx|mdx)",
+  ],
   addons: [],
   framework: {
     name: "@storybook/react-vite",

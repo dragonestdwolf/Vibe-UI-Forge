@@ -1,8 +1,8 @@
 ---
 name: shadcn
-description: Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI. Provides project context, component docs, and usage examples. Applies when working with shadcn/ui, component registries, presets, --preset codes, or any project with a components.json file. Also triggers for "shadcn init", "create an app with --preset", or "switch to --preset".
+description: Manages shadcn components and projects, including page/block generation, route and layout planning, component composition, registries, presets, docs, add/update/search, and styling. Applies to any shadcn/ui project or project with a components.json file. For requests to create, compose, or modify a page, route, dashboard, settings screen, landing page, app screen, block, or Figma-to-page UI, first run the Page Generation Workflow before writing TSX. Also triggers for shadcn init/add/docs/search, create an app with --preset, switch to --preset, and component registry work.
 user-invocable: false
-allowed-tools: Bash(npx shadcn@latest *), Bash(pnpm dlx shadcn@latest *), Bash(bunx --bun shadcn@latest *)
+allowed-tools: Bash(npx shadcn@latest *), Bash(pnpm dlx shadcn@latest *), Bash(bunx --bun shadcn@latest *), Bash(node scripts/validate_design_system_resources.mjs), Bash(npm run build), Bash(npm run build-storybook), Bash(pnpm run build), Bash(pnpm run build-storybook), Bash(bun run build), Bash(bun run build-storybook)
 ---
 
 # shadcn/ui
@@ -18,6 +18,39 @@ A framework for building ui, components and design systems. Components are added
 ```
 
 The JSON above contains the project config and installed components. Use `npx shadcn@latest docs <component>` to get documentation and example URLs for any component.
+
+## Workflow Selection
+
+Use the page generation workflow first when the task creates or modifies a page, route, screen, dashboard, settings page, landing page, block, template, or Figma-to-page UI in a shadcn project. Do this before writing TSX, adding custom markup, or choosing components.
+
+Use the generic shadcn workflow for component installation, registry search/view/add/update, docs lookup, init, presets, and low-level component fixes.
+
+If both apply, run page generation planning first, then use shadcn CLI/docs only for the specific components or registry items needed by the plan.
+
+## Page Generation Workflow
+
+For page generation, turn the request into a grounded plan before writing code:
+
+1. **Read project context** — inspect `components.json`, package scripts, routes/app structure, global CSS, token files, and existing component/block directories.
+2. **Detect resource mode** — if `.resources/config.json` exists, use the resource-aware workflow. If it is missing, infer a temporary route/layout plan from the request and existing project files.
+3. **Route matching** — for resource-aware projects, read `.resources/config.json`, then `.resources/{active}/route-index.md`, and map the request to `page_type`. Use the route fallback only when the request is ambiguous.
+4. **Layout resolution** — read `.resources/{active}/layout/{page_type}.md` and extract `layout_skeleton`, `reference_blocks`, `needed_components`, `composition_mapping`, and `generation_constraints`.
+5. **Source grounding** — resolve `reference_blocks` through `.resources/{active}/blocks.json`, resolve `needed_components` through `.resources/{active}/components.json`, then read the mapped TSX, stories, CSS, and token files. Component markdown is on demand only. Do not use historical generated pages under `src/render/**` as page template references.
+6. **Generate** — use aliases from `components.json`, reuse existing components and blocks first, follow the layout skeleton, and apply the critical composition/styling/forms/icon rules in this skill.
+7. **Validate** — run the available checks, such as `node scripts/validate_design_system_resources.mjs`, `npm run build`, or `npm run build-storybook`. If a check is unavailable, report why.
+8. **Write generation log** — when the output is a render preview page, create a log file in the same folder as the generated source, usually `src/render/{page-name}/index.log.md`.
+9. **Report grounding** — include the matched `page_type`, layout file, reference blocks, needed components, source files read, output files, generation log file, and validation result.
+
+Read [references/page-generation.md](./references/page-generation.md) for the full page generation procedure. Read [references/resource-contract.md](./references/resource-contract.md) for the `.resources` schema, markdown read policy, layout schema, and block/component mapping rules.
+
+### Resource-Aware Rules
+
+- `route-index.md` and `layout/{page_type}.md` are default inputs for page generation.
+- `component/{name}.md` is only read when TSX/stories do not answer component semantics, state, size, interaction, or accessibility.
+- `history/spec/**` is not a default generation input.
+- `src/render/**` is generated output. Do not use historical render pages as template/reference sources for new page generation.
+- TSX, stories, CSS, and tokens are the true source for generated code.
+- `.resources/{active}/blocks.json` is the page generation index; do not treat it as a shadcn CLI registry unless it is explicitly converted to a valid shadcn registry schema.
 
 ## Principles
 
@@ -163,7 +196,7 @@ npx shadcn@latest docs button dialog select
 
 **When creating, fixing, debugging, or using a component, always run `npx shadcn@latest docs` and fetch the URLs first.** This ensures you're working with the correct API and usage patterns rather than guessing.
 
-## Workflow
+## Generic shadcn Workflow
 
 1. **Get project context** — already injected above. Run `npx shadcn@latest info` again if you need to refresh.
 2. **Check installed components first** — before running `add`, always check the `components` list from project context or list the `resolvedPaths.ui` directory. Don't import components that haven't been added, and don't re-add ones already installed.
@@ -238,5 +271,7 @@ npx shadcn@latest view @shadcn/button
 - [rules/icons.md](./rules/icons.md) — data-icon, icon sizing, passing icons as objects
 - [rules/styling.md](./rules/styling.md) — Semantic colors, variants, className, spacing, size, truncate, dark mode, cn(), z-index
 - [rules/base-vs-radix.md](./rules/base-vs-radix.md) — asChild vs render, Select, ToggleGroup, Slider, Accordion
+- [references/page-generation.md](./references/page-generation.md) — Page generation workflow, resource-aware mode, plain shadcn fallback, reporting
+- [references/resource-contract.md](./references/resource-contract.md) — `.resources` structure, layout markdown schema, block/component mapping, registry boundaries
 - [cli.md](./cli.md) — Commands, flags, presets, templates
 - [customization.md](./customization.md) — Theming, CSS variables, extending components
