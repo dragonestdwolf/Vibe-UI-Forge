@@ -1,7 +1,7 @@
 # Harmony-UI-Playground 改造后预期目录架构（轻量版）
 
 > **版本**：轻量版（简化工作流）
-> **核心理念**：tsx 源码是直接来源，markdown 是按需参考
+> **核心理念**：tsx 源码是直接来源；route/layout markdown 是默认读取，component markdown 按需参考
 
 ---
 
@@ -307,7 +307,7 @@ harmony-ui-playground/src/
 1. **不移动** `harmony-ui-playground/src/` 下的任何文件
 2. **不复制** tsx 源码到 `.resources/`
 3. `.resources/` 只创建**索引文件**
-4. markdown 是**按需参考**，不是默认工作流
+4. route/layout markdown 是**默认工作流**，component markdown 是**按需参考**
 
 ---
 
@@ -346,7 +346,7 @@ harmony-ui-playground/src/
 |------|--------|----------------|
 | 核心步骤 | 6 步 | **3 步** |
 | 每步文件数 | 1-5 个 | **1 个** |
-| markdown 读取 | 默认步骤 | **按需** |
+| markdown 读取 | 默认步骤 | **route/layout 默认，component 按需** |
 | 模型压力 | 高 | **低-中** |
 | 降级逻辑 | 精确→模糊→fallback | **无（简化）** |
 | 适用场景 | 复杂页面 | **标准页面** |
