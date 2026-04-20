@@ -200,3 +200,77 @@ npm run build-storybook
 - stories 可正常渲染
 - token 变更未引发明显视觉回归
 - 若涉及 block，`registry.json` 的 `dependencies` 与实际组件一致
+
+---
+
+## 8. 资源层维护规则（Design System Skill v1.0）
+
+> 以下规则适用于 `harmony-ui-playground` 项目的资源层维护。
+
+### 8.1 文件角色划分
+
+| 文件 | 角色 | 说明 |
+|------|------|------|
+| `.resources/harmony/blocks.json` | **页面生成主索引** | v1.0 页面生成使用的 block 清单 |
+| `.resources/harmony/components.json` | **组件映射** | component id -> 源码路径/stories |
+| `.resources/harmony/layout/*.md` | **布局推理** | 页面生成默认读取 |
+| `.resources/harmony/component/*.md` | **按需参考** | 组件规范，用户询问时读取 |
+| `harmony-ui-playground/registry.json` | **Legacy** | 保留作为参考，不再作为 v1.0 主索引 |
+| `harmony-ui-playground/components.json` | **项目配置** | shadcn 风格配置，alias 定义 |
+
+### 8.2 新增 Layout 的 checklist
+
+1. 在 `.resources/harmony/layout/index.md` 注册新 layout
+2. 在 `.resources/harmony/route-index.md` 增加命中规则
+3. 创建 `.resources/harmony/layout/{new-layout}.md`，包含：
+   - `hit_rules`
+   - `exclusion_rules`
+   - `reference_blocks`（指向 blocks.json 中已注册的 block）
+   - `layout_skeleton`
+   - `needed_components`（指向 components.json 中已注册的 component）
+   - `composition_mapping`
+   - `generation_constraints`
+4. 运行 `node scripts/validate_design_system_resources.mjs` 校验
+
+### 8.3 新增 Block 的 checklist
+
+1. 在 `harmony-ui-playground/src/blocks/` 创建 TSX 实现
+2. 创建对应的 `.stories.tsx`
+3. 在 `.resources/harmony/blocks.json` 新增 block 条目：
+   - `id`（kebab-case，唯一）
+   - `name`
+   - `pageType`
+   - `description`
+   - `files`
+   - `stories`
+   - `dependencies`（kebab-case component id）
+4. 确保 `dependencies` 中的每个 component id 都在 `components.json` 中存在
+5. 运行 `node scripts/validate_design_system_resources.mjs` 校验
+
+### 8.4 新增 Component 的 checklist
+
+1. 在 `harmony-ui-playground/src/component/<ComponentName>/` 创建 TSX/CSS/stories
+2. 在 `harmony-ui-playground/src/component/index.ts` 增加导出
+3. 在 `.resources/harmony/components.json` 新增 component 条目：
+   - `id`（kebab-case，唯一）
+   - `name`
+   - `path`
+   - `export`
+   - `stories`
+4. 如有需要，在 `.resources/harmony/component/` 下创建规范 markdown
+5. 运行 `npm run build` 与 `npm run build-storybook`
+
+### 8.5 资源一致性校验脚本
+
+校验命令：
+
+```bash
+node scripts/validate_design_system_resources.mjs
+```
+
+校验内容：
+- `blocks.json` 中的 `files`/`stories` 路径是否存在
+- `components.json` 中的 `path`/`stories` 路径是否存在
+- layout 中的 `reference_blocks` 是否在 `blocks.json` 中存在
+- layout 中的 `needed_components` 是否在 `components.json` 中存在
+- block 的 `dependencies` 是否都在 `components.json` 中存在

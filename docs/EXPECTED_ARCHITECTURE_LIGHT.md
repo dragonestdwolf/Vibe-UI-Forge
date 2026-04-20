@@ -35,7 +35,8 @@
 ```
 
 **关键原则**：
-- markdown 只在**用户需要时**读取，不是工作流默认步骤
+- route/index.md 和 layout/*.md 是页面生成**默认**读取
+- component/*.md 是**按需**读取（用户询问组件细节时）
 - tsx 源码是**唯一真实来源**
 - 每步只读**当前决策必须的文件**
 
@@ -293,8 +294,12 @@ harmony-ui-playground/src/
 | `harmony-ui-playground/src/component/` | **真实来源** | tsx 源码，代码生成直接依据 |
 | `harmony-ui-playground/src/blocks/` | **真实来源** | tsx 源码，页面模板直接依据 |
 | `harmony-ui-playground/src/styles/devui-tokens.css` | **真实来源** | CSS 变量，样式直接依据 |
-| `.resources/harmony/layout/` | **轻量索引** | layout 元数据，引导工作流 |
-| `.resources/harmony/component/` | **按需参考** | 组件规范，用户询问时读取 |
+| `.resources/harmony/layout/` | **默认读取** | route/layout markdown，页面生成工作流默认步骤 |
+| `.resources/harmony/component/` | **按需参考** | 组件规范，用户询问组件细节时读取 |
+| `.resources/harmony/blocks.json` | **主索引** | 页面生成主索引，v1.0 核心文件 |
+| `.resources/harmony/components.json` | **组件映射** | component id -> 源码路径/stories |
+| `harmony-ui-playground/registry.json` | **Legacy** | 保留但不再作为页面生成主索引 |
+| `harmony-ui-playground/components.json` | **项目配置** | shadcn 风格配置，alias 定义 |
 | `history/spec/` | **历史参考** | 可选阅读，不参与工作流 |
 
 ### 改造原则
