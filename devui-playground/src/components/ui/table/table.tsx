@@ -149,7 +149,6 @@ export function Table({
   size = "sm",
   rowHoveredHighlight = true,
   fixHeader = false,
-  checkable = false,
   tableLayout = "fixed",
   showLoading = false,
   headerBg = false,
@@ -653,8 +652,7 @@ export function Table({
                     columnIndex === 0 &&
                     Array.isArray(item.row.children) &&
                     (item.row.children as Record<string, unknown>[]).length > 0
-                  const isCheckableColumn =
-                    checkable || column.type === "checkable"
+                  const isCheckableColumn = column.type === "checkable"
                   const isExpandColumn = column.type === "expand"
                   return (
                     <td

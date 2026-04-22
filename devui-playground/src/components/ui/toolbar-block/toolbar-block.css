@@ -1,17 +1,17 @@
 .toolbar-block {
   display: flex;
   width: 100%;
-  min-height: 36px;
+  min-height: 32px;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
   overflow: hidden;
   background-color: var(--devui-base-bg);
   color: var(--devui-text);
-  font-family: var(--devui-font-family-sans);
+  font-family: var(--devui-font-family-sans, "Noto Sans SC", Helvetica, Arial, sans-serif);
   font-size: 14px;
   line-height: 22px;
-  padding: 0 20px;
+  padding: 0;
 }
 
 .toolbar-block--custom {
@@ -47,9 +47,9 @@
 }
 
 .toolbar-block__main {
-  flex: 1 1 auto;
+  flex: 1 1 0;
   gap: 18px;
-  min-width: 320px;
+  min-width: 0;
 }
 
 .toolbar-block__select,
@@ -58,11 +58,11 @@
 }
 
 .toolbar-block__left .toolbar-block__select-control {
-  width: 76px;
+  width: 52px;
 }
 
 .toolbar-block__main .toolbar-block__select-control {
-  width: 92px;
+  width: 78px;
 }
 
 .toolbar-block__select-control .d-select__selection {
@@ -73,14 +73,16 @@
 
 .toolbar-block__select-control .d-select__input {
   height: 32px;
-  padding: 5px 24px 5px 0;
+  padding: 5px 18px 5px 0;
   color: var(--devui-text);
   cursor: pointer;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .toolbar-block__select-control .d-select__arrow {
   right: 0;
-  width: 18px;
+  width: 14px;
   color: var(--devui-text);
 }
 
@@ -104,7 +106,7 @@
   height: 32px;
   align-items: flex-start;
   justify-content: center;
-  padding: 0;
+  padding: 0 0 4px;
   color: var(--devui-aide-text);
   cursor: pointer;
   white-space: nowrap;
@@ -147,7 +149,7 @@
 
 .toolbar-block__filter-input {
   flex: 1 1 auto;
-  min-width: 280px;
+  min-width: 320px;
   --devui-input-border: var(--devui-form-control-line, #adb0b8);
   --devui-input-border-hover: var(--devui-form-control-line-hover, #9b9fa8);
   --devui-input-border-active: var(--devui-form-control-line-active, #5e7ce0);
@@ -158,42 +160,58 @@
 }
 
 .toolbar-block__filter-input .devui-input__wrapper {
+  height: 32px;
   padding: 0 8px;
+  align-items: center;
 }
 
 .toolbar-block__filter-input .devui-input-slot__prefix {
   flex: 0 1 auto;
   min-width: 0;
   margin-right: 8px;
+  align-self: stretch;
 }
 
 .toolbar-block__filter-input .devui-input-slot__suffix {
   margin-left: 8px;
+  align-self: stretch;
 }
 
 .toolbar-block__filter-input .devui-input__inner {
-  min-width: 150px;
+  min-width: 180px;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .toolbar-block__filter-prefix,
 .toolbar-block__filter-actions {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
 
 .toolbar-block__filter-prefix {
   gap: 8px;
   min-width: 0;
+  min-height: 32px;
 }
 
 .toolbar-block__filter-actions {
   flex: 0 0 auto;
   gap: 8px;
+  min-height: 32px;
 }
 
 .toolbar-block__filter-tag.devui-tag {
   flex: 0 1 auto;
-  max-width: 360px;
+  max-width: 410px;
+  height: 20px;
+  padding: 0 8px;
+  border-radius: 4px;
+  background: var(--devui-list-item-hover-bg, #f2f5fc);
+  color: var(--devui-text, #252b3a);
+  font-size: 12px;
+  line-height: 20px;
 }
 
 .toolbar-block__actions {
@@ -211,21 +229,27 @@
 
 .toolbar-block__icon-button.mini-devui-button,
 .toolbar-block__decorative-icon.mini-devui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-width: 0;
   width: 16px;
   height: 16px;
-  color: var(--devui-icon-fill-weak, #babbc0);
+  line-height: 1;
+  color: var(--devui-icon-fill-weak, #8a8e99);
   padding: 0;
 }
 
 .toolbar-block__decorative-icon.mini-devui-button {
-  color: var(--devui-icon-fill, #252b3a);
+  color: var(--devui-icon-fill, #575d6c);
   pointer-events: none;
 }
 
 .toolbar-block__view-switch {
   flex: 0 0 auto;
   width: 102px;
+  height: 32px;
+  align-items: center;
   justify-content: space-between;
   border-radius: 4px;
   background: var(--devui-list-item-strip-bg, #f2f5fc);
@@ -233,9 +257,13 @@
 }
 
 .toolbar-block__view-button.mini-devui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 28px;
   min-width: 28px;
   height: 28px;
+  line-height: 1;
   border-radius: 4px;
   color: var(--devui-icon-fill, #252b3a);
   padding: 0;
@@ -246,6 +274,7 @@
 }
 
 .toolbar-block .mini-devui-button__icon-svg {
+  display: block;
   width: 16px;
   height: 16px;
 }

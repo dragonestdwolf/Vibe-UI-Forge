@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { ToolbarBlock } from "./index"
 
 const meta = {
-  title: "Components/ToolbarBlock",
+  title: "Blocks/ToolbarBlock",
   component: ToolbarBlock,
   tags: ["autodocs"],
 } satisfies Meta<typeof ToolbarBlock>
@@ -12,6 +12,14 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Playground: Story = {
+  render: () => (
+    <div style={{ background: "#ffffff", minWidth: 1600 }}>
+      <ToolbarBlock />
+    </div>
+  ),
+}
+
+export const CustomContent: Story = {
   render: () => (
     <ToolbarBlock>
       <Button size="sm">保存</Button>
@@ -22,13 +30,5 @@ export const Playground: Story = {
         更多操作
       </Button>
     </ToolbarBlock>
-  ),
-}
-
-export const FigmaComposition: Story = {
-  render: () => (
-    <div style={{ background: "#ffffff", width: "100%" }}>
-      <ToolbarBlock />
-    </div>
   ),
 }

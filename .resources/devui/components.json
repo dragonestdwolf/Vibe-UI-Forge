@@ -161,14 +161,24 @@
       "name": "Table",
       "path": "src/components/ui/table",
       "export": "Table",
-      "stories": "src/components/ui/table/table.stories.tsx"
+      "stories": "src/components/ui/table/table.stories.tsx",
+      "spec": ".resources/devui/component/table.md"
     },
     {
       "id": "column",
       "name": "Column",
       "path": "src/components/ui/table",
       "export": "Column",
-      "stories": "src/components/ui/table/table.stories.tsx"
+      "stories": "src/components/ui/table/table.stories.tsx",
+      "spec": ".resources/devui/component/table.md"
+    },
+    {
+      "id": "table-block",
+      "name": "TableBlock",
+      "path": "src/components/ui/table-block",
+      "export": "TableBlock",
+      "stories": "src/components/ui/table-block/table-block.stories.tsx",
+      "spec": ".resources/devui/block/table-block.md"
     },
     {
       "id": "title-tabs-header",

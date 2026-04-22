@@ -215,7 +215,7 @@ export function ToolbarBlock({
   return (
     <section
       className={cn("toolbar-block", className)}
-      data-figma-node-id="3665:10320"
+      data-figma-node-id="10673:14830"
       data-runtime-component="ToolbarBlock"
     >
       <div className="toolbar-block__left">

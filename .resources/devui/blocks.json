@@ -7,6 +7,12 @@
       "pageType": "table-page",
       "description": "表格页面区块，由 ToolbarBlock + Table + Pagination 组合而成。",
       "doc": "block/table-block.md",
+      "source": {
+        "kind": "figma-mcp",
+        "fileKey": "VBxWjuXDcxprCHcUFKNF81",
+        "nodeId": "10743:20021",
+        "nodeName": "table-block"
+      },
       "files": [
         "src/components/ui/table-block/table-block.tsx",
         "src/components/ui/table-block/table-block.css"
@@ -26,6 +32,12 @@
       "pageType": "table-page",
       "description": "页面或区块操作条，可承载按钮、搜索、筛选、导出、刷新等操作。",
       "doc": "block/toolbar-block.md",
+      "source": {
+        "kind": "figma-mcp",
+        "fileKey": "VBxWjuXDcxprCHcUFKNF81",
+        "nodeId": "10673:14830",
+        "nodeName": "toolbar"
+      },
       "files": [
         "src/components/ui/toolbar-block/toolbar-block.tsx",
         "src/components/ui/toolbar-block/toolbar-block.css"
@@ -36,7 +48,9 @@
       "dependencies": [
         "button",
         "input",
-        "select"
+        "select",
+        "separator",
+        "tag"
       ]
     },
     {

@@ -15,7 +15,13 @@ devui-playground/src/components/ui/table/table.stories.tsx
 
 [html/component/table-benchmark.html](file://html/component/table-benchmark.html)
 
-**Figma Node**: `497:2419`
+**Figma Source**
+
+```text
+fileKey: VBxWjuXDcxprCHcUFKNF81
+nodeId: 497:2419
+nodeName: table
+```
 
 ## Core Props
 
@@ -68,11 +74,11 @@ devui-playground/src/components/ui/table/table.stories.tsx
 
 ## Icons
 
-项目使用 **Lucide React** 图标库。
+项目使用 `ButtonIcon` 统一承载表格图标，不直接引入外部图标包。
 
-### Lucide Icon 映射
+### ButtonIcon 映射
 
-| Figma Icon | Lucide Icon | 用途 |
+| Figma Icon | ButtonIcon name | 用途 |
 |------------|-------------|------|
 | Sort3 | `arrow-up-down` | 排序指示器 |
 | FilterO | `filter` | 筛选按钮 |
@@ -81,30 +87,6 @@ devui-playground/src/components/ui/table/table.stories.tsx
 | CodehubOpEdit | `pencil` | 编辑 |
 | CodehubCollection | `star` | 收藏 |
 | More2 | `more-horizontal` | 更多 |
-
-### 在 ButtonIcon 中新增
-
-如需在 button-icon.tsx 中新增这些图标，参考格式：
-
-```tsx
-function ArrowUpDownIcon({ className }: { className?: string }) {
-  return (
-    <IconBase className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M8 7l4-4 4 4M8 17l4 4 4-4" />
-      <path d="M4 12h16" />
-    </IconBase>
-  )
-}
-
-function FlagIcon({ className }: { className?: string }) {
-  return (
-    <IconBase className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
-      <line x1="4" y1="22" x2="4" y2="15" />
-    </IconBase>
-  )
-}
-```
 
 ## 设计要素（来自 Benchmark）
 
@@ -124,17 +106,17 @@ function FlagIcon({ className }: { className?: string }) {
 | 功能 | 状态 | 说明 |
 |------|------|------|
 | 基础表格 | ✅ | 已实现 |
-| 排序 | ✅ | 使用文字 ▲▼ |
-| 筛选 | ✅ | 使用文字 ⌄ |
+| 排序 | ✅ | 使用 `ButtonIcon name=\"arrow-up-down\"` |
+| 筛选 | ✅ | 使用 `ButtonIcon name=\"filter\"` |
 | 勾选 | ✅ | 已实现 |
 | 固定列 | ✅ | 支持 fixedLeft/fixedRight |
-| 树形展开 | ✅ | 使用圆形 +/- |
+| 树形展开 | ✅ | 使用 `ButtonIcon name=\"chevron-right\"` |
 | Tag 渲染 | ⚠️ | 需通过 childrenRenderer |
-| Sort SVG | ❌ | 需替换为 ButtonIcon |
-| Filter SVG | ❌ | 需替换为 ButtonIcon |
-| TreeExpand SVG | ❌ | 需替换为 ButtonIcon |
-| PriorityFlag | ❌ | 需新增图标或通过 childrenRenderer |
-| Actions 按钮组 | ❌ | 需通过 childrenRenderer |
+| Sort SVG | ✅ | 已替换为 ButtonIcon |
+| Filter SVG | ✅ | 已替换为 ButtonIcon |
+| TreeExpand SVG | ✅ | 已替换为 ButtonIcon |
+| PriorityFlag | ✅ | 通过 `ButtonIcon name=\"flag\"` + formatter 实现 |
+| Actions 按钮组 | ✅ | 通过 formatter + `ButtonIcon` 实现 |
 
 ## Generation Notes
 

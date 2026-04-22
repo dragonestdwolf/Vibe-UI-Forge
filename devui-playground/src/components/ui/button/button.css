@@ -267,6 +267,7 @@
 
 .mini-devui-button__icon-fix {
   position: relative;
+  display: block;
   width: 1em;
   height: 1em;
   flex: none;
@@ -283,6 +284,7 @@
 }
 
 .mini-devui-button__icon-svg {
+  display: block;
   width: 1em;
   height: 1em;
   stroke-width: 2;

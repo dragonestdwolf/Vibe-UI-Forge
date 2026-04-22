@@ -15,7 +15,7 @@ devui-playground/src/components/ui/toolbar-block/toolbar-block.tsx
 devui-playground/src/components/ui/toolbar-block/toolbar-block.stories.tsx
 ```
 
-`ToolbarBlock` 已经是 TSX 承载的真实 block。默认 props 会还原 Figma 节点 `3665:10320` 的标杆形态：左侧范围选择和页签，中间主操作、临时过滤、筛选输入和文本操作，右侧视图切换。
+`ToolbarBlock` 已经是 TSX 承载的真实 block。默认 props 会还原 Figma 节点 `10673:14830` 的标杆形态：左侧范围选择和页签，中间主操作、临时过滤、筛选输入和文本操作，右侧视图切换。
 
 如果传入 `children`，组件会退回到自定义容器模式，用于兼容简单工具条。
 
@@ -53,3 +53,20 @@ devui-playground/src/components/ui/toolbar-block/toolbar-block.stories.tsx
 ## 6. 旧 MiniDevUI 映射
 
 旧 `toolbar-block` 可直接映射到当前 `ToolbarBlock`。
+
+## 7. Figma 来源
+
+```text
+fileKey: VBxWjuXDcxprCHcUFKNF81
+nodeId: 10673:14830
+nodeName: toolbar
+```
+
+设计约束：
+
+- 根节点是单行横向 toolbar，不自带额外左右 padding。
+- 左侧范围选择和页签之间保持 24px gap。
+- 两处分割线高度约 24px。
+- 主操作按钮宽 85px、高 32px。
+- 筛选输入高 32px，内部可承载搜索图标、筛选 Tag、placeholder 和右侧清空/保存/目录图标。
+- 视图切换宽 102px，内部 3 个 28px 图标按钮。
