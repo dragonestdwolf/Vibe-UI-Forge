@@ -1,0 +1,151 @@
+/* ============================================================
+   SegmentedButton
+   Pixso: OPXcaxT2Rj_9QE_M8xckbw / 3261:793
+   ============================================================ */
+
+/* ============================================================
+   1. Outline 容器
+   pill: bg rgba(0,0,0,0.047), border-radius 20px, padding 2px
+   width 328px（每项 flex:1 等分）
+   ============================================================ */
+.my-segbtn--outline {
+  display: inline-flex;
+  align-items: stretch;
+  width: 328px;
+  padding: 2px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.047);
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   2. Primary 容器
+   无外层背景，items gap 1px，宽 328px
+   ============================================================ */
+.my-segbtn--primary {
+  display: inline-flex;
+  align-items: stretch;
+  width: 328px;
+  gap: 1px;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   3. 禁用整组
+   ============================================================ */
+.my-segbtn.is-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* ============================================================
+   4. Item 基础
+   ============================================================ */
+.my-segbtn__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex: 1;
+  border: none;
+  cursor: pointer;
+  font-family: var(--devui-font-family-sans, sans-serif);
+  transition:
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.my-segbtn__item:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+/* ============================================================
+   5. Outline item
+   未选中: transparent bg, border-radius 18px
+   选中:   #ffffff bg, box-shadow 0 0 3px rgba(0,0,0,0.2)
+   padding 6px 12px, min-height 36px
+   ============================================================ */
+.my-segbtn__item--outline {
+  min-height: 36px;
+  padding: 6px 12px;
+  border-radius: 18px;
+  background: transparent;
+}
+
+.my-segbtn__item--outline.is-selected {
+  background: #ffffff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================
+   6. Primary item
+   未选中: rgba(0,0,0,0.047), border-radius 由位置决定
+   选中:   #0A59F7
+   padding 8px 12px, min-height 40px
+   首尾圆角由 CSS :first-child/:last-child/:only-child 控制
+   ============================================================ */
+.my-segbtn__item--primary {
+  min-height: 40px;
+  padding: 8px 12px;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.047);
+}
+
+.my-segbtn--primary .my-segbtn__item--primary:first-child {
+  border-radius: 20px 0 0 20px;
+}
+.my-segbtn--primary .my-segbtn__item--primary:last-child {
+  border-radius: 0 20px 20px 0;
+}
+.my-segbtn--primary .my-segbtn__item--primary:only-child {
+  border-radius: 20px;
+}
+
+.my-segbtn__item--primary.is-selected {
+  background: rgba(10, 89, 247, 1);
+}
+
+/* ============================================================
+   7. 图标（24×24 容器，SVG 自适应）
+   颜色由父级文字色继承（color: currentColor）
+   ============================================================ */
+.my-segbtn__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 0;
+}
+
+/* ============================================================
+   8. 文字标签
+   14px Medium，line-height 20px，nowrap
+   ============================================================ */
+.my-segbtn__label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================================
+   9. 选中态颜色
+   ============================================================ */
+
+/* Outline 选中 → 深色文字 / 图标 */
+.my-segbtn__item--outline.is-selected .my-segbtn__label,
+.my-segbtn__item--outline.is-selected .my-segbtn__icon {
+  color: rgba(0, 0, 0, 0.898);
+}
+
+/* Primary 选中 → 白色文字 / 图标 */
+.my-segbtn__item--primary.is-selected .my-segbtn__label,
+.my-segbtn__item--primary.is-selected .my-segbtn__icon {
+  color: #ffffff;
+}

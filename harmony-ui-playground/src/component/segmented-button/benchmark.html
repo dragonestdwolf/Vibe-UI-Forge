@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<!--
+  SegmentedButton Benchmark HTML
+  Source: Pixso MCP — fileKey: OPXcaxT2Rj_9QE_M8xckbw, nodeId: 3261:793
+
+  MCP 精确归一值（design_to_code DSL）：
+  ── 容器（outline 变体）──────────────────────────────
+  border-radius: 20px
+  padding: 2px
+  background: rgba(0, 0, 0, 0.047)   ≈ #f2f2f2
+
+  ── 选中项（outline）────────────────────────────────
+  border-radius: 18px
+  background: #ffffff
+  box-shadow: 0 0 3px rgba(0,0,0,0.2)
+  padding: 6px 12px
+  min-height: 36px
+
+  ── 未选中项（outline）──────────────────────────────
+  border-radius: 18px
+  background: transparent
+  padding: 6px 12px
+  min-height: 36px
+
+  ── 选中项（primary）────────────────────────────────
+  background: rgba(10, 89, 247, 1)   = #0A59F7
+  padding: 8px 12px
+  min-height: 40px
+  border-radius: 首项 20px 0 0 20px / 末项 0 20px 20px 0 / 中间 0
+
+  ── 未选中项（primary）──────────────────────────────
+  background: rgba(0, 0, 0, 0.047)
+  padding: 8px 12px
+  min-height: 40px
+  items gap: 1px（无外层容器背景）
+
+  ── 图标 ─────────────────────────────────────────
+  width/height: 24px
+  font: HM Symbol 24px（web 以 SVG 近似）
+  选中色(outline): rgba(0,0,0,0.898)
+  未选中色: rgba(0,0,0,0.6)
+  选中色(primary): #ffffff
+
+  ── 文字 ─────────────────────────────────────────
+  font: HarmonyOS Sans SC Medium 14px/500
+  height: 20px
+  gap to icon: 4px
+  选中色(outline): rgba(0,0,0,0.898)
+  未选中色: rgba(0,0,0,0.6)
+  选中色(primary): #ffffff
+-->
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SegmentedButton — Benchmark</title>
+  <style>
+    /* ── 字体 ── */
+    @font-face {
+      font-family: 'HarmonyOS Sans SC';
+      font-weight: 500;
+      src: url('http://localhost:3667/assets/1776774554301/HarmonyOS_Sans_SC_Medium_1.ttf') format('truetype');
+    }
+
+    /* ── 全局重置 ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #e2e4ea;
+      font-family: 'HarmonyOS Sans SC', 'HarmonyOS Sans', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      padding: 40px;
+      min-height: 100vh;
+    }
+
+    /* ── 画布 ── */
+    .canvas {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 48px 56px;
+      max-width: 1000px;
+      margin: 0 auto;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+
+    /* ── Section ── */
+    .section { margin-bottom: 48px; }
+    .section-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(0,0,0,0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .row-label {
+      font-size: 12px;
+      color: rgba(0,0,0,0.4);
+      min-width: 72px;
+      font-family: 'HarmonyOS Sans SC', sans-serif;
+    }
+
+    /* ══════════════════════════════════════════════════════
+       SegmentedButton — Outline 变体
+       容器: pill，bg rgba(0,0,0,0.047)，radius 20px，padding 2px
+       选中项: white bg，shadow，radius 18px
+       ══════════════════════════════════════════════════════ */
+    .seg {
+      display: inline-flex;
+      align-items: stretch;
+      width: 328px;
+      padding: 2px;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.047);
+    }
+
+    .seg__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      min-height: 36px;
+      padding: 6px 12px;
+      border-radius: 18px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      flex: 1;
+      transition: background 180ms ease, box-shadow 180ms ease;
+    }
+
+    .seg__item--selected {
+      background: #ffffff;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .seg__icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .seg__icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .seg__label {
+      font-size: 14px;
+      font-weight: 500;
+      font-family: 'HarmonyOS Sans SC', 'PingFang SC', sans-serif;
+      line-height: 20px;
+      white-space: nowrap;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    /* 选中态文字 / 图标色 */
+    .seg__item--selected .seg__label { color: rgba(0, 0, 0, 0.898); }
+    .seg__item--selected .seg__icon svg { color: rgba(0, 0, 0, 0.898); }
+    .seg__item:not(.seg__item--selected) .seg__icon svg { color: rgba(0, 0, 0, 0.6); }
+
+    /* 禁用 */
+    .seg--disabled { opacity: 0.4; pointer-events: none; }
+
+    /* ══════════════════════════════════════════════════════
+       SegmentedButton — Primary 变体
+       无外层容器背景，items 间距 1px
+       选中: #0A59F7，未选中: rgba(0,0,0,0.047)
+       首/末项有圆角，中间项无圆角
+       ══════════════════════════════════════════════════════ */
+    .seg-primary {
+      display: inline-flex;
+      align-items: stretch;
+      width: 328px;
+      gap: 1px;
+    }
+
+    .seg-primary__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      min-height: 40px;
+      padding: 8px 12px;
+      border-radius: 0;
+      background: rgba(0, 0, 0, 0.047);
+      border: none;
+      cursor: pointer;
+      flex: 1;
+      transition: background 180ms ease;
+    }
+
+    /* 首/末圆角 */
+    .seg-primary__item:first-child { border-radius: 20px 0 0 20px; }
+    .seg-primary__item:last-child  { border-radius: 0 20px 20px 0; }
+    /* 只有一项时 */
+    .seg-primary__item:only-child  { border-radius: 20px; }
+
+    .seg-primary__item--selected {
+      background: rgba(10, 89, 247, 1);
+    }
+
+    .seg-primary__icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .seg-primary__icon svg { width: 20px; height: 20px; }
+
+    .seg-primary__label {
+      font-size: 14px;
+      font-weight: 500;
+      font-family: 'HarmonyOS Sans SC', 'PingFang SC', sans-serif;
+      line-height: 20px;
+      white-space: nowrap;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .seg-primary__item--selected .seg-primary__label { color: #ffffff; }
+    .seg-primary__item--selected .seg-primary__icon svg { color: #ffffff; }
+    .seg-primary__item:not(.seg-primary__item--selected) .seg-primary__icon svg { color: rgba(0,0,0,0.6); }
+
+    /* ── 单项展示（右侧独立 item 状态） ── */
+    .item-states {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    /* 独立展示用 outline 风格 */
+    .seg-standalone {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      padding: 8px 16px;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.047);
+      min-height: 64px;
+      cursor: pointer;
+    }
+    .seg-standalone--selected-outline {
+      background: #ffffff;
+      box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    }
+    .seg-standalone--selected-primary {
+      background: rgba(10, 89, 247, 1);
+    }
+    .seg-standalone__label {
+      font-size: 14px;
+      font-weight: 500;
+      font-family: 'HarmonyOS Sans SC', 'PingFang SC', sans-serif;
+      line-height: 20px;
+      color: rgba(0,0,0,0.6);
+    }
+    .seg-standalone--selected-outline .seg-standalone__label { color: rgba(0,0,0,0.898); }
+    .seg-standalone--selected-primary .seg-standalone__label { color: #ffffff; }
+    .seg-standalone--selected-outline .seg-standalone__icon svg { color: rgba(0,0,0,0.898); }
+    .seg-standalone--selected-primary .seg-standalone__icon svg { color: #ffffff; }
+    .seg-standalone__icon { width: 24px; height: 24px; display:flex; align-items:center; justify-content:center; }
+    .seg-standalone__icon svg { width:20px; height:20px; color: rgba(0,0,0,0.6); }
+  </style>
+</head>
+<body>
+<div class="canvas">
+
+  <!-- ═══════════════════════════════════════════════
+       inline SVG icon — HM Symbol star-circle 近似
+       原理：mask 把星形从圆中镂空，图标变为单色
+       color 变白/灰/黑时，镂空区露出背景色，
+       在蓝底/白底/灰底上均正确显示
+       ═══════════════════════════════════════════════ -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <!-- 星形镂空 mask：白色=显示圆，黑色=镂空星形 -->
+      <mask id="star-knockout">
+        <rect width="24" height="24" fill="white"/>
+        <path d="M12 6.2l1.6 3.24 3.57.52-2.58 2.51.61 3.55L12 14.3l-3.2 1.68.61-3.55L6.83 9.96l3.57-.52Z"
+              fill="black"/>
+      </mask>
+      <symbol id="ico-star" viewBox="0 0 24 24">
+        <!-- 圆形填 currentColor，星形区域由 mask 镂空透背景 -->
+        <circle cx="12" cy="12" r="11" fill="currentColor" mask="url(#star-knockout)"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ═══════════════════════════════
+       Section 1 — Outline 变体（左列）
+       容器 pill + 选中白底 shadow
+       ═══════════════════════════════ -->
+  <div class="section">
+    <div class="section-title">Variant: Outline（白底 + shadow 选中）</div>
+
+    <div class="row">
+      <span class="row-label">2 项</span>
+      <div class="seg" role="radiogroup">
+        <button class="seg__item seg__item--selected" role="radio" aria-checked="true">
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+        <button class="seg__item" role="radio" aria-checked="false">
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="row-label">3 项</span>
+      <div class="seg" role="radiogroup">
+        <button class="seg__item" role="radio" aria-checked="false">
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+        <button class="seg__item seg__item--selected" role="radio" aria-checked="true">
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+        <button class="seg__item" role="radio" aria-checked="false">
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="row-label">4 项</span>
+      <div class="seg" role="radiogroup">
+        <button class="seg__item" role="radio" aria-checked="false">
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+        <button class="seg__item seg__item--selected" role="radio" aria-checked="true">
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+        <button class="seg__item" role="radio" aria-checked="false">
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+        <button class="seg__item" role="radio" aria-checked="false">
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="row-label">5 项</span>
+      <div class="seg" role="radiogroup">
+        <button class="seg__item" role="radio" aria-checked="false">
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+        <button class="seg__item seg__item--selected" role="radio" aria-checked="true">
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+        <button class="seg__item" role="radio" aria-checked="false">
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+        <button class="seg__item" role="radio" aria-checked="false">
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+        <button class="seg__item" role="radio" aria-checked="false">
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════
+       Section 2 — Primary 变体（右列）
+       无外层容器，蓝底选中，items 间距 1px
+       ═══════════════════════════════ -->
+  <div class="section">
+    <div class="section-title">Variant: Primary（#0A59F7 蓝底选中）</div>
+
+    <div class="row">
+      <span class="row-label">2 项</span>
+      <div class="seg-primary" role="radiogroup">
+        <button class="seg-primary__item seg-primary__item--selected" role="radio" aria-checked="true">
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+        <button class="seg-primary__item" role="radio" aria-checked="false">
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="row-label">3 项</span>
+      <div class="seg-primary" role="radiogroup">
+        <button class="seg-primary__item seg-primary__item--selected" role="radio" aria-checked="true">
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+        <button class="seg-primary__item" role="radio" aria-checked="false">
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+        <button class="seg-primary__item" role="radio" aria-checked="false">
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="row-label">4 项</span>
+      <div class="seg-primary" role="radiogroup">
+        <button class="seg-primary__item seg-primary__item--selected" role="radio" aria-checked="true">
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+        <button class="seg-primary__item" role="radio" aria-checked="false">
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+        <button class="seg-primary__item" role="radio" aria-checked="false">
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+        <button class="seg-primary__item" role="radio" aria-checked="false">
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="row-label">5 项</span>
+      <div class="seg-primary" role="radiogroup">
+        <button class="seg-primary__item seg-primary__item--selected" role="radio" aria-checked="true">
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+        <button class="seg-primary__item" role="radio" aria-checked="false">
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+        <button class="seg-primary__item" role="radio" aria-checked="false">
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+        <button class="seg-primary__item" role="radio" aria-checked="false">
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+        <button class="seg-primary__item" role="radio" aria-checked="false">
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════
+       Section 3 — 单项状态（右上角区域）
+       default / selected-outline / selected-primary
+       ═══════════════════════════════ -->
+  <div class="section">
+    <div class="section-title">Item States（对应设计稿右上角）</div>
+    <div class="row">
+      <div class="item-states">
+        <!-- default -->
+        <div class="seg-standalone">
+          <span class="seg-standalone__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-standalone__label">Tabs</span>
+        </div>
+        <!-- selected outline -->
+        <div class="seg-standalone seg-standalone--selected-outline">
+          <span class="seg-standalone__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-standalone__label">Tabs</span>
+        </div>
+        <!-- selected primary -->
+        <div class="seg-standalone seg-standalone--selected-primary">
+          <span class="seg-standalone__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-standalone__label">Tabs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════
+       Section 4 — 独立 item 网格（右下角区域）
+       上行：未选中  下行：选中
+       ═══════════════════════════════ -->
+  <div class="section">
+    <div class="section-title">Item Grid（对应设计稿右下角）</div>
+    <div class="row" style="align-items:flex-start; flex-direction:column; gap:8px;">
+      <!-- 未选中行 -->
+      <div style="display:flex;gap:8px;">
+        <div class="seg-standalone">
+          <span class="seg-standalone__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-standalone__label">Tabs</span>
+        </div>
+        <div class="seg-standalone">
+          <span class="seg-standalone__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-standalone__label">Tabs</span>
+        </div>
+        <div class="seg-standalone">
+          <span class="seg-standalone__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-standalone__label">Tabs</span>
+        </div>
+      </div>
+      <!-- 选中行 -->
+      <div style="display:flex;gap:8px;">
+        <div class="seg-standalone seg-standalone--selected-primary">
+          <span class="seg-standalone__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-standalone__label">Tabs</span>
+        </div>
+        <div class="seg-standalone seg-standalone--selected-primary">
+          <span class="seg-standalone__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-standalone__label">Tabs</span>
+        </div>
+        <div class="seg-standalone seg-standalone--selected-primary">
+          <span class="seg-standalone__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-standalone__label">Tabs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════
+       Section 5 — Disabled
+       ═══════════════════════════════ -->
+  <div class="section">
+    <div class="section-title">Disabled</div>
+    <div class="row">
+      <span class="row-label">outline</span>
+      <div class="seg seg--disabled" role="radiogroup" aria-disabled="true">
+        <button class="seg__item seg__item--selected" disabled>
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+        <button class="seg__item" disabled>
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+        <button class="seg__item" disabled>
+          <span class="seg__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg__label">Tabs</span>
+        </button>
+      </div>
+      <span class="row-label">primary</span>
+      <div class="seg-primary seg--disabled" role="radiogroup" aria-disabled="true">
+        <button class="seg-primary__item seg-primary__item--selected" disabled>
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+        <button class="seg-primary__item" disabled>
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+        <button class="seg-primary__item" disabled>
+          <span class="seg-primary__icon"><svg><use href="#ico-star"/></svg></span>
+          <span class="seg-primary__label">Tabs</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- 交互：点击切换选中态（仅 benchmark 验证用） -->
+<script>
+  document.querySelectorAll('.seg[role="radiogroup"], .seg-primary[role="radiogroup"]').forEach(group => {
+    if (group.getAttribute('aria-disabled') === 'true') return;
+    const isOutline = group.classList.contains('seg');
+    const itemClass = isOutline ? 'seg__item' : 'seg-primary__item';
+    const selectedClass = isOutline ? 'seg__item--selected' : 'seg-primary__item--selected';
+
+    group.querySelectorAll('.' + itemClass).forEach(item => {
+      item.addEventListener('click', () => {
+        if (item.disabled) return;
+        group.querySelectorAll('.' + itemClass).forEach(i => {
+          i.classList.remove(selectedClass);
+          i.setAttribute('aria-checked', 'false');
+        });
+        item.classList.add(selectedClass);
+        item.setAttribute('aria-checked', 'true');
+      });
+    });
+  });
+</script>
+</body>
+</html>

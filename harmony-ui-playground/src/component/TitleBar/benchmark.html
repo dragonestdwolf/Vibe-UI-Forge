@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<!--
+  TitleBar Benchmark HTML
+  Source: Pixso MCP — fileKey: OPXcaxT2Rj_9QE_M8xckbw, nodeId: 3267:13296
+  HarmonyOS Symbol 参考: https://developer.huawei.com/consumer/cn/design/harmonyos-symbol/
+
+  ── 变体列表 ───────────────────────────────────────────
+  1. TitleBar-Normal-Phone        328×56   仅标题，无左侧图标
+  2. TitleBar-secondary page-Phone 328×56  返回键 + 标题 + 副标题
+  3. TitleBar-Drawer-Phone         328×56  汉堡菜单 + 标题
+  4. TitleBar-Title with icons-Phone 328×137 大标题纵向布局
+
+  ── 精确 DSL 值 ────────────────────────────────────────
+  容器
+    width: 328px
+    height: 56px（compact） / 137px（large）
+    background: transparent
+    flex-direction: row（compact）/ column（large）
+    gap: 8px（子元素间距）
+    padding: 0
+
+  Symbol 圆形按钮（左侧 back/hamburger 及右侧 .Items）
+    size: 40×40px
+    border-radius: 1000px → 50%（完整圆形，DSL cornerRadius:1000）
+    background: rgba(0, 0, 0, 0.0470588)  ≈ #f2f2f2
+    icon size: 24×24px
+
+  .Items（右侧操作区）
+    width: 136px（fixed）
+    height: 56px
+    justify-content: flex-end
+    gap: 8px（Normal/large）/ 10px（secondary/drawer）
+
+  文字按钮
+    height: 40px, padding: 0 12px
+    font: HarmonyHeiTi 14px/500
+    color: rgba(10, 89, 247, 1)  = #0A59F7
+    background: transparent
+
+  标题字号（variant 差异）
+    Normal:         HarmonyHeiTi Bold 26px, rgba(0,0,0,0.898)
+    secondary page: HarmonyHeiTi Bold 20px, rgba(0,0,0,0.898)
+    Drawer:         HarmonyHeiTi Bold 24px, rgba(0,0,0,0.898)
+    Title with icons: HarmonyHeiTi Bold 30px, rgba(0,0,0,0.898)
+
+  副标题
+    HarmonyHeiTi Regular 14px, rgba(0,0,0,0.6)
+    gap above title: 2px
+
+  HM Symbol 占位字符
+    font-family: 'HM Symbol'
+    font-size: 24px
+    U+F0134（󰄴）= .Default 占位图标
+-->
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TitleBar — Benchmark</title>
+  <style>
+    /* ── 字体 ─────────────────────────────────────────── */
+    @font-face {
+      font-family: 'HarmonyHeiTi';
+      font-weight: 400;
+      font-style: normal;
+      src: url('file:///Users/liangtaiyang/Library/Fonts/HarmonyHeiTi.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'HarmonyHeiTi';
+      font-weight: 500;
+      font-style: normal;
+      src: url('file:///Users/liangtaiyang/Library/Fonts/HarmonyHeiTi Medium.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'HarmonyHeiTi';
+      font-weight: 700;
+      font-style: normal;
+      /* Bold 单独字重文件不存在时沿用 Regular + browser bold synthesis */
+      src: url('file:///Users/liangtaiyang/Library/Fonts/HarmonyHeiTi Medium.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'HarmonyOS Sans SC';
+      font-weight: 400;
+      src: url('file:///Users/liangtaiyang/Library/Fonts/HarmonyOS_SansSC_Regular.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'HarmonyOS Sans SC';
+      font-weight: 700;
+      src: url('file:///Users/liangtaiyang/Library/Fonts/HarmonyOS_SansSC_Bold.ttf') format('truetype');
+    }
+    /* HM Symbol 矢量字体（用于圆形按钮占位图标 U+F0134） */
+    @font-face {
+      font-family: 'HM Symbol';
+      font-weight: 400;
+      font-style: normal;
+      src: url('file:///Users/liangtaiyang/pixso-output/assets/fonts/HMSymbolVF_1.ttf') format('truetype');
+    }
+
+    /* ── 重置 ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #e2e4ea;
+      font-family: 'HarmonyHeiTi', 'HarmonyOS Sans SC', 'PingFang SC', sans-serif;
+      padding: 40px;
+    }
+
+    /* ── 画布 ─────────────────────────────────────────── */
+    .canvas {
+      background: #fff;
+      border-radius: 12px;
+      padding: 48px 56px;
+      max-width: 980px;
+      margin: 0 auto;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+    .canvas-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: rgba(0,0,0,0.898);
+      margin-bottom: 48px;
+      font-family: 'HarmonyHeiTi', sans-serif;
+    }
+
+    /* ── Section ─────────────────────────────────────── */
+    .section { margin-bottom: 56px; }
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(0,0,0,0.35);
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      margin-bottom: 24px;
+    }
+    .variant-label {
+      font-size: 11px;
+      color: rgba(0,0,0,0.35);
+      margin-bottom: 6px;
+      font-family: 'HarmonyHeiTi', sans-serif;
+    }
+    .variant-wrap {
+      display: inline-flex;
+      flex-direction: column;
+    }
+    .row {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    /* ══════════════════════════════════════════════════
+       TitleBar 核心样式（严格对齐 Pixso DSL）
+       ══════════════════════════════════════════════════ */
+
+    /* 手机背景容器，用于视觉隔离 */
+    .phone-bg {
+      background: #f5f5f5;
+      border-radius: 4px;
+      overflow: visible;
+    }
+
+    /* ── 共用容器 ── */
+    .tb {
+      width: 328px;
+      height: 56px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+      padding: 0;
+      background: transparent;
+      flex-shrink: 0;
+    }
+
+    /* ── 圆形图标按钮（DSL cornerRadius:1000，左/右通用） ── */
+    .tb__icon-btn {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;                       /* cornerRadius:1000 → 圆形 */
+      background: rgba(0, 0, 0, 0.0470588);     /* DSL fillPaints rgba(0,0,0,0.047) */
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+      outline: none;
+      -webkit-appearance: none;
+      color: rgba(0, 0, 0, 0.8980392);          /* icon 颜色 */
+    }
+
+    /* HM Symbol 占位图标（U+F0134，24px） */
+    .tb__icon-btn .sym {
+      font-family: 'HM Symbol', sans-serif;
+      font-size: 24px;
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.8980392);
+      /* 未加载 HM Symbol 时显示 fallback SVG */
+    }
+
+    /* SVG 图标（chevron / hamburger） */
+    .tb__icon-btn svg {
+      width: 24px;
+      height: 24px;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    /* ── 中心弹性区域 ── */
+    .tb__center {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    /* ── 文字块（标题 + 副标题） ── */
+    .tb__textblock {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+      width: 100%;
+      min-width: 0;
+    }
+
+    /* 标题基础样式 */
+    .tb__title {
+      font-family: 'HarmonyHeiTi', 'HarmonyOS Sans SC', sans-serif;
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.8980392);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      line-height: 1.2;
+    }
+    /* variant 字号 */
+    .tb__title--normal    { font-size: 26px; }   /* TitleBar-Normal:         26px */
+    .tb__title--secondary { font-size: 20px; }   /* secondary page:          20px */
+    .tb__title--drawer    { font-size: 24px; }   /* Drawer:                  24px */
+    .tb__title--large     { font-size: 30px; }   /* Title with icons:        30px */
+
+    /* 副标题 */
+    .tb__subtitle {
+      font-family: 'HarmonyHeiTi', 'HarmonyOS Sans SC', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.6);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      line-height: 1.143;
+    }
+
+    /* ── 右侧 .Items 区域 ── */
+    .tb__items {
+      flex-shrink: 0;
+      width: 136px;
+      height: 56px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+    .tb__items--gap10 { gap: 10px; }   /* secondary/drawer variants gap:10px */
+
+    /* ── 文字按钮 ── */
+    .tb__text-btn {
+      flex-shrink: 0;
+      height: 40px;
+      padding: 0 12px;
+      border-radius: 50%;               /* 圆形文字按钮 */
+      border: none;
+      background: transparent;
+      font-family: 'HarmonyHeiTi', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(10, 89, 247, 1);      /* #0A59F7 */
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      outline: none;
+    }
+
+    /* ── Avatar ── */
+    .tb__avatar {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #e5e6ea;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(0,0,0,0.6);
+      overflow: hidden;
+    }
+
+    /* ══════════════════════════════════════════════════
+       TitleBar-Title with icons-Phone（大标题纵向变体）
+       DSL: 328×137px，VERTICAL layout，gap:0
+         Row1（.Items，56px）: 按钮行，右对齐
+         Row2（.title-left，81px）: 大标题 + 副标题
+       ══════════════════════════════════════════════════ */
+    .tb-large {
+      width: 328px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      background: transparent;
+    }
+    /* Row1：操作按钮行（高度 56px，内容右对齐） */
+    .tb-large__actions {
+      width: 328px;
+      height: 56px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    /* Row2：大标题区（高度 81px，padding top:8 bottom:12） */
+    .tb-large__title-area {
+      width: 328px;
+      min-height: 81px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 2px;
+      padding: 8px 0 12px 0;
+      flex-shrink: 0;
+    }
+
+    /* ── 分隔线（多行堆叠时的辅助线） ── */
+    .stack-divider {
+      width: 328px;
+      height: 1px;
+      background: rgba(0,0,0,0.06);
+    }
+  </style>
+</head>
+<body>
+<div class="canvas">
+  <div class="canvas-title">TitleBar — Benchmark</div>
+
+  <!-- ══════════════════════════════════════════════════
+       1. TitleBar-Normal-Phone
+       328×56，无左侧图标，右侧 .Items 最多 3 个圆形按钮
+       标题：HarmonyHeiTi Bold 26px
+       ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">1 — TitleBar-Normal-Phone (56px)</div>
+    <div class="row">
+
+      <div class="variant-wrap">
+        <div class="variant-label">仅标题 / 3 图标</div>
+        <div class="phone-bg">
+          <div class="tb">
+            <div class="tb__center">
+              <div class="tb__textblock">
+                <span class="tb__title tb__title--normal">Title</span>
+              </div>
+            </div>
+            <div class="tb__items">
+              <button class="tb__icon-btn" aria-label="icon1">
+                <span class="sym">󰄴</span>
+              </button>
+              <button class="tb__icon-btn" aria-label="icon2">
+                <span class="sym">󰄴</span>
+              </button>
+              <button class="tb__icon-btn" aria-label="icon3">
+                <span class="sym">󰄴</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="variant-wrap">
+        <div class="variant-label">标题 + 副标题 / 3 图标</div>
+        <div class="phone-bg">
+          <div class="tb">
+            <div class="tb__center">
+              <div class="tb__textblock">
+                <span class="tb__title tb__title--normal">Title</span>
+                <span class="tb__subtitle">Subtitle</span>
+              </div>
+            </div>
+            <div class="tb__items">
+              <button class="tb__icon-btn" aria-label="icon1">
+                <span class="sym">󰄴</span>
+              </button>
+              <button class="tb__icon-btn" aria-label="icon2">
+                <span class="sym">󰄴</span>
+              </button>
+              <button class="tb__icon-btn" aria-label="icon3">
+                <span class="sym">󰄴</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="variant-wrap">
+        <div class="variant-label">仅标题 / 1 图标</div>
+        <div class="phone-bg">
+          <div class="tb">
+            <div class="tb__center">
+              <div class="tb__textblock">
+                <span class="tb__title tb__title--normal">Title</span>
+              </div>
+            </div>
+            <div class="tb__items">
+              <button class="tb__icon-btn" aria-label="icon1">
+                <span class="sym">󰄴</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="variant-wrap">
+        <div class="variant-label">标题 + 副标题 / 文字按钮</div>
+        <div class="phone-bg">
+          <div class="tb">
+            <div class="tb__center">
+              <div class="tb__textblock">
+                <span class="tb__title tb__title--normal">Title</span>
+                <span class="tb__subtitle">Subtitle</span>
+              </div>
+            </div>
+            <div class="tb__items">
+              <button class="tb__text-btn">文字按钮</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       2. TitleBar-secondary page-Phone
+       328×56，左侧返回键（圆形按钮 + chevron svg），
+       标题：HarmonyHeiTi Bold 20px，副标题 14px
+       右侧 .Items gap:10px
+       ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">2 — TitleBar-secondary page-Phone (56px)</div>
+    <div class="row">
+
+      <div class="variant-wrap">
+        <div class="variant-label">返回 + 标题 + 副标题 / 1 图标</div>
+        <div class="phone-bg">
+          <div class="tb">
+            <button class="tb__icon-btn" aria-label="返回">
+              <!-- chevron_backward：VECTOR 路径，24×24px，居中于 40px 圆形底板 -->
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.5 5L8.5 12L15.5 19"
+                      stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="tb__center">
+              <div class="tb__textblock">
+                <span class="tb__title tb__title--secondary">Title</span>
+                <span class="tb__subtitle">Subtitle</span>
+              </div>
+            </div>
+            <div class="tb__items tb__items--gap10">
+              <button class="tb__icon-btn" aria-label="icon1">
+                <span class="sym">󰄴</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="variant-wrap">
+        <div class="variant-label">返回 + 标题 + 副标题 / 3 图标</div>
+        <div class="phone-bg">
+          <div class="tb">
+            <button class="tb__icon-btn" aria-label="返回">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.5 5L8.5 12L15.5 19"
+                      stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="tb__center">
+              <div class="tb__textblock">
+                <span class="tb__title tb__title--secondary">Title</span>
+                <span class="tb__subtitle">Subtitle</span>
+              </div>
+            </div>
+            <div class="tb__items tb__items--gap10">
+              <button class="tb__icon-btn" aria-label="icon1"><span class="sym">󰄴</span></button>
+              <button class="tb__icon-btn" aria-label="icon2"><span class="sym">󰄴</span></button>
+              <button class="tb__icon-btn" aria-label="icon3"><span class="sym">󰄴</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="variant-wrap">
+        <div class="variant-label">返回 + 标题 + 副标题 / 文字按钮</div>
+        <div class="phone-bg">
+          <div class="tb">
+            <button class="tb__icon-btn" aria-label="返回">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.5 5L8.5 12L15.5 19"
+                      stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="tb__center">
+              <div class="tb__textblock">
+                <span class="tb__title tb__title--secondary">Title</span>
+                <span class="tb__subtitle">Subtitle</span>
+              </div>
+            </div>
+            <div class="tb__items tb__items--gap10">
+              <button class="tb__text-btn">文字按钮</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="variant-wrap">
+        <div class="variant-label">返回 + 头像（Avatar 中心）</div>
+        <div class="phone-bg">
+          <div class="tb">
+            <button class="tb__icon-btn" aria-label="返回">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.5 5L8.5 12L15.5 19"
+                      stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="tb__center">
+              <!-- avatar 替代文字块 -->
+              <div class="tb__avatar">G</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       3. TitleBar-Drawer-Phone
+       328×56，左侧汉堡菜单（圆形按钮 + hamburger svg），
+       标题：HarmonyHeiTi Bold 24px，无副标题
+       右侧 .Items gap:10px
+       ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">3 — TitleBar-Drawer-Phone (56px)</div>
+    <div class="row">
+
+      <div class="variant-wrap">
+        <div class="variant-label">汉堡 + 标题 / 1 图标</div>
+        <div class="phone-bg">
+          <div class="tb">
+            <button class="tb__icon-btn" aria-label="导航菜单">
+              <!-- line.3.horizontal（HarmonyOS Symbol hamburger）-->
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6h16M4 12h16M4 18h16"
+                      stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="tb__center">
+              <div class="tb__textblock">
+                <span class="tb__title tb__title--drawer">Title</span>
+              </div>
+            </div>
+            <div class="tb__items tb__items--gap10">
+              <button class="tb__icon-btn" aria-label="icon1">
+                <span class="sym">󰄴</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="variant-wrap">
+        <div class="variant-label">汉堡 + 标题 / 3 图标</div>
+        <div class="phone-bg">
+          <div class="tb">
+            <button class="tb__icon-btn" aria-label="导航菜单">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6h16M4 12h16M4 18h16"
+                      stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="tb__center">
+              <div class="tb__textblock">
+                <span class="tb__title tb__title--drawer">Title</span>
+              </div>
+            </div>
+            <div class="tb__items tb__items--gap10">
+              <button class="tb__icon-btn" aria-label="icon1"><span class="sym">󰄴</span></button>
+              <button class="tb__icon-btn" aria-label="icon2"><span class="sym">󰄴</span></button>
+              <button class="tb__icon-btn" aria-label="icon3"><span class="sym">󰄴</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       4. TitleBar-Title with icons-Phone
+       328×137，VERTICAL layout，gap:0
+         Row1（56px）: 右对齐圆形操作按钮
+         Row2（81px，padding top:8 bottom:12）: 大标题 + 副标题
+       标题：HarmonyHeiTi Bold 30px
+       ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">4 — TitleBar-Title with icons-Phone (137px，大标题纵向)</div>
+    <div class="row">
+
+      <div class="variant-wrap">
+        <div class="variant-label">大标题 + 副标题 / 3 图标</div>
+        <div class="phone-bg">
+          <div class="tb-large">
+            <!-- Row1: 操作按钮，右对齐 -->
+            <div class="tb-large__actions">
+              <button class="tb__icon-btn" aria-label="icon1"><span class="sym">󰄴</span></button>
+              <button class="tb__icon-btn" aria-label="icon2"><span class="sym">󰄴</span></button>
+              <button class="tb__icon-btn" aria-label="icon3"><span class="sym">󰄴</span></button>
+            </div>
+            <!-- Row2: 大标题 + 副标题 -->
+            <div class="tb-large__title-area">
+              <span class="tb__title tb__title--large">Title</span>
+              <span class="tb__subtitle">Subtitle</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="variant-wrap">
+        <div class="variant-label">大标题 / 无副标题 / 3 图标</div>
+        <div class="phone-bg">
+          <div class="tb-large">
+            <div class="tb-large__actions">
+              <button class="tb__icon-btn" aria-label="icon1"><span class="sym">󰄴</span></button>
+              <button class="tb__icon-btn" aria-label="icon2"><span class="sym">󰄴</span></button>
+              <button class="tb__icon-btn" aria-label="icon3"><span class="sym">󰄴</span></button>
+            </div>
+            <div class="tb-large__title-area">
+              <span class="tb__title tb__title--large">Title</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="variant-wrap">
+        <div class="variant-label">大标题 + 副标题 / 1 图标</div>
+        <div class="phone-bg">
+          <div class="tb-large">
+            <div class="tb-large__actions">
+              <button class="tb__icon-btn" aria-label="icon1"><span class="sym">󰄴</span></button>
+            </div>
+            <div class="tb-large__title-area">
+              <span class="tb__title tb__title--large">Title</span>
+              <span class="tb__subtitle">Subtitle</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       5. 手机视口全量对照（328px 等宽纵向堆叠）
+       精确还原 Pixso 设计稿中 4 个变体的排列顺序
+       ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">5 — 手机视口全量对照（328px）</div>
+    <div class="row">
+
+      <div class="variant-wrap">
+        <div class="variant-label">所有变体纵向排列</div>
+        <div style="width:328px; background:#f5f5f5; border-radius:8px; overflow:hidden;">
+
+          <!-- secondary page -->
+          <div class="tb" style="border-bottom:1px solid rgba(0,0,0,0.06);">
+            <button class="tb__icon-btn" aria-label="返回">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M15.5 5L8.5 12L15.5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="tb__center">
+              <div class="tb__textblock">
+                <span class="tb__title tb__title--secondary">Title</span>
+                <span class="tb__subtitle">Subtitle</span>
+              </div>
+            </div>
+            <div class="tb__items tb__items--gap10">
+              <button class="tb__icon-btn"><span class="sym">󰄴</span></button>
+            </div>
+          </div>
+
+          <!-- drawer -->
+          <div class="tb" style="border-bottom:1px solid rgba(0,0,0,0.06);">
+            <button class="tb__icon-btn" aria-label="导航菜单">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="tb__center">
+              <div class="tb__textblock">
+                <span class="tb__title tb__title--drawer">Title</span>
+              </div>
+            </div>
+            <div class="tb__items tb__items--gap10">
+              <button class="tb__icon-btn"><span class="sym">󰄴</span></button>
+            </div>
+          </div>
+
+          <!-- normal -->
+          <div class="tb" style="border-bottom:1px solid rgba(0,0,0,0.06);">
+            <div class="tb__center">
+              <div class="tb__textblock">
+                <span class="tb__title tb__title--normal">Title</span>
+              </div>
+            </div>
+            <div class="tb__items">
+              <button class="tb__icon-btn"><span class="sym">󰄴</span></button>
+              <button class="tb__icon-btn"><span class="sym">󰄴</span></button>
+              <button class="tb__icon-btn"><span class="sym">󰄴</span></button>
+            </div>
+          </div>
+
+          <!-- title with icons -->
+          <div class="tb-large" style="border-bottom:1px solid rgba(0,0,0,0.06);">
+            <div class="tb-large__actions">
+              <button class="tb__icon-btn"><span class="sym">󰄴</span></button>
+              <button class="tb__icon-btn"><span class="sym">󰄴</span></button>
+              <button class="tb__icon-btn"><span class="sym">󰄴</span></button>
+            </div>
+            <div class="tb-large__title-area">
+              <span class="tb__title tb__title--large">Title</span>
+              <span class="tb__subtitle">Subtitle</span>
+            </div>
+          </div>
+
+          <!-- normal with subtitle -->
+          <div class="tb">
+            <div class="tb__center">
+              <div class="tb__textblock">
+                <span class="tb__title tb__title--normal">Title</span>
+                <span class="tb__subtitle">Subtitle</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       6. 按钮元素独立展示（圆形底板、icon 占位、文字按钮）
+       ══════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-label">6 — 元素拆分：圆形图标按钮 / 文字按钮</div>
+    <div class="row" style="align-items:center;">
+
+      <div class="variant-wrap">
+        <div class="variant-label">单字图标按钮（40×40，圆形）</div>
+        <button class="tb__icon-btn"><span class="sym">󰄴</span></button>
+      </div>
+
+      <div class="variant-wrap">
+        <div class="variant-label">chevron_backward（返回）</div>
+        <button class="tb__icon-btn">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15.5 5L8.5 12L15.5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <div class="variant-wrap">
+        <div class="variant-label">line.3.horizontal（抽屉菜单）</div>
+        <button class="tb__icon-btn">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <div class="variant-wrap">
+        <div class="variant-label">3 图标组（.Items，136px 宽）</div>
+        <div style="width:136px;height:56px;display:flex;align-items:center;justify-content:flex-end;gap:8px;">
+          <button class="tb__icon-btn"><span class="sym">󰄴</span></button>
+          <button class="tb__icon-btn"><span class="sym">󰄴</span></button>
+          <button class="tb__icon-btn"><span class="sym">󰄴</span></button>
+        </div>
+      </div>
+
+      <div class="variant-wrap">
+        <div class="variant-label">文字按钮（#0A59F7）</div>
+        <button class="tb__text-btn">文字按钮</button>
+      </div>
+
+      <div class="variant-wrap">
+        <div class="variant-label">Avatar（40×40，圆形）</div>
+        <div class="tb__avatar">G</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

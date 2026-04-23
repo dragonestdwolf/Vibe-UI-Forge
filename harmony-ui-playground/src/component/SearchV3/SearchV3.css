@@ -1,0 +1,389 @@
+/* ============================================================
+   SearchV3 — harmony-search-primary + harmony-search-second
+   Pixso: 3208:426（primary）/ 40:33944（secondary）
+   ============================================================ */
+
+/* ============================================================
+   1. Primary 容器
+   328×40, border-radius 24, fill rgba(0,0,0,0.047)
+   ============================================================ */
+.my-search-v3--primary {
+  width: 328px;
+  height: 40px;
+  border-radius: 24px;
+  background: var(--devui-embed-search-bg, rgba(0, 0, 0, 0.047));
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  transition:
+    background var(--devui-animation-duration-base, 300ms) var(--devui-animation-ease-in-out, ease),
+    box-shadow var(--devui-animation-duration-fast, 150ms) var(--devui-animation-ease-in-out, ease);
+}
+
+/* Search=OFF: padding T9 R12 B9 L12, gap 8（spec §1.1） */
+.my-search-v3--primary.is-off {
+  padding: 9px 12px;
+  gap: 8px;
+}
+
+/* Search=ON: padding T4 R4 B4 L12, gap 8（spec §1.1） */
+.my-search-v3--primary.is-on {
+  padding: 4px 4px 4px 12px;
+  gap: 8px;
+}
+
+/* ── Primary States（spec §2.1）────────────────────────── */
+
+/* Hover: fill rgba(0,0,0,0.08) */
+.my-search-v3--primary.is-hover {
+  background: var(--devui-embed-search-bg-hover, rgba(0, 0, 0, 0.08));
+}
+
+/* Press: fill rgba(0,0,0,0.12) */
+.my-search-v3--primary.is-press {
+  background: var(--devui-embed-search-bg-press, rgba(0, 0, 0, 0.12));
+}
+
+/* Focus(OFF): pill 整体 inset 2px brand */
+.my-search-v3--primary.is-off.is-focus {
+  box-shadow: inset 0 0 0 2px var(--devui-primary, #0a59f7);
+}
+
+/* Focus(ON): Search 按钮获得 inset 2px brand */
+.my-search-v3--primary.is-on.is-focus .my-search-v3__btn {
+  box-shadow: inset 0 0 0 2px var(--devui-primary, #0a59f7);
+}
+
+/* Actived / Typing: field 背景变 comp_background_tertiary */
+.my-search-v3--primary.is-actived {
+  background: var(--harmony-comp-background-tertiary, var(--devui-embed-search-bg, rgba(0, 0, 0, 0.047)));
+}
+
+/* Output(ON): __btn 获得 surface 背景，表示当前有搜索结果 */
+.my-search-v3--primary.is-on.is-output .my-search-v3__btn {
+  background: var(--devui-embed-search-bg, rgba(0, 0, 0, 0.047));
+}
+
+/* icon-hover: 语音按钮背景加深 */
+.my-search-v3--primary.is-icon-hover .my-search-v3__voice {
+  background: var(--devui-embed-search-bg-hover, rgba(0, 0, 0, 0.08));
+}
+
+/* icon-focus: 语音按钮 inset 2px brand */
+.my-search-v3--primary.is-icon-focus .my-search-v3__voice {
+  box-shadow: inset 0 0 0 2px var(--devui-primary, #0a59f7);
+}
+
+/* icon-press: 语音按钮背景压暗 */
+.my-search-v3--primary.is-icon-press .my-search-v3__voice {
+  background: var(--devui-embed-search-bg-press, rgba(0, 0, 0, 0.12));
+}
+
+/* Disabled */
+.my-search-v3--primary.is-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* CSS :hover/:active 自然交互 */
+.my-search-v3--primary:hover:not(.is-actived):not(.is-disabled):not(.is-hover):not(.is-press) {
+  background: var(--devui-embed-search-bg-hover, rgba(0, 0, 0, 0.08));
+}
+.my-search-v3--primary:active:not(.is-actived):not(.is-disabled):not(.is-press) {
+  background: var(--devui-embed-search-bg-press, rgba(0, 0, 0, 0.12));
+}
+
+/* ============================================================
+   2. Primary Inner（__inner）
+   flex:1 1 0 以免挤压右侧 action slot，gap 8
+   ============================================================ */
+.my-search-v3__inner {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── icon 按钮包装（触发搜索，tabIndex=-1） */
+.my-search-v3__icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--devui-aide-text, rgba(0, 0, 0, 0.6));
+  line-height: 0;
+  transition: color var(--devui-animation-duration-fast, 150ms) ease;
+}
+
+.my-search-v3--primary.is-actived .my-search-v3__icon-btn {
+  color: var(--devui-primary, #0a59f7);
+}
+
+/* ── 搜索图标（18×18，flex-shrink:0，禁止拉伸） */
+.my-search-v3__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  line-height: 0;
+}
+
+/* ── 输入框（fontSize 16px，Regular placeholder / Medium value） */
+.my-search-v3__input {
+  flex: 1 1 0;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--devui-text, rgba(0, 0, 0, 0.898));
+  font-size: var(--devui-font-size-lg, 16px);
+  font-family: var(--devui-font-family-sans, sans-serif);
+  font-weight: 500;
+  line-height: 1;
+  caret-color: var(--devui-primary, #0a59f7);
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.my-search-v3__input::placeholder {
+  color: var(--devui-aide-text, rgba(0, 0, 0, 0.6));
+  font-weight: 400;
+}
+
+.my-search-v3__input:disabled {
+  cursor: not-allowed;
+}
+
+/* 清除浏览器默认 search 样式 */
+.my-search-v3__input[type="search"]::-webkit-search-decoration,
+.my-search-v3__input[type="search"]::-webkit-search-cancel-button,
+.my-search-v3__input[type="search"]::-webkit-search-results-button,
+.my-search-v3__input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+/* ── 清除按钮（16×16，仅有值时渲染节点） */
+.my-search-v3__clear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--devui-icon-fill-weak, rgba(0, 0, 0, 0.4));
+  line-height: 0;
+  transition: color var(--devui-animation-duration-fast, 150ms) ease;
+}
+
+.my-search-v3__clear:hover {
+  color: var(--devui-icon-fill-hover, rgba(0, 0, 0, 0.6));
+}
+
+/* ============================================================
+   3. Primary Action Slot（Search=ON）
+   总宽约 109px = voice 32 + gap 4 + divider 1 + gap 4 + btn min-width 68
+   ============================================================ */
+.my-search-v3__action {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+/* 语音按钮：32×32, cornerRadius 16, fill rgba(0,0,0,0.047) */
+.my-search-v3__voice {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: none;
+  background: var(--devui-embed-search-bg, rgba(0, 0, 0, 0.047));
+  color: var(--devui-icon-fill, rgba(0, 0, 0, 0.6));
+  cursor: pointer;
+  padding: 0;
+  line-height: 0;
+  transition:
+    background var(--devui-animation-duration-fast, 150ms) ease,
+    box-shadow var(--devui-animation-duration-fast, 150ms) ease;
+}
+
+.my-search-v3__voice:hover:not(:disabled) {
+  background: var(--devui-embed-search-bg-hover, rgba(0, 0, 0, 0.08));
+}
+
+.my-search-v3__voice:active:not(:disabled) {
+  background: var(--devui-embed-search-bg-press, rgba(0, 0, 0, 0.12));
+}
+
+/* 分隔线：1×12, cornerRadius 1, fill rgba(0,0,0,0.047) */
+.my-search-v3__divider {
+  width: 1px;
+  height: 12px;
+  border-radius: 1px;
+  background: var(--devui-embed-search-bg, rgba(0, 0, 0, 0.047));
+  flex-shrink: 0;
+}
+
+/* 搜索按钮：min-width 68, height 32, cornerRadius 18, padding 6/12
+   fontSize 14px Medium, color brand */
+.my-search-v3__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 68px;
+  height: 32px;
+  border-radius: 18px;
+  padding: 6px 12px;
+  border: none;
+  background: transparent;
+  color: var(--devui-primary, #0a59f7);
+  font-size: var(--devui-font-size, 14px);
+  font-weight: 500;
+  font-family: var(--devui-font-family-sans, sans-serif);
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    background var(--devui-animation-duration-fast, 150ms) ease,
+    box-shadow var(--devui-animation-duration-fast, 150ms) ease;
+}
+
+.my-search-v3__btn:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.my-search-v3__btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+/* ============================================================
+   4. Secondary 容器
+   flex row: [back 40] + [field flex:1] + [scan 40], gap 8
+   ============================================================ */
+.my-search-v3--secondary {
+  width: 328px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── 两侧按钮（40×40，cornerRadius 1000，fill rgba(0,0,0,0.047)）*/
+.my-search-v3__side {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: none;
+  background: var(--devui-embed-search-bg, rgba(0, 0, 0, 0.047));
+  color: var(--devui-text, rgba(0, 0, 0, 0.898));
+  cursor: pointer;
+  padding: 0;
+  line-height: 0;
+  transition:
+    background var(--devui-animation-duration-base, 300ms) ease,
+    box-shadow var(--devui-animation-duration-fast, 150ms) ease;
+}
+
+.my-search-v3__side:disabled {
+  cursor: not-allowed;
+}
+
+/* ── 搜索栏（field）：flex:1, height 40, cornerRadius 24, padding T9 R12 B9 L12 */
+.my-search-v3__field {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 40px;
+  border-radius: 24px;
+  background: var(--devui-embed-search-bg, rgba(0, 0, 0, 0.047));
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  cursor: text;
+  transition:
+    background var(--devui-animation-duration-base, 300ms) ease,
+    border-color var(--devui-animation-duration-fast, 150ms) ease;
+}
+
+/* field 内搜索图标 color rgba(0,0,0,0.6) */
+.my-search-v3__field .my-search-v3__icon {
+  color: var(--devui-aide-text, rgba(0, 0, 0, 0.6));
+}
+
+/* ── Secondary States（spec §2.2）────────────────────────── */
+
+/* Hover: 两侧按钮 + field 均加深 */
+.my-search-v3--secondary.is-hover .my-search-v3__side,
+.my-search-v3--secondary.is-hover .my-search-v3__field {
+  background: var(--devui-embed-search-bg-hover, rgba(0, 0, 0, 0.08));
+}
+
+/* Press: 返回按钮背景压暗 */
+.my-search-v3--secondary.is-press .my-search-v3__side--back {
+  background: var(--devui-embed-search-bg-press, rgba(0, 0, 0, 0.12));
+}
+
+/* Focus(back): 返回按钮 inset 2px brand */
+.my-search-v3--secondary.is-focus .my-search-v3__side--back {
+  box-shadow: inset 0 0 0 2px var(--devui-primary, #0a59f7);
+}
+
+/* Focus(field): field border 2px brand */
+.my-search-v3--secondary.is-focus-field .my-search-v3__field {
+  border-color: var(--devui-primary, #0a59f7);
+}
+
+/* Actived / Typing: field 背景变 comp_background_tertiary */
+.my-search-v3--secondary.is-actived .my-search-v3__field {
+  background: var(--harmony-comp-background-tertiary, var(--devui-embed-search-bg, rgba(0, 0, 0, 0.047)));
+}
+
+/* icon-hover: 扫码按钮背景加深 */
+.my-search-v3--secondary.is-icon-hover .my-search-v3__side--scan {
+  background: var(--devui-embed-search-bg-hover, rgba(0, 0, 0, 0.08));
+}
+
+/* icon-focus: 扫码按钮 inset 2px brand */
+.my-search-v3--secondary.is-icon-focus .my-search-v3__side--scan {
+  box-shadow: inset 0 0 0 2px var(--devui-primary, #0a59f7);
+}
+
+/* icon-press: 扫码按钮背景压暗 */
+.my-search-v3--secondary.is-icon-press .my-search-v3__side--scan {
+  background: var(--devui-embed-search-bg-press, rgba(0, 0, 0, 0.12));
+}
+
+/* Disabled */
+.my-search-v3--secondary.is-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* CSS :hover 自然交互 */
+.my-search-v3--secondary:not(.is-hover):not(.is-disabled):hover .my-search-v3__side,
+.my-search-v3--secondary:not(.is-hover):not(.is-disabled):hover .my-search-v3__field {
+  background: var(--devui-embed-search-bg-hover, rgba(0, 0, 0, 0.08));
+}

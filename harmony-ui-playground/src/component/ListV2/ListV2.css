@@ -1,0 +1,250 @@
+/* ============================================================
+   ListV2 — harmony-list + harmony-list-item
+   Benchmark: HistoryRender/Component/list/benchmark.html
+   Pixso: component_mcp 62:35191 / target_thumbnail_mcp 3252:487
+   ============================================================ */
+
+/* ============================================================
+   1. 容器（list group card）
+   328px, border-radius 14px, overflow hidden
+   边框颜色对应 benchmark: harmony-x-legacy-overlay-004
+   ============================================================ */
+.my-list {
+  width: 328px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--devui-dividing-line, rgba(0, 0, 0, 0.04));
+  background: var(--devui-base-bg, #ffffff);
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   2. list item 基础
+   padding: 0 12px（spec §4.1 水平边距 12/12）
+   分隔线：下边框，颜色对应 DSL overlay-020 = rgba(0,0,0,0.20)
+   ============================================================ */
+.my-list-item {
+  width: 100%;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid var(--devui-line, rgba(0, 0, 0, 0.20));
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  background: var(--devui-base-bg, #ffffff);
+  text-align: left;
+  font: inherit;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background var(--devui-animation-duration-fast, 150ms) ease;
+}
+
+/* 最后一行无分隔线（spec §1.2 Separator Derivation Guard） */
+.my-list-item:last-child {
+  border-bottom: 0;
+}
+
+/* ============================================================
+   3. 状态 overlay 层（::after 伪元素避免影响内容层叠）
+   benchmark: .hm-list-item::after 模式
+   ============================================================ */
+.my-list-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  pointer-events: none;
+  transition: background var(--devui-animation-duration-fast, 150ms) ease;
+}
+
+/* Hover: overlay rgba(0,0,0,0.047) — benchmark: ls-overlay-hover */
+.my-list-item:hover::after,
+.my-list-item.is-hover::after {
+  background: var(--devui-embed-search-bg, rgba(0, 0, 0, 0.047));
+}
+
+/* Pressed: overlay rgba(0,0,0,0.098) — benchmark: ls-overlay-pressed */
+.my-list-item:active::after,
+.my-list-item.is-pressed::after {
+  background: var(--devui-embed-search-bg-press, rgba(0, 0, 0, 0.098));
+}
+
+/* Selected: background brand-008 = rgba(10,89,247,0.08) */
+.my-list-item.is-selected {
+  background: var(--devui-selected-bg, rgba(10, 89, 247, 0.08));
+}
+
+/* Focus: outline 2px brand-035 = rgba(10,89,247,0.35), inset */
+.my-list-item.is-focus {
+  outline: 2px solid var(--devui-focus-outline, rgba(10, 89, 247, 0.35));
+  outline-offset: -2px;
+}
+
+/* Disabled: opacity 0.4, pointer-events none */
+.my-list-item.is-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* ============================================================
+   4. 行高规格（spec §4.1 高度矩阵）
+   ============================================================ */
+.my-list-item--single    { min-height: 48px; } /* 1 行 Medium */
+.my-list-item--single-lg { min-height: 56px; } /* 1 行 Large  */
+.my-list-item--single-xl { min-height: 64px; } /* 1 行 XL     */
+.my-list-item--double    { min-height: 64px; } /* 2 行 Medium */
+.my-list-item--double-lg { min-height: 72px; } /* 2 行 Large  */
+.my-list-item--triple    { min-height: 96px; } /* 3 行 Medium */
+.my-list-item--avatar    { min-height: 56px; } /* Avatar leading */
+.my-list-item--appicon   { min-height: 64px; } /* AppIcon leading */
+
+/* ============================================================
+   5. Leading Rail
+   flex-shrink:0，通过 margin-right 与 content rail 分隔
+   ============================================================ */
+.my-list-item__leading {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* leading gap: 8px（badge/icon 类） */
+.my-list-item__leading--g8 {
+  margin-right: 8px;
+}
+
+/* leading gap: 16px（avatar/appicon 类，默认） */
+.my-list-item__leading--g16 {
+  margin-right: 16px;
+}
+
+/* Avatar: 40×40, border-radius 10 — benchmark: left-1=40dp_ic */
+.my-list-item__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  background: var(--devui-primary, rgba(10, 89, 247, 0.15));
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--devui-primary, #0a59f7);
+}
+
+/* AppIcon: 48×48, border-radius 12 — benchmark: left-1=48dp_ic */
+.my-list-item__appicon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  background: var(--devui-selected-bg, rgba(10, 89, 247, 0.08));
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================================
+   6. Content Rail = __main（copy + trailing）
+   flex:1，min-width:0 防止文字溢出破坏布局
+   content rail 起点由 leading 推导，无需 magic number
+   ============================================================ */
+.my-list-item__main {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ============================================================
+   7. Copy Rail（title + subtitle 纵向堆叠）
+   ============================================================ */
+.my-list-item__copy {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+/* 主标题: 16px Medium, color text-primary */
+.my-list-item__title {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: var(--devui-text, rgba(0, 0, 0, 0.898));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  padding: 0;
+}
+
+/* 副标题: 14px Regular, color text-secondary */
+.my-list-item__subtitle {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--devui-aide-text, rgba(0, 0, 0, 0.6));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   8. Trailing Rail
+   flex-shrink:0，padding-left 8px，右对齐，white-space:nowrap
+   ============================================================ */
+.my-list-item__trailing {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-left: 8px;
+  white-space: nowrap;
+}
+
+/* Trailing 辅助文字: 14px, color text-secondary */
+.my-list-item__trailing-text {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--devui-aide-text, rgba(0, 0, 0, 0.6));
+}
+
+/* Arrow: 12×24 容器，chevron-right，color overlay-020 = rgba(0,0,0,0.20) */
+.my-list-item__arrow {
+  width: 12px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--devui-icon-fill-weak, rgba(0, 0, 0, 0.20));
+  line-height: 0;
+}
+
+/* Dot indicator: 8×8, #46b1e3 — benchmark: ic/12x24/Light/Public_dots */
+.my-list-item__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(70, 177, 227, 1);
+  flex-shrink: 0;
+}
+
+/* 自定义 trailing extra 容器 */
+.my-list-item__trailing-custom {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
