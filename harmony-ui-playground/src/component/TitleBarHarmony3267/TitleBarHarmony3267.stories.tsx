@@ -26,9 +26,10 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
+/** 仅限制宽度；标题栏本身无底色，铺在 decorator 的灰底上。 */
 export const Default: Story = {
   render: (args) => (
-    <div className="w-[360px] max-w-full rounded-[20px] bg-white p-3 shadow-sm">
+    <div className="w-[360px] max-w-full">
       <TitleBarHarmony3267 {...args} />
     </div>
   ),
@@ -40,7 +41,7 @@ export const NoSubtitle: Story = {
     title: "仅主标题",
   },
   render: (args) => (
-    <div className="w-[360px] max-w-full rounded-[20px] bg-white p-3 shadow-sm">
+    <div className="w-[360px] max-w-full">
       <TitleBarHarmony3267 {...args} />
     </div>
   ),
@@ -56,7 +57,7 @@ export const SingleRightIcon: Story = {
     ],
   },
   render: (args) => (
-    <div className="w-[360px] max-w-full rounded-[20px] bg-white p-3 shadow-sm">
+    <div className="w-[360px] max-w-full">
       <TitleBarHarmony3267 {...args} />
     </div>
   ),
