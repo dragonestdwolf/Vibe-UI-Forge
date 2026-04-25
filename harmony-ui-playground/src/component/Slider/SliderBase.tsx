@@ -64,6 +64,7 @@ export function SliderBase({
     "--hmy-slider-inactive": inactiveColor,
     "--hmy-slider-thumb": thumbColor,
     "--hmy-slider-percent": `${percent}%`,
+    "--hmy-thumb-offset": percent <= 40 ? "-100%" : "-50%",
   } as CSSProperties
 
   const emit = (nextValue: number) => {
