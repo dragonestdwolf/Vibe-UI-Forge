@@ -412,8 +412,11 @@ export const PixsoSlider = forwardRef<HTMLDivElement, PixsoSliderProps>(
       .filter(Boolean)
       .join(" ")
 
-    const renderRow = () => (
-      <div className="pixso-slider__row">{trackEl}</div>
+    /* Pixso 各类型行内边距见 DSL 3286:12112/12126/12131/12165/12168 等；轨宽 336 落在 360 水平 12+336+12 */
+    const renderRow = (rowClass = "") => (
+      <div className={["pixso-slider__row", rowClass].filter(Boolean).join(" ")}>
+        {trackEl}
+      </div>
     )
 
     let content: ReactNode = renderRow()
@@ -430,7 +433,7 @@ export const PixsoSlider = forwardRef<HTMLDivElement, PixsoSliderProps>(
 
     if (type === "valueWithChange") {
       content = (
-        <div className="pixso-slider__row">
+        <div className="pixso-slider__row pixso-slider__row--pad-24-10">
           <span className="pixso-slider__delta-leading">
             {leadingText ?? "+"}
           </span>
@@ -462,7 +465,7 @@ export const PixsoSlider = forwardRef<HTMLDivElement, PixsoSliderProps>(
             <span className="pixso-slider__title">{title}</span>
             <span className="pixso-slider__icon">{leadingIcon}</span>
           </div>
-          <div className="pixso-slider__row">{trackEl}</div>
+          {renderRow()}
         </>
       )
     }
@@ -476,7 +479,7 @@ export const PixsoSlider = forwardRef<HTMLDivElement, PixsoSliderProps>(
               {subtitle ?? `${Math.round(safeValue)}`}
             </span>
           </div>
-          {renderRow()}
+          {renderRow("pixso-slider__row--pad-24-10")}
         </>
       )
     }
@@ -484,7 +487,7 @@ export const PixsoSlider = forwardRef<HTMLDivElement, PixsoSliderProps>(
     if (type === "textview") {
       content = (
         <>
-          {renderRow()}
+          {renderRow("pixso-slider__row--pad-24-10")}
           <div className="pixso-slider__textview">
             <span>{textviewLeft}</span>
             <span>{textviewRight}</span>

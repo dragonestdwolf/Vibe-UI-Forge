@@ -23,7 +23,16 @@
   --pixso-thumb-d: 12px;
   --pixso-thumb-overlay: 24px;     /* hover halo */
   --pixso-row-h: 40px;
-  --pixso-row-padding: 12px;
+  /* Pixso 3286:12112 类型=Basic：autoLayout padding L=12 R=12 T=10 B=10 */
+  --pixso-row-pad-x: 12px;
+  --pixso-row-pad-y: 10px;
+  /* 3286:12165 类型=Basic（Title）、3286:12168（Textview）：L/R=24, T/B=10 */
+  --pixso-row-pad-x-wide: 24px;
+  /*
+   * 粗轨激活层（.Items 3286:12175 画板1）：宽 140；圆点 Oval11 在父内 l=124，圆心=130。
+   * 即：填充末端 = 圆心 + 半径(6) + 4px（与稿一致），见 DSL。
+   */
+  --pixso-fill-past-thumb: 4px;
 }
 
 /* ---------- 容器 ---------- */
@@ -44,18 +53,40 @@
   width: 100%;
 }
 
+/* 3286:12137 类型=Value：整体底部 +4；3286:12167 Textview 同理 */
+.pixso-slider--value,
+.pixso-slider--textview {
+  padding-bottom: 4px;
+}
+
+/* 3286:12161 类型=Title：symbol 顶部 +12；3286:12147 iconWithTitle：顶部 +16 */
+.pixso-slider--title {
+  padding-top: 12px;
+}
+
+.pixso-slider--iconWithTitle {
+  padding-top: 16px;
+}
+
 .pixso-slider__row {
   display: flex;
   align-items: center;
   gap: 8px;
-  height: var(--pixso-row-h);
-  padding: 0 var(--pixso-row-padding);
   box-sizing: border-box;
+  min-height: var(--pixso-row-h);
+  /* 10+20+10 = 40，与 3286:12112/12115/12138/12154/12148 一致 */
+  padding: var(--pixso-row-pad-y) var(--pixso-row-pad-x);
 }
 
+/* 3286:12126 类型=Icon：L/R=24，纵向由行高 40 + align-items 居中 20px 轨 */
 .pixso-slider__row--icon {
-  padding: 0 24px;
+  padding: 0 var(--pixso-row-pad-x-wide);
   gap: 8px;
+}
+
+/* 3286:12131 Value with text change 外框 24+inner Basic 10 竖向；12165/12168 轨行 24+10 */
+.pixso-slider__row--pad-24-10 {
+  padding: var(--pixso-row-pad-y) var(--pixso-row-pad-x-wide);
 }
 
 .pixso-slider__icon {
@@ -145,10 +176,16 @@
   transition: box-shadow 0.18s ease;
 }
 
+/* 与 DSL：圆心=percent% 宽；画板1 右端=圆心+6+4（3286:12175/12176 家族） */
 .pixso-slider__fill {
   position: absolute;
   inset: 0 auto 0 0;
-  width: var(--pixso-percent, 0%);
+  width: min(
+    100%,
+    calc(
+      var(--pixso-percent, 0%) + var(--pixso-thumb-d) / 2 + var(--pixso-fill-past-thumb)
+    )
+  );
   border-radius: var(--pixso-track-radius);
   background: var(--pixso-track-fill);
   pointer-events: none;
@@ -322,10 +359,11 @@
   background: var(--pixso-seek-track-bg);
 }
 
+/* 3286:12187 上蓝条矩形 107w；3286:12190 圆心 119-12(轨起点)=107 — 与稿一致，不加半直径 */
 .pixso-seekbar__fill {
   position: absolute;
   inset: 0 auto 0 0;
-  width: var(--pixso-percent, 0%);
+  width: min(100%, var(--pixso-percent, 0%));
   height: 100%;
   border-radius: 999px;
   background: var(--pixso-seek-track-fill);
