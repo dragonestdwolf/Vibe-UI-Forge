@@ -82,6 +82,15 @@ export const PublicComponents = {
 export { SceneModeCard } from "./SceneModeCard"
 export type { SceneModeCardProps, SceneModeCardSize } from "./SceneModeCard"
 
+export { FeaturePromoCard } from "./FeaturePromoCard"
+export type { FeaturePromoCardProps } from "./FeaturePromoCard"
+
+export { PixsoListRowMedium } from "./PixsoListRowMedium"
+export type { PixsoListRowMediumProps } from "./PixsoListRowMedium"
+
+export { ScrollBar } from "./ScrollBar"
+export type { ScrollBarProps, ScrollBarState } from "./ScrollBar"
+
 export { ServiceCard, ServiceCardItem, ServiceCardStatus } from "./ServiceCard"
 export type {
   ServiceCardItemProps,

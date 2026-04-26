@@ -1,0 +1,64 @@
+/**
+ * Pixso 3252:489 — 单行 Medium 列表行（与 ListItem 主/辅色与分隔线一致）
+ */
+.pixso-list-row-medium {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 56px;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  user-select: none;
+}
+
+.pixso-list-row-medium[role="button"] {
+  cursor: pointer;
+  outline: none;
+}
+
+.pixso-list-row-medium[role="button"]:focus-visible {
+  outline: 2px solid rgba(25, 137, 250, 0.35);
+  outline-offset: -2px;
+}
+
+.pixso-list-row-medium__left {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.pixso-list-row-medium__right {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.pixso-list-row-medium__right-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+}
+
+.pixso-list-row-medium__chevron {
+  flex-shrink: 0;
+  color: rgba(0, 0, 0, 0.45);
+}
