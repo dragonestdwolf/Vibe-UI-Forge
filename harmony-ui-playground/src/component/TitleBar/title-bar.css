@@ -1,10 +1,11 @@
 .title-bar {
-  width: 100%;
+  width: 328px;
   height: 56px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   gap: 8px;
+  padding: 7px 0;
 }
 
 .title-bar__left-slot {
@@ -62,9 +63,9 @@
   align-items: center;
   justify-content: center;
   color: rgba(0, 0, 0, 0.8980392217636108);
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19;
   white-space: nowrap;
 }
 
@@ -93,7 +94,7 @@
   color: rgba(0, 0, 0, 0.8980392217636108);
   font-size: 20px;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 23px;
   letter-spacing: 0;
   text-align: left;
   white-space: nowrap;
@@ -106,7 +107,7 @@
   color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 16px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
