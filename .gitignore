@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Storybook
+storybook-static/
+
+# IDE
+.vscode/
+.idea/
+# Local Cursor MCP (tokens); use .cursor/mcp.json.example for templates
+.cursor/mcp.json
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Testing
+coverage/
+
+# Temporary
+*.tmp
+*.temp

@@ -1,0 +1,83 @@
+/**
+ * ScenarioModePageV3 — page-level styles
+ *
+ * Spec: settings-context-list.md
+ *
+ * - Card rail (scroll-snap horizontal track per layout spec)
+ * - Pagination dots
+ * - List card highlight button
+ * - Footnote
+ *
+ * scroll-snap 轨道规范（layout generation_constraints）：
+ *   display: flex + gap-12 + overflow-x: auto +
+ *   scroll-snap-type: x mandatory + scroll-padding-inline: 16px
+ */
+
+.smpv3-hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.smpv3-hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.smpv3-rail {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-block: 4px 16px;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 16px;
+}
+
+.smpv3-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+
+.smpv3-dot {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.14);
+  transition:
+    width 200ms ease,
+    background 200ms ease;
+  flex-shrink: 0;
+}
+
+.smpv3-dot[data-active="true"] {
+  width: 18px;
+  background: #0a59f7;
+}
+
+.smpv3-add-btn {
+  width: 100%;
+  padding: 14px 16px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0a59f7;
+  cursor: pointer;
+  transition: background 120ms ease;
+  font-family: inherit;
+}
+
+.smpv3-add-btn:hover {
+  background: rgba(10, 89, 247, 0.06);
+}
+
+.smpv3-add-btn:active {
+  background: rgba(10, 89, 247, 0.12);
+}
+
+.smpv3-footnote {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.45);
+  padding: 8px 4px 0;
+}

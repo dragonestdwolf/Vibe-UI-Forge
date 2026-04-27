@@ -1,0 +1,140 @@
+/*
+ * SettingsContextListLayout
+ *
+ * Spec: .resources/harmony/layout/settings-context-list.md
+ *
+ * 三段结构：
+ *  - HeaderSlot      固定 title 区   (status-bar + title-bar，gap=0，居中于 360px 壳层)
+ *  - ContextSlot     灵活 context 区 (业务卡片 / 横向轮播 / 预览)
+ *  - ListGroupSlot   固定 list 区    (多张 list 卡片，卡片间距 12px)
+ *  - FooterSlot      可选底部区域
+ *
+ * 背景色约定：
+ *  - Light: #F1F3F5 (comp_background_gray)
+ *  - Dark:  #000000  (comp_background_gray dark)
+ *  由 background prop 传入，layout 不硬编码
+ */
+
+.scl-layout {
+  --scl-page-width: 360px;
+  --scl-content-width: 328px;
+  --scl-content-gutter: 16px;
+  --scl-context-top-gap: 4px;
+  --scl-list-gap: 12px;
+  --scl-list-top-gap: 16px;
+  --scl-footer-top-gap: 16px;
+
+  /* 360px 居中于视口（margin: 0 auto 是居中核心） */
+  position: relative;
+  width: var(--scl-page-width);
+  margin: 0 auto;
+  min-height: 800px;
+  /* 背景色由 JS prop 传入，不再硬编码 */
+  font-family:
+    "HarmonyOS Sans",
+    "HarmonyOS Sans SC",
+    "HarmonyHeiTi",
+    -apple-system,
+    BlinkMacSystemFont,
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
+}
+
+/*
+ * Header：StatusBar 与 TitleBar 紧贴，二者之间不允许任何间距。
+ * Header 自身在 360px 壳层内水平居中（flex + justify-content: center），
+ * 因此 StatusBar 和 TitleBar 均居于壳层中心（各留 16px 边距）。
+ */
+.scl-layout__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* column 方向，main-axis 是垂直 */
+  align-items: center; /* cross-axis 水平居中 */
+  gap: 0;
+  width: 100%; /* 撑满 360px 壳层 */
+}
+
+.scl-layout__header > * {
+  /* 子元素保持自身宽度（title-bar=328px, status-bar 组件自定），水平居中 */
+  align-self: center;
+}
+
+/*
+ * 中间内容容器，按 328px 主内容宽度居中；
+ * 业务卡片需要 360px 满宽时（如横向轮播）可通过 contextWidth="bleed"
+ * 使用 .scl-context-bleed 突破边距，layout 不强制 overflow。
+ */
+.scl-layout__content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+
+.scl-layout__context {
+  margin-top: var(--scl-context-top-gap);
+}
+
+/*
+ * ContextSlot 居中包装（默认），包裹在 328px 主内容宽度内。
+ */
+.scl-context-centered {
+  width: var(--scl-content-width);
+  margin-inline: auto;
+}
+
+/*
+ * ContextSlot 满宽包装（contextWidth="bleed"），用于横向轮播等场景。
+ */
+.scl-context-bleed {
+  width: 100%;
+}
+
+/*
+ * ListGroupSlot：list 卡片纵向堆叠，卡片之间 12px gap。
+ * 不允许覆盖该间距（spec 强约束）。
+ */
+.scl-layout__list-group {
+  width: var(--scl-content-width);
+  margin: var(--scl-list-top-gap) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--scl-list-gap);
+}
+
+.scl-layout__list-group > :first-child {
+  margin-top: 0;
+}
+
+.scl-layout__footer {
+  width: var(--scl-content-width);
+  margin: var(--scl-footer-top-gap) auto 0;
+  font-size: 12px;
+  line-height: 18px;
+  /* 跟随页面字体语义，由 JS 根据主题计算 */
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.scl-layout__home-indicator {
+  height: 28px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 4px;
+}
+
+.scl-layout__home-indicator-bar {
+  width: 112px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* Dark mode 适配：当页面背景为深色时，footer / home-indicator 跟随 */
+.scl-layout[data-theme="dark"] .scl-layout__footer {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.scl-layout[data-theme="dark"] .scl-layout__home-indicator-bar {
+  background: rgba(255, 255, 255, 0.25);
+}
