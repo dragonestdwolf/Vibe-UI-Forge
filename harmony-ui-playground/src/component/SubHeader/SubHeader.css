@@ -131,6 +131,15 @@
   align-items: center;
 }
 
+.my-subheader__aside--none {
+  display: none;
+}
+
+/* SubHeader with leftMode="text" and rightMode="none": body bottom padding = 0 */
+.my-subheader--text-none .my-subheader__body--text {
+  padding-bottom: 0 !important;
+}
+
 .my-subheader__action {
   font-size: 14px;
   font-weight: 500;
@@ -212,4 +221,15 @@
   justify-content: center;
   width: 12px;
   height: 24px;
+}
+
+/*
+ * SubHeader 间距约束：
+ * - 下方紧接 list 卡片：间距为 0（由 .scl-layout__list-group 统一控制）
+ * - 下方紧接纯文本（FootnoteText）：间距为 8px
+ * - 两个 SubHeader 之间：间距为 12px
+ * - 上方为导航点组件时：使用 --scl-subheader-top-gap = -12px 拉近
+ */
+.my-subheader--above-dots {
+  margin-top: -12px;
 }

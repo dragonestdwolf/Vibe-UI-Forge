@@ -11,7 +11,7 @@
 - 云空间
 - 智慧多窗
 - 需要顶部业务可视化（轮播、预览、对比图、容量环等）+ 下方多组设置卡的二级设置页
-- 主内容由 1 个"业务展示卡 / 可滑动卡组" + 多个"list 卡片"自上而下垂直堆叠
+- 主内容由 1 个"居中业务展示卡 / 可滑动卡组" + 多个"list 卡片"自上而下垂直堆叠
 - 可在 list 卡片中放置 Slider、Switch 控件
 
 ## exclusion_rules
@@ -57,10 +57,30 @@ Page
 - **壳层宽度**：`360px`
 - **主内容标准宽度**：`328px`（左右各 `16px` 边距，居中于壳层内）
 - **ContextSlot 扩展宽度**：`360px` 满宽（用于横向轮播卡等需要突破边距的场景）
+- **卡片水平安全边距**：ContextSlot 内的卡片（无论静态居中还是横向轮播）距页面两侧最小 **16px**，推荐 **32px**；使用满宽轮播（`contextWidth="bleed"`）时，轨道内须以 `padding-inline` 保留该边距，不得让卡片贴边。
 
 ### ContextSlot 间距规范
 - ContextSlot 距上方内容（TitleBar 或描述文本）间距为 **8 的倍数**，最小 **16px**，推荐 **24px / 32px / 40px**。
 - 若 ContextSlot 下方紧接 Subheader（`leftMode="text"`），则间距为 **0**（gap=0）。
+- **卡片水平边距**：ContextSlot 内卡片距页面左右两侧最小 **16px**，推荐 **32px**；满宽轮播轨道应使用 `padding-inline: 32px`（至少 16px）保留该边距，不得贴边。
+- **轮播居中对齐**：当 ContextSlot 为横向轮播时，当前选中卡片须居中展示（`scroll-snap-align: center`）；两侧可见区域宽度 = `(360px − 卡片宽度) / 2`，左右对称露出。
+
+### SubHeader 间距约束
+| 相邻组件关系 | 间距值 | 说明 |
+|---|---|---|
+| SubHeader → list-card | **0px** | SubHeader 下方紧接 list 卡片，间距为 0 |
+| SubHeader → FootnoteText | **8px** | SubHeader 下方紧接纯文本（功能说明等），间距为 8px |
+| SubHeader → 导航点组件 | **-12px** | SubHeader 上方接入导航点（dots）时，使用负 margin 拉近 |
+
+### 文字规范（Typography）
+
+| 文本位置 | 字体参数 | 颜色 Token | 颜色值（Light） | 颜色值（Dark） |
+|---|---|---|---|---|
+| TitleBar 下方副文本（页面描述） | `Font/Subtitle_S/Regular`（14px / lh 22px / wt 400） | `Light/font_secondary` | `rgba(0,0,0,0.6)` | `rgba(255,255,255,0.6)` |
+| list 卡片下方说明文本（footnote） | `Font/Body_S/Regular`（12px / lh 18px / wt 400） | `Light/font_secondary` | `rgba(0,0,0,0.6)` | `rgba(255,255,255,0.6)` |
+
+- **TitleBar 副文本**：TitleBar 下方可选放置一段页面描述副文本，说明本页功能概要，宽度对齐 328px 主内容区，颜色使用 `font_secondary`（非 `font_tertiary`）。
+- **list 卡片说明文本**：list 卡片下方的功能说明、注意事项等辅助文字，使用 `footnote-text` 语义类，距上方卡片 8px，颜色同样使用 `font_secondary`。
 
 ## layout_runtime
 
@@ -130,12 +150,20 @@ Page
 | HeaderSlot | title-bar | search-header | 是否需要搜索；二者均与 status-bar 紧贴 |
 | ContextSlot | FeaturePromoCard | scene-mode-carousel / FeaturePromoCard / display-mode-preview / cloud-storage-overview / multi-window-preview / none | 选择匹配业务的展示卡片；多卡时使用横向 scroll-snap 轨道（如 `scenario-mode-page-v3` 三卡轮播） |
 | ListGroupSlot | settings-list-group | slider-list-group | 含 Slider 时优先 slider-list-group |
-| SubheaderSlot | subtitle | none | **副标题标签（使用 `leftMode="text"` + `text` 属性）**，置于 list 卡片上方，**subheader 与下方 list 卡片间距为 0**（gap=0）；使用 `font_tertiary` token；**一般无右侧蓝色操作按钮**（`rightMode` 应省略或为 `none`） |
+| SubheaderSlot | subtitle | none | **副标题标签（使用 `leftMode="text"` + `text` 属性）**，置于 list 卡片上方，**subheader 与下方 list 卡片间距为 0**（gap=0）；使用 `font_tertiary` token；**一般无右侧蓝色操作按钮**（`rightMode` 应为 `none`） |
 | ContextSlot 间距 | 16px / 24px / 32px / 40px | — | ContextSlot 距上方内容（TitleBar 或描述文本）间距为 8 的倍数，最小 16px，推荐 24 / 32 / 40px；若 ContextSlot 下方紧接 Subheader 则间距为 0 |
-| List 卡片间距 | gap-12 | — | 卡片间垂直间距固定为 12px，不允许 0 / 24 等 |
+| Subheader → 导航点 | -12px | — | Subheader 上方接入导航点（dots）组件时，间距为 -12px（拉近） |
+| ContextSlot 卡片水平边距 | padding-inline ≥ 16px，推荐 32px | — | 卡片距页面两侧最小 16px，建议 32px；bleed 轮播轨道须在容器内设 padding-inline 保留边距，不得贴边 |
+| ContextSlot 轮播选中卡居中 | scroll-snap-align: center | — | 当前选中卡片居中展示；两侧可见卡片露出量 = (360 − 卡片宽) / 2，左右对称推算 |
+| Subheader → list-card | 0px | — | Subheader 下方紧接 list 卡片，间距为 0 |
+| Subheader → Subheader | 12px | — | 两个 Subheader 之间，间距为 12px |
+| List 卡片间距 | gap-12 | — | 列表内不同模块内容之间，间距为 12px |
+| list-card → FootnoteText | 8px | — | list 卡片下方接入纯文本，间距为 8px |
 | 卡片内行项 | list-item | list-item + switch / list-item + slider / list-item + value+chevron | 依据交互类型选择 |
 | FooterSlot | none | footer-note | 需展示策略说明 / 跳转个性化设置时显示 |
 | List 卡片下方副文本 | FootnoteText / footnote | — | 副文本距上方 list 卡片间距固定为 8px |
+| TitleBar 副文本字体 | `Font/Subtitle_S/Regular` | — | 14px / lh 22px / wt 400；颜色 `font_secondary`（`rgba(0,0,0,0.6)`）；宽度对齐 328px 主内容区 |
+| list-card 说明文本字体 | `Font/Body_S/Regular` | — | 12px / lh 18px / wt 400；颜色 `font_secondary`（`rgba(0,0,0,0.6)`）；距上方卡片 8px |
 
 ## generation_constraints
 
@@ -150,7 +178,14 @@ Page
 - **SubheaderSlot 间距约束**：subheader 距下方 list 卡片间距为 0（gap=0），不得插入任何额外间距。
 - **Subheader 样式规范**：当 Subheader 位于 list 卡片上方时，一般仅使用 `text` 内容，**无右侧蓝色操作按钮**（`rightMode` 应为 `none` 或不加 rightMode）；仅有 text 的 Subheader 视觉更简洁。
 - **Footnote 间距约束**：list 卡片下方副文本（如功能说明、注意事项）距上方 list 卡片间距为 8px。
+- **TitleBar 副文本字体约束**：TitleBar 下方若放置页面描述副文本，字体参数必须使用 `Font/Subtitle_S/Regular`（14px / line-height 22px / font-weight 400），颜色使用 `Light/font_secondary`（`rgba(0,0,0,0.6)`）；dark 模式使用 `rgba(255,255,255,0.6)`；不得使用 `font_tertiary` 或其他颜色 token。
+- **list 卡片说明文本字体约束**：list 卡片下方说明文本（footnote）字体参数必须使用 `Font/Body_S/Regular`（12px / line-height 18px / font-weight 400），颜色使用 `Light/font_secondary`（`rgba(0,0,0,0.6)`）；dark 模式使用 `rgba(255,255,255,0.6)`；间距遵循 8px 上边距约束。
+- **Subheader 与上方组件间距**：Subheader 距上方组件一般为 0px；若上方为导航点（dots）组件则间距为 -12px（使用负 margin 拉近）。
+- **Subheader 与下方组件间距**：Subheader 距下方 list 卡片间距为 0px。
+- **Subheader 之间间距**：两个 Subheader 之间（如"条件开启"与"智能推荐"）间距为 12px。
+- **列表内模块间距**：list 卡片之间、不同模块内容之间间距为 12px。
 - ContextSlot 高度由业务卡片决定，不要对 ContextSlot 设硬编码高度；横向轮播必须支持 `scroll-snap`；多张 FeaturePromoCard 横向排列时使用 `display:flex + gap-12 + overflow-x:auto + scroll-snap-type:x mandatory` 轨道组合。
+- **ContextSlot 卡片水平边距约束**：ContextSlot 内卡片（居中卡或轮播卡）距页面两侧最小 **16px**，推荐 **32px**；使用 `contextWidth="bleed"` 横向轮播时，轨道容器须内设 `padding-inline`（至少 16px，建议 32px），**不得让卡片直接贴边**；选中卡片须居中对齐（`scroll-snap-align: center`），两侧可见卡片的露出量按 `(360px − 卡片宽度) / 2` 对称推算。
 - list 卡片圆角统一为 20–24px，背景为 `comp_background_primary`，与页面背景保持对比。
 - **list 图标规范**：list-item 左侧图标统一使用 `light/icon_primary`（`rgba(0,0,0,0.9)`，stroke-width 1.5–1.8px）；若有圆形背景容器，背景为 `rgba(10,89,247,0.08)`（品牌蓝 8% 透明度）。
 - list 卡片内允许嵌入 `slider`，应与 list-item 同列对齐；slider 行不再追加箭头。
@@ -175,6 +210,8 @@ Page
 | List 内图标（list-item left） | `light/icon_primary` `rgba(0,0,0,0.9)` | `dark/icon_primary` `rgba(255,255,255,0.9)` |
 | Subheader / Section label | `font_tertiary` `rgba(0,0,0,0.45)` | `font_tertiary` `rgba(255,255,255,0.45)` |
 | Divider | `comp_divider` | `comp_divider`（跟随 token 变化） |
+| TitleBar 下方副文本（页面描述） | `font_secondary` `rgba(0,0,0,0.6)` — `Font/Subtitle_S/Regular` 14px/22px/400 | `font_secondary` `rgba(255,255,255,0.6)` |
+| list-card 下方说明文本（footnote） | `font_secondary` `rgba(0,0,0,0.6)` — `Font/Body_S/Regular` 12px/18px/400 | `font_secondary` `rgba(255,255,255,0.6)` |
 
 > **List 图标规范**：list-item 左侧图标统一使用 `light/icon_primary`（`rgba(0,0,0,0.9)`，stroke-width 约 1.5–1.8px），不得使用彩色或纯白图标。若图标有圆形背景容器，使用 `rgba(10,89,247,0.08)`（即 `brand_blue` 8% 透明度）。
 
@@ -194,3 +231,7 @@ Page
 - list 卡片间距测量必须为 12px（允许 ±1px 渲染误差）。
 - HeaderSlot 中 status-bar 底边与 title-bar 顶边像素级贴合（gap=0）。
 - 生成页至少需要通过 `npm run build`；新增 stories 通过 `npm run build-storybook`。
+- ContextSlot 内卡片（静态或轮播）距页面两侧边距不得小于 16px；推荐 32px；bleed 轮播轨道的 `padding-inline` 应可在 DevTools 中测量验收。
+- 横向轮播的选中卡片须视觉上居中于 360px 壳层内；两侧露出量应左右对称（`scroll-snap-align: center` + `scroll-padding-inline` 对齐）。
+- TitleBar 下方副文本颜色必须为 `rgba(0,0,0,0.6)`（Light）/ `rgba(255,255,255,0.6)`（Dark），字号 14px，行高 22px，不得使用 `rgba(0,0,0,0.45)` 或其他透明度值。
+- list 卡片下方说明文本颜色必须为 `rgba(0,0,0,0.6)`（Light）/ `rgba(255,255,255,0.6)`（Dark），字号 12px，行高 18px；与上方卡片间距必须为 8px。

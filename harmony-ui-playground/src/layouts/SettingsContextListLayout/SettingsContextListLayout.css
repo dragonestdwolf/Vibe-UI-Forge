@@ -23,6 +23,14 @@
   --scl-list-gap: 12px;
   --scl-list-top-gap: 16px;
   --scl-footer-top-gap: 16px;
+  /*
+   * 卡片水平安全边距：ContextSlot 内卡片距页面两侧最小 16px，推荐 32px。
+   * 横向轮播（contextWidth="bleed"）时，轨道容器须使用此变量作为 padding-inline，
+   * 确保卡片不贴边，且选中卡片居中（scroll-snap-align: center）时两侧露出量对称。
+   * 公式：两侧露出量 = (360px − 卡片宽度) / 2
+   */
+  --scl-carousel-padding: 32px;
+  --scl-carousel-padding-min: 16px;
 
   /* 360px 居中于视口（margin: 0 auto 是居中核心） */
   position: relative;
@@ -102,6 +110,44 @@
   gap: var(--scl-list-gap);
 }
 
+/*
+ * Subheader 间距约束：
+ * - Subheader 下方紧接 list 卡片：间距为 0（gap=0）
+ * - Subheader 下方紧接纯文本（FootnoteText）：间距为 8px
+ * - 两个 Subheader 之间：间距为 12px
+ * - Subheader 上方为导航点组件时：间距为 -12px（拉近）
+ */
+.scl-layout__list-group .my-subheader {
+  margin-bottom: 0;
+}
+
+/*
+ * 当 SubHeader 作为 list 卡片上方的段落标签（leftMode="text" rightMode="none"）时，
+ * 高度收窄至 56px（设计规范值）；--text-none 已移除 padding-bottom，
+ * 确保 SubHeader 元素盒底边与下方 list 卡片顶边 0px 间距。
+ */
+.scl-layout__list-group .my-subheader--text-none {
+  min-height: 56px;
+}
+
+.scl-layout__list-group .my-subheader + .my-subheader {
+  margin-top: var(--scl-list-gap);
+}
+
+/*
+ * list 卡片下方说明文本
+ * 字体参数：Font/Body_S/Regular — 12px / lh 18px / wt 400
+ * 颜色：Light/font_secondary = rgba(0,0,0,0.6)（非 font_tertiary）
+ * 间距：距上方 list 卡片 8px（强约束）
+ */
+.scl-layout__list-group .footnote-text {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .scl-layout__list-group > :first-child {
   margin-top: 0;
 }
@@ -130,6 +176,25 @@
   background: rgba(0, 0, 0, 0.25);
 }
 
+/*
+ * TitleBar 下方副文本（页面描述）
+ * 字体参数：Font/Subtitle_S/Regular — 14px / lh 22px / wt 400
+ * 颜色：Light/font_secondary = rgba(0,0,0,0.6)（非 font_tertiary）
+ * 宽度：对齐 328px 主内容区，与 ListGroupSlot / TitleBar 保持同宽
+ *
+ * 用法：放置于 HeaderSlot 下方、ContextSlot 上方：
+ *   <p className="scl-header-subtitle">...</p>
+ */
+.scl-header-subtitle {
+  width: var(--scl-content-width);
+  margin-inline: auto;
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+}
+
 /* Dark mode 适配：当页面背景为深色时，footer / home-indicator 跟随 */
 .scl-layout[data-theme="dark"] .scl-layout__footer {
   color: rgba(255, 255, 255, 0.45);
@@ -137,4 +202,46 @@
 
 .scl-layout[data-theme="dark"] .scl-layout__home-indicator-bar {
   background: rgba(255, 255, 255, 0.25);
+}
+
+.scl-layout[data-theme="dark"] .scl-header-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.scl-layout[data-theme="dark"] .scl-layout__list-group .footnote-text {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/*
+ * 横向轮播辅助类（配合 contextWidth="bleed" 使用）。
+ *
+ * 约定：
+ * - padding-inline 保留两侧安全边距（推荐 32px，最小 16px），不得贴边
+ * - scroll-snap-type: x mandatory 确保卡片对齐
+ * - scroll-padding-inline 与 padding-inline 等值，保证 snap 后选中卡片视觉居中
+ * - 两侧可见露出量 = (360px − 卡片宽度) / 2，左右对称
+ *
+ * 用法：在 contextWidth="bleed" 的 ContextSlot 内，最外层滚动容器加此类：
+ *   <div className="scl-carousel-track"> ... </div>
+ */
+.scl-carousel-track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--scl-carousel-padding);
+  padding-inline: var(--scl-carousel-padding);
+  padding-block: 4px; /* 留出投影空间，不影响两侧边距 */
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scl-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.scl-carousel-track > * {
+  scroll-snap-align: center;
+  flex-shrink: 0;
 }

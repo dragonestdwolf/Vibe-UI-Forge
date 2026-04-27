@@ -2,7 +2,7 @@ import type { HTMLAttributes } from "react"
 import "./SubHeader.css"
 
 export type SubHeaderLeftMode = "double" | "title" | "text" | "select"
-export type SubHeaderRightMode = "action" | "chevron" | "icons" | "more"
+export type SubHeaderRightMode = "action" | "chevron" | "icons" | "more" | "none"
 
 export interface SubHeaderProps extends HTMLAttributes<HTMLDivElement> {
   /** 左侧区域形态（Pixso 36:35055） */
@@ -129,6 +129,7 @@ function SubHeader(props: SubHeaderProps) {
     rightMode === "chevron" ? "my-subheader__aside--chevron" : "",
     rightMode === "icons" ? "my-subheader__aside--icons" : "",
     rightMode === "more" ? "my-subheader__aside--more" : "",
+    rightMode === "none" ? "my-subheader__aside--none" : "",
   ]
     .filter(Boolean)
     .join(" ")
