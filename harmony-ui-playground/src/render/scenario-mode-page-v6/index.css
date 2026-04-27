@@ -1,0 +1,72 @@
+/* ScenarioModePageV6 样式 */
+
+.smpv6-rail {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 4px;
+  margin-inline: 4px;
+}
+
+.smpv6-hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.smpv6-hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.smpv6-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.smpv6-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.smpv6-dot[data-active="true"] {
+  background: #0a59f7;
+}
+
+.smpv6-footnote {
+  margin: 0;
+  padding-inline: 4px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.smpv6-add-btn {
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0a59f7;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease;
+}
+
+.smpv6-add-btn:hover {
+  background: rgba(10, 89, 247, 0.04);
+}
+
+.smpv6-add-btn:active {
+  background: rgba(10, 89, 247, 0.08);
+}

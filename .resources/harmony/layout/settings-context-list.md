@@ -88,7 +88,7 @@ Page
 | HeaderSlot | title-bar | title-bar / search-header | 是 | 状态栏 + 标题栏组合，二者间距固定为 0 |
 | ContextSlot | FeaturePromoCard | scene-mode-carousel / FeaturePromoCard / display-mode-preview / cloud-storage-overview / multi-window-preview / hero-promo-card / none | 否 | 业务展示卡片；可横向滚动（轮播）或纵向静态卡；多卡时使用横向 scroll-snap 轨道 |
 | ListGroupSlot | settings-list-group | settings-list-group / slider-list-group / grouped-list-section | 是 | list 卡片堆叠，可选 subheader 副标题置于最上方，距下方 list 卡片间距为 0 |
-| SubheaderSlot | subtitle | subtitle / none | 否 | 副标题标签，紧贴下方 list 卡片，间距为 0 |
+| SubheaderSlot | subtitle | subtitle / none | 否 | 副标题标签（使用 `leftMode="text"` + `text` 属性），紧贴下方 list 卡片，**subheader 与 list 卡片间距为 0**（gap=0） |
 | FooterSlot | none | footer-note / bottom-actions / none | 否 | 底部说明文案或操作 |
 
 ## visibility_rules
@@ -104,6 +104,7 @@ Page
 
 - status-bar
 - title-bar
+- subheader
 - list
 - list-item
 - switch
@@ -125,7 +126,7 @@ Page
 | HeaderSlot | title-bar | search-header | 是否需要搜索；二者均与 status-bar 紧贴 |
 | ContextSlot | FeaturePromoCard | scene-mode-carousel / FeaturePromoCard / display-mode-preview / cloud-storage-overview / multi-window-preview / none | 选择匹配业务的展示卡片；多卡时使用横向 scroll-snap 轨道（如 `scenario-mode-page-v3` 三卡轮播） |
 | ListGroupSlot | settings-list-group | slider-list-group | 含 Slider 时优先 slider-list-group |
-| SubheaderSlot | subtitle | none | 副标题标签，置于 list 卡片上方，距下方 list 卡片间距为 0；使用 `font_tertiary` token |
+| SubheaderSlot | subtitle | none | **副标题标签（使用 `leftMode="text"` + `text` 属性）**，置于 list 卡片上方，**subheader 与下方 list 卡片间距为 0**（gap=0）；使用 `font_tertiary` token |
 | List 卡片间距 | gap-12 | — | 卡片间垂直间距固定为 12px，不允许 0 / 24 等 |
 | 卡片内行项 | list-item | list-item + switch / list-item + slider / list-item + value+chevron | 依据交互类型选择 |
 | FooterSlot | none | footer-note | 需展示策略说明 / 跳转个性化设置时显示 |
