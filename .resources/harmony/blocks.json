@@ -75,6 +75,28 @@
         "service-card-status",
         "service-card-item"
       ]
+    },
+    {
+      "id": "scenario-mode-page",
+      "name": "scenario-mode-page",
+      "pageType": "settings-context-list",
+      "description": "情景模式页面 - 顶部业务卡片轮播 + 下方 list 卡片组合",
+      "files": [
+        "src/render/scenario-mode-page-v5/index.tsx"
+      ],
+      "stories": [
+        "src/render/scenario-mode-page-v5/index.stories.tsx"
+      ],
+      "dependencies": [
+        "status-bar",
+        "title-bar",
+        "subheader",
+        "feature-promo-card",
+        "list",
+        "list-item",
+        "switch",
+        "divider"
+      ]
     }
   ]
 }

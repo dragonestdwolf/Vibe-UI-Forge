@@ -192,7 +192,7 @@ export default function ScenarioModePageV5() {
         <TitleBar
           title="情景模式"
           leftIcon={iconChevronBack}
-          rightIcon={[iconAdd, iconHelp, iconMore]}
+          rightIcons={[iconAdd, iconHelp, iconMore]}
           backgroundColor="#F1F3F5"
         />
       }
@@ -242,7 +242,7 @@ export default function ScenarioModePageV5() {
       listGroup={
         <>
           <div style={{ paddingInline: 4, paddingBlockEnd: 8 }}>
-            <SubHeader title="条件开启" leftMode="subtitle" />
+            <SubHeader text="条件开启" leftMode="text" />
           </div>
           <div className="rounded-[20px] overflow-hidden" style={{ background: CARD_BG }}>
             <ListItem
@@ -270,7 +270,7 @@ export default function ScenarioModePageV5() {
           <FootnoteText>本功能需调用位置权限，读取位置信息。</FootnoteText>
 
           <div style={{ paddingInline: 4, paddingBlockEnd: 8 }}>
-            <SubHeader title="智能推荐" leftMode="subtitle" />
+            <SubHeader text="智能推荐" leftMode="text" />
           </div>
           <div className="rounded-[20px] overflow-hidden" style={{ background: CARD_BG }}>
             <ListItem
