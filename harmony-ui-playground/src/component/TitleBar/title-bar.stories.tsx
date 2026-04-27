@@ -14,6 +14,9 @@ const demoAvatar =
 const meta = {
   title: "Components/TitleBar",
   component: TitleBar,
+  parameters: {
+    layout: "centered",
+  },
   tags: ["autodocs"],
   args: {
     title: "页面标题",

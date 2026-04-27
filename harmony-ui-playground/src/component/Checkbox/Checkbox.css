@@ -40,8 +40,11 @@
 
 .my-checkbox-field--disabled .my-checkbox__native {
   cursor: not-allowed;
+  background-color: #F5F7FA;
 }
-
+.my-checkbox-field--disabled .my-checkbox-field__text{
+  color: #ccc;
+}
 .my-checkbox__native:focus,
 .my-checkbox__native:focus-visible {
   outline: none;

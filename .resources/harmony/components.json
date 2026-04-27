@@ -16,6 +16,13 @@
       "stories": "src/component/TitleBar/title-bar.stories.tsx"
     },
     {
+      "id": "title-bar-harmony-3267",
+      "name": "TitleBarHarmony3267",
+      "path": "src/component/TitleBarHarmony3267",
+      "export": "TitleBarHarmony3267",
+      "stories": "src/component/TitleBarHarmony3267/TitleBarHarmony3267.stories.tsx"
+    },
+    {
       "id": "list",
       "name": "List",
       "path": "src/component/List",
@@ -35,6 +42,41 @@
       "path": "src/component/Switch",
       "export": "Switch",
       "stories": "src/component/Switch/Switch.stories.tsx"
+    },
+    {
+      "id": "slider-base",
+      "name": "SliderBase",
+      "path": "src/component/Slider",
+      "export": "SliderBase",
+      "stories": "src/component/Slider/Slider.stories.tsx"
+    },
+    {
+      "id": "slider-with-icons",
+      "name": "SliderWithIcons",
+      "path": "src/component/Slider",
+      "export": "SliderWithIcons",
+      "stories": "src/component/Slider/Slider.stories.tsx"
+    },
+    {
+      "id": "slider-with-scale",
+      "name": "SliderWithScale",
+      "path": "src/component/Slider",
+      "export": "SliderWithScale",
+      "stories": "src/component/Slider/Slider.stories.tsx"
+    },
+    {
+      "id": "pixso-slider",
+      "name": "PixsoSlider",
+      "path": "src/component/Slider",
+      "export": "PixsoSlider",
+      "stories": "src/component/Slider/PixsoSlider.stories.tsx"
+    },
+    {
+      "id": "pixso-seekbar",
+      "name": "PixsoSeekbar",
+      "path": "src/component/Slider",
+      "export": "PixsoSeekbar",
+      "stories": "src/component/Slider/PixsoSlider.stories.tsx"
     },
     {
       "id": "clover-week-panel",
@@ -91,6 +133,20 @@
       "path": "src/component/Divider",
       "export": "Divider",
       "stories": "src/component/Divider/Divider.stories.tsx"
+    },
+    {
+      "id": "card",
+      "name": "Card",
+      "path": "src/component/Card",
+      "export": "Card",
+      "stories": "src/component/Card/Card.stories.tsx"
+    },
+    {
+      "id": "scene-mode-card",
+      "name": "SceneModeCard",
+      "path": "src/component/SceneModeCard",
+      "export": "SceneModeCard",
+      "stories": "src/component/SceneModeCard/SceneModeCard.stories.tsx"
     }
   ]
 }

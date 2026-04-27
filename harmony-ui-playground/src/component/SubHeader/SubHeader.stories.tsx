@@ -14,7 +14,7 @@ const meta = {
   title: "Components/SubHeader",
   component: SubHeader,
   parameters: {
-    layout: "fullscreen",
+    layout: "centered",
   },
   args: {
     leftMode: "double",

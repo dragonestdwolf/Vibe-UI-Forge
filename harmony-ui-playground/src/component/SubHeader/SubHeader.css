@@ -43,7 +43,7 @@
   max-width: 100%;
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 21px;
   color: rgba(0, 0, 0, 0.8980392217636108);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -55,7 +55,7 @@
   max-width: 100%;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.25;
+  line-height: 16px;
   color: rgba(0, 0, 0, 0.6000000238418579);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -80,7 +80,7 @@
 .my-subheader__chip-text {
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 19px;
   color: rgba(0, 0, 0, 0.8980392217636108);
   max-width: 200px;
   overflow: hidden;
@@ -127,14 +127,14 @@
 }
 
 .my-subheader__aside--more {
-  padding: 26px 0 6px;
+  padding: 24px 0 6px;
   align-items: center;
 }
 
 .my-subheader__action {
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 16px;
   color: rgba(10, 89, 247, 1);
   text-align: right;
   width: 100%;
@@ -195,7 +195,7 @@
 .my-subheader__more-text {
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.25;
+  line-height: 16px;
   color: rgba(0, 0, 0, 0.6000000238418579);
   text-align: right;
   flex: 1;
