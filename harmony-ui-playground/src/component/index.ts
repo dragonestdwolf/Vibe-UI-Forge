@@ -107,6 +107,9 @@ export type {
   SubHeaderRightMode,
 } from "./SubHeader"
 
+export { SwiperNav } from "./SwiperNav"
+export type { SwiperNavProps, SwiperNavVariant } from "./SwiperNav"
+
 export { SliderBase, SliderWithIcons, SliderWithScale } from "./Slider"
 export type {
   SliderBaseProps,
@@ -122,4 +125,3 @@ export type { TaskCardActionTone, TaskCardProps } from "./TaskCard"
 
 export { TitleBar } from "./TitleBar"
 export type { TitleBarProps } from "./TitleBar"
-

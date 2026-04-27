@@ -30,6 +30,13 @@
       "stories": "src/component/FeaturePromoCard/FeaturePromoCard.stories.tsx"
     },
     {
+      "id": "swiper-nav",
+      "name": "SwiperNav",
+      "path": "src/component/SwiperNav",
+      "export": "SwiperNav",
+      "stories": "src/component/SwiperNav/SwiperNav.stories.tsx"
+    },
+    {
       "id": "list",
       "name": "List",
       "path": "src/component/List",
