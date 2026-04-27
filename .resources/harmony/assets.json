@@ -1,0 +1,25 @@
+{
+  "$schema": "./schemas/assets.schema.json",
+  "version": "1.0.0",
+  "description": "Design asset registry for Harmony React UI assets",
+  "assets": [
+    {
+      "id": "phone-preview-light",
+      "name": "Phone Preview Light",
+      "description": "Light mode phone mockup for theme preview",
+      "type": "image",
+      "path": "src/assets/design/phone-preview-light.png",
+      "ossUrl": "",
+      "usage": "v30 DisplayBrightnessPage phone preview replacement"
+    },
+    {
+      "id": "phone-preview-dark",
+      "name": "Phone Preview Dark",
+      "description": "Dark mode phone mockup for theme preview",
+      "type": "image",
+      "path": "src/assets/design/phone-preview-dark.png",
+      "ossUrl": "",
+      "usage": "v30 DisplayBrightnessPage phone preview replacement"
+    }
+  ]
+}
