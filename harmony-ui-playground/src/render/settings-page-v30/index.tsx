@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { StatusBar } from "@/component/StatusBar"
-import { TitleBarHarmony3267 } from "@/component/TitleBarHarmony3267"
+import { TitleBar } from "@/component/TitleBar"
 import { List, ListItem } from "@/component/List"
 import { SliderWithIcons } from "@/component/Slider"
 import { Switch } from "@/component/Switch"
@@ -210,7 +210,7 @@ export default function DisplayBrightnessPage() {
 
       {/* Title bar */}
       <div className="bg-comp-background-gray">
-        <TitleBarHarmony3267
+        <TitleBar
           title="显示和亮度"
           subtitle="调节外观与屏幕亮度"
           backgroundColor="#F1F3F5"

@@ -1,0 +1,107 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e6]: 09:41
+    - img [ref=e8]
+  - generic [ref=e10]:
+    - button "back" [ref=e12] [cursor=pointer]
+    - generic "情景模式" [ref=e15]
+    - generic [ref=e17]:
+      - button "帮助" [ref=e18]:
+        - img [ref=e19]
+      - button "更多操作" [ref=e22]:
+        - img [ref=e23]
+  - main [ref=e27]:
+    - paragraph [ref=e28]: 自动调整通知、显示与提醒方式，让免打扰更自然地融入你的工作和休息节奏。
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]: 静音通知
+        - generic [ref=e34]: 隐藏横幅
+        - generic [ref=e35]: 白名单放行
+      - generic [ref=e37]:
+        - generic:
+          - generic:
+            - img
+          - generic: 免打扰
+          - generic: 减少来电和通知打扰
+          - button "立即开启" [ref=e38] [cursor=pointer]:
+            - generic [ref=e39]: 立即开启
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - heading "自动开启" [level=2] [ref=e46]
+        - button "新增规则" [ref=e47]:
+          - img [ref=e48]
+      - generic [ref=e49]:
+        - button "工作日 22:30 至次日 07:00 睡前自动开启，起床后恢复正常提醒 已设置" [ref=e50] [cursor=pointer]:
+          - img [ref=e53]
+          - generic [ref=e55]:
+            - generic [ref=e56]:
+              - generic [ref=e57]: 工作日 22:30 至次日 07:00
+              - generic [ref=e59]: 睡前自动开启，起床后恢复正常提醒
+            - generic [ref=e62]:
+              - generic [ref=e63]: 已设置
+              - img [ref=e64]
+        - button "到达办公室时 进入已保存地点后自动切换到安静模式 已开启" [ref=e66] [cursor=pointer]:
+          - img [ref=e69]
+          - generic [ref=e72]:
+            - generic [ref=e73]:
+              - generic [ref=e74]: 到达办公室时
+              - generic [ref=e76]: 进入已保存地点后自动切换到安静模式
+            - generic [ref=e79]:
+              - generic [ref=e80]: 已开启
+              - img [ref=e81]
+        - button "根据习惯推荐 结合偏好与位置自动建议开启" [ref=e83] [cursor=pointer]:
+          - img [ref=e86]
+          - generic [ref=e89]:
+            - generic [ref=e90]:
+              - generic [ref=e91]: 根据习惯推荐
+              - generic [ref=e93]: 结合偏好与位置自动建议开启
+            - switch [checked] [ref=e96]
+      - paragraph [ref=e99]: 若要使用地点自动开启，请允许系统访问位置信息。
+    - generic [ref=e100]:
+      - heading "允许打扰" [level=2] [ref=e102]
+      - generic [ref=e103]:
+        - button "应用和联系人白名单 仅允许收藏联系人和重点应用继续提醒 已配置" [ref=e104] [cursor=pointer]:
+          - img [ref=e107]
+          - generic [ref=e109]:
+            - generic [ref=e110]:
+              - generic [ref=e111]: 应用和联系人白名单
+              - generic [ref=e113]: 仅允许收藏联系人和重点应用继续提醒
+            - generic [ref=e116]:
+              - generic [ref=e117]: 已配置
+              - img [ref=e118]
+        - button "重复来电 3 分钟内再次来电时允许响铃" [ref=e120] [cursor=pointer]:
+          - img [ref=e123]
+          - generic [ref=e128]:
+            - generic [ref=e129]:
+              - generic [ref=e130]: 重复来电
+              - generic [ref=e132]: 3 分钟内再次来电时允许响铃
+            - switch [ref=e135]
+    - generic [ref=e138]:
+      - heading "重要信息提醒" [level=2] [ref=e140]
+      - button "重要信息提醒 验证码、实况消息与取件提醒继续显示" [ref=e142] [cursor=pointer]:
+        - generic [ref=e143]:
+          - generic [ref=e144]:
+            - generic [ref=e145]: 重要信息提醒
+            - generic [ref=e147]: 验证码、实况消息与取件提醒继续显示
+          - switch [checked] [ref=e150]
+    - generic [ref=e153]:
+      - heading "联动效果" [level=2] [ref=e155]
+      - generic [ref=e156]:
+        - button "深色模式 自动开启" [ref=e157] [cursor=pointer]:
+          - generic [ref=e158]:
+            - generic [ref=e160]: 深色模式
+            - generic [ref=e163]:
+              - generic [ref=e164]: 自动开启
+              - img [ref=e165]
+        - button "护眼模式 同步开启" [ref=e167] [cursor=pointer]:
+          - generic [ref=e168]:
+            - generic [ref=e170]: 护眼模式
+            - generic [ref=e173]:
+              - generic [ref=e174]: 同步开启
+              - img [ref=e175]
+        - button "锁屏通知样式 仅显示摘要" [ref=e177] [cursor=pointer]:
+          - generic [ref=e178]:
+            - generic [ref=e180]: 锁屏通知样式
+            - generic [ref=e183]:
+              - generic [ref=e184]: 仅显示摘要
+              - img [ref=e185]

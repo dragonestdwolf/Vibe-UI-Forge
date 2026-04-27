@@ -1,0 +1,86 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e6]: 09:41
+    - img [ref=e8]
+  - generic [ref=e10]:
+    - button "back" [ref=e12] [cursor=pointer]
+    - generic [ref=e14]:
+      - generic "情景模式" [ref=e15]
+      - generic "自动调系统功能，让人更专注" [ref=e16]
+    - generic [ref=e18]:
+      - button "添加" [ref=e19]:
+        - img [ref=e20]
+      - button "帮助" [ref=e21]:
+        - img [ref=e22]
+      - button "更多操作" [ref=e25]:
+        - img [ref=e26]
+  - main [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - img [ref=e34]
+        - generic [ref=e36]:
+          - heading "免打扰" [level=3] [ref=e37]
+          - paragraph [ref=e38]: 减少打扰保持专注
+        - button "立即开启" [ref=e39]
+      - generic [ref=e40]:
+        - button "切换到免打扰" [pressed] [ref=e41]
+        - button "切换到睡眠" [ref=e42]
+        - button "切换到工作" [ref=e43]
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - heading "条件开启" [level=2] [ref=e46]
+        - button "添加条件" [ref=e47]:
+          - img [ref=e48]
+      - button "周日 周六 22:00 到次日 07:00 已关闭" [ref=e50] [cursor=pointer]:
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]: 周日 周六
+            - generic [ref=e55]: 22:00 到次日 07:00
+          - generic [ref=e58]:
+            - generic [ref=e59]: 已关闭
+            - img [ref=e60]
+      - paragraph [ref=e62]: 此功能需获取位置权限才能使用
+    - button "推荐开启与关闭 根据你的偏好和位置，自动推荐开启或关闭情景模式" [ref=e65] [cursor=pointer]:
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]: 推荐开启与关闭
+          - generic [ref=e70]: 根据你的偏好和位置，自动推荐开启或关闭情景模式
+        - switch [checked] [ref=e73]
+    - generic [ref=e76]:
+      - heading "允许打扰" [level=2] [ref=e78]
+      - generic [ref=e79]:
+        - button "应用和元服务 未选择" [ref=e80] [cursor=pointer]:
+          - generic [ref=e81]:
+            - generic [ref=e83]: 应用和元服务
+            - generic [ref=e86]:
+              - generic [ref=e87]: 未选择
+              - img [ref=e88]
+        - button "联系人 仅限收藏" [ref=e90] [cursor=pointer]:
+          - generic [ref=e91]:
+            - generic [ref=e93]: 联系人
+            - generic [ref=e96]:
+              - generic [ref=e97]: 仅限收藏
+              - img [ref=e98]
+    - generic [ref=e100]:
+      - heading "重要信息提醒" [level=2] [ref=e102]
+      - button "重要信息提醒 允许验证码、实况消息等重要内容继续提醒" [ref=e104] [cursor=pointer]:
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - generic [ref=e107]: 重要信息提醒
+            - generic [ref=e109]: 允许验证码、实况消息等重要内容继续提醒
+          - switch [checked] [ref=e112]
+    - generic [ref=e115]:
+      - heading "关联系统功能" [level=2] [ref=e117]
+      - generic [ref=e118]:
+        - button "深色模式 不关联" [ref=e119] [cursor=pointer]:
+          - generic [ref=e120]:
+            - generic [ref=e122]: 深色模式
+            - generic [ref=e125]:
+              - generic [ref=e126]: 不关联
+              - img [ref=e127]
+        - button "护眼模式 不关联" [ref=e129] [cursor=pointer]:
+          - generic [ref=e130]:
+            - generic [ref=e132]: 护眼模式
+            - generic [ref=e135]:
+              - generic [ref=e136]: 不关联
+              - img [ref=e137]

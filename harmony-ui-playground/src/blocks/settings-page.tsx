@@ -46,7 +46,7 @@ import {
  *
  * 4. 导航栏与第一个 List 间距: 8px (mt-2)
  *
- * 5. 状态栏背景色: #f3f4f6 (与页面背景一致)
+ * 5. 状态栏背景色: #F1F3F5 (与页面背景一致)
  *
  * 6. List 圆角: 20px
  *
@@ -79,8 +79,8 @@ function SettingsPage() {
   const [soundEnabled, setSoundEnabled] = useState(true)
 
   return (
-    <div className="w-[360px] min-h-[792px] mx-auto bg-gray-100">
-      <StatusBar time="09:41" backgroundColor="#f3f4f6" />
+    <div className="w-[360px] min-h-[792px] mx-auto bg-comp-background-gray">
+      <StatusBar time="09:41" backgroundColor="#F1F3F5" />
 
       <div className="w-[328px] mx-auto">
         <TitleBar

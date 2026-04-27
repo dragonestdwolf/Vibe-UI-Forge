@@ -57,7 +57,7 @@ Vibe-UI-Forge-main/
 │   ├── src/
 │   │   ├── component/                 # 组件源码
 │   │   ├── blocks/                   # block 源码 + generated pages
-│   │   └── styles/devui-tokens.css  # token
+│   │   └── styles/harmony-token.css  # token
 │   ├── components.json                # shadcn 配置（alias）
 │   └── registry.json                  # legacy block 清单
 │
@@ -94,7 +94,7 @@ Vibe-UI-Forge-main/
 |-----------|------|
 | `src/component/` | 组件 TSX 源码 |
 | `src/blocks/` | block TSX 源码 |
-| `src/styles/devui-tokens.css` | CSS token |
+| `src/styles/harmony-token.css` | CSS token |
 | `components.json` | shadcn alias 配置 |
 
 ---

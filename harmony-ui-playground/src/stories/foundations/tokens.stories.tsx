@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 import { useMemo, type ReactNode } from "react"
 import globalSource from "@/index.css?raw"
-import devuiTokenSource from "@/styles/devui-tokens.css?raw"
+import harmonyTokenSource from "@/styles/harmony-token.css?raw"
 
 type TokenEntry = {
   name: string
@@ -17,7 +17,7 @@ function parseTokens(source: string): TokenEntry[] {
   }))
 }
 
-const allTokens = [...parseTokens(globalSource), ...parseTokens(devuiTokenSource)]
+const allTokens = [...parseTokens(globalSource), ...parseTokens(harmonyTokenSource)]
 
 const uniqueTokens = Array.from(
   new Map(allTokens.map((token) => [token.name, token])).values()
@@ -319,7 +319,7 @@ function TokensPreview() {
                   <span
                     className="h-7 w-14 rounded-md border border-border bg-card"
                     style={{
-                      boxShadow: `var(${token.name}) var(--devui-shadow)`,
+                      boxShadow: `var(${token.name}) var(--harmony-shadow)`,
                     }}
                   />
                 }

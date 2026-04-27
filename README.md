@@ -19,6 +19,8 @@
 | `devui-playground` | devui | devui风格组件的 playground  |
 | `harmony-ui-playground` | Harmony | Harmony 风格组件的 playground |
 
+其中 `harmony-ui-playground` 的运行时 token 命名空间统一为 `--harmony-*`。
+
 设计资源&生成物的项目目录结构（harmony-ui-playground 为例）
 
 ```
@@ -27,7 +29,7 @@ harmony-ui-playground/
 ├── src/
 │   ├── component/        # 组件目录（统一维护）
 │   ├── blocks/           # Block 页面模板
-│   ├── styles/           # 设计 token（devui-tokens.css）
+│   ├── styles/           # 设计 token（harmony-token.css）
 │   ├── stories/          # 组件预览 stories
 │   ├── lib/              # 工具函数
 │   └── App.tsx           # 应用入口
@@ -71,7 +73,7 @@ harmony-ui-playground/
 Step 0: 项目上下文
     ├── 读取 components.json          → aliases、组件路径
     ├── 读取 src/index.css            → Tailwind 主题映射
-    └── 读取 src/styles/devui-tokens.css  → 设计 Token
+    └── 读取设计系统 token 文件（如 src/styles/harmony-token.css） → 设计 Token
     │
     ▼
 Step 1: 路由匹配

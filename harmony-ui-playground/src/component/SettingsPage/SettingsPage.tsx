@@ -28,16 +28,16 @@ import {
   RefreshCw,
   Info,
 } from "lucide-react"
-import type { TitleBarProps } from "../TitleBar/title-bar"
+import type { MouseEvent } from "react"
 import "./SettingsPage.css"
 
 export interface SettingsPageProps {
   /** 页面标题 */
   title?: string
   /** 左侧图标点击回调 */
-  onLeftClick?: TitleBarProps["left-click"]
+  onLeftClick?: (event: MouseEvent<HTMLButtonElement>) => void
   /** 右侧图标点击回调 */
-  onRightClick?: TitleBarProps["right-click"]
+  onRightClick?: (event: MouseEvent<HTMLButtonElement>, index: number) => void
   /** 用户头像 */
   userAvatar?: string
   /** 用户名称 */
@@ -52,7 +52,7 @@ export interface SettingsPageProps {
 const Icon = ({
   name,
   size = 22,
-  color = "var(--devui-primary)",
+  color = "var(--harmony-primary)",
 }: {
   name: string
   size?: number
@@ -94,7 +94,7 @@ const Icon = ({
     time: <Calendar size={size} color={color} />,
     keyboard: <Keyboard size={size} color={color} />,
     backup: <Save size={size} color={color} />,
-    update: <RefreshCw size={size} color="var(--devui-success)" />,
+    update: <RefreshCw size={size} color="var(--harmony-success)" />,
     phone: <Smartphone size={size} color={color} />,
   }
 
@@ -460,7 +460,7 @@ export function SettingsPage({
         id: "system-update",
         title: "系统更新",
         icon: "update",
-        iconColor: "var(--devui-success)",
+        iconColor: "var(--harmony-success)",
         showArrow: true,
         subtitle: "已是最新版本",
       },

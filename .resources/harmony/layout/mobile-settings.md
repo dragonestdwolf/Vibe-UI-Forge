@@ -63,6 +63,7 @@
 - `list-item`
 - `switch`
 - `divider` (按需)
+- `hero-card`
 
 ## composition_mapping
 
@@ -70,6 +71,7 @@
 |---|---|---|
 | `status bar` | `status-bar` | harmony-public + theme(light/dark) |
 | `titlebar` | `title-bar` | default，左侧返回、标题、右侧可选 |
+| `Hero Card` | `hero-card` | 244×220 r=24 毛玻璃面板，居中 icon + title + subtitle + 底部整宽 CTA 胶囊按钮 |
 | `Entry Card` | `list` + `list-item` | 外层 card container + trailing value + chevron |
 | `Group Card` | `list` + `list-item` + `switch`/`divider` | 多行设置组，首行可为 switch |
 | `Informational Note` | plain text | 非卡片文本块，font_secondary |
@@ -87,7 +89,7 @@
 
 | Semantic Part | Token |
 |---|---|
-| Page canvas | `background_secondary` |
+| Page canvas | `comp_background_gray` |
 | Card surface | `comp_background_primary` |
 | Title / primary labels | `font_primary` |
 | Right-side value / note | `font_secondary` |

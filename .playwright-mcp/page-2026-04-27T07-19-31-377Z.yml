@@ -1,0 +1,86 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e6]: 09:41
+    - img [ref=e8]
+  - generic [ref=e10]:
+    - button "back" [ref=e12] [cursor=pointer]
+    - generic [ref=e14]:
+      - generic "显示和亮度" [ref=e15]
+      - generic "调节外观模式与屏幕亮度" [ref=e16]
+    - generic [ref=e18]:
+      - button "帮助" [ref=e19]:
+        - img [ref=e20]
+      - button "更多操作" [ref=e23]:
+        - img [ref=e24]
+  - main [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - generic [ref=e32]: 外观模式
+          - generic [ref=e33]: 深色模式
+        - img [ref=e35]
+      - generic [ref=e37]:
+        - generic [ref=e40]: 深色预览
+        - generic [ref=e48]: 浅色预览
+    - generic [ref=e55]:
+      - button "浅色" [ref=e56]
+      - button "深色" [pressed] [ref=e57]
+      - button "自动" [ref=e58]
+    - generic [ref=e59]:
+      - heading "亮度" [level=2] [ref=e60]
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - generic [ref=e63]:
+            - generic [ref=e64]: 当前亮度
+            - generic [ref=e65]: 62%
+          - generic [ref=e66]: 室内舒适
+        - generic [ref=e68]:
+          - img [ref=e70]
+          - slider [ref=e73] [cursor=pointer]: "62"
+          - img [ref=e75]
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - generic [ref=e83]: 自动亮度调节
+            - generic [ref=e84]: 根据环境光自动优化亮度
+          - switch [checked] [ref=e85] [cursor=pointer]
+    - generic [ref=e88]:
+      - heading "显示选项" [level=2] [ref=e89]
+      - generic [ref=e90]:
+        - button "护眼模式 降低蓝光，夜间观看更柔和" [ref=e91] [cursor=pointer]:
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - generic [ref=e94]: 护眼模式
+              - generic [ref=e96]: 降低蓝光，夜间观看更柔和
+            - switch [checked] [ref=e99]
+        - button "深色模式定时 日落到日出" [ref=e102] [cursor=pointer]:
+          - generic [ref=e103]:
+            - generic [ref=e105]: 深色模式定时
+            - generic [ref=e108]:
+              - generic [ref=e109]: 日落到日出
+              - img [ref=e110]
+        - button "降低浅色壁纸亮度" [ref=e112] [cursor=pointer]:
+          - generic [ref=e113]:
+            - generic [ref=e115]: 降低浅色壁纸亮度
+            - switch [ref=e118]
+    - generic [ref=e121]:
+      - heading "更多显示设置" [level=2] [ref=e122]
+      - generic [ref=e123]:
+        - button "文字大小与粗细 标准" [ref=e124] [cursor=pointer]:
+          - generic [ref=e125]:
+            - generic [ref=e127]: 文字大小与粗细
+            - generic [ref=e130]:
+              - generic [ref=e131]: 标准
+              - img [ref=e132]
+        - button "屏幕休眠 30 秒" [ref=e134] [cursor=pointer]:
+          - generic [ref=e135]:
+            - generic [ref=e137]: 屏幕休眠
+            - generic [ref=e140]:
+              - generic [ref=e141]: 30 秒
+              - img [ref=e142]
+        - button "色彩风格 原彩" [ref=e144] [cursor=pointer]:
+          - generic [ref=e145]:
+            - generic [ref=e147]: 色彩风格
+            - generic [ref=e150]:
+              - generic [ref=e151]: 原彩
+              - img [ref=e152]
+    - paragraph [ref=e154]: 开启自动亮度后，系统会结合环境光变化和你的调节习惯动态优化屏幕显示效果。

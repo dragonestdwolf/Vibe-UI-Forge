@@ -29,7 +29,7 @@ export default function WaterSettingsGeneratedPage() {
   const textReminderNote = "默认每小时提醒一次。为避免打扰，\"每日喝水\"会在您设置的提醒范围内根据打卡的进度灵活提醒，且12:00~14:00时段午休时间，不进行提醒。"
 
   return (
-    <div className="w-[360px] min-h-[792px] mx-auto bg-background-secondary">
+    <div className="w-[360px] min-h-[792px] mx-auto bg-comp-background-gray">
       {/* Shell: Status Bar */}
       <StatusBar
         mode="light"

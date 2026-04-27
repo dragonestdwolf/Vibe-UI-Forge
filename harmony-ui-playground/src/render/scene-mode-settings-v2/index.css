@@ -1,0 +1,374 @@
+.scene-mode-settings-v2 {
+  min-height: 792px;
+  width: 360px;
+  margin: 0 auto;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top center, rgba(10, 89, 247, 0.11), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 19%, #ffffff 41%, #ffffff 100%);
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.scene-mode-settings-v2__ornament {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 999px;
+  filter: blur(56px);
+}
+
+.scene-mode-settings-v2__ornament--left {
+  left: -72px;
+  top: 78px;
+  height: 164px;
+  width: 164px;
+  background: rgba(10, 89, 247, 0.1);
+}
+
+.scene-mode-settings-v2__ornament--right {
+  right: -88px;
+  top: 164px;
+  height: 212px;
+  width: 212px;
+  background: rgba(91, 164, 255, 0.12);
+}
+
+.scene-mode-settings-v2__content {
+  padding: 0 16px 36px;
+}
+
+.scene-mode-settings-v2__hero-scroll {
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scene-mode-settings-v2__hero-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scene-mode-settings-v2__hero-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  padding: 0 16px;
+}
+
+.scene-mode-settings-v2__hero-shell {
+  position: relative;
+  flex-shrink: 0;
+  width: 252px;
+  padding: 10px;
+  border-radius: 34px;
+}
+
+.scene-mode-settings-v2__hero-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 249, 255, 0.92));
+  border: 1px solid rgba(10, 89, 247, 0.08);
+  box-shadow: 0 16px 32px rgba(10, 89, 247, 0.08);
+}
+
+.scene-mode-settings-v2__hero-shell--active::before {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(242, 248, 255, 0.96)),
+    radial-gradient(circle at top center, rgba(10, 89, 247, 0.12), transparent 48%);
+  border-color: rgba(10, 89, 247, 0.14);
+  box-shadow:
+    0 20px 44px rgba(10, 89, 247, 0.1),
+    0 0 0 1px rgba(10, 89, 247, 0.03);
+  animation: scene-mode-settings-v2-breathe 4.2s ease-in-out infinite;
+}
+
+.scene-mode-settings-v2__hero-shell-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.scene-mode-settings-v2__hero-badge {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  border-radius: 999px;
+  background: rgba(10, 89, 247, 0.08);
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: #0a59f7;
+}
+
+.scene-mode-settings-v2__hero-card {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 224px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 22px 18px 18px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(18px);
+}
+
+.scene-mode-settings-v2__hero-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 70px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(10, 89, 247, 0.08), rgba(10, 89, 247, 0.14));
+}
+
+.scene-mode-settings-v2__hero-title {
+  margin-top: 18px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: rgba(0, 0, 0, 0.92);
+}
+
+.scene-mode-settings-v2__hero-description {
+  margin-top: 10px;
+  min-height: 42px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.42);
+}
+
+.scene-mode-settings-v2__hero-button {
+  margin-top: 20px;
+  display: inline-flex;
+  min-width: 124px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(10, 89, 247, 0.08);
+  padding: 12px 18px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  color: #0a59f7;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.scene-mode-settings-v2__hero-button:hover {
+  background: rgba(10, 89, 247, 0.12);
+}
+
+.scene-mode-settings-v2__hero-button:active {
+  transform: scale(0.98);
+}
+
+.scene-mode-settings-v2__hero-button--active {
+  background: linear-gradient(180deg, #1989fa 0%, #0a59f7 100%);
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(10, 89, 247, 0.24);
+}
+
+.scene-mode-settings-v2__carousel-indicator {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.scene-mode-settings-v2__carousel-indicator-track {
+  display: inline-flex;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2px;
+}
+
+.scene-mode-settings-v2__carousel-indicator-pill {
+  height: 8px;
+  width: 22px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.scene-mode-settings-v2__stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.scene-mode-settings-v2__panel {
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(10, 89, 247, 0.05);
+  box-shadow: 0 10px 28px rgba(10, 89, 247, 0.05);
+  overflow: hidden;
+}
+
+.scene-mode-settings-v2__panel-body {
+  padding: 18px 18px 16px;
+}
+
+.scene-mode-settings-v2__eyebrow {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.34);
+}
+
+.scene-mode-settings-v2__section-title {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: -0.03em;
+  color: rgba(0, 0, 0, 0.94);
+}
+
+.scene-mode-settings-v2__section-description {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.58;
+  color: rgba(0, 0, 0, 0.34);
+}
+
+.scene-mode-settings-v2__condition-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.scene-mode-settings-v2__condition-main {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.scene-mode-settings-v2__condition-days {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: -0.03em;
+  color: rgba(0, 0, 0, 0.94);
+}
+
+.scene-mode-settings-v2__condition-time {
+  margin-top: 8px;
+  font-size: 18px;
+  line-height: 1.34;
+  letter-spacing: -0.02em;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.scene-mode-settings-v2__condition-link {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #0a59f7;
+}
+
+.scene-mode-settings-v2__condition-note {
+  margin-top: 14px;
+  max-width: 216px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(0, 0, 0, 0.28);
+}
+
+.scene-mode-settings-v2__condition-status {
+  padding-top: 32px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.92);
+}
+
+.scene-mode-settings-v2__split {
+  margin-top: 16px;
+}
+
+.scene-mode-settings-v2__switch-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.scene-mode-settings-v2__switch-slot {
+  flex-shrink: 0;
+  padding-top: 3px;
+}
+
+.scene-mode-settings-v2__list {
+  background: transparent;
+}
+
+.scene-mode-settings-v2__list .my-list-item {
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent;
+}
+
+.scene-mode-settings-v2__list .my-list-item__content {
+  border-bottom-color: rgba(10, 89, 247, 0.08);
+}
+
+.scene-mode-settings-v2__list .my-list-item__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: -0.03em;
+}
+
+.scene-mode-settings-v2__right-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  color: rgba(0, 0, 0, 0.62);
+}
+
+.scene-mode-settings-v2__right-value-text {
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+.scene-mode-settings-v2__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.scene-mode-settings-v2__home-indicator {
+  height: 5px;
+  width: 124px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+@keyframes scene-mode-settings-v2-breathe {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-4px) scale(1.01);
+  }
+}

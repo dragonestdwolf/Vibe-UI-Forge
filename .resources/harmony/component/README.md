@@ -17,3 +17,8 @@
 ## v1.0 不强制补齐所有 component/{name}.md
 
 后续只有组件规范无法从 TSX/stories 判断时，再补具体组件 markdown。
+
+## Token Namespace
+
+- Harmony 运行时 token 统一使用 `--harmony-*`
+- component markdown 如果引用 token，请不要再使用 `--devui-*` 历史命名

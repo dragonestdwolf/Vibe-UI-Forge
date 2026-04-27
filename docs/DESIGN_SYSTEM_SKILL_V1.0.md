@@ -51,7 +51,7 @@ component 规范 markdown 按需读取；
 |-----------|------|
 | `harmony-ui-playground/src/component/` | 组件实现与组件 API |
 | `harmony-ui-playground/src/blocks/` | 页面/区块实现参考 |
-| `harmony-ui-playground/src/styles/devui-tokens.css` | 设计 token |
+| `harmony-ui-playground/src/styles/harmony-token.css` | 设计 token |
 | `harmony-ui-playground/src/index.css` | Tailwind v4 semantic token 映射 |
 | `harmony-ui-playground/components.json` | alias、style、iconLibrary、Tailwind 配置 |
 
@@ -121,7 +121,7 @@ Vibe-UI-Forge-main/
 │   ├── src/
 │   │   ├── component/
 │   │   ├── blocks/
-│   │   ├── styles/devui-tokens.css
+│   │   ├── styles/harmony-token.css
 │   │   └── index.css
 │   └── registry.json
 │

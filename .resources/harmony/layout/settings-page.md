@@ -95,7 +95,7 @@
 
 | Semantic Part | Template Usage |
 |---|---|
-| Page canvas | `bg-gray-100` / `background_secondary` |
+| Page canvas | `comp_background_gray` |
 | Group card | `List` rounded card |
 | Primary text | setting title, titlebar text |
 | Secondary text | right-side value, status description |

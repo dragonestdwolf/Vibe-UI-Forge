@@ -1,0 +1,297 @@
+.display-brightness-settings-v1 {
+  width: 360px;
+  min-height: 792px;
+  margin: 0 auto;
+  background:
+    radial-gradient(circle at top center, rgba(10, 89, 247, 0.08), transparent 28%),
+    #ffffff;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.display-brightness-settings-v1__shell {
+  padding: 0 16px 34px;
+}
+
+.display-brightness-settings-v1__stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.display-brightness-settings-v1__mode-card {
+  border-radius: 28px;
+  box-shadow: 0 12px 28px rgba(10, 89, 247, 0.06);
+  border: 1px solid rgba(10, 89, 247, 0.05);
+}
+
+.display-brightness-settings-v1__mode-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.display-brightness-settings-v1__mode-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #f8faff;
+  padding: 12px;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.display-brightness-settings-v1__mode-button:hover {
+  transform: translateY(-1px);
+}
+
+.display-brightness-settings-v1__mode-button--selected {
+  border-color: rgba(10, 89, 247, 0.18);
+  background: linear-gradient(180deg, #f7fbff 0%, #f0f7ff 100%);
+  box-shadow: 0 10px 24px rgba(10, 89, 247, 0.09);
+}
+
+.display-brightness-settings-v1__mode-badge {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 999px;
+  background: rgba(10, 89, 247, 0.1);
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  color: #0a59f7;
+}
+
+.display-brightness-settings-v1__phone {
+  position: relative;
+  aspect-ratio: 100 / 188;
+  width: 100%;
+  border-radius: 20px;
+  padding: 9px 8px;
+  overflow: hidden;
+}
+
+.display-brightness-settings-v1__phone--light {
+  background: linear-gradient(180deg, #fefefe 0%, #f4f8ff 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.04),
+    0 8px 18px rgba(10, 89, 247, 0.06);
+}
+
+.display-brightness-settings-v1__phone--dark {
+  background: linear-gradient(180deg, #1d2430 0%, #11151d 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03),
+    0 8px 18px rgba(7, 12, 20, 0.24);
+}
+
+.display-brightness-settings-v1__phone-notch {
+  width: 42px;
+  height: 7px;
+  margin: 0 auto;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.display-brightness-settings-v1__phone--dark .display-brightness-settings-v1__phone-notch {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.display-brightness-settings-v1__phone-panel {
+  margin-top: 12px;
+  border-radius: 16px;
+  padding: 10px;
+}
+
+.display-brightness-settings-v1__phone--light .display-brightness-settings-v1__phone-panel {
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.display-brightness-settings-v1__phone--dark .display-brightness-settings-v1__phone-panel {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.display-brightness-settings-v1__phone-header {
+  height: 14px;
+  width: 54%;
+  border-radius: 999px;
+}
+
+.display-brightness-settings-v1__phone--light .display-brightness-settings-v1__phone-header {
+  background: rgba(10, 89, 247, 0.14);
+}
+
+.display-brightness-settings-v1__phone--dark .display-brightness-settings-v1__phone-header {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.display-brightness-settings-v1__phone-lines {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.display-brightness-settings-v1__phone-line {
+  height: 10px;
+  border-radius: 999px;
+}
+
+.display-brightness-settings-v1__phone--light .display-brightness-settings-v1__phone-line {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.display-brightness-settings-v1__phone--dark .display-brightness-settings-v1__phone-line {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.display-brightness-settings-v1__phone-line--short {
+  width: 58%;
+}
+
+.display-brightness-settings-v1__phone-line--accent {
+  width: 74%;
+}
+
+.display-brightness-settings-v1__phone--light .display-brightness-settings-v1__phone-line--accent {
+  background: rgba(10, 89, 247, 0.2);
+}
+
+.display-brightness-settings-v1__phone--dark .display-brightness-settings-v1__phone-line--accent {
+  background: rgba(91, 164, 255, 0.34);
+}
+
+.display-brightness-settings-v1__mode-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.display-brightness-settings-v1__mode-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.92);
+}
+
+.display-brightness-settings-v1__mode-description {
+  font-size: 13px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.display-brightness-settings-v1__mode-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(0, 0, 0, 0.42);
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.display-brightness-settings-v1__mode-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(10, 89, 247, 0.18);
+}
+
+.display-brightness-settings-v1__mode-button--selected .display-brightness-settings-v1__mode-dot {
+  background: #0a59f7;
+}
+
+.display-brightness-settings-v1__mode-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  background: rgba(10, 89, 247, 0.08);
+  padding: 8px 12px;
+  color: #0a59f7;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.display-brightness-settings-v1__settings-list {
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(10, 89, 247, 0.05);
+}
+
+.display-brightness-settings-v1__brightness-block {
+  padding: 18px 18px 16px;
+  background: #ffffff;
+}
+
+.display-brightness-settings-v1__brightness-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.display-brightness-settings-v1__brightness-title {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.94);
+  letter-spacing: -0.03em;
+}
+
+.display-brightness-settings-v1__brightness-value {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.36);
+}
+
+.display-brightness-settings-v1__brightness-slider {
+  margin-top: 16px;
+}
+
+.display-brightness-settings-v1__brightness-note {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.34);
+}
+
+.display-brightness-settings-v1__list-divider {
+  padding: 0 18px;
+  background: #ffffff;
+}
+
+.display-brightness-settings-v1__right-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.display-brightness-settings-v1__right-text {
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.display-brightness-settings-v1__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.display-brightness-settings-v1__home-indicator {
+  width: 124px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.1);
+}

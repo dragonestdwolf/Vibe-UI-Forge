@@ -28,3 +28,8 @@
 - `composition_mapping` - 组合映射
 - `generation_constraints` - 生成约束
 - `validation_notes` - 验证笔记
+
+## Token Note
+
+- Harmony layout 相关样式统一引用 `harmony-ui-playground/src/styles/harmony-token.css`
+- 运行时 CSS 变量命名空间统一为 `--harmony-*`

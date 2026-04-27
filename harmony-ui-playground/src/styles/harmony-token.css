@@ -1,0 +1,191 @@
+:root {
+  color-scheme: light;
+
+  /* Harmony foundation */
+  --harmony-comp-background-gray: #F1F3F5;
+  --harmony-global-bg: #f7f8fa;
+  --harmony-glass-morphism-bg: rgba(247, 248, 250, 0.92);
+  --harmony-glass-morphism-floating-container-bg: rgba(255, 255, 255, 0.94);
+  --harmony-global-bg-normal: #ffffff;
+  --harmony-base-bg: #ffffff;
+  --harmony-base-bg-dark: #1a1a1a;
+
+  --harmony-brand: #0a59f7;
+  --harmony-brand-foil: rgba(10, 89, 247, 0.06);
+  --harmony-brand-hover: #328bfb;
+  --harmony-brand-active: #2758ee;
+  --harmony-brand-active-focus: #003ebd;
+
+  --harmony-primary: #0a59f7;
+  --harmony-primary-hover: #328bfb;
+  --harmony-primary-active: #2758ee;
+  --harmony-primary-disabled: rgba(10, 89, 247, 0.28);
+
+  --harmony-contrast: #ff4d4f;
+  --harmony-contrast-hover: #ff7875;
+  --harmony-contrast-active: #d9363e;
+
+  --harmony-text: rgba(0, 0, 0, 0.9);
+  --harmony-text-weak: rgba(0, 0, 0, 0.75);
+  --harmony-aide-text: rgba(0, 0, 0, 0.6);
+  --harmony-aide-text-hover: rgba(0, 0, 0, 0.72);
+  --harmony-aide-text-stress: rgba(0, 0, 0, 0.45);
+  --harmony-placeholder: rgba(0, 0, 0, 0.4);
+  --harmony-light-text: #ffffff;
+  --harmony-dark-text: rgba(0, 0, 0, 0.9);
+
+  --harmony-link: #1989fa;
+  --harmony-link-active: #0a59f7;
+  --harmony-link-light: #46a3ff;
+  --harmony-link-light-active: #0a59f7;
+
+  --harmony-line: rgba(0, 0, 0, 0.08);
+  --harmony-dividing-line: rgba(0, 0, 0, 0.08);
+  --harmony-block: #ffffff;
+  --harmony-area: rgba(0, 0, 0, 0.05);
+
+  --harmony-danger: #f52929;
+  --harmony-warning: #f59429;
+  --harmony-waiting: #7b8cff;
+  --harmony-success: #07c160;
+  --harmony-info: #007dff;
+  --harmony-initial: #edf2fc;
+  --harmony-unavailable: #f2f3f5;
+
+  --harmony-shadow: rgba(0, 0, 0, 0.1);
+  --harmony-light-shadow: rgba(0, 0, 0, 0.06);
+  --harmony-connected-overlay-shadow: rgba(0, 0, 0, 0.12);
+  --harmony-feedback-overlay-shadow: rgba(0, 0, 0, 0.16);
+  --harmony-hover-shadow: rgba(0, 0, 0, 0.14);
+
+  --harmony-icon-text: rgba(0, 0, 0, 0.6);
+  --harmony-icon-bg: #ffffff;
+  --harmony-icon-fill: rgba(0, 0, 0, 0.6);
+  --harmony-icon-fill-weak: rgba(0, 0, 0, 0.4);
+  --harmony-icon-fill-hover: rgba(0, 0, 0, 0.9);
+  --harmony-icon-fill-active: #0a59f7;
+  --harmony-icon-fill-active-hover: #084ed8;
+  --harmony-shape-icon-fill: rgba(0, 0, 0, 0.18);
+  --harmony-shape-icon-fill-hover: rgba(0, 0, 0, 0.3);
+  --harmony-shape-icon-fill-active: rgba(0, 0, 0, 0.38);
+  --harmony-shape-icon-fill-disabled: rgba(0, 0, 0, 0.08);
+
+  --harmony-form-control-line: #e1e2e6;
+  --harmony-form-control-bg: #ffffff;
+  --harmony-form-control-line-hover: #c8c9cc;
+  --harmony-form-control-line-active: #0a59f7;
+  --harmony-form-control-interactive-outline: rgba(10, 89, 247, 0.18);
+  --harmony-form-control-line-active-hover: #084ed8;
+
+  --harmony-list-item-active-bg: rgba(10, 89, 247, 0.1);
+  --harmony-list-item-active-text: rgba(0, 0, 0, 0.9);
+  --harmony-list-item-active-hover-bg: rgba(10, 89, 247, 0.12);
+  --harmony-list-item-hover-bg: rgba(0, 0, 0, 0.0470588244497776);
+  --harmony-list-item-hover-text: rgba(0, 0, 0, 0.9);
+  --harmony-list-item-selected-bg: rgba(10, 89, 247, 0.12);
+  --harmony-list-item-strip-bg: #edf2fc;
+
+  --harmony-disabled-bg: #f2f3f5;
+  --harmony-disabled-line: rgba(0, 0, 0, 0.08);
+  --harmony-disabled-text: rgba(0, 0, 0, 0.4);
+  --harmony-icon-fill-active-disabled: rgba(10, 89, 247, 0.32);
+
+  --harmony-label-bg: rgba(10, 89, 247, 0.06);
+  --harmony-connected-overlay-bg: #ffffff;
+  --harmony-connected-overlay-line: #0a59f7;
+  --harmony-fullscreen-overlay-bg: #ffffff;
+  --harmony-feedback-overlay-bg: rgba(0, 0, 0, 0.72);
+  --harmony-feedback-overlay-text: #ffffff;
+
+  --harmony-embed-search-bg: rgba(0, 0, 0, 0.0470588244497776);
+  --harmony-embed-search-bg-hover: rgba(0, 0, 0, 0.08);
+  --harmony-float-block-shadow: rgba(10, 89, 247, 0.24);
+  --harmony-highlight-overlay: rgba(255, 255, 255, 0.85);
+  --harmony-range-item-hover-bg: rgba(10, 89, 247, 0.06);
+
+  --harmony-gray-form-control-bg: #f5f6f7;
+  --harmony-gray-form-control-hover-bg: #edf0f3;
+  --harmony-nav-expand-bg: #ffffff;
+
+  --harmony-danger-line: #f66f6a;
+  --harmony-danger-bg: rgba(245, 41, 41, 0.06);
+  --harmony-warning-line: #ed6f21;
+  --harmony-warning-bg: rgba(245, 148, 41, 0.06);
+  --harmony-info-line: #007dff;
+  --harmony-info-bg: rgba(0, 125, 255, 0.12);
+  --harmony-success-line: #07c160;
+  --harmony-success-bg: #f0f9eb;
+  --harmony-primary-line: #0a59f7;
+  --harmony-primary-bg: rgba(10, 89, 247, 0.06);
+  --harmony-default-line: rgba(0, 0, 0, 0.08);
+  --harmony-default-bg: #f5f6f7;
+
+  --harmony-shadow-length-base: 0 1px 0;
+  --harmony-shadow-length-slide-left: -2px 0 8px;
+  --harmony-shadow-length-slide-right: 2px 0 8px;
+  --harmony-shadow-length-connected-overlay: 0 4px 16px;
+  --harmony-shadow-length-hover: 0 8px 24px;
+  --harmony-shadow-length-feedback-overlay: 0 8px 24px;
+  --harmony-shadow-length-fullscreen-overlay: 0 10px 30px;
+
+  --harmony-border-radius: 4px;
+  --harmony-border-radius-feedback: 6px;
+  --harmony-border-radius-card: 20px;
+  --harmony-border-radius-full: 999px;
+
+  --harmony-font-size: 14px;
+  --harmony-font-size-card-title: 16px;
+  --harmony-font-size-page-title: 20px;
+  --harmony-font-size-modal-title: 18px;
+  --harmony-font-size-price: 20px;
+  --harmony-font-size-data-overview: 24px;
+  --harmony-font-size-icon: 16px;
+  --harmony-font-size-sm: 12px;
+  --harmony-font-size-md: 14px;
+  --harmony-font-size-lg: 16px;
+
+  --harmony-font-title-weight: 700;
+  --harmony-font-content-weight: 400;
+  --harmony-line-height-base: 1.5;
+
+  --harmony-animation-ease-in-smooth: cubic-bezier(0.4, 0, 1, 1);
+  --harmony-animation-duration-slow: 300ms;
+  --harmony-animation-duration-base: 200ms;
+  --harmony-animation-duration-fast: 120ms;
+  --harmony-animation-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --harmony-animation-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --harmony-animation-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --harmony-animation-ease-in-out-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --harmony-animation-linear: linear;
+
+  --harmony-z-index-full-page-overlay: 1080;
+  --harmony-z-index-pop-up: 1060;
+  --harmony-z-index-dropdown: 1052;
+  --harmony-z-index-modal: 1050;
+  --harmony-z-index-drawer: 1040;
+  --harmony-z-index-framework: 1000;
+
+  --harmony-table-column-shadow-color: rgba(0, 0, 0, 0.08);
+
+  --harmony-btn-sm-padding: 0 12px;
+  --harmony-btn-padding: 0 16px;
+  --harmony-btn-lg-padding: 0 20px;
+  --harmony-btn-common-bg: #f5f6f7;
+  --harmony-btn-common-bg-disabled: #f2f3f5;
+  --harmony-btn-common-border-color: #e1e2e6;
+  --harmony-btn-common-bg-hover: #edf0f3;
+  --harmony-btn-common-color-hover: rgba(0, 0, 0, 0.9);
+  --harmony-btn-common-border-color-hover: #c8c9cc;
+  --harmony-btn-common-bg-active: #e4e7ec;
+  --harmony-btn-common-color-active: rgba(0, 0, 0, 0.9);
+  --harmony-btn-common-border-color-active: #c8c9cc;
+  --harmony-btn-common-border-disabled: rgba(0, 0, 0, 0.08);
+
+  --harmony-icon-hover-bg: rgba(0, 0, 0, 0.08);
+  --harmony-icon-active-bg: rgba(0, 0, 0, 0.12);
+
+  --harmony-font-family-sans:
+    "HarmonyOS Sans SC", "HarmonyOS Sans", "PingFang SC", "Microsoft YaHei",
+    "Source Han Sans CN", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    Arial, sans-serif;
+}

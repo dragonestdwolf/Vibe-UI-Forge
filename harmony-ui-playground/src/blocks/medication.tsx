@@ -27,8 +27,8 @@ export default function MedicationPage() {
   ]
 
   return (
-    <div className="w-[360px] mx-auto bg-gray-100">
-      <StatusBar time="08:08" backgroundColor="#f1f3f5" />
+    <div className="w-[360px] mx-auto bg-comp-background-gray">
+      <StatusBar time="08:08" backgroundColor="#F1F3F5" />
 
       <FloatLayer
         modelValue={open}

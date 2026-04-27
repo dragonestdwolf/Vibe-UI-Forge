@@ -22,14 +22,14 @@ export default function WaterSettingsPage() {
   const textReminderNote = "默认每小时提醒一次。为避免打扰，\"每日喝水\"会在您设置的提醒范围内根据打卡的进度灵活提醒，且12:00~14:00时段午休时间，不进行提醒。"
 
   return (
-    <div className="w-[360px] min-h-[792px] mx-auto bg-gray-100">
-      <StatusBar time="08:08" backgroundColor="#f1f3f5" />
+    <div className="w-[360px] min-h-[792px] mx-auto bg-comp-background-gray">
+      <StatusBar time="08:08" backgroundColor="#F1F3F5" />
 
       <div className="w-[328px] mx-auto">
         <TitleBar
           title={textTitle}
           leftIcon={iconChevronBack}
-          backgroundColor="#f1f3f5"
+          backgroundColor="#F1F3F5"
         />
       </div>
 

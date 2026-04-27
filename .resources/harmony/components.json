@@ -140,6 +140,97 @@
       "path": "src/component/SceneModeCard",
       "export": "SceneModeCard",
       "stories": "src/component/SceneModeCard/SceneModeCard.stories.tsx"
+    },
+    {
+      "id": "feature-promo-card",
+      "name": "FeaturePromoCard",
+      "path": "src/component/FeaturePromoCard",
+      "export": "FeaturePromoCard",
+      "stories": "src/component/FeaturePromoCard/FeaturePromoCard.stories.tsx"
+    },
+    {
+      "id": "ai-bottom-bar",
+      "name": "AiBottomBar",
+      "path": "src/component/AiBottomBar",
+      "export": "AiBottomBar",
+      "stories": "src/component/AiBottomBar/AiBottomBar.stories.tsx"
+    },
+    {
+      "id": "app-icon",
+      "name": "AppIcon",
+      "path": "src/component/AppIcon",
+      "export": "AppIcon",
+      "stories": "src/component/AppIcon/AppIcon.stories.tsx"
+    },
+    {
+      "id": "avatar",
+      "name": "Avatar",
+      "path": "src/component/Avatar",
+      "export": "Avatar",
+      "stories": "src/component/Avatar/Avatar.stories.tsx"
+    },
+    {
+      "id": "checkbox",
+      "name": "Checkbox",
+      "path": "src/component/Checkbox",
+      "export": "Checkbox",
+      "stories": "src/component/Checkbox/Checkbox.stories.tsx"
+    },
+    {
+      "id": "clover-icon",
+      "name": "CloverIcon",
+      "path": "src/component/CloverIcon",
+      "export": "CloverIcon",
+      "stories": "src/component/CloverIcon/CloverIcon.stories.tsx"
+    },
+    {
+      "id": "icon-button",
+      "name": "IconButton",
+      "path": "src/component/IconButton",
+      "export": "IconButton",
+      "stories": "src/component/IconButton/IconButton.stories.tsx"
+    },
+    {
+      "id": "message",
+      "name": "Message",
+      "path": "src/component/Message",
+      "export": "Message",
+      "stories": "src/component/Message/Message.stories.tsx"
+    },
+    {
+      "id": "pixso-list-row-medium",
+      "name": "PixsoListRowMedium",
+      "path": "src/component/PixsoListRowMedium",
+      "export": "PixsoListRowMedium",
+      "stories": "src/component/PixsoListRowMedium/PixsoListRowMedium.stories.tsx"
+    },
+    {
+      "id": "scroll-bar",
+      "name": "ScrollBar",
+      "path": "src/component/ScrollBar",
+      "export": "ScrollBar",
+      "stories": "src/component/ScrollBar/ScrollBar.stories.tsx"
+    },
+    {
+      "id": "settings-page",
+      "name": "SettingsPage",
+      "path": "src/component/SettingsPage",
+      "export": "SettingsPage",
+      "stories": "src/component/SettingsPage/SettingsPage.stories.tsx"
+    },
+    {
+      "id": "sub-header",
+      "name": "SubHeader",
+      "path": "src/component/SubHeader",
+      "export": "SubHeader",
+      "stories": "src/component/SubHeader/SubHeader.stories.tsx"
+    },
+    {
+      "id": "wifi-icon",
+      "name": "WifiIcon",
+      "path": "src/component/WifiIcon",
+      "export": "WifiIcon",
+      "stories": "src/component/WifiIcon/WifiIcon.stories.tsx"
     }
   ]
 }
