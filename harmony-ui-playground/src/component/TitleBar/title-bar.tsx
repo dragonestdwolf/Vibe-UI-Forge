@@ -1,8 +1,9 @@
 import type { CSSProperties, MouseEvent, ReactNode } from "react"
-import { cn } from "@/lib/utils"
-import "./title-bar.css"
 
-const defaultLeftIcon =
+import { cn } from "@/lib/utils"
+
+import "./title-bar.css"
+const defaultBackIcon =
   "data:image/svg+xml;utf8," +
   encodeURIComponent(
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
@@ -10,7 +11,7 @@ const defaultLeftIcon =
     </svg>`
   )
 
-const defaultRightIcon =
+const defaultRightIcon0 =
   "data:image/svg+xml;utf8," +
   encodeURIComponent(
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
@@ -20,152 +21,107 @@ const defaultRightIcon =
     </svg>`
   )
 
-type ClickHandler = (event: MouseEvent<HTMLButtonElement>) => void
-
-type RightClickHandler = (
-  event: MouseEvent<HTMLButtonElement>,
-  index: number
-) => void
+const defaultRightIcon1 =
+  "data:image/svg+xml;utf8," +
+  encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+      <path d="M12 5v14M5 12h14" stroke="#000000" stroke-width="2" stroke-linecap="round" />
+    </svg>`
+  )
 
 export type TitleBarProps = {
   title?: string
-  titleStyle?: CSSProperties
-  leftIcon?: string
-  leftText?: string
-  rightIcon?: string[]
-  rightText?: string
   subtitle?: string
+  titleStyle?: CSSProperties
   subtitleStyle?: CSSProperties
-  avatarSrc?: string
-  avatarSize?: number
-  avatarRadius?: number
+  leftIcon?: string
+  leftAriaLabel?: string
+  onLeftClick?: (event: MouseEvent<HTMLButtonElement>) => void
+  /** Up to three circular icon actions on the right (Pixso export used two). */
+  rightIcons?: string[]
+  onRightIconClick?: (event: MouseEvent<HTMLButtonElement>, index: number) => void
   backgroundColor?: string
   left?: ReactNode
   right?: ReactNode
-  "left-click"?: ClickHandler
-  "right-click"?: RightClickHandler
+  className?: string
 }
 
 export function TitleBar({
   title = "Title",
+  subtitle = "Subtitle",
   titleStyle,
-  leftIcon = defaultLeftIcon,
-  leftText = "",
-  rightIcon = [defaultRightIcon],
-  rightText = "",
-  subtitle = "",
   subtitleStyle,
-  avatarSrc = "",
-  avatarSize = 40,
-  avatarRadius = 999,
-  backgroundColor = "",
+  leftIcon = defaultBackIcon,
+  leftAriaLabel = "back",
+  onLeftClick,
+  rightIcons = [defaultRightIcon0, defaultRightIcon1],
+  onRightIconClick,
+  backgroundColor,
   left,
   right,
-  "left-click": onLeftClick,
-  "right-click": onRightClick,
+  className,
 }: TitleBarProps) {
   const rootStyle: CSSProperties | undefined = backgroundColor
     ? { backgroundColor }
     : undefined
 
-  const leftTextToShow = leftText || ""
-  const rightTextToShow = rightText || ""
-  const rightIconsList = rightIcon.slice(0, 3)
-  const showAvatar = Boolean(avatarSrc)
-  const showLeft = Boolean(leftIcon || leftTextToShow)
-  const showRightBlock = Boolean(rightTextToShow || rightIconsList.length > 0)
-
-  const emitLeft = (event: MouseEvent<HTMLButtonElement>) => {
-    onLeftClick?.(event)
-  }
-
-  const emitRight = (
-    event: MouseEvent<HTMLButtonElement>,
-    index: number
-  ) => {
-    onRightClick?.(event, index)
-  }
+  const icons = rightIcons.slice(0, 3)
+  const showLeft = Boolean(left || leftIcon)
+  const showDefaultRight = !right && icons.length > 0
 
   return (
-    <div className={cn("title-bar")} style={rootStyle} data-runtime-component="TitleBar">
-      {left ? (
-        <div className="title-bar__left-slot">{left}</div>
-      ) : showLeft ? (
-        <button
-          type="button"
-          className={cn(
-            "title-bar__bubble",
-            leftTextToShow && "title-bar__bubble--text"
-          )}
-          onClick={emitLeft}
-          aria-label={leftTextToShow || "left action"}
-        >
-          {leftTextToShow ? (
-            <span className="title-bar__text">{leftTextToShow}</span>
-          ) : (
-            <img className="title-bar__img" src={leftIcon} alt="" />
-          )}
-        </button>
-      ) : null}
-
-      <div className="title-bar__center">
-        {showAvatar ? (
-          <div
-            className="title-bar__avatar"
-            style={{
-              width: avatarSize,
-              height: avatarSize,
-              borderRadius: avatarRadius,
-            }}
+    <div
+      className={cn("title-bar-h", className)}
+      style={rootStyle}
+      data-runtime-component="TitleBar"
+    >
+      <div className="title-bar-h__left">
+        {left ? (
+          left
+        ) : showLeft ? (
+          <button
+            type="button"
+            className="title-bar-h__bubble"
+            onClick={onLeftClick}
+            aria-label={leftAriaLabel}
           >
-            <img className="title-bar__avatar-img" src={avatarSrc} alt="" />
+            <img className="title-bar-h__img" src={leftIcon} alt="" />
+          </button>
+        ) : null}
+      </div>
+
+      <div className="title-bar-h__center">
+        <div className="title-bar-h__textblock">
+          <div className="title-bar-h__title" style={titleStyle} title={title}>
+            {title}
           </div>
-        ) : (
-          <div className="title-bar__textblock">
-            <div className="title-bar__title" style={titleStyle} title={title}>
-              {title}
+          {subtitle ? (
+            <div
+              className="title-bar-h__subtitle"
+              style={subtitleStyle}
+              title={subtitle}
+            >
+              {subtitle}
             </div>
-            {subtitle ? (
-              <div
-                className="title-bar__subtitle"
-                style={subtitleStyle}
-                title={subtitle}
-              >
-                {subtitle}
-              </div>
-            ) : null}
-          </div>
-        )}
+          ) : null}
+        </div>
       </div>
 
       {right ? (
-        <div className="title-bar__right">{right}</div>
-      ) : showRightBlock ? (
-        <div className="title-bar__right">
-          {rightTextToShow ? (
+        <div className="title-bar-h__right">{right}</div>
+      ) : showDefaultRight ? (
+        <div className="title-bar-h__right">
+          {icons.map((src, index) => (
             <button
+              key={`${src}-${index}`}
               type="button"
-              className="title-bar__bubble title-bar__bubble--text"
-              onClick={(event) => emitRight(event, 0)}
-              aria-label={rightTextToShow}
+              className="title-bar-h__bubble"
+              onClick={(event) => onRightIconClick?.(event, index)}
+              aria-label={`action ${index + 1}`}
             >
-              <span className="title-bar__text">{rightTextToShow}</span>
+              <img className="title-bar-h__img" src={src} alt="" />
             </button>
-          ) : null}
-
-          {!rightTextToShow
-            ? rightIconsList.map((src, index) => (
-                <button
-                  key={`${src}-${index}`}
-                  type="button"
-                  className="title-bar__bubble"
-                  onClick={(event) => emitRight(event, index)}
-                  aria-label={`right action ${index + 1}`}
-                >
-                  <img className="title-bar__img" src={src} alt="" />
-                </button>
-              ))
-            : null}
+          ))}
         </div>
       ) : null}
     </div>
