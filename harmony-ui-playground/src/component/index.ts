@@ -123,5 +123,3 @@ export type { TaskCardActionTone, TaskCardProps } from "./TaskCard"
 export { TitleBar } from "./TitleBar"
 export type { TitleBarProps } from "./TitleBar"
 
-export { TitleBarHarmony3267 } from "./TitleBarHarmony3267"
-export type { TitleBarHarmony3267Props } from "./TitleBarHarmony3267"

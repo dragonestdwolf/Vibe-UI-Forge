@@ -34,7 +34,7 @@
   --fpc-action-bg: rgba(0, 0, 0, 0.047);
   --fpc-action-bg-hover: rgba(0, 0, 0, 0.08);
   --fpc-action-bg-pressed: rgba(0, 0, 0, 0.12);
-  --fpc-action-text-color: rgba(0, 0, 0, 0.9);
+  --fpc-action-text-color: rgba(10, 89, 247, 1);
   --fpc-action-text-size: 16px;
   --fpc-action-text-line: 24px;
   --fpc-action-text-weight: 500;
