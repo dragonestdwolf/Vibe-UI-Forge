@@ -6,12 +6,15 @@
  * Validates that:
  * 1. blocks.json files/stories paths exist
  * 2. components.json path/stories paths exist
- * 3. layout reference_blocks reference existing blocks
- * 4. layout needed_components reference existing components
- * 5. block dependencies reference existing components
+ * 3. assets.json asset paths exist
+ * 4. layout reference_blocks reference existing blocks
+ * 5. layout needed_components reference existing components
+ * 6. layout related_assets / asset_mapping reference existing assets
+ * 7. block dependencies reference existing components
+ * 8. block assets reference existing assets
  */
 
-import { readFileSync, existsSync } from 'fs';
+import { readFileSync, existsSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -68,9 +71,14 @@ const componentsPath = join(resourcePath, 'components.json');
 const componentsData = loadJson(componentsPath);
 if (!componentsData) process.exit(1);
 
+// Load assets.json when present
+const assetsPath = join(resourcePath, 'assets.json');
+const assetsData = existsSync(assetsPath) ? loadJson(assetsPath) : null;
+
 // Build lookup sets
 const blockIds = new Set(blocksData.blocks.map(b => b.id));
 const componentIds = new Set(componentsData.components.map(c => c.id));
+const assetIds = new Set((assetsData?.assets || []).map(a => a.id));
 
 // ============================================
 // 1. Validate blocks.json files and stories
@@ -106,6 +114,15 @@ for (const block of blocksData.blocks) {
       logError(`blocks.json > ${block.id} > dependencies: "${dep}" not found in components.json`);
     }
   }
+
+  // Check assets
+  for (const assetId of block.assets || []) {
+    if (!assetIds.has(assetId)) {
+      logError(`blocks.json > ${block.id} > assets: "${assetId}" not found in assets.json`);
+    } else {
+      logSuccess(`blocks.json > ${block.id} > assets: "${assetId}" exists in assets.json`);
+    }
+  }
 }
 
 // ============================================
@@ -133,16 +150,28 @@ for (const comp of componentsData.components) {
 }
 
 // ============================================
-// 3. Validate layout markdown reference_blocks and needed_components
+// 3. Validate assets.json paths
+// ============================================
+if (assetsData) {
+  console.log('\n--- Validating assets.json ---');
+
+  for (const asset of assetsData.assets || []) {
+    if (!checkPath(asset.path)) {
+      logError(`assets.json > ${asset.id} > path: "${asset.path}" does not exist`);
+    } else {
+      logSuccess(`assets.json > ${asset.id} > path: "${asset.path}" exists`);
+    }
+  }
+}
+
+// ============================================
+// 4. Validate layout markdown reference_blocks, needed_components, related_assets
 // ============================================
 console.log('\n--- Validating layout markdown files ---');
 
 const layoutDir = join(resourcePath, 'layout');
-const layoutFiles = [
-  'mobile-settings.md',
-  'health-dashboard.md',
-  'mobile-sheet.md'
-];
+const layoutFiles = readdirSync(layoutDir)
+  .filter((file) => file.endsWith('.md') && file !== 'index.md');
 
 for (const layoutFile of layoutFiles) {
   const layoutPath = join(layoutDir, layoutFile);
@@ -186,6 +215,40 @@ for (const layoutFile of layoutFiles) {
         logError(`layout > ${layoutFile} > needed_components: "${comp}" not found in components.json`);
       } else {
         logSuccess(`layout > ${layoutFile} > needed_components: "${comp}" exists in components.json`);
+      }
+    }
+  }
+
+  // Extract related_assets
+  const relatedAssetsMatch = content.match(/## related_assets\n\n([\s\S]*?)(?=\n## |\n---|$)/);
+  if (relatedAssetsMatch) {
+    const relatedAssets = relatedAssetsMatch[1]
+      .split('\n')
+      .filter(line => line.trim().startsWith('- `'))
+      .map(line => line.match(/- `([^`]+)`/)?.[1])
+      .filter(Boolean);
+
+    for (const assetId of relatedAssets) {
+      if (!assetIds.has(assetId)) {
+        logError(`layout > ${layoutFile} > related_assets: "${assetId}" not found in assets.json`);
+      } else {
+        logSuccess(`layout > ${layoutFile} > related_assets: "${assetId}" exists in assets.json`);
+      }
+    }
+  }
+
+  // Extract asset_mapping
+  const assetMappingSection = content.match(/## asset_mapping\n\n([\s\S]*?)(?=\n## |\n---|$)/);
+  if (assetMappingSection) {
+    const mappedAssetIds = Array.from(assetMappingSection[1].matchAll(/`([^`]+)`/g))
+      .map((match) => match[1])
+      .filter((value, index, array) => index % 2 === 1 && array.indexOf(value) === index);
+
+    for (const assetId of mappedAssetIds) {
+      if (!assetIds.has(assetId)) {
+        logError(`layout > ${layoutFile} > asset_mapping: "${assetId}" not found in assets.json`);
+      } else {
+        logSuccess(`layout > ${layoutFile} > asset_mapping: "${assetId}" exists in assets.json`);
       }
     }
   }

@@ -18,6 +18,7 @@ request / Figma
 ```
 
 The output should be grounded in the local project: existing components, blocks, stories, CSS, tokens, and aliases.
+When a project exposes a resource asset index, the output should also be grounded in registered local images and other visual assets instead of hand-drawn placeholders.
 
 ## Modes
 
@@ -30,20 +31,21 @@ Use this mode when `.resources/config.json` exists.
 3. Read `.resources/config.json` to find `active`, `resources[active].path`, and `resources[active].projectRoot`.
 4. Read `.resources/{active}/route-index.md` and match the user request to `page_type`.
 5. Read `.resources/{active}/layout/{page_type}.md`.
-6. Extract `reference_blocks`, `needed_components`, `layout_skeleton`, `composition_mapping`, and `generation_constraints`.
+6. Extract `reference_blocks`, `needed_components`, `layout_skeleton`, `composition_mapping`, `generation_constraints`, and any `related_assets` / `asset_mapping` hints present in the layout or template.
 7. Read `.resources/{active}/blocks.json` and find source files/stories for every reference block.
 8. Read `.resources/{active}/components.json` and find source files/stories for every needed component.
-9. Read the referenced TSX/stories plus relevant global CSS and token files.
-10. Generate the page using project aliases and existing APIs.
-11. Validate the generated page or render preview.
-12. Write a generation log beside the generated render source.
-13. Report grounding.
+9. If `.resources/{active}/assets.json` exists, resolve registered asset ids and paths for the current layout, template, or block.
+10. Read the referenced TSX/stories plus relevant global CSS, token files, and asset files.
+11. Generate the page using project aliases and existing APIs.
+12. Validate the generated page or render preview.
+13. Write a generation log beside the generated render source.
+14. Report grounding.
 
 ### Plain shadcn Project
 
 Use this fallback when `.resources/config.json` is missing.
 
-1. Read `components.json`, package scripts, routes/pages, existing components, blocks, and global CSS.
+1. Read `components.json`, package scripts, routes/pages, existing components, blocks, global CSS, and any local asset catalogs that the project already maintains.
 2. Infer a temporary `page_type` from the request, such as `settings`, `dashboard`, `landing`, `profile`, `auth`, `detail`, `list`, or `form`.
 3. Build a short layout plan before coding:
    - page intent
@@ -98,6 +100,7 @@ Ground generation in source files:
 
 - Reference blocks: TSX and stories from `blocks.json`.
 - Needed components: TSX and stories from `components.json`.
+- Related assets: files resolved through `.resources/{active}/assets.json`, `related_assets`, `asset_mapping`, or block-level asset ids.
 - Styling: global CSS, token CSS, Tailwind config or Tailwind v4 theme blocks.
 - Imports: aliases from project `components.json`.
 
@@ -120,6 +123,7 @@ Allowed source grounding:
 - `.resources/{active}/layout/**`
 - `.resources/{active}/blocks.json` entries that point to stable source blocks, such as `src/blocks/**`
 - `.resources/{active}/components.json` entries that point to stable components, such as `src/component/**` or `src/components/**`
+- `.resources/{active}/assets.json` entries that point to stable local asset files
 - Global CSS, token files, assets, and component stories that belong to blocks/components
 
 Rules:

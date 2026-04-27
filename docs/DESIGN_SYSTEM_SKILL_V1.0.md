@@ -67,6 +67,7 @@ component 规范 markdown 按需读取；
 Step 0: Project Context
     读 components.json
     读 src/index.css / tokens.css
+    读 .resources/{active}/assets.json（如存在）
     获取 alias、组件根目录、token 体系
     ↓
 Step 1: Route Matching
@@ -81,6 +82,7 @@ Step 2: Layout Resolution
 Step 3: Source Grounding
     读 reference_blocks 指向的 src/blocks/*.tsx
     读 needed_components 指向的 src/component/* 源码和 stories
+    读 related_assets / asset_mapping 指向的已注册资产
     读 tokens.css
     ↓
 Step 4: Page Generation

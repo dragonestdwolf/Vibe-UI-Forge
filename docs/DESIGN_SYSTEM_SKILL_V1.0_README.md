@@ -21,6 +21,7 @@ Step 2: Layout Resolution
 Step 3: Source Grounding
     读 reference_blocks 指向的 src/blocks/*.tsx
     读 needed_components 指向的 src/component/* 源码和 stories
+    读 assets.json 中与当前 layout / block 相关的图片资产
     → 输出: 参考源码
     ↓
 Step 4: Page Generation
@@ -45,6 +46,7 @@ Vibe-UI-Forge-main/
 │       ├── route-index.md              # page_type 路由
 │       ├── blocks.json                 # block 主索引
 │       ├── components.json             # component 映射
+│       ├── assets.json                 # visual asset 映射
 │       ├── layout/                    # 布局 markdown
 │       │   ├── index.md
 │       │   ├── mobile-settings.md
@@ -86,6 +88,7 @@ Vibe-UI-Forge-main/
 | `layout/{page_type}.md` | page_type → layout skeleton | ✓ |
 | `blocks.json` | block id → 源码路径 | ✓ |
 | `components.json` | component id → 源码路径 | ✓ |
+| `assets.json` | asset id → 本地图片/媒体路径 | ✓（存在时） |
 | `component/*.md` | 组件规范 | **按需** |
 
 ### 3.2 真实来源（`harmony-ui-playground/`）
@@ -134,6 +137,7 @@ Vibe-UI-Forge-main/
 
 1. 读 `src/blocks/water-settings.tsx`（参考布局）
 2. 读 `src/component/StatusBar/`, `TitleBar/`, `List/`, `Switch/`（组件 API）
+3. 读 `.resources/harmony/assets.json`，并结合 layout 中的 `related_assets` / `asset_mapping` 解析本次页面可复用的缩略图、插画或图片真值
 
 ### 5.5 Page Generation
 
@@ -203,8 +207,10 @@ node scripts/validate_design_system_resources.mjs
 校验内容：
 - `blocks.json` 的 files/stories 路径是否存在
 - `components.json` 的 path/stories 路径是否存在
+- `assets.json` 的 path 路径是否存在
 - layout 的 `reference_blocks` 是否在 blocks.json 中存在
 - layout 的 `needed_components` 是否在 components.json 中存在
+- layout 的 `related_assets` / `asset_mapping` 是否在 assets.json 中存在
 - block 的 dependencies 是否都在 components.json 中存在
 
 ### 7.2 构建校验

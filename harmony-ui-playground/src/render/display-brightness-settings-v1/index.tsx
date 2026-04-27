@@ -104,6 +104,8 @@ export default function DisplayBrightnessSettingsV1() {
       <div className="display-brightness-settings-v1__shell">
         <TitleBar
           title="显示和亮度"
+          subtitle=""
+          rightIcons={[]}
           backgroundColor="transparent"
         />
 

@@ -18,6 +18,10 @@
         "list",
         "list-item",
         "switch"
+      ],
+      "assets": [
+        "phone-preview-light",
+        "phone-preview-dark"
       ]
     },
     {
@@ -36,6 +40,10 @@
         "title-bar",
         "list",
         "list-item"
+      ],
+      "assets": [
+        "phone-preview-light",
+        "phone-preview-dark"
       ]
     },
     {

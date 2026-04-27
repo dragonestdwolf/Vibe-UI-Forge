@@ -29,6 +29,11 @@
 - `settings-page`
 - `water-settings`
 
+## related_assets
+
+- `phone-preview-light`
+- `phone-preview-dark`
+
 ## layout_skeleton
 
 ```html
@@ -86,6 +91,8 @@
 - 不要把 `settings-page` 当成组件 API；它是页面模板 block
 - 保留 `360px` 页面宽度和 `328px` 主内容宽度的移动端壳层约束
 - 多组设置卡片应使用 `List` + `ListItem` 组织，不要自由拼接匿名 div 行项
+- 禁止卡片嵌套卡片；设置分组之间保持平铺堆叠，不通过在组卡片内部再包一层卡片制造层级
+- 禁止在设置卡片上大面积使用渐变色阴影来凸显视觉；如需强调，仅允许轻量、克制的实色阴影或边框对比
 - 开关设置必须使用 `Switch`
 - 跳转设置右侧应保持 `value + chevron` 或单独 `chevron` 的结构
 - 图标可使用模板中的 lucide 图标模式，但业务特定图标应优先来自参考 block 或实际资产
@@ -117,11 +124,16 @@
 - `harmony-ui-playground/src/component/List/List.tsx`
 - `harmony-ui-playground/src/component/Switch/Switch.tsx`
 - `harmony-ui-playground/src/component/Divider/Divider.tsx`
+- `.resources/harmony/assets.json`
+- `harmony-ui-playground/src/blocks/assets/pixso-icons/icon-setting-light.png`
+- `harmony-ui-playground/src/blocks/assets/pixso-icons/icon-setting-dark.png`
 
 ## validation_notes
 
 - `settings-page` 必须在 `.resources/harmony/blocks.json` 中存在
 - 本文件的 `reference_blocks` 必须能被 `scripts/validate_design_system_resources.mjs` 校验通过
 - 生成页应使用 `@/component` alias
+- 验收时确认不存在组卡片内部再包卡片的结构
+- 验收时确认卡片强调未依赖大面积渐变色阴影
 - 生成页至少需要通过 `npm run build`
 - 如新增 stories，需要通过 `npm run build-storybook`

@@ -8,18 +8,18 @@
       "name": "Phone Preview Light",
       "description": "Light mode phone mockup for theme preview",
       "type": "image",
-      "path": "src/assets/design/phone-preview-light.png",
+      "path": "src/blocks/assets/pixso-icons/icon-setting-light.png",
       "ossUrl": "",
-      "usage": "v30 DisplayBrightnessPage phone preview replacement"
+      "usage": "display brightness and settings mode preview"
     },
     {
       "id": "phone-preview-dark",
       "name": "Phone Preview Dark",
       "description": "Dark mode phone mockup for theme preview",
       "type": "image",
-      "path": "src/assets/design/phone-preview-dark.png",
+      "path": "src/blocks/assets/pixso-icons/icon-setting-dark.png",
       "ossUrl": "",
-      "usage": "v30 DisplayBrightnessPage phone preview replacement"
+      "usage": "display brightness and settings mode preview"
     }
   ]
 }

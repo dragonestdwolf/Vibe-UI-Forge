@@ -47,3 +47,15 @@
 - 主模块使用 `CardHeader` / `CardTitle` / `CardDescription` / `CardContent` / `CardFooter` 的完整 `Card` 组合，承载浅色 / 深色模式的双预览切换。
 - 设置区使用 `List` 作为卡片容器，在首块中嵌入 `SliderWithIcons` 作为亮度调节条，其余入口继续复用 `ListItem` 与 `Switch`。
 - `shadcn info --json` 在该项目中仍会因 `harmony-ui-playground/components.json` 被 CLI 识别为 invalid configuration 而失败，因此本次继续采用本地 resource-aware workflow 生成。
+- `TitleBarHarmony3267` 已删除并合并到 `TitleBar`，当前渲染页已切换到 `@/component/TitleBar`，并显式传入 `subtitle=""` 与 `rightIcons={[]}` 以匹配目标导航样式。
+
+## Validation
+
+- `npm run build`: passed
+- `npm run build-storybook`: passed
+- `node scripts/validate_design_system_resources.mjs`: failed on pre-existing resource issue
+  - `.resources/harmony/layout/mobile-settings.md` references `hero-card`
+  - `.resources/harmony/components.json` has no `hero-card` entry
+- Final visual verification: passed
+  - Storybook screenshot captured from `Render/Display Brightness Settings-V1`
+  - Screenshot path: `/tmp/display-brightness-settings-v1-final.png`

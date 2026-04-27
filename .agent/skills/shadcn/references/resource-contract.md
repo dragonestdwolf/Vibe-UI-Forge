@@ -11,6 +11,7 @@ Use this reference when a project has `.resources/config.json`, when creating a 
     ├── route-index.md
     ├── blocks.json
     ├── components.json
+    ├── assets.json
     ├── layout/
     │   ├── index.md
     │   └── {page_type}.md
@@ -38,6 +39,7 @@ Use this reference when a project has `.resources/config.json`, when creating a 
 
 - `active`: resource key to use by default.
 - `resources[active].path`: resource directory containing route, layout, block, and component indexes.
+- `resources[active].path`: resource directory containing route, layout, block, component, and asset indexes.
 - `resources[active].projectRoot`: project root for generated code and source grounding.
 
 ## Markdown Read Policy
@@ -46,6 +48,7 @@ Use this reference when a project has `.resources/config.json`, when creating a 
 | --- | --- | --- |
 | `route-index.md` | yes | Map prompt/Figma intent to `page_type`. |
 | `layout/{page_type}.md` | yes | Define layout skeleton, reference blocks, needed components, and constraints. |
+| `assets.json` | yes, when present | Map asset ids to stable local image or media files for source grounding. |
 | `component/{component_id}.md` | no | Human-readable component semantics; read only when TSX/stories are insufficient. |
 | `history/spec/**` | no | Historical audit/reference material, not default generation input. |
 
@@ -89,6 +92,10 @@ Each layout markdown should include:
 - account-settings
 - notification-settings
 
+## related_assets
+- account-hero-light
+- account-hero-dark
+
 ## layout_skeleton
 ```html
 <main>
@@ -112,6 +119,7 @@ Each layout markdown should include:
 ````
 
 `reference_blocks` must exist in `blocks.json`. `needed_components` must exist in `components.json` or be installable/creatable through the shadcn workflow.
+When `related_assets` or `asset_mapping` is present, those asset ids must exist in `assets.json`.
 
 ## blocks.json
 
@@ -133,6 +141,7 @@ Recommended shape:
       "files": ["src/blocks/account-settings.tsx"],
       "stories": ["src/blocks/account-settings.stories.tsx"],
       "dependencies": ["button", "switch", "card"],
+      "assets": ["account-hero-light", "account-hero-dark"],
       "tags": ["settings", "form"]
     }
   ]
@@ -150,6 +159,7 @@ Recommended fields:
 - `pageType`
 - `description`
 - `stories`
+- `assets`
 - `tags`
 
 Forbidden reference paths:
@@ -194,6 +204,40 @@ Recommended fields:
 - `stories`
 - `spec`
 
+## assets.json Resource Index
+
+`.resources/{system}/assets.json` maps asset ids to stable local files that page generation can reuse as visual truth.
+
+Recommended shape:
+
+```json
+{
+  "assets": [
+    {
+      "id": "phone-preview-light",
+      "name": "Phone Preview Light",
+      "description": "Light mode phone preview thumbnail",
+      "type": "image",
+      "path": "src/blocks/assets/pixso-icons/icon-setting-light.png",
+      "usage": "display mode preview"
+    }
+  ]
+}
+```
+
+Required fields:
+
+- `id`
+- `type`
+- `path`
+
+Recommended fields:
+
+- `name`
+- `description`
+- `usage`
+- `ossUrl`
+
 ## Registry Boundary
 
 Keep these roles separate:
@@ -202,6 +246,7 @@ Keep these roles separate:
 - shadcn registry: CLI-installable registry items that follow shadcn schema.
 - `.resources/{system}/blocks.json`: agent page generation index for local blocks and examples.
 - `.resources/{system}/components.json`: agent component source index.
+- `.resources/{system}/assets.json`: agent visual asset source index for local images and media.
 
 Do not assume `.resources/{system}/blocks.json` can be passed to the shadcn CLI. If CLI compatibility is needed, generate a separate shadcn-compatible registry from the resource index.
 
@@ -215,6 +260,7 @@ When adding a layout:
 4. Ensure every `reference_blocks` id exists in `blocks.json`.
 5. Ensure every `needed_components` id exists in `.resources/{system}/components.json`.
 6. Ensure no `reference_blocks` resolve to `src/render/**`.
+7. Ensure every `related_assets` / `asset_mapping` id exists in `.resources/{system}/assets.json` when those sections are present.
 
 When adding a block:
 
@@ -222,9 +268,16 @@ When adding a block:
 2. Register the block in `.resources/{system}/blocks.json`.
 3. Ensure every dependency exists in `.resources/{system}/components.json`.
 4. Do not register generated render previews from `src/render/**` as blocks.
+5. Register any reusable visual assets in `.resources/{system}/assets.json` and reference them by id from the block or matched layout.
 
 When adding a component:
 
 1. Add or update source and exports.
 2. Register the component in `.resources/{system}/components.json`.
 3. Add component markdown only when human-readable semantics are needed.
+
+When adding a reusable visual asset:
+
+1. Add or update the stable local file under the project root.
+2. Register it in `.resources/{system}/assets.json`.
+3. Reference it from the matched layout via `related_assets` / `asset_mapping` or from a block entry via `assets`.
