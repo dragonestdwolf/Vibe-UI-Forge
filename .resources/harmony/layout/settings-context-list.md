@@ -58,6 +58,10 @@ Page
 - **主内容标准宽度**：`328px`（左右各 `16px` 边距，居中于壳层内）
 - **ContextSlot 扩展宽度**：`360px` 满宽（用于横向轮播卡等需要突破边距的场景）
 
+### ContextSlot 间距规范
+- ContextSlot 距上方内容（TitleBar 或描述文本）间距为 **8 的倍数**，最小 **16px**，推荐 **24px / 32px / 40px**。
+- 若 ContextSlot 下方紧接 Subheader（`leftMode="text"`），则间距为 **0**（gap=0）。
+
 ## layout_runtime
 
 | 能力 | 源码支撑 | 说明 |
@@ -126,7 +130,8 @@ Page
 | HeaderSlot | title-bar | search-header | 是否需要搜索；二者均与 status-bar 紧贴 |
 | ContextSlot | FeaturePromoCard | scene-mode-carousel / FeaturePromoCard / display-mode-preview / cloud-storage-overview / multi-window-preview / none | 选择匹配业务的展示卡片；多卡时使用横向 scroll-snap 轨道（如 `scenario-mode-page-v3` 三卡轮播） |
 | ListGroupSlot | settings-list-group | slider-list-group | 含 Slider 时优先 slider-list-group |
-| SubheaderSlot | subtitle | none | **副标题标签（使用 `leftMode="text"` + `text` 属性）**，置于 list 卡片上方，**subheader 与下方 list 卡片间距为 0**（gap=0）；使用 `font_tertiary` token |
+| SubheaderSlot | subtitle | none | **副标题标签（使用 `leftMode="text"` + `text` 属性）**，置于 list 卡片上方，**subheader 与下方 list 卡片间距为 0**（gap=0）；使用 `font_tertiary` token；**一般无右侧蓝色操作按钮**（`rightMode` 应省略或为 `none`） |
+| ContextSlot 间距 | 16px / 24px / 32px / 40px | — | ContextSlot 距上方内容（TitleBar 或描述文本）间距为 8 的倍数，最小 16px，推荐 24 / 32 / 40px；若 ContextSlot 下方紧接 Subheader 则间距为 0 |
 | List 卡片间距 | gap-12 | — | 卡片间垂直间距固定为 12px，不允许 0 / 24 等 |
 | 卡片内行项 | list-item | list-item + switch / list-item + slider / list-item + value+chevron | 依据交互类型选择 |
 | FooterSlot | none | footer-note | 需展示策略说明 / 跳转个性化设置时显示 |
@@ -140,7 +145,10 @@ Page
 - HeaderSlot 中 status-bar 与 title-bar 之间间距必须为 0；不允许插入 padding / margin / 任何中间区块。
 - **背景色约定**：通过 `background` 参数控制。Light 模式使用 `#F1F3F5`，Dark 模式使用 `#000000`；不得硬编码背景色。
 - ListGroupSlot 内多张 list 卡片之间的垂直间距固定为 12px；首张卡片距 ContextSlot 间距 ≥ 16px。
+- **ContextSlot 间距约束**：中间业务卡片（ContextSlot）距上方内容（TitleBar 或描述文本）间距为 **8 的倍数**，最小 **16px**，推荐 **24px / 32px / 40px**。
+- **ContextSlot + Subheader 间距**：若 ContextSlot 下方紧接 Subheader（`leftMode="text"`），则 ContextSlot 距 Subheader 间距为 **0**（gap=0）。
 - **SubheaderSlot 间距约束**：subheader 距下方 list 卡片间距为 0（gap=0），不得插入任何额外间距。
+- **Subheader 样式规范**：当 Subheader 位于 list 卡片上方时，一般仅使用 `text` 内容，**无右侧蓝色操作按钮**（`rightMode` 应为 `none` 或不加 rightMode）；仅有 text 的 Subheader 视觉更简洁。
 - **Footnote 间距约束**：list 卡片下方副文本（如功能说明、注意事项）距上方 list 卡片间距为 8px。
 - ContextSlot 高度由业务卡片决定，不要对 ContextSlot 设硬编码高度；横向轮播必须支持 `scroll-snap`；多张 FeaturePromoCard 横向排列时使用 `display:flex + gap-12 + overflow-x:auto + scroll-snap-type:x mandatory` 轨道组合。
 - list 卡片圆角统一为 20–24px，背景为 `comp_background_primary`，与页面背景保持对比。
