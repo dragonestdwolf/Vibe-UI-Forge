@@ -20,7 +20,7 @@ const meta = {
     leftMode: "double",
     rightMode: "action",
     title: "Content subheading",
-    subtitle: "subheading",
+    text: "subheading",
     selectText: "Select",
     actionText: "操作",
     moreText: "more",
@@ -29,7 +29,7 @@ const meta = {
   argTypes: {
     leftMode: {
       control: "select",
-      options: ["double", "title", "subtitle", "select"],
+      options: ["double", "title", "text", "select"],
     },
     rightMode: {
       control: "select",

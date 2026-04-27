@@ -7,7 +7,6 @@
 | page_type | layout file | description |
 |-----------|-------------|-------------|
 | mobile-settings | mobile-settings.md | 喝水设置页面 - 设置项列表与开关控制 |
-| mobile-settings-secondary page | settings-context-list.md | 设置二级页 - 顶部固定 title + 灵活业务卡片区 + 底部固定 list 卡片组合（情景模式 / 显示与亮度 / 云空间 / 智慧多窗） |
 | health-dashboard | health-dashboard.md | 健康任务进度页 - 三叶草展示 |
 | mobile-sheet | mobile-sheet.md | 服药提醒半模态页 - 浮层卡片列表 |
 

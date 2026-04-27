@@ -30,7 +30,7 @@
   padding: 24px 0 8px;
 }
 
-.my-subheader__body--subtitle {
+.my-subheader__body--text {
   padding: 28px 0 8px;
 }
 
@@ -50,7 +50,7 @@
   white-space: nowrap;
 }
 
-.my-subheader__subtitle {
+.my-subheader__text {
   margin: 0;
   max-width: 100%;
   font-size: 14px;

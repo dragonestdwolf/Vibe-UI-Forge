@@ -16,13 +16,6 @@
       "stories": "src/component/TitleBar/title-bar.stories.tsx"
     },
     {
-      "id": "title-bar-harmony-3267",
-      "name": "TitleBarHarmony3267",
-      "path": "src/component/TitleBarHarmony3267",
-      "export": "TitleBarHarmony3267",
-      "stories": "src/component/TitleBarHarmony3267/TitleBarHarmony3267.stories.tsx"
-    },
-    {
       "id": "list",
       "name": "List",
       "path": "src/component/List",
@@ -147,13 +140,6 @@
       "path": "src/component/SceneModeCard",
       "export": "SceneModeCard",
       "stories": "src/component/SceneModeCard/SceneModeCard.stories.tsx"
-    },
-    {
-      "id": "feature-promo-card",
-      "name": "FeaturePromoCard",
-      "path": "src/component/FeaturePromoCard",
-      "export": "FeaturePromoCard",
-      "stories": "src/component/FeaturePromoCard/FeaturePromoCard.stories.tsx"
     }
   ]
 }

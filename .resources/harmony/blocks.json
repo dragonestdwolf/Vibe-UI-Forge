@@ -75,48 +75,6 @@
         "service-card-status",
         "service-card-item"
       ]
-    },
-    {
-      "id": "scenario-mode-page-v3",
-      "name": "scenario-mode-page-v3",
-      "pageType": "settings-context-list",
-      "description": "情景模式二级页 - 横向卡片轮播 + 条件开启 list + 推荐开关 list",
-      "files": [
-        "src/render/scenario-mode-page-v3/index.tsx",
-        "src/render/scenario-mode-page-v3/index.css"
-      ],
-      "stories": [
-        "src/render/scenario-mode-page-v3/index.stories.tsx"
-      ],
-      "dependencies": [
-        "status-bar",
-        "title-bar",
-        "list-item",
-        "switch",
-        "divider",
-        "feature-promo-card"
-      ]
-    },
-    {
-      "id": "scenario-mode-page-v4",
-      "name": "scenario-mode-page-v4",
-      "pageType": "settings-context-list",
-      "description": "情景模式二级页（V4）- 使用修复后的 SettingsContextListLayout，TitleBar 正确居中于 360px 壳层",
-      "files": [
-        "src/render/scenario-mode-page-v4/index.tsx",
-        "src/render/scenario-mode-page-v4/index.css"
-      ],
-      "stories": [
-        "src/render/scenario-mode-page-v4/index.stories.tsx"
-      ],
-      "dependencies": [
-        "status-bar",
-        "title-bar",
-        "list-item",
-        "switch",
-        "divider",
-        "feature-promo-card"
-      ]
     }
   ]
 }
