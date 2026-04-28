@@ -2,6 +2,11 @@ import type { Meta, StoryObj } from "@storybook/react-vite"
 import type { ReactNode } from "react"
 
 import { FeaturePromoCard } from "./FeaturePromoCard"
+import {
+  CloudBackupIcon,
+  DoNotDisturbIcon,
+  FocusModeIcon,
+} from "./mode-icons"
 
 /* 与 SceneModeCard / Slider 等保持同一画布背景，整体风格一致 */
 function centerInViewport(Story: () => ReactNode) {
@@ -9,50 +14,6 @@ function centerInViewport(Story: () => ReactNode) {
     <div className="box-border flex min-h-screen w-full min-w-0 items-center justify-center bg-[#f3f4f6] p-8">
       <Story />
     </div>
-  )
-}
-
-/* -------------------------------------------------------------------------- */
-/* DnD（免打扰）图标 — Pixso 节点 3368:122 sub vector                              */
-/* 与 SceneModeCard.stories.tsx 保持一致，避免重复设计真值                            */
-/* -------------------------------------------------------------------------- */
-function DoNotDisturbIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-      <path fill="#0000d4" d="M21.5 4.8C14.8 7 7 14.8 4.7 21.4c-2.1 6.2-2.2 14.9-.1 20.9 2.1 6.1 8.2 12.9 14.6 16.1 7.4 3.7 18.2 3.7 25.6 0 17.9-8.9 21.9-32.9 7.8-46.9C44.5 3.4 33 1 21.5 4.8m9 11.4c-.3 1.3-.9 4.3-1.2 6.8-.9 8.1 5.6 14.6 14.5 14.3 4.8-.2 5.3 1 2.1 5.1-3.4 4.4-9.5 6.9-14.8 6.2C17.6 46.7 10.9 31 19.2 20.5c2.6-3.3 7.6-6.5 10.2-6.5 1.4 0 1.7.5 1.1 2.2"/>
-    </svg>
-  )
-}
-
-function FocusModeIcon() {
-  return (
-    <svg
-      viewBox="0 0 64 64"
-      xmlns="http://www.w3.org/2000/svg"
-      role="img"
-      aria-label="专注模式"
-    >
-      <circle cx="32" cy="32" r="29" fill="#0A59F7" />
-      <circle cx="32" cy="32" r="14" fill="none" stroke="#FFFFFF" strokeWidth="3" />
-      <circle cx="32" cy="32" r="5" fill="#FFFFFF" />
-    </svg>
-  )
-}
-
-function CloudBackupIcon() {
-  return (
-    <svg
-      viewBox="0 0 64 64"
-      xmlns="http://www.w3.org/2000/svg"
-      role="img"
-      aria-label="云备份"
-    >
-      <circle cx="32" cy="32" r="29" fill="#11B981" />
-      <path
-        d="M22 38c-3.3 0-6-2.7-6-6 0-3 2.2-5.5 5.1-5.9C22 22.5 25.6 20 30 20c4.5 0 8.3 3 9.5 7.1.5-.1 1-.2 1.5-.2 3.3 0 6 2.7 6 6s-2.7 6-6 6H22z"
-        fill="#FFFFFF"
-      />
-    </svg>
   )
 }
 

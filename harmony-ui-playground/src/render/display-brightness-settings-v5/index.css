@@ -1,0 +1,170 @@
+.display-brightness-v5 {
+  width: 360px;
+  min-height: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: #f2f3f5;
+  color: rgba(0, 0, 0, 0.8980392218);
+  font-family:
+    "HarmonyOS Sans", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system,
+    sans-serif;
+}
+
+.display-brightness-v5__titlebar {
+  width: 328px;
+  margin: 0 auto;
+}
+
+.display-brightness-v5__content {
+  width: 328px;
+  margin: 20px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.display-brightness-v5__card {
+  width: 100%;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.display-brightness-v5__list-card {
+  padding: 8px 0;
+}
+
+.display-brightness-v5__list-card--single {
+  padding: 8px 0;
+}
+
+.display-brightness-v5 .my-list-item {
+  min-height: 40px;
+  padding: 0 16px;
+  background: transparent;
+}
+
+.display-brightness-v5 .my-list-item__content {
+  min-height: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.display-brightness-v5 .my-list-item__title {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8980392218);
+}
+
+.display-brightness-v5 .my-list-item__right {
+  padding-left: 10px;
+  gap: 4px;
+}
+
+.display-brightness-v5__trailing {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.display-brightness-v5__trailing--mode {
+  gap: 8px;
+}
+
+.display-brightness-v5__trailing-value {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+}
+
+.display-brightness-v5__chevron {
+  width: 12px;
+  height: 24px;
+  display: block;
+  object-fit: contain;
+}
+
+.display-brightness-v5__mode-pill {
+  width: 36px;
+  height: 20px;
+  padding: 2px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: #0a59f7;
+  box-sizing: border-box;
+}
+
+.display-brightness-v5__mode-pill-knob {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.display-brightness-v5__mode-pill-icon {
+  width: 10.5px;
+  height: 10.5px;
+  color: #0a59f7;
+}
+
+.display-brightness-v5__brightness-card {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.display-brightness-v5__brightness-slider {
+  --pixso-icon: rgba(0, 0, 0, 0.6);
+  --pixso-hover: rgba(0, 0, 0, 0.04);
+}
+
+.display-brightness-v5__brightness-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.display-brightness-v5__setting-row {
+  width: 296px;
+  min-height: 40px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.display-brightness-v5__setting-label {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8980392218);
+}
+
+.display-brightness-v5__spacer {
+  flex: 1 1 auto;
+  min-height: 24px;
+}
+
+.display-brightness-v5__footer {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+.display-brightness-v5__home-indicator {
+  width: 126px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.2);
+}
