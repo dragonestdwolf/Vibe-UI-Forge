@@ -1,0 +1,56 @@
+/**
+ * ScenarioModePageV8 — page-level styles
+ *
+ * V8 简化：轮播轨道统一复用布局系统 scl-carousel-track，
+ * 移除 V7 的自定义 smpv7-rail / smpv7-hide-scrollbar。
+ * 仅保留导航点与添加条件按钮的页面级样式。
+ */
+
+/* 导航点容器 */
+.smpv8-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+
+/* 导航点基础样式 */
+.smpv8-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.14);
+  transition: width 200ms ease, background 200ms ease;
+  flex-shrink: 0;
+}
+
+/* 激活导航点：展开为胶囊形 + 品牌蓝 */
+.smpv8-dot[data-active="true"] {
+  width: 18px;
+  background: #0a59f7;
+}
+
+/* 添加条件高亮按钮 */
+.smpv8-add-btn {
+  width: 100%;
+  padding: 14px 16px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0a59f7;
+  cursor: pointer;
+  transition: background 120ms ease;
+  font-family: inherit;
+}
+
+.smpv8-add-btn:hover {
+  background: rgba(10, 89, 247, 0.06);
+}
+
+.smpv8-add-btn:active {
+  background: rgba(10, 89, 247, 0.12);
+}

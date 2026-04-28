@@ -1,8 +1,8 @@
 import type { HTMLAttributes } from "react"
 import "./SubHeader.css"
 
-export type SubHeaderLeftMode = "double" | "title" | "subtitle" | "select"
-export type SubHeaderRightMode = "action" | "chevron" | "icons" | "more"
+export type SubHeaderLeftMode = "double" | "title" | "text" | "select"
+export type SubHeaderRightMode = "action" | "chevron" | "icons" | "more" | "none"
 
 export interface SubHeaderProps extends HTMLAttributes<HTMLDivElement> {
   /** 左侧区域形态（Pixso 36:35055） */
@@ -10,7 +10,7 @@ export interface SubHeaderProps extends HTMLAttributes<HTMLDivElement> {
   /** 右侧区域形态（Pixso 36:35272） */
   rightMode?: SubHeaderRightMode
   title?: string
-  subtitle?: string
+  text?: string
   selectText?: string
   /** rightMode === action */
   actionText?: string
@@ -101,7 +101,7 @@ function SubHeader(props: SubHeaderProps) {
     leftMode = "double",
     rightMode = "action",
     title = "Content subheading",
-    subtitle = "subheading",
+    text = "subheading",
     selectText = "Select",
     actionText = "操作",
     moreText = "more",
@@ -117,7 +117,7 @@ function SubHeader(props: SubHeaderProps) {
     "my-subheader__body",
     leftMode === "double" ? "my-subheader__body--double" : "",
     leftMode === "title" ? "my-subheader__body--title" : "",
-    leftMode === "subtitle" ? "my-subheader__body--subtitle" : "",
+    leftMode === "text" ? "my-subheader__body--text" : "",
     leftMode === "select" ? "my-subheader__body--select" : "",
   ]
     .filter(Boolean)
@@ -129,6 +129,7 @@ function SubHeader(props: SubHeaderProps) {
     rightMode === "chevron" ? "my-subheader__aside--chevron" : "",
     rightMode === "icons" ? "my-subheader__aside--icons" : "",
     rightMode === "more" ? "my-subheader__aside--more" : "",
+    rightMode === "none" ? "my-subheader__aside--none" : "",
   ]
     .filter(Boolean)
     .join(" ")
@@ -143,14 +144,14 @@ function SubHeader(props: SubHeaderProps) {
         {leftMode === "double" ? (
           <>
             <p className="my-subheader__title">{title}</p>
-            <p className="my-subheader__subtitle">{subtitle}</p>
+            <p className="my-subheader__text">{text}</p>
           </>
         ) : null}
 
         {leftMode === "title" ? <p className="my-subheader__title">{title}</p> : null}
 
-        {leftMode === "subtitle" ? (
-          <p className="my-subheader__subtitle">{subtitle}</p>
+        {leftMode === "text" ? (
+          <p className="my-subheader__text">{text}</p>
         ) : null}
 
         {leftMode === "select" ? (

@@ -1,0 +1,75 @@
+.my-swiper-nav {
+  --swiper-nav-width: 360px;
+  --swiper-nav-height: 32px;
+  --swiper-nav-active: rgba(10, 89, 247, 1);
+  --swiper-nav-muted: rgba(0, 0, 0, 0.098);
+  --swiper-nav-progress-muted: rgba(0, 0, 0, 0.2);
+  --swiper-nav-number-color: rgba(0, 0, 0, 0.898);
+
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--swiper-nav-width);
+  height: var(--swiper-nav-height);
+  font-family:
+    "HarmonyOS Sans",
+    "HarmonyOS Sans SC",
+    "HarmonyHeiTi",
+    -apple-system,
+    BlinkMacSystemFont,
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
+}
+
+.my-swiper-nav__dots {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 6px;
+}
+
+.my-swiper-nav__dot {
+  width: var(--swiper-dot-width, 6px);
+  height: var(--swiper-dot-height, 6px);
+  border-radius: 4px;
+  background: var(--swiper-nav-muted);
+  flex: 0 0 auto;
+}
+
+.my-swiper-nav__dot--active {
+  background: var(--swiper-nav-active);
+}
+
+.my-swiper-nav__number {
+  color: var(--swiper-nav-number-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.my-swiper-nav__progress {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+  padding: 15px 16px;
+  gap: 4px;
+}
+
+.my-swiper-nav__progress-item {
+  height: 2px;
+  min-width: 0;
+  border-radius: 2px;
+  background: var(--swiper-nav-progress-muted);
+  flex: 1 1 0;
+}
+
+.my-swiper-nav__progress-item--active {
+  background: rgba(255, 255, 255, 1);
+}

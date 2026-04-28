@@ -16,6 +16,27 @@
       "stories": "src/component/TitleBar/title-bar.stories.tsx"
     },
     {
+      "id": "subheader",
+      "name": "SubHeader",
+      "path": "src/component/SubHeader",
+      "export": "SubHeader",
+      "stories": "src/component/SubHeader/SubHeader.stories.tsx"
+    },
+    {
+      "id": "feature-promo-card",
+      "name": "FeaturePromoCard",
+      "path": "src/component/FeaturePromoCard",
+      "export": "FeaturePromoCard",
+      "stories": "src/component/FeaturePromoCard/FeaturePromoCard.stories.tsx"
+    },
+    {
+      "id": "swiper-nav",
+      "name": "SwiperNav",
+      "path": "src/component/SwiperNav",
+      "export": "SwiperNav",
+      "stories": "src/component/SwiperNav/SwiperNav.stories.tsx"
+    },
+    {
       "id": "list",
       "name": "List",
       "path": "src/component/List",
