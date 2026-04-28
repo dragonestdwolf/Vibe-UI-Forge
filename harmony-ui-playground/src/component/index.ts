@@ -80,10 +80,13 @@ export const PublicComponents = {
 }
 
 export { SceneModeCard } from "./SceneModeCard"
-export type { SceneModeCardProps, SceneModeCardSize } from "./SceneModeCard"
+export type { SceneModeCardProps } from "./SceneModeCard"
 
 export { FeaturePromoCard } from "./FeaturePromoCard"
 export type { FeaturePromoCardProps } from "./FeaturePromoCard"
+
+export { HarmonyPageShell } from "./HarmonyPageShell"
+export type { HarmonyPageShellProps } from "./HarmonyPageShell"
 
 export { PixsoListRowMedium } from "./PixsoListRowMedium"
 export type { PixsoListRowMediumProps } from "./PixsoListRowMedium"

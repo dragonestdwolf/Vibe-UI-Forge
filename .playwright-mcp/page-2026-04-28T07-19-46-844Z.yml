@@ -1,0 +1,83 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e6]: 08:08
+    - img [ref=e8]
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - button "back" [ref=e13] [cursor=pointer]
+      - generic "情景模式" [ref=e16]
+      - generic [ref=e17]:
+        - button "action 1" [ref=e18] [cursor=pointer]
+        - button "action 2" [ref=e19] [cursor=pointer]
+        - button "action 3" [ref=e20] [cursor=pointer]
+    - paragraph [ref=e21]: 显示模式开启后会自动调整系统功能，让您能全身心投入情景。
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - img [ref=e27]
+        - generic [ref=e29]:
+          - generic [ref=e31]: 勿扰模式
+          - generic [ref=e34]: 设置
+      - generic [ref=e35]:
+        - img [ref=e38]
+        - generic [ref=e41]:
+          - generic [ref=e43]: 个人
+          - generic [ref=e46]: 设置
+      - generic [ref=e47]:
+        - img [ref=e50]
+        - generic [ref=e53]:
+          - generic [ref=e55]: 工作
+          - generic [ref=e58]: 设置
+      - generic [ref=e59]:
+        - img [ref=e62]
+        - generic [ref=e64]:
+          - generic [ref=e66]: 睡眠
+          - generic [ref=e69]: 设置
+    - generic [ref=e70]:
+      - generic [ref=e71]: 条件开启
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - img [ref=e75]
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - generic [ref=e80]: 周日 周六
+              - generic [ref=e81]: 22:00-次日 07:00
+            - generic [ref=e84]: 右侧文本
+        - generic [ref=e85]: 添加条件
+      - paragraph [ref=e86]: 本功能需调用位置权限，读取位置信息
+    - generic [ref=e87]:
+      - generic [ref=e88]: 推荐开启与关闭
+      - generic [ref=e90]:
+        - generic [ref=e91]: 推荐开启与关闭
+        - switch [checked] [ref=e92] [cursor=pointer]
+      - paragraph [ref=e95]:
+        - text: 基于个人偏好,以及位置、时间等数据信息,智能推荐开启或关闭相应的情景模式,关闭后将影响情景模式的推荐体验。
+        - link "查看使用个性化智能服务的应用" [ref=e96] [cursor=pointer]:
+          - /url: "#"
+    - generic [ref=e97]:
+      - generic [ref=e98]: 允许打扰
+      - generic [ref=e99]:
+        - generic [ref=e101]:
+          - generic [ref=e103]: 应用和元服务
+          - generic [ref=e106]: 未选择
+        - generic [ref=e108]:
+          - generic [ref=e110]: 联系人
+          - generic [ref=e113]: 仅允许收藏联系人
+    - generic [ref=e114]:
+      - generic [ref=e115]: 重要信息提醒
+      - generic [ref=e117]:
+        - generic [ref=e118]: 重要信息提醒
+        - switch [checked] [ref=e119] [cursor=pointer]
+      - paragraph [ref=e122]: 开启后,模式开启期间会提醒重要信息(短信验证码和实况)。
+    - generic [ref=e123]:
+      - generic [ref=e124]: 关联系统功能
+      - generic [ref=e125]:
+        - generic [ref=e127]:
+          - generic [ref=e129]: 深色模式
+          - generic [ref=e131]:
+            - generic [ref=e132]: 不关联
+            - img [ref=e133]
+        - generic [ref=e136]:
+          - generic [ref=e138]: 护眼模式
+          - generic [ref=e140]:
+            - generic [ref=e141]: 不关联
+            - img [ref=e142]

@@ -63,24 +63,21 @@ const meta = {
     docs: {
       description: {
         component:
-          "情景模式卡片（Pixso 节点 `3368:205`）。两种尺寸：`large` 244×220 / r24，`small` 220×198 / r22；表面为 `rgba(255,255,255,0.8)` 毛玻璃，主标题 24/22px Regular，副标题 14/13px Bold。",
+          "兼容别名。`SceneModeCard` 旧实现已废弃，当前直接复用 `FeaturePromoCard` 的真值实现与 API。",
       },
     },
   },
   argTypes: {
-    size: {
-      control: { type: "inline-radio" },
-      options: ["large", "small"],
-      description: "Pixso 变体「中间大卡片」/「左·右侧小卡片」",
-    },
     title: { control: "text" },
     subtitle: { control: "text" },
+    actionLabel: { control: "text" },
     disabled: { control: "boolean" },
+    actionDisabled: { control: "boolean" },
   },
   args: {
-    size: "large",
     title: "免打扰",
     subtitle: "减少打扰保持专注",
+    actionLabel: "立即开启",
     icon: <DoNotDisturbIcon />,
   },
   decorators: [centerInViewport],
@@ -90,122 +87,88 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-/* -------------------------------------------------------------------------- */
-/* 1. 基础用法：大卡片                                                            */
-/* -------------------------------------------------------------------------- */
-export const Large: Story = {
-  args: { size: "large" },
+export const Default: Story = {}
+
+export const Clickable: Story = {
+  args: {
+    onAction: () => window.alert("立即开启：免打扰"),
+  },
 }
 
-/* -------------------------------------------------------------------------- */
-/* 2. 小卡片                                                                    */
-/* -------------------------------------------------------------------------- */
-export const Small: Story = {
-  args: { size: "small" },
-}
-
-/* -------------------------------------------------------------------------- */
-/* 3. 三联布局：左小 / 中大 / 右小（与 Pixso COMPONENT_SET 三个变体的语义一致）          */
-/* -------------------------------------------------------------------------- */
-export const TripletLayout: Story = {
+export const Variations: Story = {
   render: () => (
-    <div className="flex items-center gap-3">
+    <div className="flex items-stretch gap-3">
       <SceneModeCard
-        size="small"
-        title="工作模式"
-        subtitle="专注会议与文档"
-        icon={<WorkModeIcon />}
-      />
-      <SceneModeCard
-        size="large"
+        icon={<DoNotDisturbIcon />}
         title="免打扰"
         subtitle="减少打扰保持专注"
-        icon={<DoNotDisturbIcon />}
+        actionLabel="立即开启"
       />
       <SceneModeCard
-        size="small"
-        title="睡眠"
-        subtitle="夜间静音与暗色"
+        icon={<WorkModeIcon />}
+        title="专注模式"
+        subtitle="屏蔽通知专心做事"
+        actionLabel="开启专注"
+      />
+      <SceneModeCard
         icon={<SleepModeIcon />}
+        title="睡眠模式"
+        subtitle="夜间静音与暗色"
+        actionLabel="立即开启"
       />
     </div>
   ),
 }
 
-/* -------------------------------------------------------------------------- */
-/* 4. 多状态对照：default / hover (CSS 模拟) / pressed / focus / disabled              */
-/* -------------------------------------------------------------------------- */
 export const States: Story = {
   render: () => (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-3 gap-4">
       <div className="flex flex-col items-center gap-2">
         <span className="text-xs text-black/60">default</span>
         <SceneModeCard
-          size="small"
           title="免打扰"
           subtitle="减少打扰保持专注"
           icon={<DoNotDisturbIcon />}
+          actionLabel="立即开启"
         />
       </div>
       <div className="flex flex-col items-center gap-2">
-        <span className="text-xs text-black/60">interactive (hover/active 可在画布交互)</span>
+        <span className="text-xs text-black/60">action disabled</span>
         <SceneModeCard
-          size="small"
           title="免打扰"
           subtitle="减少打扰保持专注"
           icon={<DoNotDisturbIcon />}
-          onClick={() => undefined}
+          actionLabel="已开启"
+          actionDisabled
+          onAction={() => undefined}
         />
       </div>
       <div className="flex flex-col items-center gap-2">
-        <span className="text-xs text-black/60">focus（Tab 聚焦）</span>
+        <span className="text-xs text-black/60">card disabled</span>
         <SceneModeCard
-          size="small"
           title="免打扰"
           subtitle="减少打扰保持专注"
           icon={<DoNotDisturbIcon />}
-          onClick={() => undefined}
-        />
-      </div>
-      <div className="flex flex-col items-center gap-2">
-        <span className="text-xs text-black/60">disabled</span>
-        <SceneModeCard
-          size="small"
-          title="免打扰"
-          subtitle="减少打扰保持专注"
-          icon={<DoNotDisturbIcon />}
+          actionLabel="立即开启"
           disabled
-          onClick={() => undefined}
+          onAction={() => undefined}
         />
       </div>
     </div>
   ),
 }
 
-/* -------------------------------------------------------------------------- */
-/* 5. 带浮动操作胶囊（按 Pixso 节点 3368:133/345/720 1:1 还原；视觉上略突出右边缘）       */
-/* -------------------------------------------------------------------------- */
-export const WithActionPill: Story = {
+export const TitleOnly: Story = {
   args: {
-    size: "large",
-    actionPill: "进入",
-  },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          "Pixso 设计稿在卡片右上方 (180, 20) 处叠放 120×40 / r20 的胶囊，视觉上少量突出卡片右边缘——按设计稿 1:1 还原。",
-      },
-    },
+    subtitle: undefined,
+    actionLabel: undefined,
   },
 }
 
-/* -------------------------------------------------------------------------- */
-/* 6. 可点击：将卡片整体作为按钮（role=button）                                       */
-/* -------------------------------------------------------------------------- */
-export const Clickable: Story = {
+export const LongText: Story = {
   args: {
-    size: "large",
-    onClick: () => window.alert("进入：免打扰模式"),
+    title: "免打扰",
+    subtitle: "屏蔽通知，让你保持专注且不被打扰",
+    actionLabel: "立即开启免打扰",
   },
 }

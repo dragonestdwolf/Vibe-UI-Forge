@@ -3,7 +3,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  align-self: flex-start;
+  align-self: center;
   width: fit-content;
   max-width: 100%;
   box-sizing: border-box;
@@ -68,4 +68,3 @@
 :where(.my-switch--on .my-switch__knob) {
   transform: translateX(16px);
 }
-

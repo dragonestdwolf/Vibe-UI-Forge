@@ -1,0 +1,544 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner "Storybook" [ref=e6]:
+      - heading "Storybook" [level=1] [ref=e7]
+      - img
+      - generic [ref=e11]:
+        - generic [ref=e13]:
+          - link "Skip to content" [ref=e14] [cursor=pointer]:
+            - /url: "#storybook-preview-wrapper"
+          - link "Storybook" [ref=e16] [cursor=pointer]:
+            - /url: ./
+            - img "Storybook" [ref=e17]
+          - switch "Settings" [ref=e22] [cursor=pointer]:
+            - img [ref=e23]
+        - generic [ref=e26]: Search for components
+        - search [ref=e27]:
+          - combobox "Search for components" [ref=e28]:
+            - generic:
+              - img
+            - searchbox "Search for components" [ref=e29]
+            - code:
+              - generic: ⌘
+              - text: K
+            - button "Tag filters" [ref=e31] [cursor=pointer]:
+              - img [ref=e32]
+        - navigation "Stories" [ref=e35]:
+          - heading "Stories" [level=2] [ref=e36]
+          - generic [ref=e38]:
+            - generic [ref=e39]:
+              - button "Collapse" [expanded] [ref=e40] [cursor=pointer]:
+                - img [ref=e42]
+                - text: Playground
+              - button "Expand all" [ref=e44] [cursor=pointer]:
+                - img [ref=e45]
+            - button "SettingsApp" [ref=e48] [cursor=pointer]:
+              - generic [ref=e49]:
+                - img [ref=e51]
+                - img [ref=e53]
+              - text: SettingsApp
+            - generic [ref=e55]:
+              - button "Collapse" [expanded] [ref=e56] [cursor=pointer]:
+                - img [ref=e58]
+                - text: Blocks
+              - button "Expand all" [ref=e60] [cursor=pointer]:
+                - img [ref=e61]
+            - button "GroupedListSection" [ref=e64] [cursor=pointer]:
+              - generic [ref=e65]:
+                - img [ref=e67]
+                - img [ref=e69]
+              - text: GroupedListSection
+            - generic [ref=e71]:
+              - button "Collapse" [expanded] [ref=e72] [cursor=pointer]:
+                - img [ref=e74]
+                - text: Render
+              - button "Expand all" [ref=e76] [cursor=pointer]:
+                - img [ref=e77]
+            - button "Display Brightness Settings-V1" [ref=e80] [cursor=pointer]:
+              - generic [ref=e81]:
+                - img [ref=e83]
+                - img [ref=e85]
+              - text: Display Brightness Settings-V1
+            - button "Display Brightness Settings-V2" [ref=e88] [cursor=pointer]:
+              - generic [ref=e89]:
+                - img [ref=e91]
+                - img [ref=e93]
+              - text: Display Brightness Settings-V2
+            - button "Display Brightness Settings-V3" [ref=e96] [cursor=pointer]:
+              - generic [ref=e97]:
+                - img [ref=e99]
+                - img [ref=e101]
+              - text: Display Brightness Settings-V3
+            - button "DisplayBrightnessSettingsV4" [ref=e104] [cursor=pointer]:
+              - generic [ref=e105]:
+                - img [ref=e107]
+                - img [ref=e109]
+              - text: DisplayBrightnessSettingsV4
+            - button "Display Theme Brightness Settings-V1" [ref=e112] [cursor=pointer]:
+              - generic [ref=e113]:
+                - img [ref=e115]
+                - img [ref=e117]
+              - text: Display Theme Brightness Settings-V1
+            - button "DoNotDisturbScenePageV1" [ref=e120] [cursor=pointer]:
+              - generic [ref=e121]:
+                - img [ref=e123]
+                - img [ref=e125]
+              - text: DoNotDisturbScenePageV1
+            - button "DoNotDisturbScenePageV2" [ref=e128] [cursor=pointer]:
+              - generic [ref=e129]:
+                - img [ref=e131]
+                - img [ref=e133]
+              - text: DoNotDisturbScenePageV2
+            - button "ScenarioModePageV1" [ref=e136] [cursor=pointer]:
+              - generic [ref=e137]:
+                - img [ref=e139]
+                - img [ref=e141]
+              - text: ScenarioModePageV1
+            - button "ScenarioModePageV2" [ref=e144] [cursor=pointer]:
+              - generic [ref=e145]:
+                - img [ref=e147]
+                - img [ref=e149]
+              - text: ScenarioModePageV2
+            - button "ScenarioModePageV3" [ref=e152] [cursor=pointer]:
+              - generic [ref=e153]:
+                - img [ref=e155]
+                - img [ref=e157]
+              - text: ScenarioModePageV3
+            - button "ScenarioModePageV4" [ref=e160] [cursor=pointer]:
+              - generic [ref=e161]:
+                - img [ref=e163]
+                - img [ref=e165]
+              - text: ScenarioModePageV4
+            - button "ScenarioModePageV5" [ref=e168] [cursor=pointer]:
+              - generic [ref=e169]:
+                - img [ref=e171]
+                - img [ref=e173]
+              - text: ScenarioModePageV5
+            - button "ScenarioModePageV6" [ref=e176] [cursor=pointer]:
+              - generic [ref=e177]:
+                - img [ref=e179]
+                - img [ref=e181]
+              - text: ScenarioModePageV6
+            - button "ScenarioModePageV7" [ref=e184] [cursor=pointer]:
+              - generic [ref=e185]:
+                - img [ref=e187]
+                - img [ref=e189]
+              - text: ScenarioModePageV7
+            - button "ScenarioModePageV8" [ref=e192] [cursor=pointer]:
+              - generic [ref=e193]:
+                - img [ref=e195]
+                - img [ref=e197]
+              - text: ScenarioModePageV8
+            - button "Scene Mode Settings-V1" [ref=e200] [cursor=pointer]:
+              - generic [ref=e201]:
+                - img [ref=e203]
+                - img [ref=e205]
+              - text: Scene Mode Settings-V1
+            - button "Scene Mode Settings-V2" [ref=e208] [cursor=pointer]:
+              - generic [ref=e209]:
+                - img [ref=e211]
+                - img [ref=e213]
+              - text: Scene Mode Settings-V2
+            - button "Scene Mode Settings-V3" [ref=e216] [cursor=pointer]:
+              - generic [ref=e217]:
+                - img [ref=e219]
+                - img [ref=e221]
+              - text: Scene Mode Settings-V3
+            - button "Scene Mode Settings-V4" [expanded] [ref=e224] [cursor=pointer]:
+              - generic [ref=e225]:
+                - img [ref=e227]
+                - img [ref=e229]
+              - text: Scene Mode Settings-V4
+            - link "Docs" [ref=e232] [cursor=pointer]:
+              - /url: /?path=/docs/render-scene-mode-settings-v4--docs
+              - img [ref=e234]
+              - text: Docs
+            - generic [ref=e236]:
+              - link "Default" [ref=e237] [cursor=pointer]:
+                - /url: /?path=/story/render-scene-mode-settings-v4--default
+                - img [ref=e239]
+                - text: Default
+              - link "Skip to content" [ref=e241] [cursor=pointer]:
+                - /url: "#storybook-preview-wrapper"
+            - button "SceneMode" [ref=e243] [cursor=pointer]:
+              - generic [ref=e244]:
+                - img [ref=e246]
+                - img [ref=e248]
+              - text: SceneMode
+            - button "SettingsPageV15" [ref=e251] [cursor=pointer]:
+              - generic [ref=e252]:
+                - img [ref=e254]
+                - img [ref=e256]
+              - text: SettingsPageV15
+            - button "SettingsPageV16" [ref=e259] [cursor=pointer]:
+              - generic [ref=e260]:
+                - img [ref=e262]
+                - img [ref=e264]
+              - text: SettingsPageV16
+            - button "SettingsPageV17" [ref=e267] [cursor=pointer]:
+              - generic [ref=e268]:
+                - img [ref=e270]
+                - img [ref=e272]
+              - text: SettingsPageV17
+            - button "SettingsPageV18" [ref=e275] [cursor=pointer]:
+              - generic [ref=e276]:
+                - img [ref=e278]
+                - img [ref=e280]
+              - text: SettingsPageV18
+            - button "SettingsPageV19" [ref=e283] [cursor=pointer]:
+              - generic [ref=e284]:
+                - img [ref=e286]
+                - img [ref=e288]
+              - text: SettingsPageV19
+            - button "SettingsPageV20" [ref=e291] [cursor=pointer]:
+              - generic [ref=e292]:
+                - img [ref=e294]
+                - img [ref=e296]
+              - text: SettingsPageV20
+            - button "SettingsPageV21" [ref=e299] [cursor=pointer]:
+              - generic [ref=e300]:
+                - img [ref=e302]
+                - img [ref=e304]
+              - text: SettingsPageV21
+            - button "SettingsPageV22" [ref=e307] [cursor=pointer]:
+              - generic [ref=e308]:
+                - img [ref=e310]
+                - img [ref=e312]
+              - text: SettingsPageV22
+            - button "SettingsPageV23" [ref=e315] [cursor=pointer]:
+              - generic [ref=e316]:
+                - img [ref=e318]
+                - img [ref=e320]
+              - text: SettingsPageV23
+            - button "SettingsPageV24" [ref=e323] [cursor=pointer]:
+              - generic [ref=e324]:
+                - img [ref=e326]
+                - img [ref=e328]
+              - text: SettingsPageV24
+            - button "Setting Page-V26" [ref=e331] [cursor=pointer]:
+              - generic [ref=e332]:
+                - img [ref=e334]
+                - img [ref=e336]
+              - text: Setting Page-V26
+            - button "Setting Page-V27" [ref=e339] [cursor=pointer]:
+              - generic [ref=e340]:
+                - img [ref=e342]
+                - img [ref=e344]
+              - text: Setting Page-V27
+            - button "Setting Page-V28" [ref=e347] [cursor=pointer]:
+              - generic [ref=e348]:
+                - img [ref=e350]
+                - img [ref=e352]
+              - text: Setting Page-V28
+            - button "Setting Page-V29" [ref=e355] [cursor=pointer]:
+              - generic [ref=e356]:
+                - img [ref=e358]
+                - img [ref=e360]
+              - text: Setting Page-V29
+            - button "Setting Page-V30" [ref=e363] [cursor=pointer]:
+              - generic [ref=e364]:
+                - img [ref=e366]
+                - img [ref=e368]
+              - text: Setting Page-V30
+            - button "TestSimpleButton" [ref=e371] [cursor=pointer]:
+              - generic [ref=e372]:
+                - img [ref=e374]
+                - img [ref=e376]
+              - text: TestSimpleButton
+            - button "WaterSettingsGenerated" [ref=e379] [cursor=pointer]:
+              - generic [ref=e380]:
+                - img [ref=e382]
+                - img [ref=e384]
+              - text: WaterSettingsGenerated
+            - generic [ref=e386]:
+              - button "Collapse" [expanded] [ref=e387] [cursor=pointer]:
+                - img [ref=e389]
+                - text: Components
+              - button "Expand all" [ref=e391] [cursor=pointer]:
+                - img [ref=e392]
+            - button "AiBottomBar" [ref=e395] [cursor=pointer]:
+              - generic [ref=e396]:
+                - img [ref=e398]
+                - img [ref=e400]
+              - text: AiBottomBar
+            - button "AppIcon" [ref=e403] [cursor=pointer]:
+              - generic [ref=e404]:
+                - img [ref=e406]
+                - img [ref=e408]
+              - text: AppIcon
+            - button "Avatar" [ref=e411] [cursor=pointer]:
+              - generic [ref=e412]:
+                - img [ref=e414]
+                - img [ref=e416]
+              - text: Avatar
+            - button "Button" [ref=e419] [cursor=pointer]:
+              - generic [ref=e420]:
+                - img [ref=e422]
+                - img [ref=e424]
+              - text: Button
+            - button "Card" [ref=e427] [cursor=pointer]:
+              - generic [ref=e428]:
+                - img [ref=e430]
+                - img [ref=e432]
+              - text: Card
+            - button "Checkbox" [ref=e435] [cursor=pointer]:
+              - generic [ref=e436]:
+                - img [ref=e438]
+                - img [ref=e440]
+              - text: Checkbox
+            - button "CloverIcon" [ref=e443] [cursor=pointer]:
+              - generic [ref=e444]:
+                - img [ref=e446]
+                - img [ref=e448]
+              - text: CloverIcon
+            - button "CloverWeekPanel" [ref=e451] [cursor=pointer]:
+              - generic [ref=e452]:
+                - img [ref=e454]
+                - img [ref=e456]
+              - text: CloverWeekPanel
+            - button "Divider" [ref=e459] [cursor=pointer]:
+              - generic [ref=e460]:
+                - img [ref=e462]
+                - img [ref=e464]
+              - text: Divider
+            - button "FeaturePromoCard" [ref=e467] [cursor=pointer]:
+              - generic [ref=e468]:
+                - img [ref=e470]
+                - img [ref=e472]
+              - text: FeaturePromoCard
+            - button "FloatLayer" [ref=e475] [cursor=pointer]:
+              - generic [ref=e476]:
+                - img [ref=e478]
+                - img [ref=e480]
+              - text: FloatLayer
+            - button "HarmonyPageShell" [ref=e483] [cursor=pointer]:
+              - generic [ref=e484]:
+                - img [ref=e486]
+                - img [ref=e488]
+              - text: HarmonyPageShell
+            - button "IconButton" [ref=e491] [cursor=pointer]:
+              - generic [ref=e492]:
+                - img [ref=e494]
+                - img [ref=e496]
+              - text: IconButton
+            - button "List" [ref=e499] [cursor=pointer]:
+              - generic [ref=e500]:
+                - img [ref=e502]
+                - img [ref=e504]
+              - text: List
+            - button "Message" [ref=e507] [cursor=pointer]:
+              - generic [ref=e508]:
+                - img [ref=e510]
+                - img [ref=e512]
+              - text: Message
+            - button "PixsoListRowMedium" [ref=e515] [cursor=pointer]:
+              - generic [ref=e516]:
+                - img [ref=e518]
+                - img [ref=e520]
+              - text: PixsoListRowMedium
+            - button "SceneModeCard" [ref=e523] [cursor=pointer]:
+              - generic [ref=e524]:
+                - img [ref=e526]
+                - img [ref=e528]
+              - text: SceneModeCard
+            - button "ScrollBar" [ref=e531] [cursor=pointer]:
+              - generic [ref=e532]:
+                - img [ref=e534]
+                - img [ref=e536]
+              - text: ScrollBar
+            - button "ServiceCard" [ref=e539] [cursor=pointer]:
+              - generic [ref=e540]:
+                - img [ref=e542]
+                - img [ref=e544]
+              - text: ServiceCard
+            - button "Slider" [ref=e547] [cursor=pointer]:
+              - generic [ref=e548]:
+                - img [ref=e550]
+                - img [ref=e552]
+              - text: Slider
+            - button "StatusBar" [ref=e555] [cursor=pointer]:
+              - generic [ref=e556]:
+                - img [ref=e558]
+                - img [ref=e560]
+              - text: StatusBar
+            - button "SubHeader" [ref=e563] [cursor=pointer]:
+              - generic [ref=e564]:
+                - img [ref=e566]
+                - img [ref=e568]
+              - text: SubHeader
+            - button "SwiperNav" [ref=e571] [cursor=pointer]:
+              - generic [ref=e572]:
+                - img [ref=e574]
+                - img [ref=e576]
+              - text: SwiperNav
+            - button "Switch" [ref=e579] [cursor=pointer]:
+              - generic [ref=e580]:
+                - img [ref=e582]
+                - img [ref=e584]
+              - text: Switch
+            - button "TaskCard" [ref=e587] [cursor=pointer]:
+              - generic [ref=e588]:
+                - img [ref=e590]
+                - img [ref=e592]
+              - text: TaskCard
+            - button "TitleBar" [ref=e595] [cursor=pointer]:
+              - generic [ref=e596]:
+                - img [ref=e598]
+                - img [ref=e600]
+              - text: TitleBar
+            - button "TitleBarHarmony3267" [ref=e603] [cursor=pointer]:
+              - generic [ref=e604]:
+                - img [ref=e606]
+                - img [ref=e608]
+              - text: TitleBarHarmony3267
+            - button "WifiIcon" [ref=e611] [cursor=pointer]:
+              - generic [ref=e612]:
+                - img [ref=e614]
+                - img [ref=e616]
+              - text: WifiIcon
+            - button "Showcase" [ref=e619] [cursor=pointer]:
+              - generic [ref=e620]:
+                - img [ref=e622]
+                - img [ref=e624]
+              - text: Showcase
+            - generic [ref=e626]:
+              - button "Collapse" [expanded] [ref=e627] [cursor=pointer]:
+                - img [ref=e629]
+                - text: Foundations
+              - button "Expand all" [ref=e631] [cursor=pointer]:
+                - img [ref=e632]
+            - button "Tokens" [ref=e635] [cursor=pointer]:
+              - generic [ref=e636]:
+                - img [ref=e638]
+                - img [ref=e640]
+              - text: Tokens
+    - separator "Sidebar resize handle" [ref=e642]
+  - generic [ref=e644]:
+    - region "Toolbar" [ref=e645]:
+      - heading "Toolbar" [level=2] [ref=e646]
+      - toolbar [ref=e647]:
+        - generic [ref=e648]:
+          - button "Reload story" [ref=e649] [cursor=pointer]:
+            - img [ref=e650]
+          - switch "Measure tool" [ref=e652] [cursor=pointer]:
+            - img [ref=e653]
+          - switch "Outline tool" [ref=e656] [cursor=pointer]:
+            - img [ref=e657]
+          - button "Viewport size" [ref=e659] [cursor=pointer]:
+            - img [ref=e660]
+        - generic [ref=e664]:
+          - switch "Change zoom level" [ref=e665] [cursor=pointer]: 100%
+          - button "Enter full screen" [ref=e666] [cursor=pointer]:
+            - img [ref=e667]
+          - button "Share" [ref=e669] [cursor=pointer]:
+            - img [ref=e670]
+    - main "Main preview area" [ref=e673]:
+      - heading "Main preview area" [level=2] [ref=e674]
+      - generic [ref=e675]:
+        - progressbar "Content is loading..." [ref=e677]
+        - generic [ref=e678]:
+          - link "Skip to sidebar" [ref=e679] [cursor=pointer]:
+            - /url: "#render-scene-mode-settings-v4--default"
+          - iframe [ref=e683]:
+            - generic [ref=f1e3]:
+              - generic [ref=f1e4]:
+                - generic [ref=f1e6]: 08:08
+                - img [ref=f1e8]
+              - generic [ref=f1e10]:
+                - generic [ref=f1e11]:
+                  - button "back" [ref=f1e13] [cursor=pointer]
+                  - generic "情景模式" [ref=f1e16]
+                  - generic [ref=f1e17]:
+                    - button "action 1" [ref=f1e18] [cursor=pointer]
+                    - button "action 2" [ref=f1e19] [cursor=pointer]
+                    - button "action 3" [ref=f1e20] [cursor=pointer]
+                - paragraph [ref=f1e21]: 显示模式开启后会自动调整系统功能，让您能全身心投入情景。
+                - generic [ref=f1e23]:
+                  - generic [ref=f1e24]:
+                    - img [ref=f1e27]
+                    - generic [ref=f1e29]:
+                      - generic [ref=f1e31]: 勿扰模式
+                      - generic [ref=f1e34]: 设置
+                  - generic [ref=f1e35]:
+                    - img [ref=f1e38]
+                    - generic [ref=f1e41]:
+                      - generic [ref=f1e43]: 个人
+                      - generic [ref=f1e46]: 设置
+                  - generic [ref=f1e47]:
+                    - img [ref=f1e50]
+                    - generic [ref=f1e53]:
+                      - generic [ref=f1e55]: 工作
+                      - generic [ref=f1e58]: 设置
+                  - generic [ref=f1e59]:
+                    - img [ref=f1e62]
+                    - generic [ref=f1e64]:
+                      - generic [ref=f1e66]: 睡眠
+                      - generic [ref=f1e69]: 设置
+                - generic [ref=f1e70]:
+                  - generic [ref=f1e71]: 条件开启
+                  - generic [ref=f1e72]:
+                    - generic [ref=f1e73]:
+                      - img [ref=f1e75]
+                      - generic [ref=f1e78]:
+                        - generic [ref=f1e79]:
+                          - generic [ref=f1e80]: 周日 周六
+                          - generic [ref=f1e81]: 22:00-次日 07:00
+                        - generic [ref=f1e84]: 右侧文本
+                    - generic [ref=f1e85]: 添加条件
+                  - paragraph [ref=f1e86]: 本功能需调用位置权限，读取位置信息
+                - generic [ref=f1e87]:
+                  - generic [ref=f1e88]: 推荐开启与关闭
+                  - generic [ref=f1e90]:
+                    - generic [ref=f1e91]: 推荐开启与关闭
+                    - switch [checked] [ref=f1e92] [cursor=pointer]
+                  - paragraph [ref=f1e95]:
+                    - text: 基于个人偏好,以及位置、时间等数据信息,智能推荐开启或关闭相应的情景模式,关闭后将影响情景模式的推荐体验。
+                    - link "查看使用个性化智能服务的应用" [ref=f1e96] [cursor=pointer]:
+                      - /url: "#"
+                - generic [ref=f1e97]:
+                  - generic [ref=f1e98]: 允许打扰
+                  - generic [ref=f1e99]:
+                    - generic [ref=f1e101]:
+                      - generic [ref=f1e103]: 应用和元服务
+                      - generic [ref=f1e106]: 未选择
+                    - generic [ref=f1e108]:
+                      - generic [ref=f1e110]: 联系人
+                      - generic [ref=f1e113]: 仅允许收藏联系人
+                - generic [ref=f1e114]:
+                  - generic [ref=f1e115]: 重要信息提醒
+                  - generic [ref=f1e117]:
+                    - generic [ref=f1e118]: 重要信息提醒
+                    - switch [checked] [ref=f1e119] [cursor=pointer]
+                  - paragraph [ref=f1e122]: 开启后,模式开启期间会提醒重要信息(短信验证码和实况)。
+                - generic [ref=f1e123]:
+                  - generic [ref=f1e124]: 关联系统功能
+                  - generic [ref=f1e125]:
+                    - generic [ref=f1e127]:
+                      - generic [ref=f1e129]: 深色模式
+                      - generic [ref=f1e131]:
+                        - generic [ref=f1e132]: 不关联
+                        - img [ref=f1e133]
+                    - generic [ref=f1e136]:
+                      - generic [ref=f1e138]: 护眼模式
+                      - generic [ref=f1e140]:
+                        - generic [ref=f1e141]: 不关联
+                        - img [ref=f1e142]
+  - generic [ref=e684]:
+    - separator "Addon panel resize handle" [ref=e685]
+    - region "Addon panel" [ref=e687]:
+      - heading "Addon panel" [level=2] [ref=e688]
+      - generic [ref=e689]:
+        - generic [ref=e690]:
+          - generic [ref=e691]:
+            - button "Move addon panel to right" [ref=e692] [cursor=pointer]:
+              - img [ref=e693]
+            - button "Hide addon panel" [ref=e696] [cursor=pointer]:
+              - img [ref=e697]
+          - tablist "Available addons" [ref=e702]:
+            - tab "Controls" [selected] [ref=e703] [cursor=pointer]:
+              - generic [ref=e705]: Controls
+            - tab "Actions" [ref=e706] [cursor=pointer]:
+              - generic [ref=e708]: Actions
+            - tab "Interactions" [ref=e709] [cursor=pointer]:
+              - generic [ref=e711]: Interactions
+        - tabpanel "Controls" [ref=e712]
