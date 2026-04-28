@@ -1,0 +1,33 @@
+# Generation Log
+
+- Prompt: `生成一个手机深浅模式和亮度调整的设置页面`
+- Matched layout: `settings-context-list`
+- Layout source: `.resources/harmony/layout/settings-context-list.md`
+- Reference blocks:
+  - `settings-page`
+  - `scenario-mode-page-v3` (layout reference only, not copied)
+- Needed components used:
+  - `status-bar`
+  - `title-bar`
+  - `subheader`
+  - `list`
+  - `list-item`
+  - `switch`
+  - `slider`
+- Grounding source files:
+  - `harmony-ui-playground/src/layouts/SettingsContextListLayout/SettingsContextListLayout.tsx`
+  - `harmony-ui-playground/src/layouts/SettingsContextListLayout/SettingsContextListLayout.css`
+  - `harmony-ui-playground/src/blocks/settings-page.tsx`
+  - `harmony-ui-playground/src/component/StatusBar/StatusBar.tsx`
+  - `harmony-ui-playground/src/component/TitleBar/title-bar.tsx`
+  - `harmony-ui-playground/src/component/SubHeader/SubHeader.tsx`
+  - `harmony-ui-playground/src/component/List/List.tsx`
+  - `harmony-ui-playground/src/component/List/ListItem.tsx`
+  - `harmony-ui-playground/src/component/Switch/Switch.tsx`
+  - `harmony-ui-playground/src/component/Slider/SliderBase.tsx`
+- Output files:
+  - `harmony-ui-playground/src/render/display-theme-brightness-settings-v1/index.tsx`
+  - `harmony-ui-playground/src/render/display-theme-brightness-settings-v1/index.css`
+  - `harmony-ui-playground/src/render/display-theme-brightness-settings-v1/index.stories.tsx`
+- Validation target:
+  - `npm run build` in `harmony-ui-playground`

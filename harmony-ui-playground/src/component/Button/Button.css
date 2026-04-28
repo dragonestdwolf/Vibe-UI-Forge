@@ -7,8 +7,8 @@
   box-sizing: border-box;
   border: 1px solid transparent;
   border-radius: 20px;
-  background-color: var(--my-btn-bg, var(--devui-primary));
-  color: var(--my-btn-color, var(--devui-light-text));
+  background-color: var(--my-btn-bg, var(--harmony-primary));
+  color: var(--my-btn-color, var(--harmony-light-text));
   cursor: pointer;
   user-select: none;
   font-size: 14px;
@@ -27,17 +27,17 @@
 }
 
 .my-btn--danger {
-  background-color: var(--devui-danger);
+  background-color: var(--harmony-danger);
 }
 
 .my-btn--success {
-  background-color: var(--devui-success);
+  background-color: var(--harmony-success);
 }
 
 .my-btn--info {
-  background-color: var(--devui-btn-common-bg);
-  color: var(--devui-info);
-  border-color: var(--devui-btn-common-border-color);
+  background-color: var(--harmony-btn-common-bg);
+  color: var(--harmony-info);
+  border-color: var(--harmony-btn-common-border-color);
 }
 
 .my-btn--plain {
@@ -46,19 +46,19 @@
 }
 
 .my-btn--plain.my-btn--primary {
-  border-color: var(--devui-primary);
-  color: var(--devui-primary);
+  border-color: var(--harmony-primary);
+  color: var(--harmony-primary);
 }
 
 .my-btn--plain.my-btn--danger {
-  border-color: var(--devui-danger);
-  color: var(--devui-danger);
+  border-color: var(--harmony-danger);
+  color: var(--harmony-danger);
 }
 
 .my-btn--plain.my-btn--default,
 .my-btn--plain.my-btn--info {
-  border-color: var(--devui-btn-common-border-color);
-  color: var(--devui-info);
+  border-color: var(--harmony-btn-common-border-color);
+  color: var(--harmony-info);
 }
 
 .my-btn--small {
@@ -84,7 +84,7 @@
   left: -4px;
   width: calc(100% + 8px);
   height: calc(100% + 8px);
-  border: 2px solid var(--devui-primary);
+  border: 2px solid var(--harmony-primary);
   border-radius: 999px;
   pointer-events: none;
 }
@@ -137,4 +137,3 @@
     transform: rotate(360deg);
   }
 }
-

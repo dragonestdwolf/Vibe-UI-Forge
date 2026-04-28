@@ -87,8 +87,8 @@ function SettingsPageV20() {
   const [passwordEnabled, setPasswordEnabled] = useState(false)
 
   return (
-    <div className="mx-auto flex min-h-[792px] w-[360px] flex-col bg-[#f5f6f8] text-[#1f2329]">
-      <StatusBar time="08:08" backgroundColor="#f5f6f8" />
+    <div className="mx-auto flex min-h-[792px] w-[360px] flex-col bg-comp-background-gray text-[#1f2329]">
+      <StatusBar time="08:08" backgroundColor="#F1F3F5" />
 
       <div className="px-4 pt-1 pb-3">
         <div className="flex items-center gap-4">

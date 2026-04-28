@@ -35,7 +35,7 @@ For page generation, turn the request into a grounded plan before writing code:
 2. **Detect resource mode** — if `.resources/config.json` exists, use the resource-aware workflow. If it is missing, infer a temporary route/layout plan from the request and existing project files.
 3. **Route matching** — for resource-aware projects, read `.resources/config.json`, then `.resources/{active}/route-index.md`, and map the request to `page_type`. Use the route fallback only when the request is ambiguous.
 4. **Layout resolution** — read `.resources/{active}/layout/{page_type}.md` and extract `layout_skeleton`, `reference_blocks`, `needed_components`, `composition_mapping`, and `generation_constraints`.
-5. **Source grounding** — resolve `reference_blocks` through `.resources/{active}/blocks.json`, resolve `needed_components` through `.resources/{active}/components.json`, then read the mapped TSX, stories, CSS, and token files. Component markdown is on demand only. Do not use historical generated pages under `src/render/**` as page template references.
+5. **Source grounding** — resolve `reference_blocks` through `.resources/{active}/blocks.json`, resolve `needed_components` through `.resources/{active}/components.json`, resolve related visual assets through `.resources/{active}/assets.json` plus any `related_assets` or `asset_mapping` declared in the matched layout/template, then read the mapped TSX, stories, CSS, tokens, and asset files. Component markdown is on demand only. Never use generated preview output as a grounding source. This includes any content under `src/render/**`, `render/**`, `Render/**`, or any similarly named render-output folder in the workspace.
 6. **Generate** — use aliases from `components.json`, reuse existing components and blocks first, follow the layout skeleton, and apply the critical composition/styling/forms/icon rules in this skill.
 7. **Validate** — run the available checks, such as `node scripts/validate_design_system_resources.mjs`, `npm run build`, or `npm run build-storybook`. If a check is unavailable, report why.
 8. **Write generation log** — when the output is a render preview page, create a log file in the same folder as the generated source, usually `src/render/{page-name}/index.log.md`.
@@ -46,10 +46,12 @@ Read [references/page-generation.md](./references/page-generation.md) for the fu
 ### Resource-Aware Rules
 
 - `route-index.md` and `layout/{page_type}.md` are default inputs for page generation.
+- `.resources/{active}/assets.json` is the default visual asset index when it exists.
 - `component/{name}.md` is only read when TSX/stories do not answer component semantics, state, size, interaction, or accessibility.
 - `history/spec/**` is not a default generation input.
-- `src/render/**` is generated output. Do not use historical render pages as template/reference sources for new page generation.
-- TSX, stories, CSS, and tokens are the true source for generated code.
+- Any `render` / `Render` folder is generated output unless the user explicitly says otherwise. Do not use files from `src/render/**`, `render/**`, `Render/**`, or other render-output directories as template/reference sources for new page generation.
+- When a task asks to ignore historical renders, treat all existing render outputs as tainted examples: they may be overwritten or replaced, but they must not influence layout, copy, styling, or component decisions for the new page.
+- TSX, stories, CSS, tokens, and assets registered in `.resources/{active}/assets.json` are the true source for generated code.
 - `.resources/{active}/blocks.json` is the page generation index; do not treat it as a shadcn CLI registry unless it is explicitly converted to a valid shadcn registry schema.
 
 ## Principles

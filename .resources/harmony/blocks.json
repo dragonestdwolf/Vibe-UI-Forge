@@ -5,12 +5,12 @@
       "id": "water-settings",
       "name": "water-settings",
       "pageType": "mobile-settings",
-      "description": "喝水设置页面 - 设置项列表与开关控制",
+      "description": "喝水设置页面 - 真值参考页，设置项列表与开关控制",
       "files": [
-        "src/blocks/water-settings.tsx"
+        "src/pages/water-settings.tsx"
       ],
       "stories": [
-        "src/blocks/water-settings.stories.tsx"
+        "src/pages/water-settings.stories.tsx"
       ],
       "dependencies": [
         "status-bar",
@@ -18,62 +18,51 @@
         "list",
         "list-item",
         "switch"
+      ],
+      "assets": [
+        "phone-preview-light",
+        "phone-preview-dark"
       ]
     },
     {
       "id": "settings-page",
       "name": "settings-page",
       "pageType": "mobile-settings",
-      "description": "通用设置页",
+      "description": "通用设置页 - 真值参考页",
       "files": [
-        "src/blocks/settings-page.tsx"
+        "src/pages/settings-page.tsx"
       ],
       "stories": [
-        "src/blocks/settings-page.stories.tsx"
+        "src/pages/settings-page.stories.tsx"
       ],
       "dependencies": [
         "status-bar",
         "title-bar",
         "list",
         "list-item"
+      ],
+      "assets": [
+        "phone-preview-light",
+        "phone-preview-dark"
       ]
     },
     {
-      "id": "health-clover",
-      "name": "health-clover",
-      "pageType": "health-dashboard",
-      "description": "健康三叶草页面 - 展示每日健康任务进度",
+      "id": "grouped-list-section",
+      "name": "grouped-list-section",
+      "pageType": "settings-context-list",
+      "description": "带可选 subtitle 和辅助文本的列表分组 block；统一处理组内 0-gap 与 footnote 8px 间距",
       "files": [
-        "src/blocks/health-clover.tsx"
+        "src/blocks/grouped-list-section.tsx",
+        "src/blocks/grouped-list-section.css"
       ],
       "stories": [
-        "src/blocks/health-clover.stories.tsx"
+        "src/blocks/grouped-list-section.stories.tsx"
       ],
       "dependencies": [
-        "status-bar",
-        "title-bar",
-        "clover-week-panel",
-        "task-card",
-        "button"
-      ]
-    },
-    {
-      "id": "medication",
-      "name": "medication",
-      "pageType": "mobile-sheet",
-      "description": "服药提醒页面 - 浮层卡片列表展示",
-      "files": [
-        "src/blocks/medication.tsx"
-      ],
-      "stories": [
-        "src/blocks/medication.stories.tsx"
-      ],
-      "dependencies": [
-        "status-bar",
-        "float-layer",
-        "service-card",
-        "service-card-status",
-        "service-card-item"
+        "subheader",
+        "list",
+        "list-item",
+        "switch"
       ]
     },
     {

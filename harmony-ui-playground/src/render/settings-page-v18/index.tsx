@@ -42,8 +42,8 @@ function SettingsPageV18() {
   const cloudPercent = (cloudUsed / cloudTotal) * 100
 
   return (
-    <div className="w-[360px] min-h-[792px] mx-auto bg-gray-100">
-      <StatusBar time="09:41" backgroundColor="#f3f4f6" />
+    <div className="w-[360px] min-h-[792px] mx-auto bg-comp-background-gray">
+      <StatusBar time="09:41" backgroundColor="#F1F3F5" />
 
       <div className="w-[328px] mx-auto">
         <TitleBar title="设置" leftIcon={iconChevronBack} />

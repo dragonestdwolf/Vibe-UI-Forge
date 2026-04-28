@@ -169,7 +169,7 @@ export default function SceneModePage() {
         <TitleBar
           title="情景模式"
           leftIcon={iconChevronBack}
-          rightIcon={[plusIcon]}
+          rightIcons={[plusIcon]}
           backgroundColor="#F1F3F5"
         />
       </div>

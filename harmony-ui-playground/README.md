@@ -19,5 +19,5 @@ npm run dev
 
 - `.storybook/`: Storybook 配置
 - `src/component/`: 组件目录（统一）
-- `src/styles/devui-tokens.css`: 设计 token
+- `src/styles/harmony-token.css`: Harmony 设计 token，统一使用 `--harmony-*` 命名
 - `components.json`: shadcn 配置

@@ -54,7 +54,7 @@ export const Overview: Story = {
                 leftMode="double"
                 rightMode="action"
                 title="Content subheading"
-                subtitle="subtitle"
+                text="subtitle"
                 actionText="操作"
               />
               <Divider>Section Divider</Divider>

@@ -19,8 +19,8 @@
 - 通用一级"设置"主页（多组设置 list 但无业务展示卡）→ 命中 `mobile-settings`
 - 顶部存在 tab / segmented control 作为页面主导航
 - 页面主体为表单录入、富文本详情、信息流
-- 半模态浮层场景 → 命中 `mobile-sheet`
-- 健康任务进度卡片为主体 → 命中 `health-dashboard`
+- 半模态浮层场景
+- 健康任务进度卡片为主体
 - 底部存在固定主 CTA / 双按钮操作栏
 
 ## layout_skeleton
@@ -142,6 +142,7 @@ Page
 
 - settings-page
 - scenario-mode-page-v3（FeaturePromoCard 在 ContextSlot 横向轮播的典型实现）
+- grouped-list-section（SubHeader + list-card + footnote 的标准分组 block）
 
 ## composition_mapping
 
@@ -149,7 +150,7 @@ Page
 |---|---|---|---|
 | HeaderSlot | title-bar | search-header | 是否需要搜索；二者均与 status-bar 紧贴 |
 | ContextSlot | FeaturePromoCard | scene-mode-carousel / FeaturePromoCard / display-mode-preview / cloud-storage-overview / multi-window-preview / none | 选择匹配业务的展示卡片；多卡时使用横向 scroll-snap 轨道（如 `scenario-mode-page-v3` 三卡轮播） |
-| ListGroupSlot | settings-list-group | slider-list-group | 含 Slider 时优先 slider-list-group |
+| ListGroupSlot | settings-list-group | slider-list-group / grouped-list-section | 含 subtitle 或 footnote 时优先 grouped-list-section；含 Slider 时可在 grouped-list-section 内承载 slider-list-group |
 | SubheaderSlot | subtitle | none | **副标题标签（使用 `leftMode="text"` + `text` 属性）**，置于 list 卡片上方，**subheader 与下方 list 卡片间距为 0**（gap=0）；使用 `font_tertiary` token；**一般无右侧蓝色操作按钮**（`rightMode` 应为 `none`） |
 | ContextSlot 间距 | 16px / 24px / 32px / 40px | — | ContextSlot 距上方内容（TitleBar 或描述文本）间距为 8 的倍数，最小 16px，推荐 24 / 32 / 40px；若 ContextSlot 下方紧接 Subheader 则间距为 0 |
 | Subheader → 导航点 | -12px | — | Subheader 上方接入导航点（dots）组件时，间距为 -12px（拉近） |
@@ -176,8 +177,9 @@ Page
 - **ContextSlot 间距约束**：中间业务卡片（ContextSlot）距上方内容（TitleBar 或描述文本）间距为 **8 的倍数**，最小 **16px**，推荐 **24px / 32px / 40px**。
 - **ContextSlot + Subheader 间距**：若 ContextSlot 下方紧接 Subheader（`leftMode="text"`），则 ContextSlot 距 Subheader 间距为 **0**（gap=0）。
 - **SubheaderSlot 间距约束**：subheader 距下方 list 卡片间距为 0（gap=0），不得插入任何额外间距。
+- **grouped-list-section 约束**：当 list-card 同时带有 subheader 和/或 footnote 时，必须包裹在 `grouped-list-section` 中作为一个整体 block 参与 `ListGroupSlot` 排布；父级 `ListGroupSlot.gap=12` 只作用于 section 与 section 之间，section 内部 `gap=0`。
 - **Subheader 样式规范**：当 Subheader 位于 list 卡片上方时，一般仅使用 `text` 内容，**无右侧蓝色操作按钮**（`rightMode` 应为 `none` 或不加 rightMode）；仅有 text 的 Subheader 视觉更简洁。
-- **Footnote 间距约束**：list 卡片下方副文本（如功能说明、注意事项）距上方 list 卡片间距为 8px。
+- **Footnote 间距约束**：list 卡片下方副文本（如功能说明、注意事项）距上方 list 卡片间距为 8px；该 8px 属于 `grouped-list-section` 内部规则，不应由 `ListGroupSlot` 的外部 gap 产生。
 - **TitleBar 副文本字体约束**：TitleBar 下方若放置页面描述副文本，字体参数必须使用 `Font/Subtitle_S/Regular`（14px / line-height 22px / font-weight 400），颜色使用 `Light/font_secondary`（`rgba(0,0,0,0.6)`）；dark 模式使用 `rgba(255,255,255,0.6)`；不得使用 `font_tertiary` 或其他颜色 token。
 - **list 卡片说明文本字体约束**：list 卡片下方说明文本（footnote）字体参数必须使用 `Font/Body_S/Regular`（12px / line-height 18px / font-weight 400），颜色使用 `Light/font_secondary`（`rgba(0,0,0,0.6)`）；dark 模式使用 `rgba(255,255,255,0.6)`；间距遵循 8px 上边距约束。
 - **Subheader 与上方组件间距**：Subheader 距上方组件一般为 0px；若上方为导航点（dots）组件则间距为 -12px（使用负 margin 拉近）。

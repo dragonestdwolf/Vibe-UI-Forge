@@ -19,7 +19,8 @@
 注意：
 
 - `devui-playground` 与 `harmony-ui-playground` 都是项目内维护组件，不是“原生未改动组件”。
-- 两个 playground 都依赖 `src/styles/devui-tokens.css` 与 `src/index.css` 的 token 映射。
+- `devui-playground` 依赖 `src/styles/devui-tokens.css` 与 `src/index.css` 的 token 映射。
+- `harmony-ui-playground` 依赖 `src/styles/harmony-token.css` 与 `src/index.css` 的 token 映射，运行时统一使用 `--harmony-*`。
 
 ---
 
@@ -122,13 +123,19 @@ rg "<component-kebab-name>" registry.json src/blocks src/component/index.ts
 两个 playground 都有独立 token 文件：
 
 - `devui-playground/src/styles/devui-tokens.css`
-- `harmony-ui-playground/src/styles/devui-tokens.css`
+- `harmony-ui-playground/src/styles/harmony-token.css`（`--harmony-*`）
 
 修改 token 时：
 
 1. 评估是否两个 playground 都要改
 2. 如需在 Tailwind 语义类中使用，补充 `src/index.css` 的 `@theme inline` 映射
 3. 回归 Storybook（`Foundations/*` 与关键组件 stories）
+
+命名要求：
+
+- Harmony token 只能使用 `--harmony-*`
+- DevUI token 只能使用 `--devui-*`
+- 不要在 `harmony-ui-playground` 中保留 `--devui-*` 兼容别名
 
 ---
 

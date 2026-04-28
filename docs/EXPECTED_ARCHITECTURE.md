@@ -24,7 +24,7 @@ Vibe-UI-Forge-main/
 │   ├── config.json                  # 资源配置：active + 多资源注册
 │   ├── harmony/                     # Harmony 设计系统资源索引
 │   │   ├── route-index.md           # 路由规则索引
-│   │   ├── global-rules.md          # 全局规则索引（指向实际文件）
+│   │   ├── global-rules.md          # 全局规则索引（指向实际文件，token 使用 --harmony-*）
 │   │   │
 │   │   ├── layout/                  # 布局索引（轻量指针）
 │   │   │   ├── index.md             # 布局清单（指向 blocks/）
@@ -63,7 +63,7 @@ Vibe-UI-Forge-main/
 │   │   │   └── ...
 │   │   │
 │   │   ├── styles/                 # 样式实现（真实来源）
-│   │   │   ├── devui-tokens.css    # Token 变量（代码生成直接依据）
+│   │   │   ├── harmony-token.css   # Token 变量（`--harmony-*`，代码生成直接依据）
 │   │   │   └── index.css
 │   │   │
 │   │   ├── stories/                # Storybook stories
@@ -108,9 +108,10 @@ Vibe-UI-Forge-main/
 │
 ├── global-rules.md                # 全局规则索引
 │   格式：
-│   - font: ../harmony-ui-playground/src/styles/devui-tokens.css
-│   - theme: ../harmony-ui-playground/src/styles/devui-tokens.css
+│   - font: ../harmony-ui-playground/src/styles/harmony-token.css
+│   - theme: ../harmony-ui-playground/src/styles/harmony-token.css
 │   - icon: ../harmony-ui-playground/src/component/ (图标组件路径)
+│   - token namespace: --harmony-*
 │
 ├── layout/                         # 布局索引（轻量指针）
 │   ├── index.md                   # 布局清单（id, name, blocks_path, hit_rules）
@@ -226,7 +227,7 @@ harmony-ui-playground/src/blocks/
 │    基于 harmony-ui-playground/src/  │
 │    中实际的 .tsx 组件源码生成代码    │
 │    应用 harmony-ui-playground/src/   │
-│    └── styles/devui-tokens.css     │
+│    └── styles/harmony-token.css    │
 └─────────────────────────────────────┘
 ```
 
@@ -248,7 +249,7 @@ harmony-ui-playground/src/blocks/
 | `component/list.md` (元数据) | `component/List/List.tsx` |
 | `component/switch.md` (元数据) | `component/Switch/Switch.tsx` |
 | `layout/index.md` | `blocks/settings-page/settings-page.tsx` |
-| `global-rules.md` | `styles/devui-tokens.css` |
+| `global-rules.md` | `styles/harmony-token.css` |
 
 ### 工作流读取路径
 
@@ -283,7 +284,7 @@ harmony-ui-playground/src/blocks/
 |------|------|------|
 | `harmony-ui-playground/src/component/` | **组件实现（真实来源）** | `.tsx` 源码，代码生成的直接依据 |
 | `harmony-ui-playground/src/blocks/` | **Block 实现（真实来源）** | `.tsx` 源码，页面模板的直接依据 |
-| `harmony-ui-playground/src/styles/devui-tokens.css` | **Token 实现（真实来源）** | CSS 变量，样式生成的直接依据 |
+| `harmony-ui-playground/src/styles/harmony-token.css` | **Token 实现（真实来源）** | CSS 变量，样式生成的直接依据，命名空间统一为 `--harmony-*` |
 | `history/spec/` | **参考文档（派生品）** | 从实现中提取的人类可读文档 |
 | `.resources/harmony/` | **轻量索引（指针）** | 指向真实来源的路径映射和元数据 |
 

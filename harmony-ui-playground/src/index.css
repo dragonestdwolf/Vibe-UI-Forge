@@ -1,50 +1,51 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "./styles/devui-tokens.css";
+@import "./styles/harmony-token.css";
 
 @theme inline {
-  --font-sans: var(--devui-font-family-sans);
-  --font-heading: var(--devui-font-family-sans);
-  --color-background: var(--devui-global-bg);
-  --color-foreground: var(--devui-text);
-  --color-card: var(--devui-base-bg);
-  --color-card-foreground: var(--devui-text);
-  --color-popover: var(--devui-connected-overlay-bg);
-  --color-popover-foreground: var(--devui-text);
-  --color-primary: var(--devui-primary);
-  --color-primary-foreground: var(--devui-light-text);
-  --color-secondary: var(--devui-brand-foil);
-  --color-secondary-foreground: var(--devui-dark-text);
-  --color-muted: var(--devui-area);
-  --color-muted-foreground: var(--devui-aide-text);
-  --color-accent: var(--devui-list-item-hover-bg);
-  --color-accent-foreground: var(--devui-list-item-hover-text);
-  --color-destructive: var(--devui-danger);
-  --color-destructive-foreground: var(--devui-light-text);
-  --color-border: var(--devui-line);
-  --color-input: var(--devui-form-control-line);
-  --color-ring: var(--devui-form-control-line-active);
-  --color-success: var(--devui-success);
-  --color-warning: var(--devui-warning);
-  --color-info: var(--devui-info);
-  --radius-sm: var(--devui-border-radius);
-  --radius-md: var(--devui-border-radius);
-  --radius-lg: var(--devui-border-radius-card);
-  --radius-xl: var(--devui-border-radius-card);
-  --radius-2xl: var(--devui-border-radius-full);
-  --shadow-sm: var(--devui-shadow-length-base) var(--devui-light-shadow);
-  --shadow-md: var(--devui-shadow-length-base) var(--devui-shadow);
-  --shadow-lg: var(--devui-shadow-length-hover) var(--devui-hover-shadow);
+  --font-sans: var(--harmony-font-family-sans);
+  --font-heading: var(--harmony-font-family-sans);
+  --color-background: var(--harmony-global-bg);
+  --color-comp-background-gray: var(--harmony-comp-background-gray);
+  --color-foreground: var(--harmony-text);
+  --color-card: var(--harmony-base-bg);
+  --color-card-foreground: var(--harmony-text);
+  --color-popover: var(--harmony-connected-overlay-bg);
+  --color-popover-foreground: var(--harmony-text);
+  --color-primary: var(--harmony-primary);
+  --color-primary-foreground: var(--harmony-light-text);
+  --color-secondary: var(--harmony-brand-foil);
+  --color-secondary-foreground: var(--harmony-dark-text);
+  --color-muted: var(--harmony-area);
+  --color-muted-foreground: var(--harmony-aide-text);
+  --color-accent: var(--harmony-list-item-hover-bg);
+  --color-accent-foreground: var(--harmony-list-item-hover-text);
+  --color-destructive: var(--harmony-danger);
+  --color-destructive-foreground: var(--harmony-light-text);
+  --color-border: var(--harmony-line);
+  --color-input: var(--harmony-form-control-line);
+  --color-ring: var(--harmony-form-control-line-active);
+  --color-success: var(--harmony-success);
+  --color-warning: var(--harmony-warning);
+  --color-info: var(--harmony-info);
+  --radius-sm: var(--harmony-border-radius);
+  --radius-md: var(--harmony-border-radius);
+  --radius-lg: var(--harmony-border-radius-card);
+  --radius-xl: var(--harmony-border-radius-card);
+  --radius-2xl: var(--harmony-border-radius-full);
+  --shadow-sm: var(--harmony-shadow-length-base) var(--harmony-light-shadow);
+  --shadow-md: var(--harmony-shadow-length-base) var(--harmony-shadow);
+  --shadow-lg: var(--harmony-shadow-length-hover) var(--harmony-hover-shadow);
   --shadow-xl:
-    var(--devui-shadow-length-fullscreen-overlay)
-    var(--devui-feedback-overlay-shadow);
+    var(--harmony-shadow-length-fullscreen-overlay)
+    var(--harmony-feedback-overlay-shadow);
   --shadow-overlay:
-    var(--devui-shadow-length-connected-overlay)
-    var(--devui-connected-overlay-shadow);
-  --z-index-dropdown: var(--devui-z-index-dropdown);
-  --z-index-modal: var(--devui-z-index-modal);
-  --z-index-drawer: var(--devui-z-index-drawer);
-  --z-index-overlay: var(--devui-z-index-full-page-overlay);
+    var(--harmony-shadow-length-connected-overlay)
+    var(--harmony-connected-overlay-shadow);
+  --z-index-dropdown: var(--harmony-z-index-dropdown);
+  --z-index-modal: var(--harmony-z-index-modal);
+  --z-index-drawer: var(--harmony-z-index-drawer);
+  --z-index-overlay: var(--harmony-z-index-full-page-overlay);
 }
 
 @layer base {
@@ -60,10 +61,10 @@
   body {
     @apply bg-background text-foreground;
 
-    font-family: var(--devui-font-family-sans);
-    font-size: var(--devui-font-size);
-    font-weight: var(--devui-font-content-weight);
-    line-height: var(--devui-line-height-base);
+    font-family: var(--harmony-font-family-sans);
+    font-size: var(--harmony-font-size);
+    font-weight: var(--harmony-font-content-weight);
+    line-height: var(--harmony-line-height-base);
   }
 
   html {
@@ -80,12 +81,12 @@
   }
 
   body > * ::-webkit-scrollbar-thumb {
-    background-color: var(--devui-line);
-    border-radius: var(--devui-border-radius-full);
+    background-color: var(--harmony-line);
+    border-radius: var(--harmony-border-radius-full);
   }
 
   body > * ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--devui-placeholder);
+    background-color: var(--harmony-placeholder);
   }
 
   ::selection {

@@ -63,6 +63,7 @@
 - `list-item`
 - `switch`
 - `divider` (按需)
+- `hero-card`
 
 ## composition_mapping
 
@@ -70,6 +71,7 @@
 |---|---|---|
 | `status bar` | `status-bar` | harmony-public + theme(light/dark) |
 | `titlebar` | `title-bar` | default，左侧返回、标题、右侧可选 |
+| `Hero Card` | `hero-card` | 244×220 r=24 毛玻璃面板，居中 icon + title + subtitle + 底部整宽 CTA 胶囊按钮 |
 | `Entry Card` | `list` + `list-item` | 外层 card container + trailing value + chevron |
 | `Group Card` | `list` + `list-item` + `switch`/`divider` | 多行设置组，首行可为 switch |
 | `Informational Note` | plain text | 非卡片文本块，font_secondary |
@@ -78,6 +80,8 @@
 
 - 禁止把整页实现为连续的匿名 frame 容器
 - 禁止把所有区块写成逐元素绝对定位；只允许壳层级固定区
+- 禁止卡片嵌套卡片；如需表达层级，优先通过卡片内部分区、行组、留白或分割线处理
+- 禁止在卡片表面大面积使用渐变色阴影来刻意凸显视觉重心；卡片强调应优先依赖内容层级、间距、圆角与轻量实色阴影
 - 卡片内容必须以可复用的 entry row / setting row / control row / note 组织
 - 卡片内部优先使用 flex 或纵向流式布局
 - 右侧值区必须保持最小宽度
@@ -87,7 +91,7 @@
 
 | Semantic Part | Token |
 |---|---|
-| Page canvas | `background_secondary` |
+| Page canvas | `comp_background_gray` |
 | Card surface | `comp_background_primary` |
 | Title / primary labels | `font_primary` |
 | Right-side value / note | `font_secondary` |
@@ -100,4 +104,6 @@
 - 验收 checklist 参见 `history/spec/1.layout/layout.md` Section 15
 - 必须能映射到 `list` 组件的行级布局
 - 卡片堆叠顺序与 reference block 一致
+- 验收时确认不存在 card-in-card 结构
+- 验收时确认卡片未通过大面积渐变色阴影制造视觉主次
 - Build 通过且 Storybook 组件故事存在

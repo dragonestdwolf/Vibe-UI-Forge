@@ -90,7 +90,7 @@ Vibe-UI-Forge-main/
 │   │   │   └── ...
 │   │   │
 │   │   └── styles/
-│   │       └── devui-tokens.css    # ⭐ Step 3 读取
+│   │       └── harmony-token.css   # ⭐ Step 3 读取（`--harmony-*`）
 │   │
 │   └── ...
 │
@@ -159,7 +159,7 @@ harmony-ui-playground/src/
 │   └── ...
 │
 └── styles/
-    └── devui-tokens.css         # ⭐ Token（Step 3 直接读取）
+    └── harmony-token.css        # ⭐ Token（Step 3 直接读取，命名空间为 `--harmony-*`）
 ```
 
 ---
@@ -255,13 +255,13 @@ harmony-ui-playground/src/
 读取文件：
 - harmony-ui-playground/src/blocks/{page}/ 下的 tsx 源码
 - harmony-ui-playground/src/component/{name}/ 下的 tsx 源码
-- harmony-ui-playground/src/styles/devui-tokens.css
+- harmony-ui-playground/src/styles/harmony-token.css
 ```
 
 **核心原则**：
 - 直接读取 tsx 源码，不是 markdown
 - 按需读取需要的组件，不是全部加载
-- 应用 tokens.css 中的 CSS 变量
+- 应用 tokens.css 中的 CSS 变量，Harmony 统一使用 `--harmony-*`
 
 ---
 
@@ -293,7 +293,7 @@ harmony-ui-playground/src/
 |------|------|------|
 | `harmony-ui-playground/src/component/` | **真实来源** | tsx 源码，代码生成直接依据 |
 | `harmony-ui-playground/src/blocks/` | **真实来源** | tsx 源码，页面模板直接依据 |
-| `harmony-ui-playground/src/styles/devui-tokens.css` | **真实来源** | CSS 变量，样式直接依据 |
+| `harmony-ui-playground/src/styles/harmony-token.css` | **真实来源** | CSS 变量，样式直接依据，命名空间统一为 `--harmony-*` |
 | `.resources/harmony/layout/` | **默认读取** | route/layout markdown，页面生成工作流默认步骤 |
 | `.resources/harmony/component/` | **按需参考** | 组件规范，用户询问组件细节时读取 |
 | `.resources/harmony/blocks.json` | **主索引** | 页面生成主索引，v1.0 核心文件 |

@@ -10,7 +10,7 @@ import "./settings-app.css"
 // 图标组件
 const IconWrapper = ({
   children,
-  color = "var(--devui-primary)",
+  color = "var(--harmony-primary)",
 }: {
   children: React.ReactNode
   color?: string
@@ -81,7 +81,7 @@ function SettingsApp() {
                     }}
                     autoFocus
                     style={{
-                      border: "1px solid var(--devui-primary)",
+                      border: "1px solid var(--harmony-primary)",
                       borderRadius: "4px",
                       padding: "4px 8px",
                       fontSize: "14px",

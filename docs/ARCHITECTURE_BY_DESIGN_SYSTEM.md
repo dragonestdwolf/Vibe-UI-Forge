@@ -35,7 +35,7 @@ Vibe-UI-Forge-main/
 │       ├── component/               # Harmony 组件实现
 │       ├── blocks/                 # Harmony Block 实现
 │       └── styles/
-│           └── devui-tokens.css
+│           └── harmony-token.css    # `--harmony-*`
 │
 ├── devui-playground/                 # DevUI 实现层（真实来源）
 │   └── src/
@@ -159,7 +159,9 @@ A workflow for generating UI based on {DesignSystem} design system.
 
 ### Step 3: Code Generation
 - Read `../{playground}/src/` for actual tsx implementations
-- Apply tokens from `../{playground}/src/styles/devui-tokens.css`
+- Apply tokens from the active design system token file
+- Harmony uses `../harmony-ui-playground/src/styles/harmony-token.css` with `--harmony-*`
+- DevUI uses `../devui-playground/src/styles/devui-tokens.css` with `--devui-*`
 
 ## Resource Path
 
@@ -183,7 +185,7 @@ A workflow for generating UI based on {DesignSystem} design system.
 
 | 应该包含 | 不应该包含 |
 |---------|-----------|
-| 通用工作流（3步） | Harmony 特定的 Token 名称 |
+| 通用工作流（3步） | Harmony 特定的 token 名称（如 `--harmony-*`） |
 | 规则模板格式 | DevUI 特定的组件名 |
 | 按需读取协议 | 任何设计系统的颜色值 |
 

@@ -216,7 +216,7 @@ export default function ScenarioModePageV4() {
         <TitleBar
           title="情景模式"
           leftIcon={iconChevronBack}
-          rightIcon={[iconAdd, iconHelp, iconMore]}
+          rightIcons={[iconAdd, iconHelp, iconMore]}
           backgroundColor="#F1F3F5"
         />
       }

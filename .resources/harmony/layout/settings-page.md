@@ -1,7 +1,7 @@
 # Page Template: settings-page
 
 > 页面模板说明：`settings-page` 是 `mobile-settings` 布局族下的通用设置页模板。  
-> 真实来源：`harmony-ui-playground/src/blocks/settings-page.tsx`
+> 真实来源：`harmony-ui-playground/src/pages/settings-page.tsx`
 
 ## hit_rules
 
@@ -19,8 +19,8 @@
 出现以下任一特征时，不应优先使用该模板：
 
 - 只围绕单一功能配置，例如喝水提醒、提醒时间、目标设定，应优先参考 `water-settings`
-- 页面主体为健康任务、进度可视化、卡片任务列表，应命中 `health-dashboard`
-- 页面主体是底部半模态浮层，应命中 `mobile-sheet`
+- 页面主体为健康任务、进度可视化、卡片任务列表
+- 页面主体是底部半模态浮层
 - 页面需要表单提交、复杂输入或固定底部主操作按钮
 - 页面主要内容是图表、信息流、详情页、网格卡片或营销内容
 
@@ -28,6 +28,11 @@
 
 - `settings-page`
 - `water-settings`
+
+## related_assets
+
+- `phone-preview-light`
+- `phone-preview-dark`
 
 ## layout_skeleton
 
@@ -53,8 +58,8 @@
 |---|---|
 | layout_family | `mobile-settings` |
 | page_template | `settings-page` |
-| source_block | `src/blocks/settings-page.tsx` |
-| story | `src/blocks/settings-page.stories.tsx` |
+| source_block | `src/pages/settings-page.tsx` |
+| story | `src/pages/settings-page.stories.tsx` |
 | viewport | `360px` width, `792px` min height |
 | content_width | `328px` |
 
@@ -86,6 +91,8 @@
 - 不要把 `settings-page` 当成组件 API；它是页面模板 block
 - 保留 `360px` 页面宽度和 `328px` 主内容宽度的移动端壳层约束
 - 多组设置卡片应使用 `List` + `ListItem` 组织，不要自由拼接匿名 div 行项
+- 禁止卡片嵌套卡片；设置分组之间保持平铺堆叠，不通过在组卡片内部再包一层卡片制造层级
+- 禁止在设置卡片上大面积使用渐变色阴影来凸显视觉；如需强调，仅允许轻量、克制的实色阴影或边框对比
 - 开关设置必须使用 `Switch`
 - 跳转设置右侧应保持 `value + chevron` 或单独 `chevron` 的结构
 - 图标可使用模板中的 lucide 图标模式，但业务特定图标应优先来自参考 block 或实际资产
@@ -95,7 +102,7 @@
 
 | Semantic Part | Template Usage |
 |---|---|
-| Page canvas | `bg-gray-100` / `background_secondary` |
+| Page canvas | `comp_background_gray` |
 | Group card | `List` rounded card |
 | Primary text | setting title, titlebar text |
 | Secondary text | right-side value, status description |
@@ -107,8 +114,8 @@
 
 默认读取：
 
-- `harmony-ui-playground/src/blocks/settings-page.tsx`
-- `harmony-ui-playground/src/blocks/settings-page.stories.tsx`
+- `harmony-ui-playground/src/pages/settings-page.tsx`
+- `harmony-ui-playground/src/pages/settings-page.stories.tsx`
 
 按需读取：
 
@@ -117,11 +124,16 @@
 - `harmony-ui-playground/src/component/List/List.tsx`
 - `harmony-ui-playground/src/component/Switch/Switch.tsx`
 - `harmony-ui-playground/src/component/Divider/Divider.tsx`
+- `.resources/harmony/assets.json`
+- `harmony-ui-playground/src/blocks/assets/pixso-icons/icon-setting-light.png`
+- `harmony-ui-playground/src/blocks/assets/pixso-icons/icon-setting-dark.png`
 
 ## validation_notes
 
 - `settings-page` 必须在 `.resources/harmony/blocks.json` 中存在
 - 本文件的 `reference_blocks` 必须能被 `scripts/validate_design_system_resources.mjs` 校验通过
 - 生成页应使用 `@/component` alias
+- 验收时确认不存在组卡片内部再包卡片的结构
+- 验收时确认卡片强调未依赖大面积渐变色阴影
 - 生成页至少需要通过 `npm run build`
 - 如新增 stories，需要通过 `npm run build-storybook`
