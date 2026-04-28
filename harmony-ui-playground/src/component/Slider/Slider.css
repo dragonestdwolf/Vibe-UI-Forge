@@ -1,119 +1,429 @@
-.hmy-slider {
+/* ==========================================================================
+   1:1 还原（鸿蒙设计 Light 主题），与现有 Slider 同目录共存。
+   只承载 Pixso/Pixso-Phone 系列样式；不影响原有 SliderBase / SliderRow / Scale。
+   ========================================================================== */
+
+/* ---------- Tokens（来自 Pixso localStyleMap，命名映射 Light/*） ---------- */
+:where(.pixso-slider) {
+  --pixso-track-bg: rgba(0, 0, 0, 0.047);          /* Light/comp_background_tertiary */
+  --pixso-track-fill: #0a59f7;                      /* Light/comp_background_emphasize */
+  --pixso-thumb: #ffffff;                           /* Light/background_primary */
+  --pixso-thumb-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  --pixso-text-primary: rgba(0, 0, 0, 0.898);       /* Light/font_primary */
+  --pixso-text-secondary: rgba(0, 0, 0, 0.6);       /* Light/font_secondary */
+  --pixso-icon: rgba(0, 0, 0, 0.898);               /* Light/icon_primary */
+  --pixso-hover: rgba(0, 0, 0, 0.047);              /* Light/interactive_hover */
+  --pixso-focus-ring: #0a59f7;
+  --pixso-bubble-bg: rgba(46, 48, 51, 0.9);         /* #2e3033 90% */
+  --pixso-bubble-text: #ffffff;
+
+  --pixso-track-h: 20px;
+  --pixso-track-radius: 12px;
+  --pixso-thumb-d: 12px;
+  --pixso-thumb-overlay: 24px;     /* hover halo */
+  --pixso-row-h: 40px;
+  /* Pixso 3286:12112 类型=Basic：autoLayout padding L=12 R=12 T=10 B=10 */
+  --pixso-row-pad-x: 12px;
+  --pixso-row-pad-y: 10px;
+  /* 3286:12165 类型=Basic（Title）、3286:12168（Textview）：L/R=24, T/B=10 */
+  --pixso-row-pad-x-wide: 24px;
+  /*
+   * 粗轨激活层（.Items 3286:12175 画板1）：宽 140；圆点 Oval11 在父内 l=124，圆心=130。
+   * 即：填充末端 = 圆心 + 半径(6) + 4px（与稿一致），见 DSL。
+   */
+  --pixso-fill-past-thumb: 4px;
+}
+
+/* ---------- 容器 ---------- */
+.pixso-slider {
+  display: inline-flex;
+  flex-direction: column;
+  width: 360px;          /* Pixso 360px-phone */
+  max-width: 100%;
+  font-family:
+    "HarmonyOS Sans", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system,
+    sans-serif;
+  color: var(--pixso-text-primary);
+  user-select: none;
+}
+
+.pixso-slider--block {
+  display: flex;
   width: 100%;
-  min-width: 0;
 }
 
-.hmy-slider__input {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 20px;
-  background: transparent;
-  cursor: pointer;
-  position: relative;
+/* 3286:12137 类型=Value：整体底部 +4；3286:12167 Textview 同理 */
+.pixso-slider--value,
+.pixso-slider--textview {
+  padding-bottom: 4px;
 }
 
-.hmy-slider__input::-webkit-slider-runnable-track {
-  height: 12px;
-  border-radius: 999px;
-  background: var(--hmy-slider-inactive);
+/* 3286:12161 类型=Title：symbol 顶部 +12；3286:12147 iconWithTitle：顶部 +16 */
+.pixso-slider--title {
+  padding-top: 12px;
 }
 
-.hmy-slider__input::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: var(--hmy-slider-percent);
-  height: 12px;
-  border-radius: 999px;
-  background: var(--hmy-slider-active);
-  pointer-events: none;
-  z-index: 1;
+.pixso-slider--iconWithTitle {
+  padding-top: 16px;
 }
 
-.hmy-slider__input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  margin-top: 1px;
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: var(--hmy-slider-thumb);
-  border: 2px solid var(--hmy-slider-active);
-  position: relative;
-  z-index: 2; 
-  transform: translateX(var(--hmy-thumb-offset));
-}
-
-.hmy-slider__input::-moz-range-track {
-  height: 12px;
-  border-radius: 999px;
-  background: var(--hmy-slider-inactive);
-}
-
-.hmy-slider__input::-moz-range-progress {
-  height: 12px;
-  border-radius: 999px;
-  background: var(--hmy-slider-active);
-}
-
-.hmy-slider__input::-moz-range-thumb {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: var(--hmy-slider-thumb);
-  border: 2px solid var(--hmy-slider-active);
-  position: relative;
-  z-index: 2;
-}
-
-.hmy-slider--disabled {
-  opacity: 0.5;
-}
-
-.hmy-slider--disabled .hmy-slider__input {
-  cursor: not-allowed;
-}
-
-.hmy-slider-row {
+.pixso-slider__row {
   display: flex;
   align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  min-height: var(--pixso-row-h);
+  /* 10+20+10 = 40，与 3286:12112/12115/12138/12154/12148 一致 */
+  padding: var(--pixso-row-pad-y) var(--pixso-row-pad-x);
 }
 
-.hmy-slider-row__main {
-  flex: 1;
-  min-width: 0;
+/* 3286:12126 类型=Icon：L/R=24，纵向由行高 40 + align-items 居中 20px 轨 */
+.pixso-slider__row--icon {
+  padding: 0 var(--pixso-row-pad-x-wide);
+  gap: 8px;
 }
 
-.hmy-slider-row__icon {
-  width: 20px;
-  height: 20px;
+/* 3286:12131 Value with text change 外框 24+inner Basic 10 竖向；12165/12168 轨行 24+10 */
+.pixso-slider__row--pad-24-10 {
+  padding: var(--pixso-row-pad-y) var(--pixso-row-pad-x-wide);
+}
+
+.pixso-slider__icon {
+  width: 24px;
+  height: 24px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: rgba(0, 0, 0, 0.56);
+  color: var(--pixso-icon);
   flex-shrink: 0;
 }
 
-.hmy-slider-scale {
+.pixso-slider__title-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 24px;
+  height: 24px;
+}
+
+.pixso-slider__title {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  color: var(--pixso-text-primary);
+}
+
+.pixso-slider__subtitle {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--pixso-text-secondary);
+}
+
+.pixso-slider__textview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: 20px;
+  padding: 0 24px;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--pixso-text-secondary);
+}
+
+.pixso-slider__value-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 12px;
+  height: 11px;
+  font-size: 10px;
+  line-height: 11px;
+  color: var(--pixso-text-secondary);
+}
+
+.pixso-slider__value-trail {
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--pixso-text-secondary);
+  min-width: 24px;
+  text-align: right;
+}
+
+.pixso-slider__delta-leading {
+  font-size: 10px;
+  line-height: 11px;
+  color: var(--pixso-text-secondary);
+  width: 11px;
+  text-align: center;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+/* ---------- 主轨道（chunky pill，336x20 r=12） ---------- */
+.pixso-slider__track {
+  position: relative;
+  flex: 1 1 auto;
+  height: var(--pixso-track-h);
+  border-radius: var(--pixso-track-radius);
+  background: var(--pixso-track-bg);
+  outline: none;
+  cursor: pointer;
+  transition: box-shadow 0.18s ease;
+}
+
+/* 与 DSL：圆心=percent% 宽；画板1 右端=圆心+6+4（3286:12175/12176 家族） */
+.pixso-slider__fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: min(
+    100%,
+    calc(
+      var(--pixso-percent, 0%) + var(--pixso-thumb-d) / 2 + var(--pixso-fill-past-thumb)
+    )
+  );
+  border-radius: var(--pixso-track-radius);
+  background: var(--pixso-track-fill);
+  pointer-events: none;
+  transition: width 0.05s linear;
+}
+
+.pixso-slider__thumb {
+  position: absolute;
+  top: 50%;
+  left: var(--pixso-percent, 0%);
+  width: var(--pixso-thumb-d);
+  height: var(--pixso-thumb-d);
+  border-radius: 50%;
+  background: var(--pixso-thumb);
+  box-shadow: var(--pixso-thumb-shadow);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* hover halo around thumb */
+.pixso-slider__thumb::before {
+  content: "";
+  position: absolute;
+  inset: 50% 50% auto auto;
+  width: var(--pixso-thumb-overlay);
+  height: var(--pixso-thumb-overlay);
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  background: transparent;
+  transition: background 0.18s ease;
+  pointer-events: none;
+}
+
+.pixso-slider__track[data-state="hover"] .pixso-slider__thumb::before {
+  background: var(--pixso-hover);
+}
+
+/* focus 状态：轨道外加 2px 蓝色描边（Pixso 矩形 4） */
+.pixso-slider__track[data-state="focus"] {
+  box-shadow: 0 0 0 2px var(--pixso-focus-ring);
+}
+
+/* keyboard focus 自动镜像 focus 视觉 */
+.pixso-slider__track:focus-visible {
+  box-shadow: 0 0 0 2px var(--pixso-focus-ring);
+}
+
+/* active 状态：thumb 略放大 */
+.pixso-slider__track[data-state="active"] .pixso-slider__thumb {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* disabled */
+.pixso-slider--disabled,
+.pixso-slider__track[data-state="disabled"] {
+  cursor: not-allowed;
+}
+
+.pixso-slider--disabled .pixso-slider__track,
+.pixso-slider__track[data-state="disabled"] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---------- Scale 刻度点（8 dots over 320 wide row） ---------- */
+.pixso-slider__ticks {
+  position: absolute;
+  inset: 50% 8px auto 8px;
+  height: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.pixso-slider__tick {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Bubble（48x33 Rectangle + 16x9 Triangle） ---------- */
+.pixso-slider__bubble-layer {
+  position: relative;
+  height: 48px;
+  padding: 0 12px;
+}
+
+.pixso-slider__bubble {
+  position: absolute;
+  bottom: 8px;
+  left: var(--pixso-percent, 0%);
+  transform: translateX(-50%);
+  width: 48px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  align-items: center;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.18));
 }
 
-.hmy-slider-scale__ticks {
-  display: flex;
-  justify-content: space-between;
-  font-size: 10px;
-  line-height: 14px;
-  color: rgba(0, 0, 0, 0.48);
-}
-
-.hmy-slider-scale__value {
-  font-size: 12px;
+.pixso-slider__bubble-body {
+  width: 48px;
+  height: 33px;
+  border-radius: 4px;
+  background: var(--pixso-bubble-bg);
+  color: var(--pixso-bubble-text);
+  font-size: 14px;
   line-height: 16px;
-  color: rgba(0, 0, 0, 0.6);
-  text-align: right;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pixso-slider__bubble-arrow {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 9px solid var(--pixso-bubble-bg);
+  margin-top: -1px;
+}
+
+/* ---------- Item 段（.Items 336x20 segmented，已包含在主轨道内，
+   保留 wrapper class，便于 Storybook/外部嵌入 segmented 模式） ---------- */
+.pixso-slider-items {
+  display: inline-flex;
+  width: 336px;
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   PixsoSeekbar — 节点 3286:12185「Slider-Seekbar-Phone」
+   细轨道 4px + 16px 圆点
+   ========================================================================== */
+:where(.pixso-seekbar) {
+  --pixso-seek-h: 40px;
+  --pixso-seek-track-h: 4px;
+  --pixso-seek-thumb-d: 16px;
+  --pixso-seek-track-bg: rgba(0, 0, 0, 0.047);
+  --pixso-seek-track-fill: #0a59f7;
+  --pixso-seek-thumb: #ffffff;
+  --pixso-seek-hover: rgba(0, 0, 0, 0.047);
+  --pixso-seek-focus-ring: #0a59f7;
+}
+
+.pixso-seekbar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 360px;
+  max-width: 100%;
+  height: var(--pixso-seek-h);
+  padding: 0 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+}
+
+.pixso-seekbar--block {
+  display: flex;
+  width: 100%;
+}
+
+.pixso-seekbar__track {
+  position: relative;
+  flex: 1 1 auto;
+  height: var(--pixso-seek-track-h);
+  border-radius: 999px;
+  background: var(--pixso-seek-track-bg);
+}
+
+/* 3286:12187 上蓝条矩形 107w；3286:12190 圆心 119-12(轨起点)=107 — 与稿一致，不加半直径 */
+.pixso-seekbar__fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: min(100%, var(--pixso-percent, 0%));
+  height: 100%;
+  border-radius: 999px;
+  background: var(--pixso-seek-track-fill);
+}
+
+.pixso-seekbar__thumb-wrap {
+  position: absolute;
+  top: 50%;
+  left: var(--pixso-percent, 0%);
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.pixso-seekbar__thumb {
+  width: var(--pixso-seek-thumb-d);
+  height: var(--pixso-seek-thumb-d);
+  border-radius: 50%;
+  background: var(--pixso-seek-thumb);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+}
+
+.pixso-seekbar[data-state="hover"] .pixso-seekbar__thumb-wrap::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--pixso-seek-hover);
+}
+
+.pixso-seekbar[data-state="focus"] .pixso-seekbar__thumb-wrap::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 0 2px var(--pixso-seek-focus-ring);
+}
+
+.pixso-seekbar:focus-visible .pixso-seekbar__thumb-wrap::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 0 2px var(--pixso-seek-focus-ring);
+}
+
+.pixso-seekbar[data-state="active"] .pixso-seekbar__thumb {
+  transform: scale(1.1);
+}
+
+.pixso-seekbar[data-state="disabled"],
+.pixso-seekbar--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }

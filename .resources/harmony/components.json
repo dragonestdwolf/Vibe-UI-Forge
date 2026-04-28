@@ -58,39 +58,18 @@
       "stories": "src/component/Switch/Switch.stories.tsx"
     },
     {
-      "id": "slider-base",
-      "name": "SliderBase",
+      "id": "slider",
+      "name": "Slider",
       "path": "src/component/Slider",
-      "export": "SliderBase",
+      "export": "Slider",
       "stories": "src/component/Slider/Slider.stories.tsx"
     },
     {
-      "id": "slider-with-icons",
-      "name": "SliderWithIcons",
+      "id": "slider-seekbar",
+      "name": "SliderSeekbar",
       "path": "src/component/Slider",
-      "export": "SliderWithIcons",
+      "export": "SliderSeekbar",
       "stories": "src/component/Slider/Slider.stories.tsx"
-    },
-    {
-      "id": "slider-with-scale",
-      "name": "SliderWithScale",
-      "path": "src/component/Slider",
-      "export": "SliderWithScale",
-      "stories": "src/component/Slider/Slider.stories.tsx"
-    },
-    {
-      "id": "pixso-slider",
-      "name": "PixsoSlider",
-      "path": "src/component/Slider",
-      "export": "PixsoSlider",
-      "stories": "src/component/Slider/PixsoSlider.stories.tsx"
-    },
-    {
-      "id": "pixso-seekbar",
-      "name": "PixsoSeekbar",
-      "path": "src/component/Slider",
-      "export": "PixsoSeekbar",
-      "stories": "src/component/Slider/PixsoSlider.stories.tsx"
     },
     {
       "id": "clover-week-panel",

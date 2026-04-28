@@ -56,8 +56,6 @@
   + 改后效果：![改后效果](./iamges/Slider_After.png)
 + 卡片/Card
   + 个人打分10/10
-+ PixsoSlider
-  + 个人打分10/10
 + SceneModeCard
   + 个人打分 7/10
   + | 存在问题 | 解决方案 |

@@ -16,7 +16,7 @@ import { StatusBar } from "@/component/StatusBar"
 import { TitleBar } from "@/component/TitleBar"
 import { List, ListItem } from "@/component/List"
 import { Switch } from "@/component/Switch"
-import { SliderBase } from "@/component/Slider"
+import { Slider } from "@/component/Slider"
 
 import iconChevronBack from "@/blocks/assets/pixso-icons/icon-chevron-backward.png"
 import iconArrowRightSmall from "@/blocks/assets/pixso-icons/icon-arrow-right-small.png"
@@ -222,9 +222,9 @@ function SliderListCard() {
         title={<span style={{ color: FONT_PRIMARY, fontWeight: 500 }}>亮度</span>}
         right={
           <div style={{ minWidth: 160, paddingInlineStart: 8 }}>
-            <SliderBase
-              modelValue={brightness}
-              onUpdateModelValue={setBrightness}
+            <Slider
+              value={brightness}
+              onChange={setBrightness}
               min={0}
               max={100}
             />

@@ -10,24 +10,24 @@ import {
   type PointerEvent,
 } from "react"
 
-import "./PixsoSlider.css"
+import "./Slider.css"
 
 /* ==========================================================================
-   PixsoSeekbar
+   SliderSeekbar
    ----------------------------------------------------------------------------
    Pixso 节点：3286:12185「Slider-Seekbar-Phone」
    细轨道（4px）+ 16px 圆点 thumb，常用于音频/视频进度、亮度系统级控件。
    状态 state: default | hover | focus | active | disabled
    ========================================================================== */
 
-export type PixsoSeekbarState =
+export type SliderSeekbarState =
   | "default"
   | "hover"
   | "focus"
   | "active"
   | "disabled"
 
-export interface PixsoSeekbarProps {
+export interface SliderSeekbarProps {
   value?: number
   defaultValue?: number
   min?: number
@@ -36,7 +36,7 @@ export interface PixsoSeekbarProps {
   disabled?: boolean
   block?: boolean
   /** 强制视觉状态；用于 Storybook 演示 */
-  forceState?: PixsoSeekbarState
+  forceState?: SliderSeekbarState
   className?: string
   style?: CSSProperties
   onChange?: (value: number) => void
@@ -58,8 +58,8 @@ function pct(v: number, min: number, max: number) {
   return ((v - min) / (max - min)) * 100
 }
 
-export const PixsoSeekbar = forwardRef<HTMLDivElement, PixsoSeekbarProps>(
-  function PixsoSeekbar(
+export const SliderSeekbar = forwardRef<HTMLDivElement, SliderSeekbarProps>(
+  function SliderSeekbar(
     {
       value: controlledValue,
       defaultValue,
@@ -99,7 +99,7 @@ export const PixsoSeekbar = forwardRef<HTMLDivElement, PixsoSeekbarProps>(
     const trackRef = useRef<HTMLDivElement | null>(null)
     const draggingRef = useRef(false)
 
-    const computedState: PixsoSeekbarState = forceState
+    const computedState: SliderSeekbarState = forceState
       ? forceState
       : disabled
         ? "disabled"
@@ -263,4 +263,4 @@ export const PixsoSeekbar = forwardRef<HTMLDivElement, PixsoSeekbarProps>(
   },
 )
 
-export default PixsoSeekbar
+export default SliderSeekbar

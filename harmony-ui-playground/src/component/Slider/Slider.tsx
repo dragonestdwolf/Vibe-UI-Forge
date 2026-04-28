@@ -11,10 +11,9 @@ import {
   type ReactNode,
 } from "react"
 
-import "./PixsoSlider.css"
+import "./Slider.css"
 
 /* ==========================================================================
-   PixsoSlider
    ----------------------------------------------------------------------------
    Pixso 节点：3286:12110「6.Slider - 滑动条」
    设计稿严格 1:1 还原，包含 9 种类型 × 5 种状态。
@@ -26,7 +25,7 @@ import "./PixsoSlider.css"
 
 /* -------------------- 类型 / Props -------------------- */
 
-export type PixsoSliderType =
+export type SliderType =
   | "basic"
   | "scale"
   | "icon"
@@ -37,18 +36,18 @@ export type PixsoSliderType =
   | "title"
   | "textview"
 
-export type PixsoSliderState =
+export type SliderState =
   | "default"
   | "hover"
   | "focus"
   | "active"
   | "disabled"
 
-export type PixsoSliderTheme = "light"
+export type SliderTheme = "light"
 
-export interface PixsoSliderProps {
+export interface SliderProps {
   /** 类型变体 — 9 种 */
-  type?: PixsoSliderType
+  type?: SliderType
   /** 当前值（受控） */
   value?: number
   /** 默认值（非受控） */
@@ -58,8 +57,8 @@ export interface PixsoSliderProps {
   step?: number
   disabled?: boolean
   /** 强制视觉状态；用于 Storybook / 文档展示。运行时通常不传。 */
-  forceState?: PixsoSliderState
-  theme?: PixsoSliderTheme
+  forceState?: SliderState
+  theme?: SliderTheme
   /** scale 类型：刻度数（含两端），默认 8 */
   ticks?: number
   /** icon / iconWithTitle 类型：左侧图标 */
@@ -112,7 +111,7 @@ function pct(v: number, min: number, max: number) {
 
 interface TrackProps {
   percent: number
-  state: PixsoSliderState
+  state: SliderState
   disabled: boolean
   showTicks?: boolean
   ticksCount?: number
@@ -197,8 +196,8 @@ const SliderBubble = ({ percent, children }: BubbleProps) => (
 
 /* -------------------- 主组件 -------------------- */
 
-export const PixsoSlider = forwardRef<HTMLDivElement, PixsoSliderProps>(
-  function PixsoSlider(
+export const Slider = forwardRef<HTMLDivElement, SliderProps>(
+  function Slider(
     {
       type = "basic",
       value: controlledValue,
@@ -251,7 +250,7 @@ export const PixsoSlider = forwardRef<HTMLDivElement, PixsoSliderProps>(
     const trackRef = useRef<HTMLDivElement | null>(null)
     const draggingRef = useRef(false)
 
-    const computedState: PixsoSliderState = forceState
+    const computedState: SliderState = forceState
       ? forceState
       : disabled
         ? "disabled"
@@ -516,4 +515,4 @@ export const PixsoSlider = forwardRef<HTMLDivElement, PixsoSliderProps>(
   },
 )
 
-export default PixsoSlider
+export default Slider

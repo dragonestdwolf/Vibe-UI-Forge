@@ -110,12 +110,6 @@ export type {
 export { SwiperNav } from "./SwiperNav"
 export type { SwiperNavProps, SwiperNavVariant } from "./SwiperNav"
 
-export { SliderBase, SliderWithIcons, SliderWithScale } from "./Slider"
-export type {
-  SliderBaseProps,
-  SliderWithIconsProps,
-  SliderWithScaleProps,
-} from "./Slider"
 
 export { Switch } from "./Switch"
 export type { SwitchProps } from "./Switch"
