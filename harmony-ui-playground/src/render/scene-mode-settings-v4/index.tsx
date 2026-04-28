@@ -8,6 +8,12 @@ import { FeaturePromoCard } from "@/component/FeaturePromoCard"
 import { Switch } from "@/component/Switch"
 import { SwiperNav } from "@/component/SwiperNav"
 import { TitleBar } from "@/component/TitleBar"
+import {
+  DoNotDisturbIcon,
+  PersonalModeIcon,
+  SleepModeIcon,
+  WorkModeIcon,
+} from "@/component/FeaturePromoCard/mode-icons"
 
 import iconArrowRightSmall from "../../blocks/assets/pixso-icons/icon-arrow-right-small.png"
 import iconChevronBack from "../../blocks/assets/pixso-icons/icon-chevron-backward.png"
@@ -52,62 +58,6 @@ const iconMore = createIconDataUri(
   </svg>`
 )
 
-function DoNotDisturbIcon() {
-  return (
-    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="勿扰模式">
-      <circle cx="32" cy="32" r="29" fill="#7E57FF" />
-      <path
-        d="M40.4 41.2c-7.4 0-13.4-6-13.4-13.4 0-3 1-5.7 2.6-7.9-5.6 1.4-9.7 6.4-9.7 12.4 0 7.1 5.7 12.8 12.8 12.8 6 0 11-4.1 12.4-9.7-1.4 1-2.9 1.7-4.7 1.8z"
-        fill="#FFFFFF"
-      />
-    </svg>
-  )
-}
-
-function PersonalModeIcon() {
-  return (
-    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="个人模式">
-      <defs>
-        <linearGradient id="scene-mode-personal-fill" x1="12" y1="10" x2="52" y2="54">
-          <stop offset="0%" stopColor="#F091FF" />
-          <stop offset="100%" stopColor="#B65CFF" />
-        </linearGradient>
-      </defs>
-      <circle cx="32" cy="32" r="29" fill="url(#scene-mode-personal-fill)" />
-      <circle cx="32" cy="24.5" r="7" fill="#FFFFFF" />
-      <path
-        d="M20.5 44.5c0-6.1 5-11 11.2-11h.6c6.2 0 11.2 4.9 11.2 11v1.5h-23v-1.5Z"
-        fill="#FFFFFF"
-      />
-    </svg>
-  )
-}
-
-function WorkModeIcon() {
-  return (
-    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="工作模式">
-      <circle cx="32" cy="32" r="29" fill="#47A7FF" />
-      <rect x="19" y="23" width="26" height="20" rx="4" fill="#FFFFFF" />
-      <path d="M25 23.5v-3a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3" stroke="#47A7FF" strokeWidth="3" strokeLinecap="round" />
-      <path d="M19 30h26" stroke="#47A7FF" strokeWidth="3" />
-    </svg>
-  )
-}
-
-function SleepModeIcon() {
-  return (
-    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="睡眠模式">
-      <circle cx="32" cy="32" r="29" fill="#41CCE3" />
-      <path
-        d="M40 41c-7.5 0-13.5-6-13.5-13.5 0-2.6.7-5 2-7-5.5 1.5-9.5 6.5-9.5 12.5 0 7.2 5.8 13 13 13 5.4 0 10-3.3 12-8-1.3.6-2.7 1-4 1z"
-        fill="#FFFFFF"
-      />
-      <circle cx="43.5" cy="18.5" r="2.2" fill="#FFFFFF" opacity="0.95" />
-      <circle cx="38.5" cy="14.2" r="1.3" fill="#FFFFFF" opacity="0.8" />
-    </svg>
-  )
-}
-
 const MODE_OPTIONS: Array<{
   key: ModeKey
   title: string
@@ -123,7 +73,7 @@ const MODE_OPTIONS: Array<{
 }> = [
   {
     key: "dnd",
-    title: "勿扰模式",
+    title: "免打扰",
     subtitle: "减少打扰保持专注",
     summary: "左右滑动卡片即可切换模式，当前模式会在本页实时生效。",
     conditionDays: "周日 周六",
@@ -398,7 +348,7 @@ export default function SceneModeSettingsV4() {
                     className={cx(
                       "transition-all duration-200",
                       selected
-                        ? "shadow-[0_18px_36px_rgba(10,89,247,0.14)] ring-1 ring-[#0A59F7]/10"
+                        ? "shadow-[0_12px_28px_rgba(0,0,0,0.06)]"
                         : "scale-[0.985] opacity-80"
                     )}
                   />
