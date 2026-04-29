@@ -1,0 +1,181 @@
+/*
+ * Display and Brightness Settings — Harmony 二级页
+ *
+ * 布局基于 SettingsContextListLayout（spec：.resources/harmony/layout/settings-context-list.md）。
+ * 仅在此处放置该页面专属的视觉细节：
+ *  - 显示模式对比卡（ContextSlot）
+ *  - list 卡片的圆角 / 卡片内 slider 行
+ *  - footnote 文本
+ */
+
+/* ===================== ContextSlot：显示模式对比卡 ===================== */
+
+.dab-mode-card {
+  width: 100%;
+  border-radius: 24px;
+  background: #ffffff;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.dab-mode-card__row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.dab-mode-card__option {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease;
+  appearance: none;
+}
+
+.dab-mode-card__option:focus-visible {
+  outline: 2px solid rgba(10, 89, 247, 0.35);
+  outline-offset: 2px;
+}
+
+.dab-mode-card__option[data-active] {
+  border-color: #0a59f7;
+  background: rgba(10, 89, 247, 0.06);
+}
+
+.dab-mode-card__phone {
+  width: 116px;
+  height: 200px;
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f3f5;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.dab-mode-card__option[data-active] .dab-mode-card__phone {
+  box-shadow: 0 6px 20px rgba(10, 89, 247, 0.18);
+}
+
+.dab-mode-card__phone-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dab-mode-card__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.dab-mode-card__radio {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  background: #ffffff;
+  display: inline-block;
+  position: relative;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.dab-mode-card__radio[data-active] {
+  border-color: #0a59f7;
+  background: #0a59f7;
+}
+
+.dab-mode-card__radio[data-active]::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 999px;
+  background: #ffffff;
+}
+
+/* ===================== ListGroupSlot：list 卡片样式 ===================== */
+
+.dab-list-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/*
+ * 嵌入 list 卡片的滑块行：与上方 ListItem("亮度") 同列对齐，左右各 16px 边距，
+ * 与卡片底部 12px 间距，形成 Title -> Slider 的视觉单元（spec：list 卡片内可嵌入 slider）。
+ */
+.dab-slider-cell {
+  padding: 4px 16px 16px;
+  background: #ffffff;
+}
+
+.dab-brightness-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.dab-brightness-row__icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dab-brightness-row .pixso-slider {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.dab-brightness-row .pixso-slider__row {
+  padding: 0;
+}
+
+/* ===================== ListItem 右侧值 + chevron 组合 ===================== */
+
+.dab-row-trailing {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dab-row-chevron {
+  width: 12px;
+  height: 24px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ===================== Footnote ===================== */
+
+.dab-footnote {
+  margin: 8px 4px 0;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+}

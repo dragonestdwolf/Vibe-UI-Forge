@@ -1,0 +1,200 @@
+/*
+ * Display and Brightness Settings — v2 (low-fi reference)
+ *
+ * 基于 SettingsContextListLayout（spec：.resources/harmony/layout/settings-context-list.md）。
+ * 与 v1 的差异（按低保真图）：
+ *  - ContextSlot 使用 SubHeader「显示模式」+ 简化矩形预览卡（无具体手机内容图）
+ *  - 单选样式：圆形 radio + label 横排在预览图下方
+ *  - 「深色模式 / 定时开启」独立成 list-card
+ *  - 亮度滑块带「亮 / 暗」两端文本 cap，并与「自动调节」同卡
+ *  - 字体设置项改名为「字体大小和界面缩放」
+ */
+
+/* ===================== ContextSlot ===================== */
+
+.dabv2-mode-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+/* SubHeader「显示模式」位于 ContextSlot 内，紧贴下方卡片，使用 8px 视觉呼吸 */
+.dabv2-mode-subheader {
+  padding-inline: 4px;
+  min-height: 28px;
+}
+
+.dabv2-mode-subheader .my-subheader__text {
+  font-size: 13px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.dabv2-mode-card {
+  width: 100%;
+  border-radius: 24px;
+  background: #ffffff;
+  padding: 16px;
+  box-sizing: border-box;
+  margin-top: 8px;
+}
+
+.dabv2-mode-card__row {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.dabv2-mode-card__option {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+.dabv2-mode-card__option:focus-visible {
+  outline: 2px solid rgba(10, 89, 247, 0.35);
+  outline-offset: 4px;
+  border-radius: 16px;
+}
+
+/* 浅色 / 深色预览：使用 assets.json 注册的 phone-preview-light / phone-preview-dark */
+.dabv2-mode-card__phone {
+  width: 100%;
+  aspect-ratio: 116 / 200;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1.5px solid transparent;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.dabv2-mode-card__phone[data-mode="light"] {
+  background: #ffffff;
+}
+
+.dabv2-mode-card__phone[data-mode="dark"] {
+  background: #1a1a1a;
+}
+
+.dabv2-mode-card__phone-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.dabv2-mode-card__option[data-active] .dabv2-mode-card__phone {
+  border-color: #0a59f7;
+  box-shadow: 0 4px 14px rgba(10, 89, 247, 0.18);
+}
+
+/* radio + 文案 横排 */
+.dabv2-mode-card__label-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dabv2-mode-card__radio {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(0, 0, 0, 0.35);
+  background: #ffffff;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.dabv2-mode-card__radio[data-active] {
+  border-color: #0a59f7;
+  background: #0a59f7;
+}
+
+.dabv2-mode-card__radio[data-active]::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 999px;
+  background: #ffffff;
+}
+
+.dabv2-mode-card__label {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* ===================== ListGroupSlot ===================== */
+
+.dabv2-list-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* 亮度滑块行：与卡内 ListItem 同 16px 内边距对齐，上下留 16px 呼吸空间 */
+.dabv2-slider-cell {
+  padding: 18px 16px 12px;
+  background: #ffffff;
+}
+
+.dabv2-brightness-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.dabv2-brightness-row__cap {
+  flex-shrink: 0;
+  font-size: 13px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.6);
+  min-width: 14px;
+  text-align: center;
+}
+
+.dabv2-brightness-row__slider {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.dabv2-brightness-row__slider .pixso-slider__row {
+  padding: 0;
+}
+
+/* ListItem 末尾「值 + chevron」 */
+.dabv2-row-trailing {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dabv2-row-chevron {
+  width: 12px;
+  height: 24px;
+  display: inline-block;
+  flex-shrink: 0;
+}
