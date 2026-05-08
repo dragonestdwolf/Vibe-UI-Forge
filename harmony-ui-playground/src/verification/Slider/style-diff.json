@@ -1,0 +1,402 @@
+{
+  "summary": {
+    "totalScore": 83.8,
+    "scores": {
+      "layoutDeduction": 0,
+      "resources": 10,
+      "styles": 53.8,
+      "variants": 20,
+      "total": 83.8
+    },
+    "verdict": "基本符合，存在可修复偏差"
+  },
+  "checks": {
+    "layout": [
+      {
+        "label": "AllTypes component count",
+        "expected": 9,
+        "actual": 9,
+        "delta": 0,
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "AllStates component count",
+        "expected": 5,
+        "actual": 5,
+        "delta": 0,
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "SeekbarStates component count",
+        "expected": 5,
+        "actual": 5,
+        "delta": 0,
+        "pass": true,
+        "weight": 2
+      }
+    ],
+    "resources": [
+      {
+        "label": "design icon font",
+        "expected": "HM Symbol",
+        "actual": "HM Symbol",
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "storybook icon implementation",
+        "expected": "HM Symbol",
+        "actual": "\"HarmonyOS Sans\", \"PingFang SC\", \"Microsoft YaHei\", system-ui, -apple-system, sans-serif",
+        "pass": false,
+        "weight": 2
+      }
+    ],
+    "styles": [
+      {
+        "label": "main slider width",
+        "expected": 360,
+        "actual": 360,
+        "delta": 0,
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "main row height",
+        "expected": 40,
+        "actual": 40,
+        "delta": 0,
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "main row padding left",
+        "expected": 12,
+        "actual": 12,
+        "delta": 0,
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "main row padding top",
+        "expected": 10,
+        "actual": 10,
+        "delta": 0,
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "main track height",
+        "expected": 20,
+        "actual": 20,
+        "delta": 0,
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "main track bg",
+        "expected": "rgba(0, 0, 0, 0.05)",
+        "actual": "rgba(0, 0, 0, 0.047)",
+        "pass": false,
+        "weight": 1
+      },
+      {
+        "label": "main thumb diameter",
+        "expected": 12,
+        "actual": 12,
+        "delta": 0,
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "main fill color",
+        "expected": "rgb(10, 89, 247)",
+        "actual": "rgb(10, 89, 247)",
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "main thumb color",
+        "expected": "rgb(255, 255, 255)",
+        "actual": "rgb(255, 255, 255)",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "seekbar width",
+        "expected": 360,
+        "actual": 360,
+        "delta": 0,
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "seekbar horizontal padding",
+        "expected": 12,
+        "actual": 12,
+        "delta": 0,
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "seekbar track width",
+        "expected": 336,
+        "actual": 336,
+        "delta": 0,
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "seekbar track height",
+        "expected": 4,
+        "actual": 4,
+        "delta": 0,
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "seekbar fill width at story value",
+        "expected": 107,
+        "actual": 107.52,
+        "delta": 0.52,
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "seekbar thumb diameter",
+        "expected": 16,
+        "actual": 16,
+        "delta": 0,
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "seekbar fill color",
+        "expected": "rgb(10, 89, 247)",
+        "actual": "rgb(10, 89, 247)",
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "hover state present",
+        "expected": "true",
+        "actual": "true",
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "focus state present",
+        "expected": "true",
+        "actual": "true",
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "disabled state present",
+        "expected": "true",
+        "actual": "true",
+        "pass": true,
+        "weight": 2
+      },
+      {
+        "label": "focus ring color",
+        "expected": "rgb(10, 89, 247)",
+        "actual": "rgb(10, 89, 247)",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "disabled opacity",
+        "expected": "0.4",
+        "actual": "0.4",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "bubble body width",
+        "expected": 48,
+        "actual": 48,
+        "delta": 0,
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "bubble body height",
+        "expected": 33,
+        "actual": 33,
+        "delta": 0,
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "bubble body bg",
+        "expected": "rgba(46, 48, 51, 0.9)",
+        "actual": "rgba(46, 48, 51, 0.9)",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "bubble body radius",
+        "expected": "18px",
+        "actual": "4px",
+        "pass": false,
+        "weight": 2
+      },
+      {
+        "label": "bubble text color",
+        "expected": "rgb(255, 255, 255)",
+        "actual": "rgb(255, 255, 255)",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "bubble text size",
+        "expected": "14px",
+        "actual": "14px",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "bubble text line-height",
+        "expected": "16px",
+        "actual": "16px",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "bubble text content",
+        "expected": "100%",
+        "actual": "42",
+        "pass": false,
+        "weight": 1
+      },
+      {
+        "label": "bubble arrow width",
+        "expected": "8px",
+        "actual": "8px",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "bubble arrow height",
+        "expected": "9px",
+        "actual": "9px",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "bubble arrow color",
+        "expected": "rgba(46, 48, 51, 0.9)",
+        "actual": "rgba(46, 48, 51, 0.9)",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "bubble shadow",
+        "expected": "none",
+        "actual": "drop-shadow(rgba(0, 0, 0, 0.18) 0px 2px 6px)",
+        "pass": false,
+        "weight": 1
+      }
+    ],
+    "variants": [
+      {
+        "label": "variant basic",
+        "expected": "present",
+        "actual": "present",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "variant scale",
+        "expected": "present",
+        "actual": "present",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "variant icon",
+        "expected": "present",
+        "actual": "present",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "variant valueWithChange",
+        "expected": "present",
+        "actual": "present",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "variant value",
+        "expected": "present",
+        "actual": "present",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "variant iconWithTitle",
+        "expected": "present",
+        "actual": "present",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "variant bubble",
+        "expected": "present",
+        "actual": "present",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "variant title",
+        "expected": "present",
+        "actual": "present",
+        "pass": true,
+        "weight": 1
+      },
+      {
+        "label": "variant textview",
+        "expected": "present",
+        "actual": "present",
+        "pass": true,
+        "weight": 1
+      }
+    ]
+  },
+  "importantFindings": [
+    {
+      "severity": "high",
+      "item": "气泡框样式与设计稿不一致",
+      "evidence": "设计稿气泡为 48x33、圆角 18px、文本 “100%”、无阴影；Storybook 采集为 48x33、圆角 4px、文本 “42”、filter=drop-shadow(rgba(0, 0, 0, 0.18) 0px 2px 6px)。",
+      "suggestion": "将 `.pixso-slider__bubble-body` 圆角改为 18px，去掉额外 drop-shadow；如果该 Story 要按设计样例截图做比对，bubbleFormatter/default value 应展示 100%。"
+    },
+    {
+      "severity": "medium",
+      "item": "图标资源未使用设计稿 HM Symbol 图标字体",
+      "evidence": "设计稿 icon font=HM Symbol，Storybook icon font=\"HarmonyOS Sans\", \"PingFang SC\", \"Microsoft YaHei\", system-ui, -apple-system, sans-serif。",
+      "suggestion": "将 Slider icon story/默认资源切换为规范图标库，或在组件 props 文档中标明需传入 HM Symbol/Pixso 资源。"
+    },
+    {
+      "severity": "medium",
+      "item": "阴影 token 有偏差",
+      "evidence": "设计稿 thumb shadow=0 0 3 rgba(0,0,0,.2)，组件 CSS 采集=rgba(0, 0, 0, 0.12) 0px 1px 4px 0px。",
+      "suggestion": "将 `--pixso-thumb-shadow` 对齐为 0 0 3px rgba(0,0,0,.2)，seekbar 同步处理。"
+    },
+    {
+      "severity": "low",
+      "item": "部分 alpha 使用 0.047 近似 0.05",
+      "evidence": "设计稿 tertiary/hover alpha=.05，组件采集 track bg=rgba(0, 0, 0, 0.047)。",
+      "suggestion": "如需像素级对齐，改为 rgba(0,0,0,0.05)。"
+    }
+  ],
+  "informationalFindings": [
+    {
+      "item": "主 Slider fill 长度未计入评分",
+      "evidence": "设计导出样例 fill=140px、thumb 中心约 38.7/100；Storybook value=42 对应 fill=151.11px、推回约 42/100。",
+      "note": "该差异来自设计样例值与 Story 默认 value 不一致，不能直接证明组件进度换算规则错误。若要像素级比对，应先把 Story 默认值调到设计样例对应值。"
+    }
+  ]
+}
