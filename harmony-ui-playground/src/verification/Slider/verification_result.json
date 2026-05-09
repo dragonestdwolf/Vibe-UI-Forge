@@ -1,0 +1,168 @@
+{
+  "component": "Slider",
+  "input": {
+    "dsl": "src/verification/Slider.json",
+    "reference": "src/verification/reference.md",
+    "plan": "src/verification/reference_result.md",
+    "implementation": [
+      "src/component/Slider/Slider.tsx",
+      "src/component/Slider/Slider.css",
+      "src/component/Slider/SliderSeekbar.tsx",
+      "src/render/display-brightness-settings-v4/index.tsx"
+    ]
+  },
+  "result": {
+    "layout_deduction": 0,
+    "resource": {
+      "weight": 20,
+      "compliant": 0,
+      "total": 3,
+      "score": 0
+    },
+    "style": {
+      "weight": 60,
+      "compliant": 17,
+      "total": 27,
+      "score": 37.78
+    },
+    "variant": {
+      "weight": 20,
+      "compliant": 13,
+      "total": 14,
+      "score": 18.57
+    },
+    "final_score": 56.35,
+    "verdict": "partially_compliant"
+  },
+  "major_issues": [
+    "icon resource library is not constrained to design system resources",
+    "thumb and seekbar shadows differ from DSL in blur/offset/alpha",
+    "multiple color alpha values differ from DSL references",
+    "bubble radius differs significantly from DSL",
+    "value scale text line-height differs from DSL"
+  ],
+  "all_mismatches": [
+    {
+      "id": "R-01",
+      "module": "resource",
+      "type": "icon",
+      "dsl_expected": "HM Symbol icon resource (node 3523:12774)",
+      "actual": "lucide-react icon usage in slider scenarios",
+      "evidence": [
+        "src/render/display-brightness-settings-v4/index.tsx"
+      ]
+    },
+    {
+      "id": "R-02",
+      "module": "resource",
+      "type": "icon",
+      "dsl_expected": "HM Symbol icon resource (node 3523:12781)",
+      "actual": "component does not constrain icon source to design-system library",
+      "evidence": [
+        "src/component/Slider/Slider.tsx",
+        "src/render/display-brightness-settings-v4/index.tsx"
+      ]
+    },
+    {
+      "id": "R-03",
+      "module": "resource",
+      "type": "icon",
+      "dsl_expected": "HM Symbol icon resource (node 3523:12798)",
+      "actual": "no built-in whitelist/mapping for icon resources",
+      "evidence": [
+        "src/component/Slider/Slider.tsx"
+      ]
+    },
+    {
+      "id": "S-01",
+      "module": "style",
+      "type": "color_alpha",
+      "dsl_expected": "track background rgba(0,0,0,0.05)",
+      "actual": "rgba(0,0,0,0.047)",
+      "evidence": [
+        "src/component/Slider/Slider.css"
+      ]
+    },
+    {
+      "id": "S-02",
+      "module": "style",
+      "type": "color_alpha",
+      "dsl_expected": "hover overlay rgba(0,0,0,0.05)",
+      "actual": "rgba(0,0,0,0.047)",
+      "evidence": [
+        "src/component/Slider/Slider.css"
+      ]
+    },
+    {
+      "id": "S-03",
+      "module": "style",
+      "type": "text_color_alpha",
+      "dsl_expected": "title color rgba(0,0,0,0.9)",
+      "actual": "rgba(0,0,0,0.898)",
+      "evidence": [
+        "src/component/Slider/Slider.css"
+      ]
+    },
+    {
+      "id": "S-04",
+      "module": "style",
+      "type": "shadow",
+      "dsl_expected": "thumb shadow x=0,y=0,blur=3,alpha=0.2",
+      "actual": "0 1px 4px rgba(0,0,0,0.12)",
+      "mismatch_points": [
+        "y_offset",
+        "blur",
+        "alpha"
+      ],
+      "evidence": [
+        "src/component/Slider/Slider.css"
+      ]
+    },
+    {
+      "id": "S-05",
+      "module": "style",
+      "type": "shadow",
+      "dsl_expected": "seekbar thumb shadow x=0,y=0,blur=3,alpha=0.2",
+      "actual": "0 1px 4px rgba(0,0,0,0.18)",
+      "mismatch_points": [
+        "y_offset",
+        "blur",
+        "alpha"
+      ],
+      "evidence": [
+        "src/component/Slider/Slider.css"
+      ]
+    },
+    {
+      "id": "S-06",
+      "module": "style",
+      "type": "typography",
+      "dsl_expected": "value scale line-height 12px",
+      "actual": "line-height 11px",
+      "evidence": [
+        "src/component/Slider/Slider.css"
+      ]
+    },
+    {
+      "id": "S-07",
+      "module": "style",
+      "type": "radius",
+      "dsl_expected": "bubble body radius 18",
+      "actual": "bubble radius 4px",
+      "evidence": [
+        "src/component/Slider/Slider.css"
+      ]
+    },
+    {
+      "id": "V-01",
+      "module": "variant",
+      "type": "state_name",
+      "dsl_expected": "Enabled/Hover/Focus/Active/Disabled",
+      "actual": "default/hover/focus/active/disabled",
+      "evidence": [
+        "src/component/Slider/Slider.tsx",
+        "src/component/Slider/SliderSeekbar.tsx"
+      ]
+    }
+  ]
+}
