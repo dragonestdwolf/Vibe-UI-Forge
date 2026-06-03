@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_public_synchronize-同步_质感图标</title>
+    <defs>
+        <linearGradient x1="15.2777778%" y1="0%" x2="70.1705324%" y2="85.0369119%" id="linearGradient-1">
+            <stop stop-color="#A89FF9" offset="0%"/>
+            <stop stop-color="#715AFB" offset="100%"/>
+        </linearGradient>
+        <path d="M44,42.0001492 C44,45.3138577 41.3137085,48.0001492 38,48.0001492 L10,48.0001492 C6.6862915,48.0001492 4,45.3138577 4,42.0001492 L4,6.00014918 C4,2.68644068 6.6862915,0.000149181892 10,0.000149181892 L30.1715796,0.000149181892 C30.7020086,0.000149181892 31.2107129,0.210859712 31.585785,0.585927505 L43.4142054,12.4142122 C43.7892832,12.7892856 44,13.2979969 44,13.8284338 Z" id="path-2"/>
+        <radialGradient cx="50%" cy="57.6152457%" fx="50%" fy="57.6152457%" r="52.2109403%" gradientTransform="translate(0.500000,0.576152),scale(0.875030,1.000000),rotate(-158.726091),scale(1.000000,1.011790),translate(-0.500000,-0.576152)" id="radialGradient-4">
+            <stop stop-color="#5531EB" offset="0%"/>
+            <stop stop-color="#5531EB" stop-opacity="0" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="0%" y1="25.1540926%" x2="100%" y2="129.942572%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0.0533632695" offset="100%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="52.7559684%" gradientTransform="translate(0.500000,0.500000),rotate(-90.000000),scale(1.000000,0.995896),translate(-0.500000,-0.500000)" id="radialGradient-6">
+            <stop stop-color="#8E81F4" offset="0%"/>
+            <stop stop-color="#BFB9FA" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-7">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_synchronize-同步_质感图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <mask id="mask-3" fill="white">
+            <use xlink:href="#path-2"/>
+        </mask>
+        <use id="形状结合" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"/>
+        <path d="M32,20 C40.836556,20 48,27.163444 48,36 C48,40.7792953 45.9045199,45.069165 42.5822024,48.0009666 L21.4177976,48.0009666 C18.0954801,45.069165 16,40.7792953 16,36 C16,27.163444 23.163444,20 32,20 Z" id="形状结合" fill="url(#radialGradient-4)" fill-rule="nonzero" opacity="0.900000036" mask="url(#mask-3)"/>
+        <path d="M30.5,1.5 L42.5,13.5 L34.5,13.5 C32.290861,13.5 30.5,11.709139 30.5,9.5 L30.5,1.5 L30.5,1.5 Z" id="path6" fill="url(#linearGradient-5)" opacity="0.6"/>
+        <path d="M12,14.5 L28,14.5 M12,24.5 L22,24.5" id="path" stroke="#FFFFFF" stroke-width="2" opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle id="path7" stroke="url(#linearGradient-7)" stroke-width="1.2" fill="url(#radialGradient-6)" fill-rule="nonzero" cx="34" cy="36" r="12"/>
+        <path d="M27.8641892,31.3804472 C28.3264103,30.7673813 29.3029759,31.0942728 29.3029759,31.8620606 L29.3029759,35.1088803 C29.3029759,35.5507081 28.9448037,35.9088803 28.5029759,35.9088803 C28.282062,35.9088803 28.082062,35.8193373 27.9372905,35.6745729 L27.9296,35.6664 L27.9216344,35.8562235 L27.92,36 C27.92,39.3578913 30.6421087,42.08 34,42.08 C34.9256713,42.08 35.8265181,41.8729719 36.6658477,41.4668049 C37.1327835,41.2646832 37.5935551,41.3727107 37.8103028,41.8027416 C38.0348282,42.2482036 37.8344009,42.7106028 37.3707654,42.9026299 C36.3260644,43.4136604 35.1775661,43.68 34,43.68 C29.7584531,43.68 26.32,40.2415469 26.32,36 C26.32,34.3218102 26.8610974,32.7108954 27.8641892,31.3804472 Z M34,28.32 C38.2415469,28.32 41.68,31.7584531 41.68,36 C41.68,37.6796274 41.1379711,39.2918441 40.1332877,40.6228975 C39.6708659,41.2355364 38.6947629,40.9085047 38.6947629,40.1409369 L38.6947629,36.959995 C38.6947629,36.5181672 39.0529351,36.159995 39.4947629,36.159995 C39.7156768,36.159995 39.9156768,36.2495381 40.0604483,36.3943108 L40.0664,36.4008 L40.0783628,36.1438997 L40.08,36 C40.08,32.6421087 37.3578913,29.92 34,29.92 C33.1452535,29.92 32.3112938,30.0964977 31.5415902,30.4371655 C31.1447245,30.6128166 30.6938399,30.5651832 30.4334586,30.122414 C30.1562454,29.6510228 30.4392838,29.1769118 30.8733345,28.9832584 C31.8523774,28.5464548 32.9141275,28.32 34,28.32 Z" id="path5备份" fill="#FFFFFF" fill-rule="nonzero"/>
+    </g>
+</svg>

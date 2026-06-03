@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="480px" height="480px" viewBox="0 0 480 480" version="1.1">
+    <title>ic_public_camera_dome-摄像头_3D图标</title>
+    <defs>
+        <linearGradient x1="0%" y1="48.2090645%" x2="102.555521%" y2="48.2091342%" id="linearGradient-1">
+            <stop stop-color="#D3D3D3" offset="0%"/>
+            <stop stop-color="#FFFFFF" offset="4.24434851%"/>
+            <stop stop-color="#F2F2F2" offset="7.31885696%"/>
+            <stop stop-color="#E6E6E6" offset="88.0040115%"/>
+            <stop stop-color="#F9F9F9" offset="91.7954181%"/>
+            <stop stop-color="#CDCDCD" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="27.8856123%" y1="37.1538041%" x2="55.9839101%" y2="64.9902689%" id="linearGradient-2">
+            <stop stop-color="#EFEFF0" offset="0%"/>
+            <stop stop-color="#ABABAB" offset="100%"/>
+        </linearGradient>
+        <radialGradient cx="22.8722355%" cy="-8.00368476%" fx="22.8722355%" fy="-8.00368476%" r="131.96653%" gradientTransform="translate(0.228722,-0.080037),scale(0.314574,1.000000),rotate(34.826569),scale(1.000000,1.105284),translate(-0.228722,0.080037)" id="radialGradient-3">
+            <stop stop-color="#FFFFFF" stop-opacity="0.4" offset="0.0616327032%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="99.9798541%"/>
+        </radialGradient>
+        <path d="M460,12 C471.045695,12 480,20.954305 480,32 C480,43.045695 471.045695,52 460,52 L381.494,52 L351.754098,162.995634 L313.117065,152.642872 L340.083,52 L139.916,52 L166.882935,152.642872 L128.245902,162.995634 L98.505,52 L20,52 C8.954305,52 1.3527075e-15,43.045695 0,32 C-1.3527075e-15,20.954305 8.954305,12 20,12 L460,12 Z" id="path-4"/>
+        <linearGradient x1="30.2603563%" y1="-14.4591867%" x2="35.1161912%" y2="45.7360525%" id="linearGradient-6">
+            <stop stop-color="#EFEFF0" offset="0%"/>
+            <stop stop-color="#ABABAB" offset="100%"/>
+        </linearGradient>
+        <radialGradient cx="22.8722355%" cy="-8.00368476%" fx="22.8722355%" fy="-8.00368476%" r="82.7116436%" gradientTransform="translate(0.228722,-0.080037),rotate(65.669161),scale(1.000000,1.105284),translate(-0.228722,0.080037)" id="radialGradient-7">
+            <stop stop-color="#FFFFFF" stop-opacity="0.4" offset="0.0616327032%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="99.9798541%"/>
+        </radialGradient>
+        <rect id="path-8" x="1.8189894e-12" y="0" width="479.999663" height="479.999663"/>
+        <linearGradient x1="59.8120317%" y1="45.0434118%" x2="67.8426887%" y2="54.3089471%" id="linearGradient-9">
+            <stop stop-color="#FFFFFF" stop-opacity="0.9" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="100%"/>
+        </linearGradient>
+        <radialGradient cx="35.4323969%" cy="26.8539809%" fx="35.4323969%" fy="26.8539809%" r="70.4106797%" id="radialGradient-10">
+            <stop stop-color="#F8F8F8" offset="0%"/>
+            <stop stop-color="#C3C3C3" offset="100%"/>
+        </radialGradient>
+        <radialGradient cx="48.5559115%" cy="47.4591468%" fx="48.5559115%" fy="47.4591468%" r="56.0314352%" id="radialGradient-11">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="77.6033984%"/>
+            <stop stop-color="#F0F3FF" stop-opacity="0.6" offset="100%"/>
+        </radialGradient>
+        <circle id="path-12" cx="240" cy="275.121951" r="204.878049"/>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-13">
+            <stop stop-color="#F0F0F0" offset="0%"/>
+            <stop stop-color="#D5D5D5" offset="100%"/>
+        </linearGradient>
+        <ellipse id="path-14" cx="240" cy="309.629386" rx="107.598513" ry="105.992565"/>
+        <linearGradient x1="6.94614523%" y1="20.4464722%" x2="67.326658%" y2="58.870304%" id="linearGradient-15">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="100%"/>
+        </linearGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="52.1690378%" gradientTransform="translate(0.500000,0.500000),scale(0.975610,1.000000),rotate(60.860765),translate(-0.500000,-0.500000)" id="radialGradient-16">
+            <stop stop-color="#F0F2F6" offset="0%"/>
+            <stop stop-color="#04072B" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-17">
+            <stop stop-color="#7A7373" offset="0%"/>
+            <stop stop-color="#FFFFFF" offset="100%"/>
+        </linearGradient>
+        <radialGradient cx="38.2201126%" cy="29.6079281%" fx="38.2201126%" fy="29.6079281%" r="71.2121671%" gradientTransform="translate(0.382201,0.296079),scale(0.950000,1.000000),rotate(62.853358),translate(-0.382201,-0.296079)" id="radialGradient-18">
+            <stop stop-color="#F0F2F6" offset="0%"/>
+            <stop stop-color="#04072B" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-19">
+            <stop stop-color="#FFFFFF" stop-opacity="0.8" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_camera_dome-摄像头_3D图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="path" fill="#D8D8D8" fill-rule="nonzero" opacity="0" x="0" y="0" width="480" height="480"/>
+        <path d="M143.131,52 L166.882935,140.642872 L163.882,141.446 L139.916,52 L143.131,52 Z M340.083,52 L316.117,141.446 L313.117065,140.642872 L336.868,52 L340.083,52 Z M479.997093,19.6555106 L480,20 L480,32 L479.997093,31.6555106 C479.813225,20.7687286 470.930636,12 460,12 L20,12 C8.954305,12 -1.3527075e-15,20.954305 0,32 L0,20 C-1.3527075e-15,8.954305 8.954305,2.02906125e-15 20,0 L460,0 C470.930636,-3.11329894e-14 479.813225,8.76872859 479.997093,19.6555106 Z" id="形状结合" fill="url(#linearGradient-1)" fill-rule="nonzero"/>
+        <mask id="mask-5" fill="white">
+            <use xlink:href="#path-4"/>
+        </mask>
+        <g id="矩形-2" fill-rule="nonzero">
+            <use fill="url(#linearGradient-2)" xlink:href="#path-4"/>
+            <use fill="url(#radialGradient-3)" xlink:href="#path-4"/>
+        </g>
+        <g id="矩形" fill-rule="nonzero" mask="url(#mask-5)">
+            <use fill="url(#linearGradient-6)" xlink:href="#path-8"/>
+            <use fill="url(#radialGradient-7)" xlink:href="#path-8"/>
+        </g>
+        <path d="M341.155,52 L314.117,152.91 L313.117065,152.642872 L340.083,52 L341.155,52 Z M460,12 C471.045695,12 480,20.954305 480,32 C480,32.3421501 479.991408,32.6822935 479.974429,33.0202262 C479.465052,23.5347935 471.612449,16 462,16 L18,16 C8.38755128,16 0.534947868,23.5347935 0.0262046658,33.0203655 C0.00859170013,32.6822935 4.19013015e-17,32.3421501 0,32 C-1.3527075e-15,20.954305 8.954305,12 20,12 L460,12 Z M166.882935,152.642872 L165.882,152.91 L138.844,52 L139.916,52 L166.882935,152.642872 Z" id="矩形-2" fill="url(#linearGradient-9)" fill-rule="nonzero"/>
+        <g id="椭圆形" fill-rule="nonzero">
+            <use fill="#FFFFFF" xlink:href="#path-12"/>
+            <use fill="url(#radialGradient-10)" xlink:href="#path-12"/>
+            <use fill="url(#radialGradient-11)" xlink:href="#path-12"/>
+        </g>
+        <g id="椭圆形" fill-rule="nonzero">
+            <use fill="#FFFFFF" xlink:href="#path-14"/>
+            <use fill="url(#linearGradient-13)" xlink:href="#path-14"/>
+        </g>
+        <path d="M240,199.621951 C299.425018,199.621951 347.598513,247.076439 347.598513,305.614516 C347.598513,306.285056 347.592192,306.95414 347.579606,307.621717 C346.492852,250.009839 298.743979,203.636821 240,203.636821 C181.255681,203.636821 133.506594,250.010377 132.420394,307.622186 C132.407814,306.95481 132.401487,306.285391 132.401487,305.614516 C132.401487,247.076439 180.574982,199.621951 240,199.621951 Z" id="椭圆形-2" fill="url(#linearGradient-15)" fill-rule="nonzero"/>
+        <ellipse id="椭圆形" stroke="url(#linearGradient-17)" stroke-width="2" fill="url(#radialGradient-16)" fill-rule="nonzero" cx="240" cy="309" rx="91.2" ry="89"/>
+        <ellipse id="椭圆形" fill="url(#radialGradient-18)" fill-rule="nonzero" cx="240" cy="309" rx="56.7741935" ry="53.9354839"/>
+        <ellipse id="椭圆形" fill="url(#linearGradient-19)" cx="230.064516" cy="296.225806" rx="18.9247312" ry="17.0322581"/>
+    </g>
+</svg>

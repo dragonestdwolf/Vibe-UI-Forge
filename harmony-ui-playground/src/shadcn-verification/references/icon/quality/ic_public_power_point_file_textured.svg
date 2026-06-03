@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48.000000" height="48.000000" viewBox="0 0 48 48" fill="none">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_177_15129_dd" x="12.500000" y="16.509766" width="22.990234" height="22.992432" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feGaussianBlur in="BackgroundImage" stdDeviation="0"/>
+			<feComposite in2="SourceAlpha" operator="in" result="effect_backgroundBlur_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_backgroundBlur_1" result="shape"/>
+		</filter>
+		<clipPath id="clip177_15093">
+			<rect id="ic_public_power_point_file_ textured-演示文稿文件_质感" width="48.000000" height="48.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<linearGradient x1="23.999922" y1="0.500000" x2="23.999922" y2="46.591400" id="paint_linear_177_15127_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#F9B766"/>
+			<stop offset="1.000000" stop-color="#F4840C"/>
+		</linearGradient>
+		<linearGradient x1="30.669922" y1="3.935227" x2="44.329926" y2="18.245916" id="paint_linear_177_15128_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFFFFF"/>
+			<stop offset="1.000000" stop-color="#FFFFFF" stop-opacity="0.054902"/>
+			<stop offset="1.000000" stop-color="#FFFFFF" stop-opacity="0.000000"/>
+		</linearGradient>
+		<linearGradient x1="23.995117" y1="16.509766" x2="23.995117" y2="39.502197" id="paint_linear_177_15129_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFFFFF" stop-opacity="0.800000"/>
+			<stop offset="1.000000" stop-color="#FFFFFF" stop-opacity="0.501961"/>
+		</linearGradient>
+	</defs>
+	<g clip-path="url(#clip177_15093)">
+		<path id="path3" d="M31.3 0.5L11.16 0.5C7.02 0.5 3.66 3.85 3.66 8L3.66 40C3.66 44.14 7.02 47.5 11.16 47.5L36.83 47.5C40.97 47.5 44.33 44.14 44.33 40L44.33 13.52C44.33 12.99 44.11 12.48 43.74 12.11L32.71 1.08C32.34 0.71 31.83 0.5 31.3 0.5Z" fill="url(#paint_linear_177_15127_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<g opacity="0.600000">
+			<path id="pah4" d="M31.3 0.5L30.66 0.5C31.47 0.5 32.12 1.15 32.12 1.95L32.12 8.7C32.12 10.9 33.92 12.7 36.12 12.7L42.87 12.7C43.67 12.7 44.33 13.35 44.33 14.15L44.33 13.52C44.33 12.99 44.11 12.48 43.74 12.11L32.71 1.08C32.34 0.71 31.83 0.5 31.3 0.5Z" fill="url(#paint_linear_177_15128_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</g>
+		<g filter="url(#filter_177_15129_dd)">
+			<path id="path5" d="M22 18.54C20.92 18.63 19.91 18.87 18.97 19.26C17.73 19.78 16.6 20.55 15.57 21.57C14.54 22.6 13.78 23.73 13.26 24.96C12.75 26.2 12.5 27.55 12.5 29C12.5 30.45 12.75 31.79 13.26 33.03C13.78 34.27 14.54 35.4 15.57 36.42C16.6 37.45 17.73 38.22 18.97 38.73C20.2 39.24 21.55 39.5 23 39.5C24.44 39.5 25.79 39.24 27.02 38.73C28.26 38.22 29.39 37.45 30.42 36.42C31.44 35.4 32.21 34.27 32.73 33.03C33.12 32.08 33.36 31.07 33.45 29.99L22 29.99L22 18.54ZM35.49 27.99L24 27.99L24 16.5C24.71 16.53 25.42 16.63 26.11 16.78C26.81 16.94 27.5 17.15 28.17 17.44C28.84 17.72 29.48 18.07 30.09 18.46C30.76 18.91 31.39 19.42 31.98 20.01C33.09 21.12 33.94 22.39 34.55 23.82C34.83 24.49 35.06 25.18 35.21 25.88C35.36 26.57 35.46 27.28 35.49 27.99Z" fill="url(#paint_linear_177_15129_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "pageName": "display-theme-brightness-settings-v1",
+  "comparisonMode": "spec-only",
+  "render": {
+    "pageUrl": "http://localhost:6007/?path=/story/render-display-theme-brightness-settings-v1--default",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "deviceScaleFactor": 1,
+    "waitUntil": "load",
+    "waitMs": 2000,
+    "contentRootSelector": ".display-theme-settings",
+    "useStorybookIframe": true,
+    "useStorybookFrame": false
+  },
+  "layout": {
+    "gridChecks": [],
+    "backgroundChecks": []
+  },
+  "presetComponents": [],
+  "customElements": [],
+  "domScan": {
+    "enabled": true,
+    "maxElements": 800,
+    "rootSelector": ".display-theme-settings"
+  },
+  "source": {
+    "registryPath": "/Users/admin/Desktop/Vibe-UI-Forge/harmony-ui-playground/src/shadcn-verification/output/displaythemebrightnesssettingsv1/page_element_registry.json",
+    "registryChecksum": "46d60edb72be39fa03c3efcfde670385dc478cb823183ba7550fce4f0b0ad3dd"
+  },
+  "coverage": {
+    "presetComponentCount": 0,
+    "customElementCount": 0,
+    "styleCheckCount": 0,
+    "resourceCount": 0,
+    "layoutCheckCount": 0,
+    "domScanEnabled": true,
+    "domScanMaxElements": 800
+  },
+  "checksum": "76f34989e2b876dd0914e7f8cfe8ef0e85f5e1d41945fec006e1cce587ef7ace"
+}

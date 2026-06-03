@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_public_show_thumbnails-显示缩略图_质感图标</title>
+    <defs>
+        <linearGradient x1="0%" y1="15.2777778%" x2="79.0455666%" y2="74.3311888%" id="linearGradient-1">
+            <stop stop-color="#A89FF9" offset="0%"/>
+            <stop stop-color="#715AFB" offset="100%"/>
+        </linearGradient>
+        <rect id="path-2" x="0" y="4" width="48" height="40" rx="6"/>
+        <radialGradient cx="50%" cy="57.6152457%" fx="50%" fy="57.6152457%" r="52.2109403%" gradientTransform="translate(0.500000,0.576152),scale(0.875030,1.000000),rotate(-158.726091),scale(1.000000,1.011790),translate(-0.500000,-0.576152)" id="radialGradient-4">
+            <stop stop-color="#5531EB" offset="0%"/>
+            <stop stop-color="#5531EB" stop-opacity="0" offset="100%"/>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="52.7559684%" gradientTransform="translate(0.500000,0.500000),scale(0.671822,1.000000),rotate(-90.000000),scale(1.000000,0.995896),translate(-0.500000,-0.500000)" id="radialGradient-5">
+            <stop stop-color="#8E81F4" offset="0%"/>
+            <stop stop-color="#BFB9FA" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_show_thumbnails-显示缩略图_质感图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <mask id="mask-3" fill="white">
+            <use xlink:href="#path-2"/>
+        </mask>
+        <use id="矩形" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"/>
+        <path d="M32,20 C40.836556,20 48,27.163444 48,36 C48,40.7792953 45.9045199,45.069165 42.5822024,48.0009666 L21.4177976,48.0009666 C18.0954801,45.069165 16,40.7792953 16,36 C16,27.163444 23.163444,20 32,20 Z" id="形状结合" fill="url(#radialGradient-4)" fill-rule="nonzero" opacity="0.900000036" mask="url(#mask-3)"/>
+        <path d="M34.336299,25.6401239 C40.2240115,25.6401239 45.5551048,29.0945191 47.9175605,34.4402177 C48.0243094,34.6816607 48.0243094,34.9557991 47.9175605,35.1972421 C45.5551048,40.5416834 40.2240115,43.9960786 34.336299,43.9960786 C28.4485864,43.9960786 23.1174932,40.5416834 20.7550375,35.1972421 C20.6482886,34.9557991 20.6482886,34.6816607 20.7550375,34.4402177 C23.1174932,29.0945191 28.4473154,25.6401239 34.336299,25.6401239 Z" id="形状结合-path" stroke="url(#linearGradient-6)" stroke-width="1.2" fill="url(#radialGradient-5)" fill-rule="nonzero"/>
+        <path d="M34.3360448,29.7899252 C37.143288,29.7899252 39.4193278,32.0421356 39.4193278,34.8199876 C39.4193278,37.5978393 37.143288,39.8500498 34.3360448,39.8500498 C31.5288017,39.8500498 29.2527619,37.5978393 29.2527619,34.8199876 C29.2527619,32.0421356 31.5288017,29.7899252 34.3360448,29.7899252 Z M34.3182999,32.3013114 C32.9263208,32.3013114 31.7984247,33.4173987 31.7984247,34.794804 C31.7984247,36.1722094 32.9263208,37.2882967 34.3182999,37.2882967 C35.7102789,37.2882967 36.838175,36.1722094 36.838175,34.794804 C36.838175,33.4173987 35.7102789,32.3013114 34.3182999,32.3013114 Z" id="形状结合" fill="#FFFFFF" fill-rule="nonzero"/>
+    </g>
+</svg>

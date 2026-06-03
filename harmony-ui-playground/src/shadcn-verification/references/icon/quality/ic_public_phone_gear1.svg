@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_public_phone_gear-手机维修_质感图标</title>
+    <defs>
+        <linearGradient x1="32.9861111%" y1="0%" x2="59.8835609%" y2="85.0369119%" id="linearGradient-1">
+            <stop stop-color="#8CA3FA" offset="0%"/>
+            <stop stop-color="#2070F3" offset="100%"/>
+        </linearGradient>
+        <rect id="path-2" x="10" y="0" width="28" height="48" rx="4"/>
+        <radialGradient cx="50%" cy="55.9984808%" fx="50%" fy="55.9984808%" r="50.5600611%" gradientTransform="translate(0.500000,0.559985),scale(0.875030,1.000000),rotate(-137.184617),scale(1.000000,1.011790),translate(-0.500000,-0.559985)" id="radialGradient-4">
+            <stop stop-color="#1F55B5" offset="0%"/>
+            <stop stop-color="#2070F3" stop-opacity="0" offset="100%"/>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="55.1831298%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.906074),rotate(90.000000),translate(-0.500000,-0.500000)" id="radialGradient-5">
+            <stop stop-color="#668CF7" offset="0%"/>
+            <stop stop-color="#B0BFFD" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="32.5969765%" y1="9.32456913%" x2="80.2428649%" y2="100%" id="linearGradient-7">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0.76" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_phone_gear-手机维修_质感图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <mask id="mask-3" fill="white">
+            <use xlink:href="#path-2"/>
+        </mask>
+        <use id="矩形" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"/>
+        <path d="M32,20 C40.836556,20 48,27.163444 48,36 C48,40.7792953 45.9045199,45.069165 42.5822024,48.0009666 L21.4177976,48.0009666 C18.0954801,45.069165 16,40.7792953 16,36 C16,27.163444 23.163444,20 32,20 Z" id="形状结合" fill="url(#radialGradient-4)" fill-rule="nonzero" mask="url(#mask-3)"/>
+        <circle id="椭圆形" fill="#FFFFFF" opacity="0.6" cx="24" cy="6" r="2"/>
+        <path d="M38.2592656,24.4758102 L45.4729053,28.640607 C46.5717779,29.2750414 47.2487113,30.4475245 47.2487113,31.7163932 L47.2487113,40.0459869 C47.2487113,41.3148556 46.5717779,42.4873387 45.4729053,43.1217731 L38.2592656,47.2865699 C37.160393,47.9210043 35.8065262,47.9210043 34.7076536,47.2865699 L27.4940139,43.1217731 C26.3951413,42.4873387 25.7182079,41.3148556 25.7182079,40.0459869 L25.7182079,31.7163932 C25.7182079,30.4475245 26.3951413,29.2750414 27.4940139,28.640607 L34.7076536,24.4758102 C35.8065262,23.8413758 37.160393,23.8413758 38.2592656,24.4758102 Z" id="多边形" stroke="url(#linearGradient-6)" stroke-width="1.2" fill="url(#radialGradient-5)" fill-rule="nonzero"/>
+        <circle id="椭圆形" fill="url(#linearGradient-7)" fill-rule="nonzero" cx="36.4834596" cy="35.88119" r="5"/>
+    </g>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_public_setting_vds-设置vds_质感图标</title>
+    <defs>
+        <linearGradient x1="15.2777778%" y1="0%" x2="70.1705324%" y2="85.0369119%" id="linearGradient-1">
+            <stop stop-color="#A8DB81" offset="0%"/>
+            <stop stop-color="#63D5A8" offset="100%"/>
+        </linearGradient>
+        <path d="M35.6315789,0 L10.3684211,0 C6.29895447,0 3,3.13400675 3,7 L3,41 C3,44.8659932 6.29895447,48 10.3684211,48 L35.6315789,48 C39.7010455,48 43,44.8659932 43,41 L43,7 C43,3.13400675 39.7010455,0 35.6315789,0 Z" id="path-2"/>
+        <radialGradient cx="46.113301%" cy="53.5058727%" fx="46.113301%" fy="53.5058727%" r="45.4502376%" gradientTransform="translate(0.461133,0.535059),scale(0.875030,1.000000),rotate(-146.148540),scale(1.000000,1.011790),translate(-0.461133,-0.535059)" id="radialGradient-4">
+            <stop stop-color="#218856" stop-opacity="0.823499986" offset="0%"/>
+            <stop stop-color="#5FA771" stop-opacity="0" offset="99.914124%"/>
+        </radialGradient>
+        <radialGradient cx="50%" cy="53.4011256%" fx="50%" fy="53.4011256%" r="62.8509454%" gradientTransform="translate(0.500000,0.534011),scale(1.000000,0.906074),rotate(90.000000),translate(-0.500000,-0.534011)" id="radialGradient-5">
+            <stop stop-color="#64DAA1" offset="0%"/>
+            <stop stop-color="#C8F0D2" stop-opacity="0.95" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="32.5969765%" y1="9.32456913%" x2="80.2428649%" y2="100%" id="linearGradient-7">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0.76" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_setting_vds-设置vds_质感图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <mask id="mask-3" fill="white">
+            <use xlink:href="#path-2"/>
+        </mask>
+        <use id="path" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"/>
+        <path d="M32,20 C40.836556,20 48,27.163444 48,36 C48,40.7792953 45.9045199,45.069165 42.5822024,48.0009666 L21.4177976,48.0009666 C18.0954801,45.069165 16,40.7792953 16,36 C16,27.163444 23.163444,20 32,20 Z" id="形状结合" fill="url(#radialGradient-4)" fill-rule="nonzero" mask="url(#mask-3)"/>
+        <path d="M13.0000063,9.99142005 L32.9999937,9.99142005 L30.0008862,6.97745255 M32.9999937,15.9860325 L13.0000063,15.9860325 L15.9991138,19" id="path6" stroke="#FFFFFF" stroke-width="2" opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M37.2592656,24.4758102 L44.4729053,28.640607 C45.5717779,29.2750414 46.2487113,30.4475245 46.2487113,31.7163932 L46.2487113,40.0459869 C46.2487113,41.3148556 45.5717779,42.4873387 44.4729053,43.1217731 L37.2592656,47.2865699 C36.160393,47.9210043 34.8065262,47.9210043 33.7076536,47.2865699 L26.4940139,43.1217731 C25.3951413,42.4873387 24.7182079,41.3148556 24.7182079,40.0459869 L24.7182079,31.7163932 C24.7182079,30.4475245 25.3951413,29.2750414 26.4940139,28.640607 L33.7076536,24.4758102 C34.8065262,23.8413758 36.160393,23.8413758 37.2592656,24.4758102 Z" id="多边形" stroke="url(#linearGradient-6)" stroke-width="0.857142857" fill="url(#radialGradient-5)" fill-rule="nonzero"/>
+        <circle id="椭圆形" fill="url(#linearGradient-7)" fill-rule="nonzero" cx="35.4834596" cy="35.88119" r="5"/>
+    </g>
+</svg>

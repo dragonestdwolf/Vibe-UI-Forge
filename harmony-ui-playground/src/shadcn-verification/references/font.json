@@ -1,0 +1,204 @@
+{
+  "source": "global.css",
+  "description": "字体规范，从 global.css :root 中 --harmony-font-size-* / --harmony-font-weight-* 提取。字体家族来自 html 与 --button-harmony-font-family。行高按设计比率推算（display 1.2×, title 1.33×, subtitle 1.44×, body 1.5×, caption 1.67×）。",
+  "rules": {
+    "allowedFontFamilies": [
+      "HarmonyHeiTi",
+      "Geist Variable"
+    ],
+    "allowedFontSizes": [
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      24,
+      30,
+      38,
+      48,
+      56
+    ],
+    "allowedFontWeights": [
+      300,
+      400,
+      500,
+      700
+    ],
+    "allowedLineHeights": [
+      13,
+      17,
+      18,
+      20,
+      21,
+      23,
+      24,
+      26,
+      27,
+      32,
+      40,
+      46,
+      58,
+      67
+    ],
+    "constraintsCN": [
+      "字体家族必须在 allowedFontFamilies 内",
+      "字号必须在 allowedFontSizes 内",
+      "字重必须在 allowedFontWeights 内",
+      "行高必须在 allowedLineHeights 内"
+    ]
+  },
+  "fonts": [
+    {
+      "name": "font_display_l_light",
+      "cssVar": "--harmony-font-size-display-l",
+      "fontFamily": "HarmonyHeiTi",
+      "fontWeight": 300,
+      "fontStyle": "Light",
+      "fontSize": 56,
+      "lineHeight": 67,
+      "shorthand": "300 56px/67px \"HarmonyHeiTi\", sans-serif"
+    },
+    {
+      "name": "font_display_m_light",
+      "cssVar": "--harmony-font-size-display-m",
+      "fontFamily": "HarmonyHeiTi",
+      "fontWeight": 300,
+      "fontStyle": "Light",
+      "fontSize": 48,
+      "lineHeight": 58,
+      "shorthand": "300 48px/58px \"HarmonyHeiTi\", sans-serif"
+    },
+    {
+      "name": "font_display_s_light",
+      "cssVar": "--harmony-font-size-display-s",
+      "fontFamily": "HarmonyHeiTi",
+      "fontWeight": 300,
+      "fontStyle": "Light",
+      "fontSize": 38,
+      "lineHeight": 46,
+      "shorthand": "300 38px/46px \"HarmonyHeiTi\", sans-serif"
+    },
+    {
+      "name": "font_title_l_bold",
+      "cssVar": "--harmony-font-size-title-l",
+      "fontFamily": "HarmonyHeiTi",
+      "fontWeight": 700,
+      "fontStyle": "Bold",
+      "fontSize": 30,
+      "lineHeight": 40,
+      "shorthand": "700 30px/40px \"HarmonyHeiTi\", sans-serif"
+    },
+    {
+      "name": "font_title_m_bold",
+      "cssVar": "--harmony-font-size-title-m",
+      "fontFamily": "HarmonyHeiTi",
+      "fontWeight": 700,
+      "fontStyle": "Bold",
+      "fontSize": 24,
+      "lineHeight": 32,
+      "shorthand": "700 24px/32px \"HarmonyHeiTi\", sans-serif"
+    },
+    {
+      "name": "font_title_s_bold",
+      "cssVar": "--harmony-font-size-title-s",
+      "fontFamily": "HarmonyHeiTi",
+      "fontWeight": 700,
+      "fontStyle": "Bold",
+      "fontSize": 20,
+      "lineHeight": 27,
+      "shorthand": "700 20px/27px \"HarmonyHeiTi\", sans-serif"
+    },
+    {
+      "name": "font_subtitle_l_medium",
+      "cssVar": "--harmony-font-size-subtitle-l",
+      "fontFamily": "HarmonyHeiTi",
+      "fontWeight": 500,
+      "fontStyle": "Medium",
+      "fontSize": 18,
+      "lineHeight": 26,
+      "shorthand": "500 18px/26px \"HarmonyHeiTi\", sans-serif"
+    },
+    {
+      "name": "font_subtitle_m_medium",
+      "cssVar": "--harmony-font-size-subtitle-m",
+      "fontFamily": "HarmonyHeiTi",
+      "fontWeight": 500,
+      "fontStyle": "Medium",
+      "fontSize": 16,
+      "lineHeight": 23,
+      "shorthand": "500 16px/23px \"HarmonyHeiTi\", sans-serif"
+    },
+    {
+      "name": "font_subtitle_s_medium",
+      "cssVar": "--harmony-font-size-subtitle-s",
+      "fontFamily": "HarmonyHeiTi",
+      "fontWeight": 500,
+      "fontStyle": "Medium",
+      "fontSize": 14,
+      "lineHeight": 20,
+      "shorthand": "500 14px/20px \"HarmonyHeiTi\", sans-serif"
+    },
+    {
+      "name": "font_body_l_regular",
+      "cssVar": "--harmony-font-size-body-l",
+      "fontFamily": "HarmonyHeiTi",
+      "fontWeight": 400,
+      "fontStyle": "Regular",
+      "fontSize": 16,
+      "lineHeight": 24,
+      "shorthand": "400 16px/24px \"HarmonyHeiTi\", sans-serif"
+    },
+    {
+      "name": "font_body_m_regular",
+      "cssVar": "--harmony-font-size-body-m",
+      "fontFamily": "HarmonyHeiTi",
+      "fontWeight": 400,
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeight": 21,
+      "shorthand": "400 14px/21px \"HarmonyHeiTi\", sans-serif"
+    },
+    {
+      "name": "font_body_s_regular",
+      "cssVar": "--harmony-font-size-body-s",
+      "fontFamily": "HarmonyHeiTi",
+      "fontWeight": 400,
+      "fontStyle": "Regular",
+      "fontSize": 12,
+      "lineHeight": 18,
+      "shorthand": "400 12px/18px \"HarmonyHeiTi\", sans-serif"
+    },
+    {
+      "name": "font_caption_l_medium",
+      "cssVar": "--harmony-font-size-caption-l",
+      "fontFamily": "HarmonyHeiTi",
+      "fontWeight": 500,
+      "fontStyle": "Medium",
+      "fontSize": 12,
+      "lineHeight": 20,
+      "shorthand": "500 12px/20px \"HarmonyHeiTi\", sans-serif"
+    },
+    {
+      "name": "font_caption_m_medium",
+      "cssVar": "--harmony-font-size-caption-m",
+      "fontFamily": "HarmonyHeiTi",
+      "fontWeight": 500,
+      "fontStyle": "Medium",
+      "fontSize": 10,
+      "lineHeight": 17,
+      "shorthand": "500 10px/17px \"HarmonyHeiTi\", sans-serif"
+    },
+    {
+      "name": "font_caption_s_medium",
+      "cssVar": "--harmony-font-size-caption-s",
+      "fontFamily": "HarmonyHeiTi",
+      "fontWeight": 500,
+      "fontStyle": "Medium",
+      "fontSize": 8,
+      "lineHeight": 13,
+      "shorthand": "500 8px/13px \"HarmonyHeiTi\", sans-serif"
+    }
+  ]
+}

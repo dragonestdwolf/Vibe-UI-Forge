@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page Verify Scan Test</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 24px;
+        background: #ffffff;
+        font-family: Arial, sans-serif;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+      }
+      h1 {
+        color: #111827;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+      }
+      .bad-card {
+        padding: 12px;
+        background: #ff00ff;
+        color: #123456;
+        border: 3px solid #abcdef;
+        border-radius: 13px;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+      }
+      .section-spacer {
+        height: 1200px;
+      }
+      .bottom-bad {
+        padding: 8px;
+        background: #00ff99;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Scan Test Page</h1>
+      <div class="bad-card">Non-compliant styles above the fold</div>
+      <div class="section-spacer"></div>
+      <div class="bottom-bad">Non-compliant block below the fold</div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_public_camera-相机_质感图标</title>
+    <defs>
+        <linearGradient x1="0%" y1="13.5199653%" x2="79.0455666%" y2="75.5629552%" id="linearGradient-1">
+            <stop stop-color="#A8DB81" offset="0%"/>
+            <stop stop-color="#63D5A8" offset="100%"/>
+        </linearGradient>
+        <radialGradient cx="50%" cy="136.386134%" fx="50%" fy="136.386134%" r="96.2619974%" gradientTransform="translate(0.500000,1.363861),rotate(-90.000000),scale(1.000000,0.995896),translate(-0.500000,-1.363861)" id="radialGradient-2">
+            <stop stop-color="#63D5A8" offset="0%"/>
+            <stop stop-color="#BCF2DB" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_camera-相机_质感图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <path d="M6,10 L13,10 L13,10 L14.3783324,5.17583662 C14.7463052,3.88793194 15.9234632,3 17.2629042,3 L30.7370958,3 C32.0765368,3 33.2536948,3.88793194 33.6216676,5.17583662 L35,10 L35,10 L42,10 C45.3137085,10 48,12.6862915 48,16 L48,38 C48,41.3137085 45.3137085,44 42,44 L6,44 C2.6862915,44 4.05812251e-16,41.3137085 0,38 L0,16 C1.95394836e-15,12.6862915 2.6862915,10 6,10 Z" id="path4" fill="url(#linearGradient-1)" fill-rule="nonzero"/>
+        <circle id="path5" stroke="url(#linearGradient-3)" stroke-width="1.2" fill="url(#radialGradient-2)" fill-rule="nonzero" cx="24" cy="27" r="11"/>
+    </g>
+</svg>

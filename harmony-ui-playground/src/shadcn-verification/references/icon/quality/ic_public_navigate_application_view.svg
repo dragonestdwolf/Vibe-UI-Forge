@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_public_navigate_application_view-定位应用_质感图标</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="79.0455666%" y2="85.0369119%" id="linearGradient-1">
+            <stop stop-color="#7DDFE7" offset="0%"/>
+            <stop stop-color="#2CB8C9" offset="100%"/>
+        </linearGradient>
+        <path d="M7,1 L17,1 C20.3137085,1 23,3.6862915 23,7 L23,17 C23,20.3137085 20.3137085,23 17,23 L7,23 C3.6862915,23 1,20.3137085 1,17 L1,7 C1,3.6862915 3.6862915,1 7,1 Z M7,25 L17,25 C20.3137085,25 23,27.6862915 23,31 L23,41 C23,44.3137085 20.3137085,47 17,47 L7,47 C3.6862915,47 1,44.3137085 1,41 L1,31 C1,27.6862915 3.6862915,25 7,25 Z M31,1 L41,1 C44.3137085,1 47,3.6862915 47,7 L47,17 C47,20.3137085 44.3137085,23 41,23 L31,23 C27.6862915,23 25,20.3137085 25,17 L25,7 C25,3.6862915 27.6862915,1 31,1 Z" id="path-2"/>
+        <radialGradient cx="48.5258978%" cy="55.1206865%" fx="48.5258978%" fy="55.1206865%" r="40.7563765%" gradientTransform="translate(0.485259,0.551207),scale(0.875030,1.000000),rotate(93.819859),scale(1.000000,1.047112),translate(-0.485259,-0.551207)" id="radialGradient-4">
+            <stop stop-color="#2CB8C9" offset="0%"/>
+            <stop stop-color="#2CB8C9" stop-opacity="0" offset="100%"/>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="60.8562267%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.821609),rotate(90.000000),translate(-0.500000,-0.500000)" id="radialGradient-5">
+            <stop stop-color="#55CCD9" offset="0%"/>
+            <stop stop-color="#A4ECF1" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_navigate_application_view-定位应用_质感图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <mask id="mask-3" fill="white">
+            <use xlink:href="#path-2"/>
+        </mask>
+        <use id="形状结合" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"/>
+        <path d="M32,20 C40.836556,20 48,27.163444 48,36 C48,40.7792953 45.9045199,45.069165 42.5822024,48.0009666 L21.4177976,48.0009666 C18.0954801,45.069165 16,40.7792953 16,36 C16,27.163444 23.163444,20 32,20 Z" id="形状结合" fill="url(#radialGradient-4)" fill-rule="nonzero" mask="url(#mask-3)"/>
+        <path d="M36.0947067,20.4727155 C41.931692,20.4727155 46.6966574,25.0136294 46.9691028,30.6212965 L46.9813993,31.1339266 L46.9996293,31.6878263 C47.0387024,36.4915125 43.9884555,41.379609 38.0498286,46.4033089 C37.2650594,47.0671738 35.9312174,47.2528943 35.0060305,46.5687288 C28.810464,41.9871765 25.4859869,36.9015732 25.2049546,31.2399773 C25.2049546,25.2930061 30.0808431,20.4727155 36.0947067,20.4727155 Z" id="形状结合-path" stroke="url(#linearGradient-6)" stroke-width="1.2" fill="url(#radialGradient-5)" fill-rule="nonzero"/>
+        <path d="M36.1024773,27.6017069 C34.1142616,27.6017069 32.5024943,29.1965385 32.5024943,31.1638627 C32.5024943,33.131187 34.1142616,34.7260185 36.1024773,34.7260185 C38.0906932,34.7260185 39.7024603,33.131187 39.7024603,31.1638627 C39.7024603,29.1965385 38.0906932,27.6017069 36.1024773,27.6017069 Z" id="形状结合-path" fill="#FFFFFF" fill-rule="nonzero"/>
+    </g>
+</svg>

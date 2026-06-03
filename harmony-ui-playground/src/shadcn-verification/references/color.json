@@ -1,0 +1,846 @@
+{
+  "light": [
+    {
+      "name": "COMPONENT_ULTRA_THICK_fill",
+      "value": "rgba(255, 255, 255, 0.9)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --COMPONENT_ULTRA_THICK_fill"
+    },
+    {
+      "name": "FLOATING_ULTRA_THICK_fill",
+      "value": "rgba(241, 243, 245, 0.9)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --FLOATING_ULTRA_THICK_fill"
+    },
+    {
+      "name": "FloatingSegmented-activated_fill",
+      "value": "rgba(0, 0, 0, 0.047059)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --FloatingSegmented-activated_fill"
+    },
+    {
+      "name": "Floating_background_line_fill",
+      "value": "rgba(0, 0, 0, 0.1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --Floating_background_line_fill"
+    },
+    {
+      "name": "Navigation_THIN_fill",
+      "value": "rgba(0, 0, 0, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --Navigation_THIN_fill"
+    },
+    {
+      "name": "comp_background_color_floating_smooth_fill",
+      "value": "rgba(241, 243, 245, 0.95)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --comp_background_color_floating_smooth_fill"
+    },
+    {
+      "name": "comp_background_gradient_smooth_fill",
+      "value": "rgba(241, 243, 245, 0.95)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --comp_background_gradient_smooth_fill"
+    },
+    {
+      "name": "harmony-alert",
+      "value": "rgba(237, 111, 33, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-alert"
+    },
+    {
+      "name": "harmony-background-emphasize",
+      "value": "rgba(10, 89, 247, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-background-emphasize"
+    },
+    {
+      "name": "harmony-background-fourth",
+      "value": "rgba(209, 209, 214, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-background-fourth"
+    },
+    {
+      "name": "harmony-background-primary",
+      "value": "rgba(255, 255, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-background-primary"
+    },
+    {
+      "name": "harmony-background-secondary",
+      "value": "rgba(241, 243, 245, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-background-secondary"
+    },
+    {
+      "name": "harmony-background-tertiary",
+      "value": "rgba(229, 229, 234, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-background-tertiary"
+    },
+    {
+      "name": "harmony-brand",
+      "value": "rgba(10, 89, 247, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-brand"
+    },
+    {
+      "name": "harmony-comp-background-emphasize",
+      "value": "rgba(10, 89, 247, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-comp-background-emphasize"
+    },
+    {
+      "name": "harmony-comp-background-focus",
+      "value": "rgba(241, 243, 245, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-comp-background-focus"
+    },
+    {
+      "name": "harmony-comp-background-gray",
+      "value": "rgba(241, 243, 245, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-comp-background-gray"
+    },
+    {
+      "name": "harmony-comp-background-material-tabs",
+      "value": "rgba(241, 243, 245, 0.8)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-comp-background-material-tabs"
+    },
+    {
+      "name": "harmony-comp-background-neutral",
+      "value": "rgba(0, 0, 0, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-comp-background-neutral"
+    },
+    {
+      "name": "harmony-comp-background-primary",
+      "value": "rgba(255, 255, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-comp-background-primary"
+    },
+    {
+      "name": "harmony-comp-background-primary-contrary",
+      "value": "rgba(255, 255, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-comp-background-primary-contrary"
+    },
+    {
+      "name": "harmony-comp-background-secondary",
+      "value": "rgba(0, 0, 0, 0.098039)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-comp-background-secondary"
+    },
+    {
+      "name": "harmony-comp-background-tertiary",
+      "value": "rgba(0, 0, 0, 0.047059)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-comp-background-tertiary"
+    },
+    {
+      "name": "harmony-comp-common-contrary",
+      "value": "rgba(255, 255, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-comp-common-contrary"
+    },
+    {
+      "name": "harmony-comp-divider",
+      "value": "rgba(0, 0, 0, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-comp-divider"
+    },
+    {
+      "name": "harmony-comp-emphasize-secondary",
+      "value": "rgba(10, 89, 247, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-comp-emphasize-secondary"
+    },
+    {
+      "name": "harmony-comp-emphasize-tertiary",
+      "value": "rgba(10, 89, 247, 0.098039)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-comp-emphasize-tertiary"
+    },
+    {
+      "name": "harmony-comp-focused-primary",
+      "value": "rgba(0, 0, 0, 0.898039)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-comp-focused-primary"
+    },
+    {
+      "name": "harmony-comp-focused-secondary",
+      "value": "rgba(0, 0, 0, 0.6)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-comp-focused-secondary"
+    },
+    {
+      "name": "harmony-comp-focused-tertiary",
+      "value": "rgba(0, 0, 0, 0.4)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-comp-focused-tertiary"
+    },
+    {
+      "name": "harmony-comp-foreground-primary",
+      "value": "rgba(0, 0, 0, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-comp-foreground-primary"
+    },
+    {
+      "name": "harmony-confirm",
+      "value": "rgba(100, 187, 92, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-confirm"
+    },
+    {
+      "name": "harmony-font-emphasize",
+      "value": "rgba(10, 89, 247, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-font-emphasize"
+    },
+    {
+      "name": "harmony-font-fourth",
+      "value": "rgba(0, 0, 0, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-font-fourth"
+    },
+    {
+      "name": "harmony-font-on-fourth",
+      "value": "rgba(255, 255, 255, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-font-on-fourth"
+    },
+    {
+      "name": "harmony-font-on-primary",
+      "value": "rgba(255, 255, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-font-on-primary"
+    },
+    {
+      "name": "harmony-font-on-secondary",
+      "value": "rgba(255, 255, 255, 0.6)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-font-on-secondary"
+    },
+    {
+      "name": "harmony-font-on-tertiary",
+      "value": "rgba(255, 255, 255, 0.4)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-font-on-tertiary"
+    },
+    {
+      "name": "harmony-font-primary",
+      "value": "rgba(0, 0, 0, 0.898039)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-font-primary"
+    },
+    {
+      "name": "harmony-font-secondary",
+      "value": "rgba(0, 0, 0, 0.6)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-font-secondary"
+    },
+    {
+      "name": "harmony-font-tertiary",
+      "value": "rgba(0, 0, 0, 0.4)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-font-tertiary"
+    },
+    {
+      "name": "harmony-icon-emphasize",
+      "value": "rgba(10, 89, 247, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-icon-emphasize"
+    },
+    {
+      "name": "harmony-icon-fourth",
+      "value": "rgba(0, 0, 0, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-icon-fourth"
+    },
+    {
+      "name": "harmony-icon-on-fourth",
+      "value": "rgba(255, 255, 255, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-icon-on-fourth"
+    },
+    {
+      "name": "harmony-icon-on-primary",
+      "value": "rgba(255, 255, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-icon-on-primary"
+    },
+    {
+      "name": "harmony-icon-on-secondary",
+      "value": "rgba(255, 255, 255, 0.662745)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-icon-on-secondary"
+    },
+    {
+      "name": "harmony-icon-on-tertiary",
+      "value": "rgba(255, 255, 255, 0.4)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-icon-on-tertiary"
+    },
+    {
+      "name": "harmony-icon-primary",
+      "value": "rgba(0, 0, 0, 0.898039)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-icon-primary"
+    },
+    {
+      "name": "harmony-icon-secondary",
+      "value": "rgba(0, 0, 0, 0.662745)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-icon-secondary"
+    },
+    {
+      "name": "harmony-icon-sub-emphasize",
+      "value": "rgba(10, 89, 127, 0.4)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-icon-sub-emphasize"
+    },
+    {
+      "name": "harmony-icon-tertiary",
+      "value": "rgba(0, 0, 0, 0.4)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-icon-tertiary"
+    },
+    {
+      "name": "harmony-interactive-active",
+      "value": "rgba(10, 89, 247, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-interactive-active"
+    },
+    {
+      "name": "harmony-interactive-click",
+      "value": "rgba(0, 0, 0, 0.098039)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-interactive-click"
+    },
+    {
+      "name": "harmony-interactive-focus",
+      "value": "rgba(10, 89, 247, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-interactive-focus"
+    },
+    {
+      "name": "harmony-interactive-hover",
+      "value": "rgba(0, 0, 0, 0.047059)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-interactive-hover"
+    },
+    {
+      "name": "harmony-interactive-pressed",
+      "value": "rgba(0, 0, 0, 0.098039)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-interactive-pressed"
+    },
+    {
+      "name": "harmony-interactive-select",
+      "value": "rgba(10, 89, 247, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"light\"] | --harmony-interactive-select"
+    },
+    {
+      "name": "harmony-warning",
+      "value": "rgba(232, 64, 38, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-warning"
+    },
+    {
+      "name": "harmony-x-legacy-brand-008",
+      "value": "rgba(10, 89, 247, 0.08)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-brand-008"
+    },
+    {
+      "name": "harmony-x-legacy-brand-035",
+      "value": "rgba(10, 89, 247, 0.35)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-brand-035"
+    },
+    {
+      "name": "harmony-x-legacy-brand-075",
+      "value": "rgba(10, 89, 247, 0.75)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-brand-075"
+    },
+    {
+      "name": "harmony-x-legacy-brand-old",
+      "value": "rgba(0, 125, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-brand-old"
+    },
+    {
+      "name": "harmony-x-legacy-cyan-accent",
+      "value": "rgba(70, 177, 227, 0.4)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-cyan-accent"
+    },
+    {
+      "name": "harmony-x-legacy-frosted-surface",
+      "value": "rgba(255, 255, 255, 0.9)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-frosted-surface"
+    },
+    {
+      "name": "harmony-x-legacy-meta-text",
+      "value": "rgba(87, 93, 108, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-meta-text"
+    },
+    {
+      "name": "harmony-x-legacy-orange-bg",
+      "value": "rgba(251, 101, 34, 0.1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-orange-bg"
+    },
+    {
+      "name": "harmony-x-legacy-orange-solid",
+      "value": "rgba(251, 101, 34, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-orange-solid"
+    },
+    {
+      "name": "harmony-x-legacy-orange-text",
+      "value": "rgba(245, 101, 34, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-orange-text"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-004",
+      "value": "rgba(0, 0, 0, 0.04)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-overlay-004"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-005",
+      "value": "rgba(0, 0, 0, 0.05)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-overlay-005"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-006",
+      "value": "rgba(0, 0, 0, 0.06)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-overlay-006"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-008",
+      "value": "rgba(0, 0, 0, 0.08)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-overlay-008"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-010",
+      "value": "rgba(0, 0, 0, 0.1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-overlay-010"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-012",
+      "value": "rgba(0, 0, 0, 0.12)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-overlay-012"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-016",
+      "value": "rgba(0, 0, 0, 0.16)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-overlay-016"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-020",
+      "value": "rgba(0, 0, 0, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-overlay-020"
+    },
+    {
+      "name": "harmony-x-legacy-page-bg",
+      "value": "rgba(243, 245, 248, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-page-bg"
+    },
+    {
+      "name": "harmony-x-legacy-panel-border",
+      "value": "rgba(223, 225, 230, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-panel-border"
+    },
+    {
+      "name": "harmony-x-legacy-stroke-mid",
+      "value": "rgba(173, 176, 184, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-stroke-mid"
+    },
+    {
+      "name": "harmony-x-legacy-title-text",
+      "value": "rgba(37, 43, 58, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-title-text"
+    },
+    {
+      "name": "harmony-x-legacy-white-085",
+      "value": "rgba(255, 255, 255, 0.85)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"light\"] | --harmony-x-legacy-white-085"
+    },
+    {
+      "name": "slider-harmony-bubble",
+      "value": "#5a5a5a",
+      "description": "global.css | :root | --slider-harmony-bubble"
+    }
+  ],
+  "dark": [
+    {
+      "name": "COMPONENT_REGULAR_fill",
+      "value": "rgba(0, 0, 0, 0.4)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --COMPONENT_REGULAR_fill"
+    },
+    {
+      "name": "COMPONENT_THIN_fill",
+      "value": "rgba(0, 0, 0, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --COMPONENT_THIN_fill"
+    },
+    {
+      "name": "COMPONENT_ULTRA_THICK_fill",
+      "value": "rgba(46, 48, 51, 0.9)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --COMPONENT_ULTRA_THICK_fill"
+    },
+    {
+      "name": "COMPONENT_ULTRA_THIN_fill",
+      "value": "rgba(0, 0, 0, 0.101961)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --COMPONENT_ULTRA_THIN_fill"
+    },
+    {
+      "name": "FLOATING_ULTRA_THICK_fill",
+      "value": "rgba(32, 34, 36, 0.9)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --FLOATING_ULTRA_THICK_fill"
+    },
+    {
+      "name": "FloatingSegmented-activated_fill",
+      "value": "rgba(255, 255, 255, 0.047059)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --FloatingSegmented-activated_fill"
+    },
+    {
+      "name": "Floating_background_line_fill",
+      "value": "rgba(255, 255, 255, 0.1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --Floating_background_line_fill"
+    },
+    {
+      "name": "Material_background_THICK_fill",
+      "value": "rgba(32, 34, 36, 0.8)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --Material_background_THICK_fill"
+    },
+    {
+      "name": "Material_background_ULTRA_THICK_fill",
+      "value": "rgba(32, 34, 36, 0.9)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --Material_background_ULTRA_THICK_fill"
+    },
+    {
+      "name": "comp_background_color_floating_smooth_fill",
+      "value": "rgba(48, 49, 49, 0.95)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --comp_background_color_floating_smooth_fill"
+    },
+    {
+      "name": "comp_background_gradient_smooth_fill",
+      "value": "rgba(0, 0, 0, 0.6)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --comp_background_gradient_smooth_fill"
+    },
+    {
+      "name": "harmony-alert",
+      "value": "rgba(237, 111, 33, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-alert"
+    },
+    {
+      "name": "harmony-background-emphasize",
+      "value": "rgba(31, 113, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-background-emphasize"
+    },
+    {
+      "name": "harmony-background-fourth",
+      "value": "rgba(46, 48, 51, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-background-fourth"
+    },
+    {
+      "name": "harmony-background-primary",
+      "value": "rgba(229, 229, 229, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-background-primary"
+    },
+    {
+      "name": "harmony-background-secondary",
+      "value": "rgba(25, 26, 28, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-background-secondary"
+    },
+    {
+      "name": "harmony-background-tertiary",
+      "value": "rgba(32, 34, 36, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-background-tertiary"
+    },
+    {
+      "name": "harmony-brand",
+      "value": "rgba(31, 113, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-brand"
+    },
+    {
+      "name": "harmony-comp-background-emphasize",
+      "value": "rgba(31, 113, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-comp-background-emphasize"
+    },
+    {
+      "name": "harmony-comp-background-focus",
+      "value": "rgba(0, 0, 0, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-comp-background-focus"
+    },
+    {
+      "name": "harmony-comp-background-gray",
+      "value": "rgba(229, 229, 234, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-comp-background-gray"
+    },
+    {
+      "name": "harmony-comp-background-material-tabs",
+      "value": "rgba(25, 26, 28, 0.8)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-comp-background-material-tabs"
+    },
+    {
+      "name": "harmony-comp-background-neutral",
+      "value": "rgba(255, 255, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-comp-background-neutral"
+    },
+    {
+      "name": "harmony-comp-background-primary",
+      "value": "rgba(32, 34, 36, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-comp-background-primary"
+    },
+    {
+      "name": "harmony-comp-background-primary-contrary",
+      "value": "rgba(229, 229, 229, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-comp-background-primary-contrary"
+    },
+    {
+      "name": "harmony-comp-background-secondary",
+      "value": "rgba(255, 255, 255, 0.098039)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-comp-background-secondary"
+    },
+    {
+      "name": "harmony-comp-background-tertiary",
+      "value": "rgba(255, 255, 255, 0.047059)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-comp-background-tertiary"
+    },
+    {
+      "name": "harmony-comp-common-contrary",
+      "value": "rgba(0, 0, 0, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-comp-common-contrary"
+    },
+    {
+      "name": "harmony-comp-divider",
+      "value": "rgba(255, 255, 255, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-comp-divider"
+    },
+    {
+      "name": "harmony-comp-emphasize-secondary",
+      "value": "rgba(31, 113, 255, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-comp-emphasize-secondary"
+    },
+    {
+      "name": "harmony-comp-emphasize-tertiary",
+      "value": "rgba(31, 113, 255, 0.098039)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-comp-emphasize-tertiary"
+    },
+    {
+      "name": "harmony-comp-focused-primary",
+      "value": "rgba(255, 255, 255, 0.898039)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-comp-focused-primary"
+    },
+    {
+      "name": "harmony-comp-focused-secondary",
+      "value": "rgba(255, 255, 255, 0.6)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-comp-focused-secondary"
+    },
+    {
+      "name": "harmony-comp-focused-tertiary",
+      "value": "rgba(255, 255, 255, 0.4)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-comp-focused-tertiary"
+    },
+    {
+      "name": "harmony-comp-foreground-primary",
+      "value": "rgba(229, 229, 229, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-comp-foreground-primary"
+    },
+    {
+      "name": "harmony-confirm",
+      "value": "rgba(100, 187, 92, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-confirm"
+    },
+    {
+      "name": "harmony-font-emphasize",
+      "value": "rgba(94, 161, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-font-emphasize"
+    },
+    {
+      "name": "harmony-font-fourth",
+      "value": "rgba(255, 255, 255, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-font-fourth"
+    },
+    {
+      "name": "harmony-font-on-fourth",
+      "value": "rgba(255, 255, 255, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-font-on-fourth"
+    },
+    {
+      "name": "harmony-font-on-primary",
+      "value": "rgba(255, 255, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-font-on-primary"
+    },
+    {
+      "name": "harmony-font-on-secondary",
+      "value": "rgba(255, 255, 255, 0.662745)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-font-on-secondary"
+    },
+    {
+      "name": "harmony-font-on-tertiary",
+      "value": "rgba(255, 255, 255, 0.4)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-font-on-tertiary"
+    },
+    {
+      "name": "harmony-font-primary",
+      "value": "rgba(255, 255, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-font-primary"
+    },
+    {
+      "name": "harmony-font-secondary",
+      "value": "rgba(255, 255, 255, 0.662745)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-font-secondary"
+    },
+    {
+      "name": "harmony-font-tertiary",
+      "value": "rgba(255, 255, 255, 0.4)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-font-tertiary"
+    },
+    {
+      "name": "harmony-icon-emphasize",
+      "value": "rgba(94, 161, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-icon-emphasize"
+    },
+    {
+      "name": "harmony-icon-fourth",
+      "value": "rgba(255, 255, 255, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-icon-fourth"
+    },
+    {
+      "name": "harmony-icon-on-fourth",
+      "value": "rgba(255, 255, 255, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-icon-on-fourth"
+    },
+    {
+      "name": "harmony-icon-on-primary",
+      "value": "rgba(255, 255, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-icon-on-primary"
+    },
+    {
+      "name": "harmony-icon-on-secondary",
+      "value": "rgba(255, 255, 255, 0.662745)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-icon-on-secondary"
+    },
+    {
+      "name": "harmony-icon-on-tertiary",
+      "value": "rgba(255, 255, 255, 0.4)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-icon-on-tertiary"
+    },
+    {
+      "name": "harmony-icon-primary",
+      "value": "rgba(255, 255, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-icon-primary"
+    },
+    {
+      "name": "harmony-icon-secondary",
+      "value": "rgba(255, 255, 255, 0.662745)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-icon-secondary"
+    },
+    {
+      "name": "harmony-icon-sub-emphasize",
+      "value": "rgba(94, 161, 255, 0.4)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-icon-sub-emphasize"
+    },
+    {
+      "name": "harmony-icon-tertiary",
+      "value": "rgba(255, 255, 255, 0.4)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-icon-tertiary"
+    },
+    {
+      "name": "harmony-interactive-active",
+      "value": "rgba(49, 122, 247, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-interactive-active"
+    },
+    {
+      "name": "harmony-interactive-click",
+      "value": "rgba(255, 255, 255, 0.098039)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-interactive-click"
+    },
+    {
+      "name": "harmony-interactive-focus",
+      "value": "rgba(49, 122, 247, 1)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-interactive-focus"
+    },
+    {
+      "name": "harmony-interactive-hover",
+      "value": "rgba(255, 255, 255, 0.047059)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-interactive-hover"
+    },
+    {
+      "name": "harmony-interactive-pressed",
+      "value": "rgba(255, 255, 255, 0.098039)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-interactive-pressed"
+    },
+    {
+      "name": "harmony-interactive-select",
+      "value": "rgba(49, 122, 247, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"system\"][data-theme=\"dark\"] | --harmony-interactive-select"
+    },
+    {
+      "name": "harmony-warning",
+      "value": "rgba(232, 64, 38, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-warning"
+    },
+    {
+      "name": "harmony-x-legacy-brand-008",
+      "value": "rgba(10, 89, 247, 0.08)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-brand-008"
+    },
+    {
+      "name": "harmony-x-legacy-brand-035",
+      "value": "rgba(10, 89, 247, 0.35)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-brand-035"
+    },
+    {
+      "name": "harmony-x-legacy-brand-075",
+      "value": "rgba(10, 89, 247, 0.75)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-brand-075"
+    },
+    {
+      "name": "harmony-x-legacy-brand-old",
+      "value": "rgba(0, 125, 255, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-brand-old"
+    },
+    {
+      "name": "harmony-x-legacy-cyan-accent",
+      "value": "rgba(70, 177, 227, 0.4)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-cyan-accent"
+    },
+    {
+      "name": "harmony-x-legacy-frosted-surface",
+      "value": "rgba(255, 255, 255, 0.9)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-frosted-surface"
+    },
+    {
+      "name": "harmony-x-legacy-meta-text",
+      "value": "rgba(87, 93, 108, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-meta-text"
+    },
+    {
+      "name": "harmony-x-legacy-orange-bg",
+      "value": "rgba(251, 101, 34, 0.1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-orange-bg"
+    },
+    {
+      "name": "harmony-x-legacy-orange-solid",
+      "value": "rgba(251, 101, 34, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-orange-solid"
+    },
+    {
+      "name": "harmony-x-legacy-orange-text",
+      "value": "rgba(245, 101, 34, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-orange-text"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-004",
+      "value": "rgba(0, 0, 0, 0.04)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-overlay-004"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-005",
+      "value": "rgba(0, 0, 0, 0.05)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-overlay-005"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-006",
+      "value": "rgba(0, 0, 0, 0.06)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-overlay-006"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-008",
+      "value": "rgba(0, 0, 0, 0.08)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-overlay-008"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-010",
+      "value": "rgba(0, 0, 0, 0.1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-overlay-010"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-012",
+      "value": "rgba(0, 0, 0, 0.12)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-overlay-012"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-016",
+      "value": "rgba(0, 0, 0, 0.16)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-overlay-016"
+    },
+    {
+      "name": "harmony-x-legacy-overlay-020",
+      "value": "rgba(0, 0, 0, 0.2)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-overlay-020"
+    },
+    {
+      "name": "harmony-x-legacy-page-bg",
+      "value": "rgba(243, 245, 248, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-page-bg"
+    },
+    {
+      "name": "harmony-x-legacy-panel-border",
+      "value": "rgba(223, 225, 230, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-panel-border"
+    },
+    {
+      "name": "harmony-x-legacy-stroke-mid",
+      "value": "rgba(173, 176, 184, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-stroke-mid"
+    },
+    {
+      "name": "harmony-x-legacy-title-text",
+      "value": "rgba(37, 43, 58, 1)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-title-text"
+    },
+    {
+      "name": "harmony-x-legacy-white-085",
+      "value": "rgba(255, 255, 255, 0.85)",
+      "description": "global.css | [data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --harmony-x-legacy-white-085"
+    },
+    {
+      "name": "slider-harmony-bubble",
+      "value": "rgba(255, 255, 255, 0.28)",
+      "description": "global.css | :root[data-harmony-token-set=\"wearable\"][data-theme=\"dark\"] | --slider-harmony-bubble"
+    }
+  ]
+}

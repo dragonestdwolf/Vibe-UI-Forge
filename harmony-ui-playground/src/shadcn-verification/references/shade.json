@@ -1,0 +1,941 @@
+{
+  "light": [
+    {
+      "name": "light_defaultShadowL",
+      "cssVar": "--defaultShadowL",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 20.0,
+      "blurRadius": 60.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --defaultShadowL | DROP_SHADOW"
+    },
+    {
+      "name": "light_defaultShadowM",
+      "cssVar": "--defaultShadowM",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 10.0,
+      "blurRadius": 30.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --defaultShadowM | DROP_SHADOW"
+    },
+    {
+      "name": "light_defaultShadowS",
+      "cssVar": "--defaultShadowS",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 0.0,
+      "blurRadius": 16.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --defaultShadowS | DROP_SHADOW"
+    },
+    {
+      "name": "light_defaultShadowXS",
+      "cssVar": "--defaultShadowXS",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 0.0,
+      "blurRadius": 4.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.1019607843
+      },
+      "colorHex": "#1A000000",
+      "description": "global.css | --defaultShadowXS | DROP_SHADOW"
+    },
+    {
+      "name": "light_floatingShadowM",
+      "cssVar": "--floatingShadowM",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 20.0,
+      "blurRadius": 60.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --floatingShadowM | DROP_SHADOW"
+    },
+    {
+      "name": "light_floatingShadowS",
+      "cssVar": "--floatingShadowS",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 10.0,
+      "blurRadius": 16.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --floatingShadowS | DROP_SHADOW"
+    },
+    {
+      "name": "light_FABShadow",
+      "cssVar": "--FABShadow",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 25.0,
+      "blurRadius": 30.0,
+      "spreadRadius": -6.0,
+      "colorRgba": {
+        "r": 10,
+        "g": 89,
+        "b": 247,
+        "a": 0.3019607843
+      },
+      "colorHex": "#4D0A59F7",
+      "description": "global.css | --FABShadow | DROP_SHADOW"
+    },
+    {
+      "name": "light_FLOATINGshadow",
+      "cssVar": "--FLOATINGshadow",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 8.0,
+      "blurRadius": 48.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0799999985
+      },
+      "colorHex": "#14000000",
+      "description": "global.css | --FLOATINGshadow | DROP_SHADOW"
+    },
+    {
+      "name": "light_Navigation_title",
+      "cssVar": "--Navigation_title",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 4.0,
+      "blurRadius": 32.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 241,
+        "g": 243,
+        "b": 245,
+        "a": 0.8
+      },
+      "colorHex": "#CCF1F3F5",
+      "description": "global.css | --Navigation_title | DROP_SHADOW"
+    },
+    {
+      "name": "light_OUTER_DEFAULT_LG",
+      "cssVar": "--OUTER_DEFAULT_LG",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 20.0,
+      "blurRadius": 120.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --OUTER_DEFAULT_LG | DROP_SHADOW"
+    },
+    {
+      "name": "light_OUTER_DEFAULT_MD",
+      "cssVar": "--OUTER_DEFAULT_MD",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 10.0,
+      "blurRadius": 60.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --OUTER_DEFAULT_MD | DROP_SHADOW"
+    },
+    {
+      "name": "light_OUTER_DEFAULT_SM",
+      "cssVar": "--OUTER_DEFAULT_SM",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 10.0,
+      "blurRadius": 16.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.1
+      },
+      "colorHex": "#1A000000",
+      "description": "global.css | --OUTER_DEFAULT_SM | DROP_SHADOW"
+    },
+    {
+      "name": "light_OUTER_DEFAULT_XS",
+      "cssVar": "--OUTER_DEFAULT_XS",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 4.0,
+      "blurRadius": 8.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.1
+      },
+      "colorHex": "#1A000000",
+      "description": "global.css | --OUTER_DEFAULT_XS | DROP_SHADOW"
+    },
+    {
+      "name": "light_OUTER_FLOATING_MD",
+      "cssVar": "--OUTER_FLOATING_MD",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 20.0,
+      "blurRadius": 160.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.4
+      },
+      "colorHex": "#66000000",
+      "description": "global.css | --OUTER_FLOATING_MD | DROP_SHADOW"
+    },
+    {
+      "name": "light_OUTER_FLOATING_SM",
+      "cssVar": "--OUTER_FLOATING_SM",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 20.0,
+      "blurRadius": 160.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --OUTER_FLOATING_SM | DROP_SHADOW"
+    },
+    {
+      "name": "light_Tips",
+      "cssVar": "--Tips",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 0.0,
+      "blurRadius": 60.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --Tips | DROP_SHADOW"
+    },
+    {
+      "name": "light_Toast",
+      "cssVar": "--Toast",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 20.0,
+      "blurRadius": 120.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --Toast | DROP_SHADOW"
+    },
+    {
+      "name": "light_edit-text",
+      "cssVar": "--edit-text",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 0.0,
+      "blurRadius": 60.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --edit-text | DROP_SHADOW"
+    },
+    {
+      "name": "light_menu",
+      "cssVar": "--menu",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 0.0,
+      "blurRadius": 60.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --menu | DROP_SHADOW"
+    }
+  ],
+  "dark": [
+    {
+      "name": "dark_defaultShadowL",
+      "cssVar": "--defaultShadowL",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 20.0,
+      "blurRadius": 60.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --defaultShadowL | DROP_SHADOW"
+    },
+    {
+      "name": "dark_defaultShadowM",
+      "cssVar": "--defaultShadowM",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 10.0,
+      "blurRadius": 30.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --defaultShadowM | DROP_SHADOW"
+    },
+    {
+      "name": "dark_defaultShadowS",
+      "cssVar": "--defaultShadowS",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 0.0,
+      "blurRadius": 16.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --defaultShadowS | DROP_SHADOW"
+    },
+    {
+      "name": "dark_defaultShadowXS",
+      "cssVar": "--defaultShadowXS",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 0.0,
+      "blurRadius": 4.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.1
+      },
+      "colorHex": "#1A000000",
+      "description": "global.css | --defaultShadowXS | DROP_SHADOW"
+    },
+    {
+      "name": "dark_floatingShadowM",
+      "cssVar": "--floatingShadowM",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 20.0,
+      "blurRadius": 60.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --floatingShadowM | DROP_SHADOW"
+    },
+    {
+      "name": "dark_floatingShadowS",
+      "cssVar": "--floatingShadowS",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 10.0,
+      "blurRadius": 16.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --floatingShadowS | DROP_SHADOW"
+    },
+    {
+      "name": "dark_Card_0",
+      "cssVar": "--Card",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 13.0,
+      "blurRadius": 26.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0784313725
+      },
+      "colorHex": "#14000000",
+      "description": "global.css | --Card | DROP_SHADOW"
+    },
+    {
+      "name": "dark_Card_1",
+      "cssVar": "--Card",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 1.0,
+      "blurRadius": 6.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0784313725
+      },
+      "colorHex": "#14000000",
+      "description": "global.css | --Card | DROP_SHADOW"
+    },
+    {
+      "name": "dark_Card_2",
+      "cssVar": "--Card",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 2.0,
+      "blurRadius": 3.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0784313725
+      },
+      "colorHex": "#14000000",
+      "description": "global.css | --Card | DROP_SHADOW"
+    },
+    {
+      "name": "dark_Card_3",
+      "cssVar": "--Card",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": -2.0,
+      "blurRadius": 3.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0784313725
+      },
+      "colorHex": "#14000000",
+      "description": "global.css | --Card | DROP_SHADOW"
+    },
+    {
+      "name": "dark_FABShadow_0",
+      "cssVar": "--FABShadow",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 11.0,
+      "blurRadius": 16.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0
+      },
+      "colorHex": "#00000000",
+      "description": "global.css | --FABShadow | DROP_SHADOW"
+    },
+    {
+      "name": "dark_FABShadow_1",
+      "cssVar": "--FABShadow",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 3.0,
+      "blurRadius": 8.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0
+      },
+      "colorHex": "#00000000",
+      "description": "global.css | --FABShadow | DROP_SHADOW"
+    },
+    {
+      "name": "dark_FABShadow_2",
+      "cssVar": "--FABShadow",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": -3.0,
+      "blurRadius": 8.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0
+      },
+      "colorHex": "#00000000",
+      "description": "global.css | --FABShadow | DROP_SHADOW"
+    },
+    {
+      "name": "dark_FABShadow_3",
+      "cssVar": "--FABShadow",
+      "effectType": "INNER_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 1.0,
+      "blurRadius": 3.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0
+      },
+      "colorHex": "#00000000",
+      "description": "global.css | --FABShadow | INNER_SHADOW"
+    },
+    {
+      "name": "dark_FLOATINGshadow",
+      "cssVar": "--FLOATINGshadow",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 8.0,
+      "blurRadius": 48.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0799999985
+      },
+      "colorHex": "#14000000",
+      "description": "global.css | --FLOATINGshadow | DROP_SHADOW"
+    },
+    {
+      "name": "dark_Navigation_title",
+      "cssVar": "--Navigation_title",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 4.0,
+      "blurRadius": 8.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --Navigation_title | DROP_SHADOW"
+    },
+    {
+      "name": "dark_OUTER_DEFAULT_LG_0",
+      "cssVar": "--OUTER_DEFAULT_LG",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 20.0,
+      "blurRadius": 120.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --OUTER_DEFAULT_LG | DROP_SHADOW"
+    },
+    {
+      "name": "dark_OUTER_DEFAULT_LG_1",
+      "cssVar": "--OUTER_DEFAULT_LG",
+      "effectType": "INNER_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 1.0,
+      "blurRadius": 3.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0
+      },
+      "colorHex": "#00000000",
+      "description": "global.css | --OUTER_DEFAULT_LG | INNER_SHADOW"
+    },
+    {
+      "name": "dark_OUTER_DEFAULT_MD_0",
+      "cssVar": "--OUTER_DEFAULT_MD",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 10.0,
+      "blurRadius": 60.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --OUTER_DEFAULT_MD | DROP_SHADOW"
+    },
+    {
+      "name": "dark_OUTER_DEFAULT_MD_1",
+      "cssVar": "--OUTER_DEFAULT_MD",
+      "effectType": "INNER_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 1.0,
+      "blurRadius": 3.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0
+      },
+      "colorHex": "#00000000",
+      "description": "global.css | --OUTER_DEFAULT_MD | INNER_SHADOW"
+    },
+    {
+      "name": "dark_OUTER_DEFAULT_SM_0",
+      "cssVar": "--OUTER_DEFAULT_SM",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 10.0,
+      "blurRadius": 16.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.1
+      },
+      "colorHex": "#1A000000",
+      "description": "global.css | --OUTER_DEFAULT_SM | DROP_SHADOW"
+    },
+    {
+      "name": "dark_OUTER_DEFAULT_SM_1",
+      "cssVar": "--OUTER_DEFAULT_SM",
+      "effectType": "INNER_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 1.0,
+      "blurRadius": 3.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0
+      },
+      "colorHex": "#00000000",
+      "description": "global.css | --OUTER_DEFAULT_SM | INNER_SHADOW"
+    },
+    {
+      "name": "dark_OUTER_DEFAULT_XS_0",
+      "cssVar": "--OUTER_DEFAULT_XS",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 4.0,
+      "blurRadius": 8.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.1
+      },
+      "colorHex": "#1A000000",
+      "description": "global.css | --OUTER_DEFAULT_XS | DROP_SHADOW"
+    },
+    {
+      "name": "dark_OUTER_DEFAULT_XS_1",
+      "cssVar": "--OUTER_DEFAULT_XS",
+      "effectType": "INNER_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 1.0,
+      "blurRadius": 3.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0
+      },
+      "colorHex": "#00000000",
+      "description": "global.css | --OUTER_DEFAULT_XS | INNER_SHADOW"
+    },
+    {
+      "name": "dark_OUTER_FLOATING_MD_0",
+      "cssVar": "--OUTER_FLOATING_MD",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 20.0,
+      "blurRadius": 160.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.4
+      },
+      "colorHex": "#66000000",
+      "description": "global.css | --OUTER_FLOATING_MD | DROP_SHADOW"
+    },
+    {
+      "name": "dark_OUTER_FLOATING_MD_1",
+      "cssVar": "--OUTER_FLOATING_MD",
+      "effectType": "INNER_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 1.0,
+      "blurRadius": 3.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0
+      },
+      "colorHex": "#00000000",
+      "description": "global.css | --OUTER_FLOATING_MD | INNER_SHADOW"
+    },
+    {
+      "name": "dark_OUTER_FLOATING_SM_0",
+      "cssVar": "--OUTER_FLOATING_SM",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 20.0,
+      "blurRadius": 160.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --OUTER_FLOATING_SM | DROP_SHADOW"
+    },
+    {
+      "name": "dark_OUTER_FLOATING_SM_1",
+      "cssVar": "--OUTER_FLOATING_SM",
+      "effectType": "INNER_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 1.0,
+      "blurRadius": 3.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0
+      },
+      "colorHex": "#00000000",
+      "description": "global.css | --OUTER_FLOATING_SM | INNER_SHADOW"
+    },
+    {
+      "name": "dark_Tips_0",
+      "cssVar": "--Tips",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 0.0,
+      "blurRadius": 60.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.3019607843
+      },
+      "colorHex": "#4D000000",
+      "description": "global.css | --Tips | DROP_SHADOW"
+    },
+    {
+      "name": "dark_Tips_1",
+      "cssVar": "--Tips",
+      "effectType": "INNER_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 1.0,
+      "blurRadius": 3.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0
+      },
+      "colorHex": "#00000000",
+      "description": "global.css | --Tips | INNER_SHADOW"
+    },
+    {
+      "name": "dark_Toast",
+      "cssVar": "--Toast",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 10.0,
+      "blurRadius": 100.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.5019607843
+      },
+      "colorHex": "#80000000",
+      "description": "global.css | --Toast | DROP_SHADOW"
+    },
+    {
+      "name": "dark_edit-text_0",
+      "cssVar": "--edit-text",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 0.0,
+      "blurRadius": 60.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.3019607843
+      },
+      "colorHex": "#4D000000",
+      "description": "global.css | --edit-text | DROP_SHADOW"
+    },
+    {
+      "name": "dark_edit-text_1",
+      "cssVar": "--edit-text",
+      "effectType": "INNER_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 1.0,
+      "blurRadius": 3.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0
+      },
+      "colorHex": "#00000000",
+      "description": "global.css | --edit-text | INNER_SHADOW"
+    },
+    {
+      "name": "dark_menu_0",
+      "cssVar": "--menu",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 10.0,
+      "blurRadius": 60.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.2
+      },
+      "colorHex": "#33000000",
+      "description": "global.css | --menu | DROP_SHADOW"
+    },
+    {
+      "name": "dark_menu_1",
+      "cssVar": "--menu",
+      "effectType": "INNER_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 1.0,
+      "blurRadius": 3.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0
+      },
+      "colorHex": "#00000000",
+      "description": "global.css | --menu | INNER_SHADOW"
+    },
+    {
+      "name": "dark_searchBg",
+      "cssVar": "--searchBg",
+      "effectType": "DROP_SHADOW",
+      "offsetX": 0.0,
+      "offsetY": 3.0,
+      "blurRadius": 5.0,
+      "spreadRadius": 0.0,
+      "colorRgba": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.0
+      },
+      "colorHex": "#00000000",
+      "description": "global.css | --searchBg | DROP_SHADOW"
+    }
+  ]
+}

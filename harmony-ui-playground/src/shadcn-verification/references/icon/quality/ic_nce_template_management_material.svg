@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_nce_template_management_material-模板管理</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="79.0455666%" y2="85.0369119%" id="linearGradient-1">
+            <stop stop-color="#B0BFFD" offset="0%"/>
+            <stop stop-color="#2070F3" offset="100%"/>
+        </linearGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="72.2383295%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.971429),rotate(90.000000),translate(-0.500000,-0.500000)" id="radialGradient-2">
+            <stop stop-color="#5991FF" offset="0%"/>
+            <stop stop-color="#80ABFD" offset="42.6257246%"/>
+            <stop stop-color="#C3D6FF" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_nce_template_management_material-模板管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M19,24 L8,24 L8,14 C8,10.6862915 10.6862915,8 14,8 L19,8 L19,8 L19,24 Z" id="path" stroke="#2070F3" stroke-width="2" fill="#2070F3" stroke-linejoin="round"/>
+        <rect id="path" fill="url(#linearGradient-1)" fill-rule="nonzero" x="1" y="1" width="46" height="46" rx="6"/>
+        <path d="M47,18 L37,18 C37,14.6862915 34.3137085,12 31,12 C27.6862915,12 25,14.6862915 25,18 L1,18" id="path" stroke="#FFFFFF" stroke-width="1.2" opacity="0.400000006" stroke-linejoin="round"/>
+        <path d="M39,27 L29,27 C29,23.6862915 26.3137085,21 23,21 C19.6862915,21 17,23.6862915 17,27 L-7,27" id="path" stroke="#FFFFFF" stroke-width="1.2" opacity="0.400000006" stroke-linejoin="round" transform="translate(16.000000, 24.000000) rotate(90.000000) translate(-16.000000, -24.000000) "/>
+        <path d="M31,12 C34.3137085,12 37,14.6862915 37,18 L47,18 L47,41 C47,44.3137085 44.3137085,47 41,47 L13,47 L13,37 C16.3137085,37 19,34.3137085 19,31 C19,27.6862915 16.3137085,25 13,25 L13,18 L25,18 C25,14.6862915 27.6862915,12 31,12 Z" id="path" fill="url(#radialGradient-2)"/>
+        <path d="M31,12 C34.3137085,12 37,14.6862915 37,18 L47,18 L47,41 C47,44.3137085 44.3137085,47 41,47 L13,47 L13,37 C16.3137085,37 19,34.3137085 19,31 C19,27.6862915 16.3137085,25 13,25 L13,18 L25,18 C25,14.6862915 27.6862915,12 31,12 Z" id="path" stroke="url(#linearGradient-3)" stroke-width="1.2" fill-rule="nonzero"/>
+    </g>
+</svg>

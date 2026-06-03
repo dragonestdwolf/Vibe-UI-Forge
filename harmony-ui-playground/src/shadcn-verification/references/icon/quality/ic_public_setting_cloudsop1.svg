@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_public_setting_cloudsop-设置_质感图标</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="79.0455666%" y2="85.0369119%" id="linearGradient-1">
+            <stop stop-color="#8CA3FA" offset="0%"/>
+            <stop stop-color="#2070F3" offset="100%"/>
+        </linearGradient>
+        <radialGradient cx="50%" cy="55.9984808%" fx="50%" fy="55.9984808%" r="50.5600611%" gradientTransform="translate(0.500000,0.559985),scale(0.875030,1.000000),rotate(-137.184617),scale(1.000000,1.011790),translate(-0.500000,-0.559985)" id="radialGradient-2">
+            <stop stop-color="#1F55B5" offset="0%"/>
+            <stop stop-color="#2070F3" stop-opacity="0" offset="100%"/>
+        </radialGradient>
+        <radialGradient cx="48.5258978%" cy="55.1206865%" fx="48.5258978%" fy="55.1206865%" r="44.3691005%" gradientTransform="translate(0.485259,0.551207),scale(1.000000,0.917852),rotate(93.069526),scale(1.000000,1.047112),translate(-0.485259,-0.551207)" id="radialGradient-3">
+            <stop stop-color="#212A88" offset="0%"/>
+            <stop stop-color="#5F7CA7" stop-opacity="0" offset="100%"/>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="55.1831298%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.906074),rotate(90.000000),translate(-0.500000,-0.500000)" id="radialGradient-4">
+            <stop stop-color="#668CF7" offset="0%"/>
+            <stop stop-color="#B0BFFD" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="32.5969765%" y1="9.32456913%" x2="80.2428649%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0.76" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_setting_cloudsop-设置_质感图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <rect id="矩形" fill="url(#linearGradient-1)" fill-rule="nonzero" x="1" y="1" width="46" height="46" rx="6"/>
+        <path d="M32,20 C40.836556,20 48,27.163444 48,36 C48,40.7792953 45.9045199,45.069165 42.5822024,48.0009666 L21.4177976,48.0009666 C18.0954801,45.069165 16,40.7792953 16,36 C16,27.163444 23.163444,20 32,20 Z" id="形状结合" fill="url(#radialGradient-2)" fill-rule="nonzero"/>
+        <rect id="矩形" fill="#FFFFFF" fill-rule="nonzero" opacity="0.600000024" x="1" y="13" width="46" height="2"/>
+        <line x1="6" y1="21" x2="16" y2="21" id="路径-27" stroke="#FFFFFF" stroke-width="2" opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M39.3832022,21.6133216 L47.9993603,26.5869663 L47.9993603,46.0419663 L44.6083603,47.9999663 L29.5793603,47.9999663 L25.5064334,45.6485901 C24.08995,44.830783 23.2173603,43.3194132 23.2173603,41.6837991 L23.2173603,30.9466748 C23.2173603,29.3110607 24.08995,27.7996908 25.5064334,26.9818838 L34.8050558,21.6133216 C36.2215392,20.7955146 37.9667188,20.7955146 39.3832022,21.6133216 Z" id="形状结合" fill="url(#radialGradient-3)" fill-rule="nonzero"/>
+        <path d="M38.7592656,24.4758102 L45.9729053,28.640607 C47.0717779,29.2750414 47.7487113,30.4475245 47.7487113,31.7163932 L47.7487113,40.0459869 C47.7487113,41.3148556 47.0717779,42.4873387 45.9729053,43.1217731 L38.7592656,47.2865699 C37.660393,47.9210043 36.3065262,47.9210043 35.2076536,47.2865699 L27.9940139,43.1217731 C26.8951413,42.4873387 26.2182079,41.3148556 26.2182079,40.0459869 L26.2182079,31.7163932 C26.2182079,30.4475245 26.8951413,29.2750414 27.9940139,28.640607 L35.2076536,24.4758102 C36.3065262,23.8413758 37.660393,23.8413758 38.7592656,24.4758102 Z" id="多边形" stroke="url(#linearGradient-5)" stroke-width="1.2" fill="url(#radialGradient-4)" fill-rule="nonzero"/>
+        <circle id="椭圆形" fill="url(#linearGradient-6)" fill-rule="nonzero" cx="36.9834596" cy="35.88119" r="5"/>
+    </g>
+</svg>

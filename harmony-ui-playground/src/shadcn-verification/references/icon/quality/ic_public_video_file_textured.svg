@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48.000000" height="48.000000" viewBox="0 0 48 48" fill="none">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_177_15132_dd" x="13.498047" y="18.000000" width="22.998047" height="16.000000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feGaussianBlur in="BackgroundImage" stdDeviation="0"/>
+			<feComposite in2="SourceAlpha" operator="in" result="effect_backgroundBlur_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_backgroundBlur_1" result="shape"/>
+		</filter>
+		<clipPath id="clip177_15094">
+			<rect id="ic_public_video_file_ textured-视频文件_质感" width="48.000000" height="48.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<linearGradient x1="23.999922" y1="0.500000" x2="23.999922" y2="46.591400" id="paint_linear_177_15130_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#A8DB81"/>
+			<stop offset="1.000000" stop-color="#62B42E"/>
+		</linearGradient>
+		<linearGradient x1="30.669922" y1="3.935227" x2="44.329926" y2="18.245916" id="paint_linear_177_15131_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFFFFF"/>
+			<stop offset="1.000000" stop-color="#FFFFFF" stop-opacity="0.054902"/>
+			<stop offset="1.000000" stop-color="#FFFFFF" stop-opacity="0.000000"/>
+		</linearGradient>
+		<linearGradient x1="24.997070" y1="18.000000" x2="24.997070" y2="34.000000" id="paint_linear_177_15132_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFFFFF" stop-opacity="0.800000"/>
+			<stop offset="1.000000" stop-color="#FFFFFF" stop-opacity="0.501961"/>
+		</linearGradient>
+	</defs>
+	<g clip-path="url(#clip177_15094)">
+		<path id="path3" d="M31.3 0.5L11.16 0.5C7.02 0.5 3.66 3.85 3.66 8L3.66 40C3.66 44.14 7.02 47.5 11.16 47.5L36.83 47.5C40.97 47.5 44.33 44.14 44.33 40L44.33 13.52C44.33 12.99 44.11 12.48 43.74 12.11L32.71 1.08C32.34 0.71 31.83 0.5 31.3 0.5Z" fill="url(#paint_linear_177_15130_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<g opacity="0.600000">
+			<path id="pah4" d="M31.3 0.5L30.66 0.5C31.47 0.5 32.12 1.15 32.12 1.95L32.12 8.7C32.12 10.9 33.92 12.7 36.12 12.7L42.87 12.7C43.67 12.7 44.33 13.35 44.33 14.15L44.33 13.52C44.33 12.99 44.11 12.48 43.74 12.11L32.71 1.08C32.34 0.71 31.83 0.5 31.3 0.5Z" fill="url(#paint_linear_177_15131_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</g>
+		<g filter="url(#filter_177_15132_dd)">
+			<path id="path5" d="M27.84 18.08C28.08 18.14 28.32 18.21 28.55 18.31C29.03 18.51 29.45 18.8 29.82 19.17C30.19 19.54 30.48 19.96 30.68 20.44C30.78 20.67 30.85 20.91 30.9 21.15C30.96 21.42 30.99 21.71 30.99 22L30.99 22.35L33.81 21.33C33.97 21.27 34.14 21.23 34.31 21.22C34.46 21.2 34.62 21.21 34.78 21.23C34.93 21.25 35.08 21.29 35.22 21.34C35.37 21.4 35.51 21.48 35.64 21.57C35.9 21.75 36.1 21.98 36.25 22.26C36.33 22.4 36.39 22.55 36.43 22.7C36.47 22.87 36.49 23.03 36.49 23.21L36.49 28.78C36.49 29.12 36.41 29.43 36.25 29.73C36.1 30.01 35.9 30.24 35.64 30.42C35.38 30.6 35.09 30.72 34.78 30.76C34.62 30.78 34.46 30.79 34.31 30.77C34.14 30.76 33.97 30.72 33.81 30.66L30.99 29.64L30.99 30C30.99 30.54 30.89 31.06 30.68 31.55C30.58 31.78 30.46 32 30.33 32.2C30.18 32.43 30.01 32.63 29.82 32.82C29.63 33.01 29.42 33.18 29.2 33.33C29 33.47 28.78 33.58 28.55 33.68C28.32 33.78 28.08 33.85 27.84 33.91C27.57 33.97 27.28 34 26.99 34L17.49 34C17.2 34 16.92 33.97 16.65 33.91C16.4 33.85 16.17 33.78 15.94 33.68C15.71 33.58 15.49 33.47 15.28 33.33C15.06 33.18 14.86 33.01 14.66 32.82C14.47 32.63 14.3 32.43 14.16 32.2C14.02 32 13.91 31.78 13.81 31.55C13.71 31.32 13.64 31.08 13.58 30.84C13.52 30.57 13.49 30.28 13.49 30L13.49 22C13.49 21.71 13.52 21.42 13.58 21.15C13.64 20.91 13.71 20.67 13.81 20.44C13.91 20.21 14.02 19.99 14.16 19.79C14.3 19.56 14.47 19.36 14.66 19.17C14.86 18.98 15.06 18.81 15.28 18.66C15.49 18.52 15.71 18.41 15.94 18.31C16.17 18.21 16.4 18.14 16.65 18.08C16.92 18.02 17.2 18 17.49 18L26.99 18C27.28 18 27.57 18.02 27.84 18.08Z" fill="url(#paint_linear_177_15132_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</g>
+	</g>
+</svg>

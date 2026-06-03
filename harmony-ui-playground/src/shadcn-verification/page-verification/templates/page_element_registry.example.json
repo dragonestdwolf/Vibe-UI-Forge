@@ -1,0 +1,87 @@
+{
+  "pageName": "example-page",
+  "render": {
+    "pageUrl": "http://localhost:6007/?path=/story/your-story-id--default",
+    "viewport": { "width": 390, "height": 844 },
+    "deviceScaleFactor": 1,
+    "waitUntil": "load",
+    "waitMs": 2000,
+    "contentRootSelector": ".your-page-root",
+    "useStorybookIframe": true
+  },
+  "domScan": {
+    "enabled": true,
+    "maxElements": 800,
+    "rootSelector": ".your-page-root"
+  },
+  "layout": {
+    "gridChecks": [
+      {
+        "layoutId": "page-padding-left",
+        "selector": "main",
+        "property": "padding-left",
+        "note": "页面左间距，取值须在 gap.json allowedValues 内"
+      },
+      {
+        "layoutId": "page-padding-right",
+        "selector": "main",
+        "property": "padding-right",
+        "note": "页面右间距"
+      },
+      {
+        "layoutId": "section-row-gap",
+        "selector": "main",
+        "property": "row-gap",
+        "note": "楼层纵向间距（容器需为 flex/grid 且声明 row-gap）"
+      }
+    ],
+    "backgroundChecks": [
+      {
+        "layoutId": "page-background",
+        "selector": "body",
+        "note": "页面背景色须在 color.json 允许色值内"
+      }
+    ]
+  },
+  "presetComponents": [
+    {
+      "componentId": "button-primary",
+      "name": "Button",
+      "invoked": true,
+      "evidence": "import { Button } from '@/components/ui/button'",
+      "note": "页面内使用设计系统 Button"
+    }
+  ],
+  "customElements": [
+    {
+      "elementId": "page-title",
+      "name": "页面标题",
+      "selector": "h1",
+      "stylePreset": "BASIC_STYLE",
+      "layoutChecks": [
+        {
+          "layoutId": "title-align",
+          "checkType": "align",
+          "manualReview": true,
+          "expected": { "ok": true },
+          "failType": "alignDeduct",
+          "note": "人工确认对齐后设置 expected.ok；false 将倒扣 1 分"
+        }
+      ],
+      "resources": []
+    },
+    {
+      "elementId": "header-icon",
+      "name": "头部图标",
+      "selector": ".page-header svg",
+      "styleChecks": ["颜色.iconColor"],
+      "resources": [
+        {
+          "resourceId": "header-leading-icon",
+          "selector": ".page-header svg",
+          "resourceType": "icon"
+        }
+      ]
+    }
+  ]
+}

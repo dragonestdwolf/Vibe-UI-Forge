@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_public_trash_material-删除</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="79.0455666%" y2="85.0369119%" id="linearGradient-1">
+            <stop stop-color="#BFB9FA" offset="0%"/>
+            <stop stop-color="#715AFB" offset="100%"/>
+        </linearGradient>
+        <radialGradient cx="50%" cy="71.0622462%" fx="50%" fy="71.0622462%" r="100%" gradientTransform="translate(0.500000,0.710622),scale(0.229167,1.000000),rotate(90.000000),translate(-0.500000,-0.710622)" id="radialGradient-2">
+            <stop stop-color="#B9B1F8" offset="0%"/>
+            <stop stop-color="#DDD9FB" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_trash_material-删除" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M28.1169631,-5.32907052e-14 C30.2691152,-5.32907052e-14 32.1798094,1.37715047 32.8603796,3.41886117 L34.72,9 L47,9 C47.5522847,9 48,9.44771525 48,10 C48,10.5522847 47.5522847,11 47,11 L44.355,11 L44.1285315,13 L40.6324928,41.8423196 C40.2064935,45.356814 37.2235747,48 33.6833563,48 L14.3166437,48 C10.7764253,48 7.79350654,45.356814 7.36750721,41.8423196 L3.87146848,13 L3.621,11 L1,11 C0.44771525,11 0,10.5522847 0,10 C0,9.44771525 0.44771525,9 1,9 L13.279,9 L15.1396204,3.41886117 C15.7958845,1.45006871 17.5959757,0.0992155444 19.6534181,0.00523724716 L19.8830369,-5.32907052e-14 L28.1169631,-5.32907052e-14 Z" id="path" fill="url(#linearGradient-1)" fill-rule="nonzero"/>
+        <path d="M1,11 C0.44771525,11 0,10.5522847 0,10 C0,9.44771525 0.44771525,9 1,9 L13.279,9 L15.1396204,3.41886117 C15.7958845,1.45006871 17.5959757,0.0992155444 19.6534181,0.00523724716 L19.8830369,0 L28.1169631,0 C30.2691152,0 32.1798094,1.37715047 32.8603796,3.41886117 L34.72,9 L47,9 C47.5522847,9 48,9.44771525 48,10 C48,10.5522847 47.5522847,11 47,11 L1,11 Z" id="path" stroke="url(#linearGradient-3)" stroke-width="1.2" fill="url(#radialGradient-2)" fill-rule="nonzero" opacity="0.600000024"/>
+        <line x1="18" y1="22" x2="18" y2="38" id="path" stroke="#EEEEFE" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="29" y1="22" x2="29" y2="38" id="path" stroke="#EEEEFE" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+</svg>

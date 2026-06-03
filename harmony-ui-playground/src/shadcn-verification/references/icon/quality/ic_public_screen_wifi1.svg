@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_public_screen_wifi-投屏_质感图标</title>
+    <defs>
+        <radialGradient cx="50%" cy="-59.7029078%" fx="50%" fy="-59.7029078%" r="166.610883%" gradientTransform="translate(0.500000,-0.597029),scale(0.559305,1.000000),rotate(-90.000000),scale(1.000000,0.995896),translate(-0.500000,0.597029)" id="radialGradient-1">
+            <stop stop-color="#2E86DE" offset="0%"/>
+            <stop stop-color="#8ABEF3" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="0%" y1="21.875%" x2="79.0455666%" y2="69.7082629%" id="linearGradient-3">
+            <stop stop-color="#5CA3E9" offset="0.0913393247%"/>
+            <stop stop-color="#0067D1" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_screen_wifi-投屏_质感图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <path d="M22.6546544,35.3715806 L14.2412613,43.0201199 C13.8243125,43.3991642 13.5866069,43.9365101 13.5866069,44.5 C13.5866069,45.6045695 14.4820374,46.5 15.5866069,46.5 L32.4133931,46.5 C32.9768831,46.5 33.5142289,46.2622944 33.8932733,45.8453456 C34.6362871,45.0280304 34.5760539,43.7631337 33.7587387,43.0201199 L25.3453456,35.3715806 C24.5825031,34.6780875 23.4174969,34.6780875 22.6546544,35.3715806 Z" id="path5" stroke="url(#linearGradient-2)" stroke-width="1.2" fill="url(#radialGradient-1)" fill-rule="nonzero"/>
+        <path d="M33.4295425,37.9865883 L26.0068942,31.3062048 C24.8659793,30.2793814 23.1340207,30.2793814 21.9931058,31.3062048 L14.5704575,37.9865883 C14.203208,38.3171128 13.7266115,38.5 13.232528,38.5 L6,38.5 L6,38.5 C2.6862915,38.5 0,35.6556914 0,32.1470588 L0,8.85294118 C0,5.34430865 2.6862915,2.5 6,2.5 L42,2.5 C45.3137085,2.5 48,5.34430865 48,8.85294118 L48,32.1470588 C48,35.6556914 45.3137085,38.5 42,38.5 L34.767472,38.5 C34.2733885,38.5 33.796792,38.3171128 33.4295425,37.9865883 Z" id="path6" fill="url(#linearGradient-3)" fill-rule="nonzero"/>
+        <path d="M38.3651443,18.3651443 C30.4314942,10.4314942 17.5685058,10.4314942 9.63485568,18.3651443" id="路径" stroke="#FFFFFF" stroke-width="2" opacity="0.600000024" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M31.1825722,24.8174278 C27.2157471,20.8506028 20.7842529,20.8506028 16.8174278,24.8174278" id="路径" stroke="#FFFFFF" stroke-width="2" opacity="0.600000024" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+</svg>

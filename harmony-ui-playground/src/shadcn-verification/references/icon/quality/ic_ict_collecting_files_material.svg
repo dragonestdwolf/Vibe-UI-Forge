@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>质感图标/ic_ict_collecting_files_material-收集文件</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="79.0455666%" y2="85.0369119%" id="linearGradient-1">
+            <stop stop-color="#B8E0F9" offset="0%"/>
+            <stop stop-color="#0067D1" offset="100%"/>
+        </linearGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="105.061603%" gradientTransform="translate(0.500000,0.500000),scale(0.434783,1.000000),rotate(-90.000000),scale(1.000000,1.167885),translate(-0.500000,-0.500000)" id="radialGradient-2">
+            <stop stop-color="#3A8DE6" offset="0%"/>
+            <stop stop-color="#9DC7F4" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="质感图标/ic_ict_collecting_files_material-收集文件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <path d="M40,1 L8,1 C4.13400675,1 1,4.13400675 1,8 L1,40 C1,43.8659932 4.13400675,47 8,47 L40,47 C43.8659932,47 47,43.8659932 47,40 L47,8 C47,4.13400675 43.8659932,1 40,1 Z" id="path" fill="url(#linearGradient-1)" fill-rule="nonzero"/>
+        <path d="M18,27 L2,27 C1.44771525,27 1,27.4477153 1,28 L1,40 C1,43.8659932 4.13400675,47 8,47 L40,47 C43.8659932,47 47,43.8659932 47,40 L47,28 C47,27.4477153 46.5522847,27 46,27 L30,27 C29.4477153,27 29,27.4477153 29,28 C29,30.7614237 26.7614237,33 24,33 C21.2385763,33 19,30.7614237 19,28 C19,27.4477153 18.5522847,27 18,27 Z" id="path" fill="url(#radialGradient-2)"/>
+        <path d="M18,27 L2,27 C1.44771525,27 1,27.4477153 1,28 L1,40 C1,43.8659932 4.13400675,47 8,47 L40,47 C43.8659932,47 47,43.8659932 47,40 L47,28 C47,27.4477153 46.5522847,27 46,27 L30,27 C29.4477153,27 29,27.4477153 29,28 C29,30.7614237 26.7614237,33 24,33 C21.2385763,33 19,30.7614237 19,28 C19,27.4477153 18.5522847,27 18,27 Z" id="path" stroke="url(#linearGradient-3)" stroke-width="1.2" fill-rule="nonzero"/>
+        <line x1="10" y1="10" x2="22" y2="10" id="path" stroke="#E6F5FD" stroke-width="2" stroke-linecap="round"/>
+        <line x1="10" y1="18" x2="30" y2="18" id="path" stroke="#E6F5FD" stroke-width="2" stroke-linecap="round"/>
+    </g>
+</svg>

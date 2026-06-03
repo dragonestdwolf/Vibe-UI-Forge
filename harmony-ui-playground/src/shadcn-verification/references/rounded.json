@@ -1,0 +1,201 @@
+{
+  "format": "rounded-spec-json",
+  "version": 3,
+  "description": "圆角规范（border radius）。供大模型/校验器读取：每个圆角属性必须使用 allowedValues 中的值；token 名与 value 一一对应。",
+  "rules": {
+    "unit": "px",
+    "allowedValues": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88,
+      92,
+      96,
+      999,
+      9999
+    ],
+    "constraintsCN": [
+      "所有圆角（border radius）取值必须在 allowedValues 内",
+      "allowedValues 等价于：4 或 8 的倍数（4~96），例外 0 与 9999、999",
+      "token.value 必须与 allowedValues 一致；场景 token 通过 ref 引用 global token"
+    ],
+    "constraintsEN": [
+      "All border radius values must be one of allowedValues",
+      "allowedValues equivalent to: multiples of 4 or 8 from 4 to 96, with 0 and 9999、999 as exceptions",
+      "Each token.value must be in allowedValues; scene tokens reference global tokens via ref"
+    ]
+  },
+  "tokens": {
+    "global": [
+      {
+        "name": "radius-none",
+        "value": 0,
+        "description": "无圆角"
+      },
+      {
+        "name": "radius-xs",
+        "value": 4,
+        "description": "超小圆角"
+      },
+      {
+        "name": "radius-base",
+        "value": 4,
+        "description": "基础圆角"
+      },
+      {
+        "name": "radius-md",
+        "value": 8,
+        "description": "中等圆角"
+      },
+      {
+        "name": "radius-lg",
+        "value": 12,
+        "description": "大圆角"
+      },
+      {
+        "name": "radius-xl",
+        "value": 16,
+        "description": "超大圆角"
+      },
+      {
+        "name": "radius-2xl",
+        "value": 24,
+        "description": "2 倍超大圆角"
+      },
+      {
+        "name": "radius-3xl",
+        "value": 32,
+        "description": "3 倍超大圆角"
+      },
+      {
+        "name": "radius-4xl",
+        "value": 48,
+        "description": "4 倍超大圆角"
+      },
+      {
+        "name": "radius-full",
+        "value": 999,
+        "description": "完全圆角（胶囊形）"
+      },
+      {
+        "name": "radius-full",
+        "value": 9999,
+        "description": "完全圆角（胶囊形）"
+      }
+    ],
+    "scene": [
+      {
+        "name": "radius-checkbox-base",
+        "value": 4,
+        "ref": "radius-xs",
+        "description": "复选框圆角"
+      },
+      {
+        "name": "radius-search-base",
+        "value": 4,
+        "ref": "radius-base",
+        "description": "搜索框圆角"
+      },
+      {
+        "name": "radius-dropdown-base",
+        "value": 8,
+        "ref": "radius-md",
+        "description": "下拉菜单圆角"
+      },
+      {
+        "name": "radius-popup-base",
+        "value": 12,
+        "ref": "radius-lg",
+        "description": "弹出层圆角"
+      },
+      {
+        "name": "radius-button-base",
+        "value": 4,
+        "ref": "radius-base",
+        "description": "按钮圆角"
+      },
+      {
+        "name": "radius-button-full",
+        "value": 999,
+        "ref": "radius-full",
+        "description": "按钮完全圆角"
+      },
+      {
+        "name": "radius-button-full",
+        "value": 9999,
+        "ref": "radius-full",
+        "description": "按钮完全圆角"
+      },
+      {
+        "name": "radius-card-sm",
+        "value": 4,
+        "ref": "radius-xs",
+        "description": "小卡片圆角"
+      },
+      {
+        "name": "radius-card-base",
+        "value": 8,
+        "ref": "radius-md",
+        "description": "基础卡片圆角"
+      },
+      {
+        "name": "radius-card-mg",
+        "value": 12,
+        "ref": "radius-lg",
+        "description": "中等卡片圆角"
+      },
+      {
+        "name": "radius-card-lg",
+        "value": 16,
+        "ref": "radius-xl",
+        "description": "大卡片圆角"
+      }
+    ]
+  },
+  "properties": [
+    {
+      "property": "borderRadius",
+      "nameCN": "统一圆角",
+      "description": "四个角使用相同的圆角半径。"
+    },
+    {
+      "property": "borderTopLeftRadius",
+      "nameCN": "左上圆角",
+      "description": "仅左上角的圆角半径。"
+    },
+    {
+      "property": "borderTopRightRadius",
+      "nameCN": "右上圆角",
+      "description": "仅右上角的圆角半径。"
+    },
+    {
+      "property": "borderBottomLeftRadius",
+      "nameCN": "左下圆角",
+      "description": "仅左下角的圆角半径。"
+    },
+    {
+      "property": "borderBottomRightRadius",
+      "nameCN": "右下圆角",
+      "description": "仅右下角的圆角半径。"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_public_broom-清除_质感图标</title>
+    <defs>
+        <linearGradient x1="5.27951807%" y1="0%" x2="75.9786347%" y2="85.0369119%" id="linearGradient-1">
+            <stop stop-color="#5CA3E9" offset="0.0913393247%"/>
+            <stop stop-color="#0067D1" offset="100%"/>
+        </linearGradient>
+        <radialGradient cx="50%" cy="151.091665%" fx="50%" fy="151.091665%" r="119.32017%" gradientTransform="translate(0.500000,1.510917),scale(0.571429,1.000000),rotate(-90.000000),scale(1.000000,0.995896),translate(-0.500000,-1.510917)" id="radialGradient-2">
+            <stop stop-color="#2E86DE" offset="0%"/>
+            <stop stop-color="#8ABEF3" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_broom-清除_质感图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <path d="M25,0 C28.3137085,-6.08718376e-16 31,2.6862915 31,6 L31,12 L40,12 C43.3137085,12 46,14.6862915 46,18 L46,40 C46,44.418278 42.418278,48 38,48 L32.000156,48.0007673 C33.2558827,46.3293148 34,44.2515563 34,42 L34,38 C34,36.8954305 33.1045695,36 32,36 C30.9456382,36 30.0818349,36.8158778 30.0054857,37.8507377 L30,38 L30,42 C30,45.3137085 27.3137085,48 24,48 L18.000156,48.0007673 C19.2558827,46.3293148 20,44.2515563 20,42 L20,38 C20,36.8954305 19.1045695,36 18,36 C16.9456382,36 16.0818349,36.8158778 16.0054857,37.8507377 L16,38 L16,42 C16,45.3137085 13.3137085,48 10,48 L1.60412598,48 C1.05184123,48.0000019 0.604124445,47.5522882 0.604122556,47.0000034 C0.60412166,46.7382345 0.706763678,46.4869016 0.890753508,46.3006979 C2.9635845,44.1906487 4,42.090416 4,40 L4,18 C4,14.6862915 6.6862915,12 10,12 L19,12 L19,6 C19,2.6862915 21.6862915,6.08718376e-16 25,0 Z" id="path9-2" fill="url(#linearGradient-1)" fill-rule="nonzero"/>
+        <line x1="4" y1="24" x2="46" y2="24" id="path7" stroke="#FFFFFF" opacity="0.6" stroke-linejoin="round"/>
+        <path d="M25,0 C28.3137085,-6.08718376e-16 31,2.6862915 31,6 L31,12 L40,12 C43.3137085,12 46,14.6862915 46,18 L46,24 L4,24 L4,18 C4,14.6862915 6.6862915,12 10,12 L19,12 L19,6 C19,2.6862915 21.6862915,6.08718376e-16 25,0 Z" id="path9-2" stroke="url(#linearGradient-3)" stroke-width="1.2" fill="url(#radialGradient-2)" fill-rule="nonzero"/>
+    </g>
+</svg>

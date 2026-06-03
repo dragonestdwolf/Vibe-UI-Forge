@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_public_camera_dome-摄像头_质感图标</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="79.0455666%" y2="85.0369119%" id="linearGradient-1">
+            <stop stop-color="#8CA3FA" offset="0%"/>
+            <stop stop-color="#2070F3" offset="100%"/>
+        </linearGradient>
+        <radialGradient cx="50%" cy="69.1927283%" fx="50%" fy="69.1927283%" r="81.3440858%" id="radialGradient-2">
+            <stop stop-color="#80ABFD" offset="0%"/>
+            <stop stop-color="#C3D6FF" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_camera_dome-摄像头_质感图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <path d="M46.5306122,0 C47.3421327,0 48,0.671572875 48,1.5 C48,2.32842712 47.3421327,3 46.5306122,3 L36.7386122,3 L34.9928012,10.2201631 C40.7012603,13.8566921 44.4878049,20.2422462 44.4878049,27.5121951 C44.4878049,38.8272973 35.3151022,48 24,48 C12.6848978,48 3.51219512,38.8272973 3.51219512,27.5121951 C3.51219512,20.285437 7.25388163,13.9325965 12.9056608,10.2852676 L11.1428571,3 L1.46938776,3 C0.705603803,3 0.0779278255,2.40511192 0.00672644381,1.64446001 L0,1.5 C0,0.671572875 0.657867306,0 1.46938776,0 L46.5306122,0 Z M33.7116735,3 L14.1697959,3 L15.5801851,8.82894607 C18.1486447,7.66962966 20.9989705,7.02439024 24,7.02439024 C26.959813,7.02439024 29.7730334,7.65202776 32.3138291,8.78147071 L33.7116735,3 Z" id="形状结合" fill="url(#linearGradient-1)" fill-rule="nonzero"/>
+        <circle id="椭圆形" stroke="url(#linearGradient-3)" stroke-width="1.2" fill="url(#radialGradient-2)" fill-rule="nonzero" cx="24" cy="33" r="9"/>
+        <circle id="椭圆形备份" fill="#FFFFFF" cx="24" cy="15.8032132" r="2"/>
+    </g>
+</svg>

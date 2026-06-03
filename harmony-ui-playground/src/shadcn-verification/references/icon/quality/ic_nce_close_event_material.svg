@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>质感图标/ic_nce_close_event_material-关闭事件</title>
+    <defs>
+        <linearGradient x1="18.6631944%" y1="0%" x2="68.2039055%" y2="85.0369119%" id="linearGradient-1">
+            <stop stop-color="#5CABE9" offset="0.0913393247%"/>
+            <stop stop-color="#0067D1" offset="100%"/>
+        </linearGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-2">
+            <stop stop-color="#5CA3E9" offset="0%"/>
+            <stop stop-color="#B8D9F9" offset="100%"/>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="52.7559684%" id="radialGradient-3">
+            <stop stop-color="#5CA3E9" offset="0%"/>
+            <stop stop-color="#B8D9F9" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="质感图标/ic_nce_close_event_material-关闭事件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <path d="M33,0 L9,0 C5.13400675,0 2,3.13400675 2,7 L2,41 C2,44.8659932 5.13400675,48 9,48 L33,48 C36.8659932,48 40,44.8659932 40,41 L40,7 C40,3.13400675 36.8659932,0 33,0 Z" id="path" fill="url(#linearGradient-1)" fill-rule="nonzero"/>
+        <path d="M11,10.5 L31,10.5 M11,20.5 L23,20.5" id="path" stroke="#FFFFFF" stroke-width="2" opacity="0.600000024" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M34,24 C27.372583,24 22,29.372583 22,36 C22,42.627417 27.372583,48 34,48 C40.627417,48 46,42.627417 46,36 C46,29.372583 40.627417,24 34,24 Z" id="path" fill="url(#radialGradient-2)" fill-rule="nonzero"/>
+        <path d="M34,24 C27.372583,24 22,29.372583 22,36 C22,42.627417 27.372583,48 34,48 C40.627417,48 46,42.627417 46,36 C46,29.372583 40.627417,24 34,24 Z" id="path" stroke="url(#linearGradient-4)" stroke-width="1.2" fill="url(#radialGradient-3)" fill-rule="nonzero"/>
+        <path d="M40,36 L28,36 M34,30 L34,42" id="path" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(34.000000, 36.000000) rotate(45.000000) translate(-34.000000, -36.000000) "/>
+    </g>
+</svg>

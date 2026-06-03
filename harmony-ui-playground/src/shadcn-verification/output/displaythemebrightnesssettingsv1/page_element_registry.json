@@ -1,0 +1,23 @@
+{
+  "pageName": "display-theme-brightness-settings-v1",
+  "render": {
+    "pageUrl": "http://localhost:6007/?path=/story/render-display-theme-brightness-settings-v1--default",
+    "viewport": { "width": 390, "height": 844 },
+    "deviceScaleFactor": 1,
+    "waitUntil": "load",
+    "waitMs": 2000,
+    "contentRootSelector": ".display-theme-settings",
+    "useStorybookIframe": true
+  },
+  "domScan": {
+    "enabled": true,
+    "maxElements": 800,
+    "rootSelector": ".display-theme-settings"
+  },
+  "layout": {
+    "gridChecks": [],
+    "backgroundChecks": []
+  },
+  "presetComponents": [],
+  "customElements": []
+}

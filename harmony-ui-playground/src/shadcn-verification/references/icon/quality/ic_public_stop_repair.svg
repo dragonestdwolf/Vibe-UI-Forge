@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_public_stop_repair-停止修复_质感图标</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="79.0455666%" y2="85.0369119%" id="linearGradient-1">
+            <stop stop-color="#7DDFE7" offset="0%"/>
+            <stop stop-color="#2CB8C9" offset="100%"/>
+        </linearGradient>
+        <path d="M17.4360105,5.43000858 C22.5458282,0.286151674 30.063701,-1.33409251 36.6132055,1.12560315 C37.3220561,1.39181518 37.5202709,2.3006661 36.9866374,2.8378563 L30.9558946,8.90879402 C28.632311,11.2478562 28.5927522,14.9907496 30.852032,17.2650795 C33.007094,19.4344975 36.5078235,19.5046176 38.8225281,17.4536196 L39.1334907,17.1605237 L45.1642531,11.0896083 C45.701385,10.5489 46.6181402,10.747739 46.8829913,11.4623928 C49.3240322,18.0491107 47.7161308,25.6094428 42.608785,30.7508114 C37.6283867,35.7643867 30.35362,37.437997 23.9039246,35.2249048 C23.7434023,35.1698246 23.5837069,35.1124178 23.4248855,35.0526974 L23.1526482,34.9450703 L12.2943304,45.8765791 C9.54575889,48.6434604 5.1254981,48.7063441 2.30094071,46.0652301 L2.10650869,45.8765791 C-0.702169565,43.0491908 -0.702169565,38.46794 2.10650869,35.6405517 L13.1071036,24.5656137 L13.0624237,24.4433194 L12.9297318,24.0517939 C10.8291199,17.6079688 12.509679,10.389157 17.4360105,5.43000858 Z" id="path-2"/>
+        <radialGradient cx="48.5258978%" cy="55.1206865%" fx="48.5258978%" fy="55.1206865%" r="46.8204949%" gradientTransform="translate(0.485259,0.551207),scale(0.875030,1.000000),rotate(-159.647599),scale(1.000000,1.047112),translate(-0.485259,-0.551207)" id="radialGradient-4">
+            <stop stop-color="#1C94A4" offset="0%"/>
+            <stop stop-color="#24AABA" stop-opacity="0" offset="100%"/>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-5">
+            <stop stop-color="#55CCD9" offset="0%"/>
+            <stop stop-color="#A4ECF1" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="32.5969765%" y1="9.32456913%" x2="80.2428649%" y2="100%" id="linearGradient-7">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0.76" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_stop_repair-停止修复_质感图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <mask id="mask-3" fill="white">
+            <use xlink:href="#path-2"/>
+        </mask>
+        <use id="路径" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"/>
+        <path d="M32,20 C40.836556,20 48,27.163444 48,36 C48,40.7792953 45.9045199,45.069165 42.5822024,48.0009666 L21.4177976,48.0009666 C18.0954801,45.069165 16,40.7792953 16,36 C16,27.163444 23.163444,20 32,20 Z" id="形状结合" fill="url(#radialGradient-4)" fill-rule="nonzero" mask="url(#mask-3)"/>
+        <circle id="path7" stroke="url(#linearGradient-6)" stroke-width="1.2" fill="url(#radialGradient-5)" fill-rule="nonzero" cx="35" cy="35" r="12"/>
+        <rect id="矩形" fill="url(#linearGradient-7)" fill-rule="nonzero" x="31" y="31" width="8" height="8" rx="2"/>
+    </g>
+</svg>

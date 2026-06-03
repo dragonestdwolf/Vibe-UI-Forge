@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_public_disconnect_cloudsop-断开_质感图标</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="79.0455666%" y2="85.0369119%" id="linearGradient-1">
+            <stop stop-color="#B0BFFD" offset="0%"/>
+            <stop stop-color="#2070F3" offset="100%"/>
+        </linearGradient>
+        <rect id="path-2" x="1" y="1" width="46" height="46" rx="6"/>
+        <radialGradient cx="50%" cy="55.9984808%" fx="50%" fy="55.9984808%" r="50.5600611%" gradientTransform="translate(0.500000,0.559985),scale(0.875030,1.000000),rotate(-137.184617),scale(1.000000,1.011790),translate(-0.500000,-0.559985)" id="radialGradient-4">
+            <stop stop-color="#1F55B5" offset="0%"/>
+            <stop stop-color="#2070F3" stop-opacity="0" offset="100%"/>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-5">
+            <stop stop-color="#668CF7" offset="0%"/>
+            <stop stop-color="#B0BFFD" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_disconnect_cloudsop-断开_质感图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <mask id="mask-3" fill="white">
+            <use xlink:href="#path-2"/>
+        </mask>
+        <use id="矩形" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"/>
+        <path d="M32,20 C40.836556,20 48,27.163444 48,36 C48,40.7792953 45.9045199,45.069165 42.5822024,48.0009666 L21.4177976,48.0009666 C18.0954801,45.069165 16,40.7792953 16,36 C16,27.163444 23.163444,20 32,20 Z" id="形状结合" fill="url(#radialGradient-4)" fill-rule="nonzero" mask="url(#mask-3)"/>
+        <rect id="矩形" fill="#FFFFFF" fill-rule="nonzero" opacity="0.600000024" x="1" y="13" width="46" height="2"/>
+        <line x1="6" y1="21" x2="16" y2="21" id="路径-27" stroke="#FFFFFF" stroke-width="2" opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle id="path7" stroke="url(#linearGradient-6)" stroke-width="1.2" fill="url(#radialGradient-5)" fill-rule="nonzero" cx="37" cy="37" r="11"/>
+        <path d="M43,37 L31,37 M37,31 L37,43" id="path" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(37.000000, 37.000000) rotate(45.000000) translate(-37.000000, -37.000000) "/>
+    </g>
+</svg>

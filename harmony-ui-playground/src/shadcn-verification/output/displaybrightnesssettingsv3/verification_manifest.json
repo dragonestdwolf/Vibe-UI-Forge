@@ -1,0 +1,77 @@
+{
+  "inputPath": "/Users/admin/Desktop/Vibe-UI-Forge/harmony-ui-playground/src/shadcn-verification/output/displaybrightnesssettingsv3/page_verification_input.json",
+  "pageUrl": "http://localhost:6007/?path=/story/render-display-brightness-settings-v3--default",
+  "effectivePageUrl": "http://localhost:6007/iframe.html?id=render-display-brightness-settings-v3--default&viewMode=story",
+  "navigationMode": "storybook-iframe-direct",
+  "renderScopeKind": "page",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "renderMode": "computed-style",
+  "renderWarning": "",
+  "browserPath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "domScan": {
+    "scannedCount": 100,
+    "candidateCount": 100,
+    "truncated": false,
+    "maxElements": 800,
+    "elementCount": 100,
+    "totalChecks": 1507,
+    "pass": 1226,
+    "fail": 281,
+    "unknown": 0,
+    "excluded": 0,
+    "complianceRate": 81.35
+  },
+  "scores": {
+    "finalScore": 20,
+    "modules": {
+      "pageLayout": {
+        "gridPass": 0,
+        "gridTotal": 0,
+        "gridScore": 20,
+        "backgroundDeduct": 0,
+        "score": 20
+      },
+      "preset": {
+        "invoked": 0,
+        "total": 0,
+        "weight": 0,
+        "compliance": 100,
+        "score": 0
+      },
+      "custom": {
+        "resourcePass": 0,
+        "resourceTotal": 0,
+        "stylePass": 0,
+        "styleTotal": 0,
+        "resourceInner": 30,
+        "styleInner": 70,
+        "layoutDeduct": 0,
+        "raw": 100,
+        "final": 100,
+        "weight": 0,
+        "score": 0
+      },
+      "elements": {
+        "presetCount": 0,
+        "customCount": 0,
+        "total": 0
+      }
+    }
+  },
+  "reportScores": {
+    "registryCheckCount": 0,
+    "registryWeightedScore": 20,
+    "domComplianceRate": 81.35,
+    "domCollectedChecks": 1507,
+    "headline": {
+      "label": "DOM 规范合规率（主评分）",
+      "value": 81.35,
+      "unit": "%",
+      "note": "未配置 registry 清单加权项，不以布局基线 20 分作为页面结论；请以 DOM 合规率为准。"
+    }
+  },
+  "runChecksum": "d4865eae1d4586ebe996d30e45a06a938d368a7bb3faa90c1f16a288a802a5c9"
+}

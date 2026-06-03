@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="480px" height="480px" viewBox="0 0 480 480" version="1.1">
+    <title>ic_public_broom-清除_3D图标</title>
+    <defs>
+        <linearGradient x1="31.2746496%" y1="38.8523593%" x2="59.8208253%" y2="64.5473795%" id="linearGradient-1">
+            <stop stop-color="#E0E0E0" offset="0%"/>
+            <stop stop-color="#BEBEBE" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="21.9841025%" y1="21.2126769%" x2="84.7856991%" y2="82.9004987%" id="linearGradient-2">
+            <stop stop-color="#F8F8F9" offset="0%"/>
+            <stop stop-color="#E4E4E4" offset="62.1578868%"/>
+            <stop stop-color="#B5B7BD" offset="100%"/>
+        </linearGradient>
+        <path d="M459.999281,240 L460,400 C460,444.18278 424.18278,480 380,480 L320.005868,480.001937 C332.560529,463.288395 340,442.512988 340,420 L340,380 C340,368.954305 331.045695,360 320,360 C309.069364,360 300.186775,368.768729 300.002907,379.655511 L300,380 L300,420 C300,453.137085 273.137085,480 240,480 L180.005868,480.001937 C192.560529,463.288395 200,442.512988 200,420 L200,380 C200,368.954305 191.045695,360 180,360 C169.069364,360 160.186775,368.768729 160.002907,379.655511 L160,380 L160,420 C160,453.137085 133.137085,480 100,480 L16.0501862,480 C10.5273388,479.998843 6.05112415,475.520753 6.05228095,469.997905 C6.05282978,467.377688 7.08176411,464.862357 8.9195666,462.99473 C29.6398555,441.898359 40,420.900115 40,400 L39.9992807,240 L459.999281,240 Z" id="path-3"/>
+        <linearGradient x1="20.1454682%" y1="32.5729612%" x2="97.4794942%" y2="147.750523%" id="linearGradient-5">
+            <stop stop-color="#F8F8F9" offset="0%"/>
+            <stop stop-color="#E4E4E4" offset="58.4590901%"/>
+            <stop stop-color="#B5B7BD" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="29.9182806%" y1="38.929255%" x2="89.7627051%" y2="64.714845%" id="linearGradient-6">
+            <stop stop-color="#F8CC7B" offset="0%"/>
+            <stop stop-color="#ED8C00" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="9.52084288%" y1="40.5076531%" x2="91.974927%" y2="56.7817735%" id="linearGradient-7">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0.356996763" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="0%" y1="38.2460141%" x2="100%" y2="38.6621315%" id="linearGradient-8">
+            <stop stop-color="#DF8809" offset="0%"/>
+            <stop stop-color="#F6D4AC" offset="6.94691051%"/>
+            <stop stop-color="#F8D692" offset="18.02961%"/>
+            <stop stop-color="#E49216" offset="35.1909077%"/>
+            <stop stop-color="#F3D2A9" offset="45.0731863%"/>
+            <stop stop-color="#F0AE4D" offset="52.1344165%"/>
+            <stop stop-color="#EF9918" offset="73.6090224%"/>
+            <stop stop-color="#ECC597" offset="90.0605742%"/>
+            <stop stop-color="#DF8809" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="11.1813613%" y1="38.6621315%" x2="21.2607424%" y2="43.6124238%" id="linearGradient-9">
+            <stop stop-color="#F9B766" offset="0%"/>
+            <stop stop-color="#F69E39" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+        <path d="M460,200 C460,166.862915 433.137085,140 400,140 L310,140 L310,120 L400,120 C433.137085,120 460,146.862915 460,180 Z M190,120 L190,140 L100,140 C66.862915,140 40,166.862915 40,200 L40,180 C40,146.862915 66.862915,120 100,120 L190,120 Z M250,0 C283.137085,-6.08718376e-15 310,26.862915 310,60 L310,80 C310,46.862915 283.137085,20 250,20 C216.862915,20 190,46.862915 190,80 L190,60 C190,26.862915 216.862915,6.08718376e-15 250,0 Z" id="path-10"/>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-11">
+            <stop stop-color="#3D1601" stop-opacity="0.3" offset="0%"/>
+            <stop stop-color="#3D1601" stop-opacity="0.4" offset="53.7881918%"/>
+            <stop stop-color="#3D1601" stop-opacity="0.2" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50.0011338%" x2="100%" y2="50.0022126%" id="linearGradient-12">
+            <stop stop-color="#DEDEDE" offset="0%"/>
+            <stop stop-color="#FFFFFF" offset="48.8749044%"/>
+            <stop stop-color="#DADADA" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_broom-清除_3D图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="path" fill="#D8D8D8" fill-rule="nonzero" opacity="0" x="0" y="0" width="480" height="480"/>
+        <path d="M459.99994,240 L460,400 C460,444.18278 424.18278,480 380,480 L329.005868,480.001937 C341.560529,463.288395 349,442.512988 349,420 L349,380 C349,368.954305 340.045695,360 329,360 C318.069364,360 309.186775,368.768729 309.002907,379.655511 L309,380 L309,420 C309,453.137085 282.137085,480 249,480 L189.005868,480.001937 C201.560529,463.288395 209,442.512988 209,420 L209,380 C209,368.954305 200.045695,360 189,360 C178.069364,360 169.186775,368.768729 169.002907,379.655511 L169,380 L169,420 C169,453.137085 142.137085,480 109,480 L25.0536423,480 C19.5307948,479.999835 15.0537757,475.52255 15.0539403,469.999702 C15.0540183,467.379265 16.0826725,464.863557 17.9195666,462.99473 C38.6398555,441.898359 49,420.900115 49,400 L48.9999403,240 L459.99994,240 Z" id="path9-2" fill="url(#linearGradient-1)" fill-rule="nonzero"/>
+        <mask id="mask-4" fill="white">
+            <use xlink:href="#path-3"/>
+        </mask>
+        <use id="path9-2" fill="url(#linearGradient-2)" fill-rule="nonzero" xlink:href="#path-3"/>
+        <rect id="矩形" fill="url(#linearGradient-5)" fill-rule="nonzero" mask="url(#mask-4)" x="0" y="0" width="480" height="480"/>
+        <path d="M250,20 C283.137085,20 310,46.862915 310,80 L310,140 L400,140 C433.137085,140 460,166.862915 460,200 L460,242 L40,242 L40,200 C40,166.862915 66.862915,140 100,140 L190,140 L190,80 C190,46.862915 216.862915,20 250,20 Z" id="path9-2" fill="url(#linearGradient-6)" fill-rule="nonzero"/>
+        <path d="M460,203 C460,169.862915 433.137085,143 400,143 L310,143 L310,140 L400,140 C433.137085,140 460,166.862915 460,200 Z M190,140 L190,143 L100,143 C66.862915,143 40,169.862915 40,203 L40,200 C40,166.862915 66.862915,140 100,140 L190,140 Z M250,20 C283.137085,20 310,46.862915 310,80 L310,83 C310,49.862915 283.137085,23 250,23 C216.862915,23 190,49.862915 190,83 L190,80 C190,46.862915 216.862915,20 250,20 Z" id="path9-2" fill="url(#linearGradient-7)" fill-rule="nonzero"/>
+        <g id="path9-2">
+            <use fill="url(#linearGradient-8)" xlink:href="#path-10"/>
+            <use fill-opacity="0.3" fill="url(#linearGradient-9)" xlink:href="#path-10"/>
+        </g>
+        <rect id="矩形" fill="url(#linearGradient-11)" fill-rule="nonzero" x="40" y="240" width="420" height="2"/>
+        <rect id="矩形" fill="url(#linearGradient-12)" fill-rule="nonzero" x="40" y="242" width="420" height="2"/>
+    </g>
+</svg>

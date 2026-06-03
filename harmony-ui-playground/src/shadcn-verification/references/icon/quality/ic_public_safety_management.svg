@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_public_safety_management-安全管理_质感图标</title>
+    <defs>
+        <linearGradient x1="13.7845179%" y1="0%" x2="71.037984%" y2="85.0369119%" id="linearGradient-1">
+            <stop stop-color="#F470AB" offset="0%"/>
+            <stop stop-color="#E61866" offset="99.9933416%"/>
+        </linearGradient>
+        <radialGradient cx="50%" cy="55.9984808%" fx="50%" fy="55.9984808%" r="49.5456161%" gradientTransform="translate(0.500000,0.559985),scale(1.000000,0.917869),rotate(-130.921056),scale(1.000000,1.011790),translate(-0.500000,-0.559985)" id="radialGradient-2">
+            <stop stop-color="#A72556" offset="0%"/>
+            <stop stop-color="#C15C7B" stop-opacity="0" offset="100%"/>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="58.2247891%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.906074),rotate(-90.000000),scale(1.000000,0.995896),translate(-0.500000,-0.500000)" id="radialGradient-3">
+            <stop stop-color="#ED448A" offset="0%"/>
+            <stop stop-color="#F99AC7" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="32.5969765%" y1="9.32456913%" x2="80.2428649%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0.76" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_public_safety_management-安全管理_质感图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <path d="M8.01789745,6.09373589 L22.6785983,0.962490595 C23.53409,0.663068495 24.46591,0.663068495 25.3214017,0.962490595 L39.9821025,6.09373589 C42.3886231,6.93601807 44,9.20722327 44,11.756886 L44,26.3196601 C44,33.171711 40.1286606,39.4356697 34,42.5 L24.8944272,47.0527864 C24.3313722,47.3343139 23.6686278,47.3343139 23.1055728,47.0527864 L14,42.5 C7.87133935,39.4356697 4,33.171711 4,26.3196601 L4,11.756886 C4,9.20722327 5.61137694,6.93601807 8.01789745,6.09373589 Z" id="path5" fill="url(#linearGradient-1)"/>
+        <path d="M38.4914838,18.8825019 L47.9995985,24.3726689 L47.9995985,45.8386689 L44.2565985,47.9996689 L27.6725985,47.9996689 L23.1785736,45.4052403 C21.6154948,44.5027963 20.6525985,42.8350111 20.6525985,41.0301231 L20.6525985,29.1817871 C20.6525985,27.3768991 21.6154948,25.7091139 23.1785736,24.8066699 L33.4395336,18.8825019 C35.0026124,17.9800579 36.928405,17.9800579 38.4914838,18.8825019 Z" id="形状结合" fill="url(#radialGradient-2)" fill-rule="nonzero"/>
+        <path d="M17,21 L31,21 M24,14 L24,28" id="形状结合" stroke="#FFFFFF" stroke-width="2" opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M38.3410577,24.4758102 L45.5546974,28.640607 C46.65357,29.2750414 47.3305034,30.4475245 47.3305034,31.7163932 L47.3305034,40.0459869 C47.3305034,41.3148556 46.65357,42.4873387 45.5546974,43.1217731 L38.3410577,47.2865699 C37.2421851,47.9210043 35.8883183,47.9210043 34.7894457,47.2865699 L27.575806,43.1217731 C26.4769334,42.4873387 25.8,41.3148556 25.8,40.0459869 L25.8,31.7163932 C25.8,30.4475245 26.4769334,29.2750414 27.575806,28.640607 L34.7894457,24.4758102 C35.8883183,23.8413758 37.2421851,23.8413758 38.3410577,24.4758102 Z" id="多边形" stroke="url(#linearGradient-4)" stroke-width="1.2" fill="url(#radialGradient-3)" fill-rule="nonzero"/>
+        <circle id="椭圆形" fill="url(#linearGradient-5)" fill-rule="nonzero" cx="36.5652517" cy="35.88119" r="5"/>
+    </g>
+</svg>

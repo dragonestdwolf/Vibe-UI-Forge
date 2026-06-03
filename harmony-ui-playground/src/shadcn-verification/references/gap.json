@@ -1,0 +1,467 @@
+{
+  "format": "spacing-spec-json",
+  "version": 3,
+  "description": "间距规范（padding / margin / gap）。供大模型/校验器读取：每个 spacing 属性必须使用 allowedValues 中的值；token 名与 value 一一对应。",
+  "rules": {
+    "unit": "px",
+    "allowedValues": [
+      0,
+      2,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88,
+      92,
+      96,
+      100,
+      104,
+      108,
+      112,
+      116,
+      120,
+      124,
+      128
+    ],
+    "constraintsCN": [
+      "所有 spacing（padding/margin/gap）取值必须在 allowedValues 内",
+      "allowedValues 等价于：4 或 8 的倍数（4~128），例外 0 与 2",
+      "token.value 必须与 allowedValues 一致；场景 token 通过 ref 引用 global token"
+    ],
+    "constraintsEN": [
+      "All spacing values must be one of allowedValues",
+      "allowedValues equivalent to: multiples of 4 or 8 from 4 to 128, with 0 and 2 as exceptions",
+      "Each token.value must be in allowedValues; scene tokens reference global tokens via ref"
+    ]
+  },
+  "tokens": {
+    "global": [
+      {
+        "name": "space-0_5x",
+        "value": 2,
+        "description": "0.5 倍基础间距（例外值）"
+      },
+      {
+        "name": "space-base",
+        "value": 4,
+        "description": "基础间距 4px"
+      },
+      {
+        "name": "space-2x",
+        "value": 8,
+        "description": "2 倍基础间距 8px"
+      },
+      {
+        "name": "space-3x",
+        "value": 12,
+        "description": "3 倍基础间距 12px"
+      },
+      {
+        "name": "space-4x",
+        "value": 16,
+        "description": "4 倍基础间距 16px"
+      },
+      {
+        "name": "space-5x",
+        "value": 20,
+        "description": "5 倍基础间距 20px"
+      },
+      {
+        "name": "space-6x",
+        "value": 24,
+        "description": "6 倍基础间距 24px"
+      },
+      {
+        "name": "space-7x",
+        "value": 28,
+        "description": "7 倍基础间距 28px"
+      },
+      {
+        "name": "space-8x",
+        "value": 32,
+        "description": "8 倍基础间距 32px"
+      },
+      {
+        "name": "space-9x",
+        "value": 36,
+        "description": "9 倍基础间距 36px"
+      },
+      {
+        "name": "space-10x",
+        "value": 40,
+        "description": "10 倍基础间距 40px"
+      },
+      {
+        "name": "space-11x",
+        "value": 44,
+        "description": "11 倍基础间距 44px"
+      },
+      {
+        "name": "space-12x",
+        "value": 48,
+        "description": "12 倍基础间距 48px"
+      },
+      {
+        "name": "space-13x",
+        "value": 52,
+        "description": "13 倍基础间距 52px"
+      },
+      {
+        "name": "space-14x",
+        "value": 56,
+        "description": "14 倍基础间距 56px"
+      },
+      {
+        "name": "space-15x",
+        "value": 60,
+        "description": "15 倍基础间距 60px"
+      },
+      {
+        "name": "space-16x",
+        "value": 64,
+        "description": "16 倍基础间距 64px"
+      },
+      {
+        "name": "space-17x",
+        "value": 68,
+        "description": "17 倍基础间距 68px"
+      },
+      {
+        "name": "space-18x",
+        "value": 72,
+        "description": "18 倍基础间距 72px"
+      },
+      {
+        "name": "space-19x",
+        "value": 76,
+        "description": "19 倍基础间距 76px"
+      },
+      {
+        "name": "space-20x",
+        "value": 80,
+        "description": "20 倍基础间距 80px"
+      },
+      {
+        "name": "space-21x",
+        "value": 84,
+        "description": "21 倍基础间距 84px"
+      },
+      {
+        "name": "space-22x",
+        "value": 88,
+        "description": "22 倍基础间距 88px"
+      },
+      {
+        "name": "space-23x",
+        "value": 92,
+        "description": "23 倍基础间距 92px"
+      },
+      {
+        "name": "space-24x",
+        "value": 96,
+        "description": "24 倍基础间距 96px"
+      },
+      {
+        "name": "space-25x",
+        "value": 100,
+        "description": "25 倍基础间距 100px"
+      },
+      {
+        "name": "space-26x",
+        "value": 104,
+        "description": "26 倍基础间距 104px"
+      },
+      {
+        "name": "space-27x",
+        "value": 108,
+        "description": "27 倍基础间距 108px"
+      },
+      {
+        "name": "space-28x",
+        "value": 112,
+        "description": "28 倍基础间距 112px"
+      },
+      {
+        "name": "space-29x",
+        "value": 116,
+        "description": "29 倍基础间距 116px"
+      },
+      {
+        "name": "space-30x",
+        "value": 120,
+        "description": "30 倍基础间距 120px"
+      },
+      {
+        "name": "space-31x",
+        "value": 124,
+        "description": "31 倍基础间距 124px"
+      },
+      {
+        "name": "space-32x",
+        "value": 128,
+        "description": "32 倍基础间距 128px"
+      }
+    ],
+    "elements": {
+      "horizontal": [
+        {
+          "name": "elements-horizon-sm",
+          "value": 4,
+          "ref": "space-base",
+          "description": "elements-horizon-sm | 引用 space-base | 4px"
+        },
+        {
+          "name": "elements-horizon-base",
+          "value": 8,
+          "ref": "space-2x",
+          "description": "elements-horizon-base | 引用 space-2x | 8px"
+        },
+        {
+          "name": "elements-horizon-md",
+          "value": 12,
+          "ref": "space-3x",
+          "description": "elements-horizon-md | 引用 space-3x | 12px"
+        },
+        {
+          "name": "elements-horizon-lg",
+          "value": 16,
+          "ref": "space-4x",
+          "description": "elements-horizon-lg | 引用 space-4x | 16px"
+        },
+        {
+          "name": "elements-horizon-xl",
+          "value": 24,
+          "ref": "space-6x",
+          "description": "elements-horizon-xl | 引用 space-6x | 24px"
+        }
+      ],
+      "vertical": [
+        {
+          "name": "elements-vertical-sm",
+          "value": 4,
+          "ref": "space-base",
+          "description": "elements-vertical-sm | 引用 space-base | 4px"
+        },
+        {
+          "name": "elements-vertical-base",
+          "value": 8,
+          "ref": "space-2x",
+          "description": "elements-vertical-base | 引用 space-2x | 8px"
+        },
+        {
+          "name": "elements-vertical-md",
+          "value": 12,
+          "ref": "space-3x",
+          "description": "elements-vertical-md | 引用 space-3x | 12px"
+        },
+        {
+          "name": "elements-vertical-lg",
+          "value": 16,
+          "ref": "space-4x",
+          "description": "elements-vertical-lg | 引用 space-4x | 16px"
+        },
+        {
+          "name": "elements-vertical-xl",
+          "value": 24,
+          "ref": "space-6x",
+          "description": "elements-vertical-xl | 引用 space-6x | 24px"
+        },
+        {
+          "name": "elements-vertical-2xl",
+          "value": 32,
+          "ref": "space-8x",
+          "description": "elements-vertical-2xl | 引用 space-8x | 32px"
+        }
+      ]
+    },
+    "components": {
+      "horizontal": [
+        {
+          "name": "components-horizon-sm",
+          "value": 4,
+          "ref": "space-base",
+          "description": "components-horizon-sm | 引用 space-base | 4px"
+        },
+        {
+          "name": "components-horizon-base",
+          "value": 8,
+          "ref": "space-2x",
+          "description": "components-horizon-base | 引用 space-2x | 8px"
+        },
+        {
+          "name": "components-horizon-md",
+          "value": 12,
+          "ref": "space-3x",
+          "description": "components-horizon-md | 引用 space-3x | 12px"
+        },
+        {
+          "name": "components-horizon-lg",
+          "value": 16,
+          "ref": "space-4x",
+          "description": "components-horizon-lg | 引用 space-4x | 16px"
+        }
+      ],
+      "vertical": [
+        {
+          "name": "components-vertical-sm",
+          "value": 4,
+          "ref": "space-base",
+          "description": "components-vertical-sm | 引用 space-base | 4px"
+        },
+        {
+          "name": "components-vertical-base",
+          "value": 8,
+          "ref": "space-2x",
+          "description": "components-vertical-base | 引用 space-2x | 8px"
+        },
+        {
+          "name": "components-vertical-md",
+          "value": 12,
+          "ref": "space-3x",
+          "description": "components-vertical-md | 引用 space-3x | 12px"
+        },
+        {
+          "name": "components-vertical-lg",
+          "value": 16,
+          "ref": "space-4x",
+          "description": "components-vertical-lg | 引用 space-4x | 16px"
+        }
+      ]
+    },
+    "layout": {
+      "horizontal": [
+        {
+          "name": "layout-horizon-sm",
+          "value": 16,
+          "ref": "space-4x",
+          "description": "layout-horizon-sm | 引用 space-4x | 16px"
+        },
+        {
+          "name": "layout-horizon-base",
+          "value": 24,
+          "ref": "space-6x",
+          "description": "layout-horizon-base | 引用 space-6x | 24px"
+        },
+        {
+          "name": "layout-horizon-md",
+          "value": 32,
+          "ref": "space-8x",
+          "description": "layout-horizon-md | 引用 space-8x | 32px"
+        },
+        {
+          "name": "layout-horizon-lg",
+          "value": 40,
+          "ref": "space-10x",
+          "description": "layout-horizon-lg | 引用 space-10x | 40px"
+        },
+        {
+          "name": "layout-horizon-xl",
+          "value": 48,
+          "ref": "space-12x",
+          "description": "layout-horizon-xl | 引用 space-12x | 48px"
+        }
+      ],
+      "vertical": [
+        {
+          "name": "layout-vertical-sm",
+          "value": 16,
+          "ref": "space-4x",
+          "description": "layout-vertical-sm | 引用 space-4x | 16px"
+        },
+        {
+          "name": "layout-vertical-base",
+          "value": 24,
+          "ref": "space-6x",
+          "description": "layout-vertical-base | 引用 space-6x | 24px"
+        },
+        {
+          "name": "layout-vertical-md",
+          "value": 32,
+          "ref": "space-8x",
+          "description": "layout-vertical-md | 引用 space-8x | 32px"
+        },
+        {
+          "name": "layout-vertical-lg",
+          "value": 40,
+          "ref": "space-10x",
+          "description": "layout-vertical-lg | 引用 space-10x | 40px"
+        },
+        {
+          "name": "layout-vertical-xl",
+          "value": 48,
+          "ref": "space-12x",
+          "description": "layout-vertical-xl | 引用 space-12x | 48px"
+        }
+      ]
+    }
+  },
+  "properties": [
+    {
+      "property": "paddingLeft",
+      "nameCN": "左内边距",
+      "description": "容器内容区到左边界的距离（内边距）。"
+    },
+    {
+      "property": "paddingRight",
+      "nameCN": "右内边距",
+      "description": "容器内容区到右边界的距离（内边距）。"
+    },
+    {
+      "property": "paddingTop",
+      "nameCN": "上内边距",
+      "description": "容器内容区到上边界的距离（内边距）。"
+    },
+    {
+      "property": "paddingBottom",
+      "nameCN": "下内边距",
+      "description": "容器内容区到下边界的距离（内边距）。"
+    },
+    {
+      "property": "marginLeft",
+      "nameCN": "左外边距",
+      "description": "元素外边界到左侧相邻元素/容器边界的距离（外边距）。"
+    },
+    {
+      "property": "marginRight",
+      "nameCN": "右外边距",
+      "description": "元素外边界到右侧相邻元素/容器边界的距离（外边距）。"
+    },
+    {
+      "property": "marginTop",
+      "nameCN": "上外边距",
+      "description": "元素外边界到上方相邻元素/容器边界的距离（外边距）。"
+    },
+    {
+      "property": "marginBottom",
+      "nameCN": "下外边距",
+      "description": "元素外边界到下方相邻元素/容器边界的距离（外边距）。"
+    },
+    {
+      "property": "gapHorizontal",
+      "nameCN": "元素间横向间距（gap）",
+      "description": "同一行/水平排列的相邻元素之间的间距（不含元素自身宽度）。"
+    },
+    {
+      "property": "gapVertical",
+      "nameCN": "元素间纵向间距",
+      "description": "同一列/垂直排列的相邻元素之间的间距（不含元素自身高度）。"
+    }
+  ]
+}

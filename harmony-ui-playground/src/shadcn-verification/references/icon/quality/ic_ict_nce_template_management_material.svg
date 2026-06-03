@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48" version="1.1">
+    <title>ic_ict_nce_template_management_material-模板管理_质感图标</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="79.0455666%" y2="85.0369119%" id="linearGradient-1">
+            <stop stop-color="#FDE2BD" offset="0%"/>
+            <stop stop-color="#F4840C" offset="100%"/>
+        </linearGradient>
+        <rect id="path-2" x="1" y="1" width="46" height="46" rx="6"/>
+        <radialGradient cx="50%" cy="55.9984808%" fx="50%" fy="55.9984808%" r="48.8857671%" gradientTransform="translate(0.500000,0.559985),scale(0.933340,1.000000),rotate(-135.338633),scale(1.000000,1.011790),translate(-0.500000,-0.559985)" id="radialGradient-4">
+            <stop stop-color="#C76207" offset="0%"/>
+            <stop stop-color="#F4840C" stop-opacity="0" offset="100%"/>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="52.7559684%" gradientTransform="translate(0.500000,0.500000),rotate(-90.000000),scale(1.000000,0.995896),translate(-0.500000,-0.500000)" id="radialGradient-5">
+            <stop stop-color="#F9B766" offset="0%"/>
+            <stop stop-color="#FDE2BD" offset="100%"/>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="ic_ict_nce_template_management_material-模板管理_质感图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="48" height="48"/>
+        <mask id="mask-3" fill="white">
+            <use xlink:href="#path-2"/>
+        </mask>
+        <use id="矩形" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"/>
+        <path d="M34,20 C40.0246661,20 45.2716092,23.3298277 48.0008326,28.2494863 L48.0008326,43.7505137 C47.1095818,45.3570696 45.9498403,46.7940853 44.5822024,48.0009666 L23.4177976,48.0009666 C20.0954801,45.069165 18,40.7792953 18,36 C18,27.163444 25.163444,20 34,20 Z" id="形状结合" fill="url(#radialGradient-4)" fill-rule="nonzero" mask="url(#mask-3)"/>
+        <circle id="path7" stroke="url(#linearGradient-6)" stroke-width="1.2" fill="url(#radialGradient-5)" fill-rule="nonzero" cx="36" cy="36" r="12"/>
+        <path d="M34.5980482,31.5 L30.2414214,35.8566268 C30.1633165,35.9347317 30.1633165,36.0613647 30.2414214,36.1394695 L34.6019518,40.5 L34.6019518,40.5 M41,36 L31,36" id="path11" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(35.550000, 36.000000) scale(-1, 1) translate(-35.550000, -36.000000) "/>
+    </g>
+</svg>
